@@ -1,0 +1,1 @@
+<?phpclass ContainableBehavior extends ModelBehavior {}
