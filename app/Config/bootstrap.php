@@ -27,18 +27,7 @@
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
-/*Cache::config('testcache', array(
-    'engine' => 'File',
-    'path' => CACHE,
-    'prefix' => 'cakecache_test_'
-));*/
 
-Cache::config('testcache', array(
-    'engine' => 'Apc',
-    'prefix' => 'cakecache_test_apc',
-    'path' => CACHE . 'persistent' . DS,
-    'lock' => true, 
-));
 
 /**
  * The settings below can be used to set additional paths to models, views and controllers.

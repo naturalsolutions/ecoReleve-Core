@@ -3,19 +3,25 @@
 {
 "type": "FeatureCollection",
 "features": [
-	<?php for($i=0;$i<count($table);$i++):?>
+	<?php 
+	$ModelName="TStationsJoin";
+	if(isset($table[0][0]['AppModel']) || isset($table[0]['AppModel']['TSta_PK_ID'])){
+		$ModelName="AppModel";	
+	}
+	for($i=0;$i<count($table);$i++):?>
 		<?php
 			$count=1;
 			$id="";
-			if(!is_string(array_keys($table[$i])[0])){
-				$lat=$table[$i][0]['TStationsJoin']['LAT'];
-				$lon=$table[$i][0]['TStationsJoin']['LON'];
+			$sta_keys=array_keys($table[$i]);
+			if(!is_string($sta_keys[0])){
+				$lat=$table[$i][0][$ModelName]['LAT'];
+				$lon=$table[$i][0][$ModelName]['LON'];
 				$count=count($table[$i]);	
 			}
 			else{
-				$lat=$table[$i]['TStationsJoin']['LAT'];
-				$lon=$table[$i]['TStationsJoin']['LON'];
-				$id=$table[$i]['TStationsJoin']['TSta_PK_ID'];
+				$lat=$table[$i][$ModelName]['LAT'];
+				$lon=$table[$i][$ModelName]['LON'];
+				$id=$table[$i][$ModelName]['TSta_PK_ID'];
 			}	
 		?>
 		{"type":"Feature","properties":{"count":<?php echo $count;?>,"id":"<?php echo $id;?>"},"geometry":{"type": "Point", "coordinates":[ <?php echo $lon;?>, <?php echo $lat;?>]}}

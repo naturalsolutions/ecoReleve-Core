@@ -44,17 +44,61 @@
 			return sqrt(pow(($x1-$x2),2) + pow(($y1-$y2),2)) >> (21 - $zoom);
 		}
 		
+		//cluster method for a table return by the method find from cake model
 		function cluster($markers, $distance, $zoom) {
+			$clustered = array();
+			$name_key='TStationsJoin';
+			if(isset($markers[0]['AppModel'])){
+				$name_key='AppModel';
+			}
+			/* Loop until all markers have been compared. */
+			while (count($markers)) {
+				$marker  = array_pop($markers);				
+				if(isset($marker[$name_key]['LAT'])){
+					$cluster = array();
+					/* Compare against all markers which are left. */
+					foreach ($markers as $key => $target) {				
+						$pixels = $this->pixelDistance($marker[$name_key]['LAT'], $marker[$name_key]['LON'],
+												$target[$name_key]['LAT'], $target[$name_key]['LON'],
+												$zoom);
+						/* If two markers are closer than given distance remove */
+						/* target marker from array and add it to cluster.      */
+						if ($distance > $pixels){
+							/*printf("Distance between %s,%s and %s,%s is %d pixels.\n", 
+								$marker['lat'], $marker['lon'],
+								$target['lat'], $target['lon'],
+								$pixels);*/
+							unset($markers[$key]);
+							$cluster[] = $target;
+						}
+							
+					}
+
+					/* If a marker has been added to cluster, add also the one  */
+					/* we were comparing to and remove the original from array. */
+					if (count($cluster) > 0) {
+						$cluster[] = $marker;
+						$clustered[] = $cluster;
+					} else {
+						$clustered[] = $marker;
+					}
+				}	
+			}
+			return $clustered;
+		}
+		
+		//cluster method for a table return by the method query from cake model
+		function cluster2($markers, $distance, $zoom) {
 			$clustered = array();
 			/* Loop until all markers have been compared. */
 			while (count($markers)) {
 				$marker  = array_pop($markers);				
-				if(isset($marker['TStationsJoin']['LAT'])){
+				if(isset($marker[0]['rLat'])){
 					$cluster = array();
 					/* Compare against all markers which are left. */
 					foreach ($markers as $key => $target) {				
-						$pixels = $this->pixelDistance($marker['TStationsJoin']['LAT'], $marker['TStationsJoin']['LON'],
-												$target['TStationsJoin']['LAT'], $target['TStationsJoin']['LON'],
+						$pixels = $this->pixelDistance($marker[0]['rLat'], $marker[0]['rLon'],
+												$target[0]['rLat'], $target[0]['rLon'],
 												$zoom);
 						/* If two markers are closer than given distance remove */
 						/* target marker from array and add it to cluster.      */

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Protocol_Form xsi:noNamespaceSchemaLocation="Pocket_XSD_V3-1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<?php echo $debug?>
-	<protocol id="<?php echo $id_proto?>">
+	<protocol id="<?php if(isset($id_proto))echo $id_proto?>">
 		<?php if($find == 1):?>
 			<name>
 				<display_label><?php echo str_replace("TProtocol","",str_replace("_"," ",$nom))?></display_label>
@@ -28,11 +28,11 @@
 							$colonne_decoupe=split("_",$key,2); if(stripos($key, "id")===false && stripos($key, "fk")===false &&stripos($key, "pk")===false):?>
 							<?php //verify if the colunm is link with an id column for see if it's field list
 								$list=false;
-														
-								if(sizeof($colonne_decoupe)>1 && (isset($model->schema()["Id_".$colonne_decoupe[1]]) || isset($model->schema()["ID_".$colonne_decoupe[1]]) || isset($model->schema()["id_".$colonne_decoupe[1]]))){
-									if(isset($model->schema()["Id_".$colonne_decoupe[1]]))$id_type="Id";
-									if(isset($model->schema()["ID_".$colonne_decoupe[1]]))$id_type="ID";
-									if(isset($model->schema()["id_".$colonne_decoupe[1]]))$id_type="id";
+								$schemamodel=$model->schema();						
+								if(sizeof($colonne_decoupe)>1 && (isset($schemamodel["Id_".$colonne_decoupe[1]]) || isset($schemamodel["ID_".$colonne_decoupe[1]]) || isset($schemamodel["id_".$colonne_decoupe[1]]))){
+									if(isset($schemamodel["Id_".$colonne_decoupe[1]]))$id_type="Id";
+									if(isset($schemamodel["ID_".$colonne_decoupe[1]]))$id_type="ID";
+									if(isset($schemamodel["id_".$colonne_decoupe[1]]))$id_type="id";
 									$list=true;
 								}
 							?>

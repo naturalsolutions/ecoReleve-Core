@@ -22,6 +22,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+ header("Access-Control-Allow-Origin: *");
+ 
 /**
  *  Get Cake's root directory
  */
@@ -39,6 +41,5 @@ define('WWW_ROOT', ROOT . DS . APP_DIR . DS . WEBROOT_DIR . DS);
 if (!defined('CAKE_CORE_INCLUDE_PATH')) {
 	define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
 }
-CakePlugin::load('DebugKit');
 
 require APP_DIR . DS . WEBROOT_DIR . DS . 'index.php';

@@ -2,7 +2,7 @@
 	App::uses('Model', 'Model');
 	App::uses('AppModel', 'Model');
 	define("base", "ereleve");
-	include_once '../../lib/Cake/Model/ConnectionManager.php';
+	//include_once '../../lib/Cake/Model/ConnectionManager.php';
 	include_once 'AppController.php';	
 	define("cache_time",3600);
 	class NsmlController extends AppController{		
@@ -38,7 +38,7 @@
 			
 			//try to load the table find to 0 if not
 			try{
-				$model = new AppModel($table,$table,base);
+				$model = new AppModel($table,str_replace(" ","",$table),base);
 				$protocolemodel = new AppModel("TProtocole","TProtocole",base);
 			}
 			catch(Exception $e){
@@ -52,7 +52,10 @@
 				}
 				if($key=="StaDate"){
 					$date_name="StaDate";
-				}				
+				}
+				if($key=="lastArgosDate"){
+					$date_name="lastArgosDate";
+				}	
 				array_push($array_column,$key);		
 			}			
 			$condition_array=array("$date_name IS NOT NULL");
@@ -62,6 +65,9 @@
 			if(isset($this->params['url']['count']))
 				$count=$this->params['url']['count'];
 			
+			//
+			if(isset($this->request->params['count']))
+				$count=$this->request->params['count'];
 			//take place parameter for a place filter
 			if(isset($this->params['url']['place']) && $this->params['url']['place']!="" && $this->params['url']['place']!="null"){
 				$place=$this->params['url']['place'];				
@@ -86,7 +92,7 @@
 				$datearr=$this->params['url']['max-date'];
 			}
 			
-			$condition_array=$model->filter_create($condition_array,$place,$region,"",$datedep,$datearr,$fieldactivity,"","");						
+			$condition_array=$model->filter_create($condition_array,$place,$region,"",$datedep,$datearr,$fieldactivity,"","",$date_name,false);						
 				
 			$prototable=$table;	
 			if(strpos($table,"TProtocol_")!==false)
@@ -124,7 +130,8 @@
 												)+$arrayjoin 
 									);
 			}	
-		
+			//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
+			//fwrite($fp, print_r(,true));
 			$this->set("debug","");					
 			$this->set("exist",$exist);					
 			$this->set("finds",$find);
@@ -141,7 +148,12 @@
 			$model = new AppModel("TMapSelectionManager","TMapSelectionManager",base);	
 			$conditions=array();
 			$debug="";	
-			$table = $model->find("all",array()+$conditions);	
+			$date_name=array("DATE","StaDate","lastArgosDate");
+			//$model->column_exist("V_Qry_VGroups_AllTaxons_EnjilDamStations",$date_name);
+			$table = $model->find("all",array('order'=> array("TSMan_Layer_Name asc"))+$conditions);				
+			$this->set('date_name',$date_name);
+			$this->set('base',base);			
+			$this->set('model',$model);
 			$this->set('views', $table);
 			$this->set("debug",$debug);
 			// Set response as XML
@@ -153,7 +165,7 @@
 
 		//list of fieldactivity
 		function fa_list(){
-			$model = new AppModel("TStations","TStations");
+			$model = new AppModel("TStations","TStations",base);
 			$debug="";
 			//Cache::clear(); 
 			$tables = $model->find("all",array(
@@ -170,7 +182,7 @@
 		
 		//list of region
 		function region_list(){
-			$model = new AppModel("TStations","TStations");
+			$model = new AppModel("TStations","TStations",base);
 			$debug="";
 			$tables = $model->find("all",array(
 							'fields'=>array('Region'),
@@ -186,7 +198,7 @@
 		
 		//list of place
 		function place_list(){
-			$model = new AppModel("TStations","TStations");
+			$model = new AppModel("TStations","TStations",base);
 			$debug="";
 			$region="";
 			$conditions=array();

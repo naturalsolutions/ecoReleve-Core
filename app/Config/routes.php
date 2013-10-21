@@ -33,15 +33,19 @@
  
 	//router config for the cake project
 	Router::connect('/protocole/list',array('controller'=>'proto','action' => 'proto_list'));  //get list of protocole url
-	Router::connect('/protocole/structure',array('controller'=>'proto','action' => 'proto_get'));  //get structure of protocole url
+	Router::connect('/protocole/get/:id_proto',array('controller'=>'proto','action' => 'proto_get','id_proto'=>'[0-9]+'));  //get structure of protocole url
 	Router::connect('/station/get',array('controller'=>'proto','action' => 'station_get'));  //get station url
-	Router::connect('/protocole/taxon/list',array('controller'=>'proto','action' => 'station_get'));  //get station url
-	Router::connect('/view/map_export',array('controller'=>'NSML','action' => 'map_views_list')); //get map export views
+	Router::connect('/protocole/taxon/list',array('controller'=>'proto','action' => 'proto_taxon_get'));  //get proto's taxons url
+	Router::connect('/view/map_export/list',array('controller'=>'NSML','action' => 'map_views_list')); //get map export views list
 	Router::connect('/fa/list',array('controller'=>'NSML','action' => 'fa_list'));  //get field activity list url
 	Router::connect('/region/list',array('controller'=>'NSML','action' => 'region_list'));  //get region list url
 	Router::connect('/place/list',array('controller'=>'NSML','action' => 'place_list'));  //get place list url
 	Router::connect('/nsml/get',array('controller'=>'NSML','action' => 'nsml_get'));  //get nsml from view url
-	Router::connect('/user/get',array('controller'=>'User','action' => 'listv'));  //get nsml from view url
+	Router::connect('/taxon/get',array('controller'=>'proto','action' => 'taxon_get','id_taxon'=>'[0-9]+'));  //get taxon url
+	Router::connect('/taxon/get/:id_taxon',array('controller'=>'proto','action' => 'taxon_get','id_taxon'=>'[0-9]+'));  //get taxon url with id
+	Router::connect('/COUNT/view/map_export/get',array('controller'=>'NSML','action' => 'nsml_get','count' => 'yes'));
+	Router::connect('/taxon/list',array('controller'=>'proto','action' => 'column_list','table_name' => 'TTaxa_name','column_name' => 'NAME_WITHOUT_AUTHORITY'));
+	Router::connect('/user/list',array('controller'=>'User','action' => 'listv'));  //get nsml from view url
 	Router::connect('/carto/station/get',array('controller'=>'Carto','action' => 'station_get')); //get stations for openlayer url
 	
 	

@@ -1,5 +1,4 @@
 <?php
-	include_once '../../lib/Cake/Model/ConnectionManager.php';
 	include_once 'AppController.php';
 	App::uses('Model', 'Model');
 	define("base", "user");

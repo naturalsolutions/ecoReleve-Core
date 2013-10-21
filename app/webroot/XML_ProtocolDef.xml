@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Protocol_Form xsi:noNamespaceSchemaLocation="Pocket_XSD_V3-1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <protocol id="1">
+       	<name>
+            <display_label>Site flore</display_label>
+       	    <label  lang="fr">Site flore</label>
+			<label  lang="en">Site flore</label>
+       	</name>
+       	<description>
+       	    <label  lang="fr">Site flore</label>
+			 <label  lang="en">Site flore</label>
+       	</description>
+        <multispecies>false</multispecies>
+        <monitoring>false</monitoring>
+        <taxonomyFileName></taxonomyFileName>
+    <fields>
+		<field_list id="2">
+			<name>
+			   <label lang="fr">Habitat</label>
+			   <display_label lang="fr">Habitat</display_label>
+			   <label lang="en">Habitat</label>
+			   <display_label lang="en">Habitat</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">20;00;non renseigné|21;21;21-Lagunes|22;22;22-Eaux douces stagnantes|23;23;23-Eaux stagnantes,saumâtres et salées|24;24;24-Eaux courantes|31;31;31-Landes et fruticées|32;32;32-Fruticées sclérophylles|34;34;34-Pelouses calcicoles sèches et steppes|35;35;35-Pelouses silicicoles sèches|37;37;37-Prairies humides et mégaphorbiaies|38;38;38-Prairies mésophiles|41;41;41-Forêts caducifoliées|42;42;42-Forêts de conifères|43;43;43-Forêts mixtes|44;44;44-Forêts riveraines,forêts et fourrés très humides|45;45;45-Forêts sempervirentes non résineuses|53;53;53-Végétation de ceinture des bords des eaux|81;81;81-Prairies améliorées|82;82;82-Cultures|83;83;83-Vergers,bosquets et plantations d'arbres|84;84;84-Alignements d'arbres,haies,petits bois,bocage,parcs|85;85;85-Parcs urbains et grands jardins|86;86;86-Villes,villages et sites industriels|87;87;87-Terrains en friche et terrains vagues|89;89;89-Lagunes et réservoirs industriels, canaux</itemlist>
+				<itemlist lg="en">20;00;non renseigné|21;21;21-Lagunes|22;22;22-Eaux douces stagnantes|23;23;23-Eaux stagnantes,saumâtres et salées|24;24;24-Eaux courantes|31;31;31-Landes et fruticées|32;32;32-Fruticées sclérophylles|34;34;34-Pelouses calcicoles sèches et steppes|35;35;35-Pelouses silicicoles sèches|37;37;37-Prairies humides et mégaphorbiaies|38;38;38-Prairies mésophiles|41;41;41-Forêts caducifoliées|42;42;42-Forêts de conifères|43;43;43-Forêts mixtes|44;44;44-Forêts riveraines,forêts et fourrés très humides|45;45;45-Forêts sempervirentes non résineuses|53;53;53-Végétation de ceinture des bords des eaux|81;81;81-Prairies améliorées|82;82;82-Cultures|83;83;83-Vergers,bosquets et plantations d'arbres|84;84;84-Alignements d'arbres,haies,petits bois,bocage,parcs|85;85;85-Parcs urbains et grands jardins|86;86;86-Villes,villages et sites industriels|87;87;87-Terrains en friche et terrains vagues|89;89;89-Lagunes et réservoirs industriels, canaux</itemlist>
+			</items>
+			<default_value id="20"  lastvalue="true" />
+        </field_list>
+		<field_numeric id="3">
+			<name>
+			   <label lang="fr">Surface</label>
+			   <display_label lang="fr">Surface</display_label>
+				<label lang="en">Surface</label>
+			   <display_label lang="en">Surface</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Surface</label>
+			   <label lang="en">Surface</label>
+			</description>
+			<unit>m²</unit>
+			<constraints>
+			   <max_bound>10000</max_bound>
+				  <min_bound>0</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >0</default_value>
+		</field_numeric>
+		<field_numeric id="4">
+			<name>
+			   <label lang="fr">Recouv-arbo</label>
+			   <display_label lang="fr">Recouv-arbo</display_label>
+				<label lang="en">Recouv-arbo</label>
+			   <display_label lang="en">Recouv-arbo</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Recouv-arbo</label>
+			   <label lang="en">Recouv-arbo</label>
+			</description>
+			<unit></unit>
+			<constraints>
+			   <max_bound>100</max_bound>
+				  <min_bound>0</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >0</default_value>
+		</field_numeric>		
+		<field_numeric id="5">
+			<name>
+			   <label lang="fr">Recouv-arbu</label>
+			   <display_label lang="fr">Recouv-arbu</display_label>
+				<label lang="en">Recouv-arbu</label>
+			   <display_label lang="en">Recouv-arbu</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Recouv-arbu</label>
+			   <label lang="en">Recouv-arbu</label>
+			</description>
+			<unit></unit>
+			<constraints>
+			   <max_bound>100</max_bound>
+				  <min_bound>0</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >0</default_value>
+		</field_numeric>
+		<field_numeric id="6">
+			<name>
+			   <label lang="fr">Recouv-herba</label>
+			   <display_label lang="fr">Recouv-herba</display_label>
+				<label lang="en">Recouv-herba</label>
+			   <display_label lang="en">Recouv-herba</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Recouv-herba</label>
+			   <label lang="en">Recouv-herba</label>
+			</description>
+			<unit></unit>
+			<constraints>
+			   <max_bound>100</max_bound>
+				  <min_bound>0</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >0</default_value>
+		</field_numeric>		
+	    <field_text id ="7">
+			<name>
+			   <label lang="fr">Commentaires</label>
+			   <display_label lang="fr">Commentaires</display_label>
+			   <label lang="en">Commentaires</label>
+			   <display_label lang="en">Commentaires</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			   <string_length>100</string_length>
+			   <multiline>true</multiline>
+			</constraints>
+			<default_value />
+		</field_text>
+	</fields>
+    <exports>
+     	<export name="CSV" format="csv">
+			<templateCsv>
+				<fields>WHEN;DATE;Date|WHEN;TIME;Heure|WHERE;LAT;latitude|WHERE;LON;longitude|WHERE;ELE;altitude|WHERE;WPT;Nom station|WHATOBS;2;Habitat|WHATOBS;3;Surface|WHATOBS;4;Recouvrement arbo|WHATOBS;5;Recouvrement arbu|WHATOBS;6;Recouvrement herba|WHATOBS;7;Commentaires|WHO;FW1;Observateur|WHO;FW2;Projet</fields>
+			</templateCsv>
+		</export>   
+    </exports>
+    </protocol>
+	<protocol id="2">
+       	<name>
+            <display_label>Inventaire flore</display_label>
+       	    <label  lang="fr">Inventaire flore</label>
+			<label  lang="en">Inventaire flore</label>
+       	</name>
+       	<description>
+       	    <label  lang="fr">Inventaire flore</label>
+			 <label  lang="en">Inventaire flore</label>
+       	</description>
+        <multispecies>true</multispecies>
+        <monitoring>false</monitoring>
+        <taxonomyFileName></taxonomyFileName>
+    <fields>
+		<field_numeric id="2">
+			<name>
+			   <label lang="fr">Abond-domin</label>
+			   <display_label lang="fr">Abond-domin</display_label>
+				<label lang="en">Abond-domin</label>
+			   <display_label lang="en">Abond-domin</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Abond-domin</label>
+			   <label lang="en">Abond-domin</label>
+			</description>
+			<unit></unit>
+			<constraints>
+			   <max_bound>10</max_bound>
+				  <min_bound>0</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >2</default_value>
+		</field_numeric>
+		<field_list id="3">
+			<name>
+			   <label lang="fr">Strate</label>
+			   <display_label lang="fr">Strate</display_label>
+			   <label lang="en">Strate</label>
+			   <display_label lang="en">Strate</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">20;20;herbacée|21;21;arbustive|22;22;arborée</itemlist>
+				<itemlist lg="en">20;20;herbacée|21;21;arbustive|22;22;arborée</itemlist>
+			</items>
+			<default_value id="20"  lastvalue="true" />
+    </field_list>	
+    
+		<field_list id="4">
+			<name>
+			   <label lang="fr">Indigenat</label>
+			   <display_label lang="fr">Statut d'indigénat</display_label>
+			   <label lang="en">Indigenat</label>
+			   <display_label lang="en">Statut d'indigénat</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">35;35;Indigène|36;36;Naturalisée|37;37;Subspontanée|38;38;Cultivée|39;39;Plantée|40;40;Ne sait pas</itemlist>
+				<itemlist lg="en">35;35;Indigène|36;36;Naturalisée|37;37;Subspontanée|38;38;Cultivée|39;39;Plantée|40;40;Ne sait pas</itemlist>
+			</items>
+			<default_value id="37"  lastvalue="true" />
+    </field_list>	
+	</fields>
+    <exports>
+     	<export name="CSV" format="csv">
+			<templateCsv>
+				<fields>WHEN;DATE;Date|WHEN;TIME;Heure|WHERE;LAT;latitude|WHERE;LON;longitude|WHERE;ELE;altitude|WHERE;WPT;Nom station|WHATTAX;TAXON_ID;Id_taxon|WHATTAX;TAXON;Nom_taxon|WHATOBS;2;Abondance-dominance|WHATOBS;3;Strate||WHATOBS;4;Indigenat|WHO;FW1;Observateur|WHO;FW2;Projet</fields>
+			</templateCsv>
+		</export>   
+    </exports>
+    </protocol>
+	<protocol id="3">
+       	<name>
+            <display_label>Meteo</display_label>
+       	    <label  lang="fr">Meteo</label>
+			<label  lang="en">Meteo</label>
+       	</name>
+       	<description>
+       	    <label  lang="fr">Meteo</label>
+			 <label  lang="en">Meteo</label>
+       	</description>
+        <multispecies>false</multispecies>
+        <monitoring>false</monitoring>
+        <taxonomyFileName></taxonomyFileName>
+    <fields>
+		<field_list id="1">
+			<name>
+			   <label lang="fr">Vent</label>
+			   <display_label lang="fr">Vent</display_label>
+			   <label lang="en">Vent</label>
+			   <display_label lang="en">Vent</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">0;0;0|1;1;1|2;2;2|3;3;3</itemlist>
+				<itemlist lg="en">0;0;0|1;1;1|2;2;2|3;3;3</itemlist>
+			</items>
+			<default_value id="0"  lastvalue="true" />
+        </field_list>
+		<field_list id="2">
+			<name>
+			   <label lang="fr">Nébulosité(%)</label>
+			   <display_label lang="fr">Nébulosité(%)</display_label>
+			   <label lang="en">Nébulosité(%)</label>
+			   <display_label lang="en">Nébulosité(%)</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">1;1;0-25|2;2;25-50|3;3;50-75|4;4;>75</itemlist>
+				<itemlist lg="en">1;1;0-25|2;2;25-50|3;3;50-75|4;4;>75</itemlist>
+			</items>
+			<default_value id="1"  lastvalue="false" />
+        </field_list>
+		<field_numeric id="3">
+			<name>
+			   <label lang="fr">Tempétature</label>
+			   <display_label lang="fr">Tempétature</display_label>
+				<label lang="en">Tempétature</label>
+			   <display_label lang="en">Tempétature</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Tempétature</label>
+			   <label lang="en">Tempétature</label>
+			</description>
+			<unit></unit>
+			<constraints>
+			   <max_bound>50</max_bound>
+				<min_bound>-30</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >0</default_value>
+		</field_numeric>
+		<field_list id="4">
+			<name>
+			   <label lang="fr">Pluie</label>
+			   <display_label lang="fr">Pluie</display_label>
+			   <label lang="en">Pluie</label>
+			   <display_label lang="en">Pluie</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">0;0;0|1;1;1|2;2;2|3;3;3</itemlist>
+				<itemlist lg="en">0;0;0|1;1;1|2;2;2|3;3;3</itemlist>
+			</items>
+			<default_value id="0"  lastvalue="true" />
+        </field_list>
+	</fields>
+    <exports>
+     	<export name="CSV" format="csv">
+			<templateCsv>
+				<fields>WHEN;DATE;Date|WHEN;TIME;Heure|WHERE;LAT;latitude|WHERE;LON;longitude|WHERE;ELE;altitude|WHERE;WPT;Nom station|WHATOBS;1;Vent|WHATOBS;2;Nébulosité|WHATOBS;3;Tempétature|WHATOBS;4;Pluie|WHO;FW1;Observateur|WHO;FW2;Projet</fields>
+			</templateCsv>
+		</export>   
+    </exports>
+	</protocol>
+    <protocol id="4">
+       	<name>
+            <display_label>Site faune</display_label>
+       	    <label  lang="fr">Site faune</label>
+			<label  lang="en">Site faune</label>
+       	</name>
+       	<description>
+       	    <label  lang="fr">Site faune</label>
+			 <label  lang="en">Site faune</label>
+       	</description>
+        <multispecies>false</multispecies>
+        <monitoring>false</monitoring>
+        <taxonomyFileName></taxonomyFileName>
+    <fields>
+		<field_list id="2">
+			<name>
+			   <label lang="fr">Habitat</label>
+			   <display_label lang="fr">Habitat</display_label>
+			   <label lang="en">Habitat</label>
+			   <display_label lang="en">Habitat</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">20;00;non renseigné|21;21;21-Lagunes|22;22;22-Eaux douces stagnantes|23;23;23-Eaux stagnantes,saumâtres et salées|24;24;24-Eaux courantes|31;31;31-Landes et fruticées|32;32;32-Fruticées sclérophylles|34;34;34-Pelouses calcicoles sèches et steppes|35;35;35-Pelouses silicicoles sèches|37;37;37-Prairies humides et mégaphorbiaies|38;38;38-Prairies mésophiles|41;41;41-Forêts caducifoliées|42;42;42-Forêts de conifères|43;43;43-Forêts mixtes|44;44;44-Forêts riveraines,forêts et fourrés très humides|45;45;45-Forêts sempervirentes non résineuses|53;53;53-Végétation de ceinture des bords des eaux|81;81;81-Prairies améliorées|82;82;82-Cultures|83;83;83-Vergers,bosquets et plantations d'arbres|84;84;84-Alignements d'arbres,haies,petits bois,bocage,parcs|85;85;85-Parcs urbains et grands jardins|86;86;86-Villes,villages et sites industriels|87;87;87-Terrains en friche et terrains vagues|89;89;89-Lagunes et réservoirs industriels, canaux</itemlist>
+				<itemlist lg="en">20;00;non renseigné|21;21;21-Lagunes|22;22;22-Eaux douces stagnantes|23;23;23-Eaux stagnantes,saumâtres et salées|24;24;24-Eaux courantes|31;31;31-Landes et fruticées|32;32;32-Fruticées sclérophylles|34;34;34-Pelouses calcicoles sèches et steppes|35;35;35-Pelouses silicicoles sèches|37;37;37-Prairies humides et mégaphorbiaies|38;38;38-Prairies mésophiles|41;41;41-Forêts caducifoliées|42;42;42-Forêts de conifères|43;43;43-Forêts mixtes|44;44;44-Forêts riveraines,forêts et fourrés très humides|45;45;45-Forêts sempervirentes non résineuses|53;53;53-Végétation de ceinture des bords des eaux|81;81;81-Prairies améliorées|82;82;82-Cultures|83;83;83-Vergers,bosquets et plantations d'arbres|84;84;84-Alignements d'arbres,haies,petits bois,bocage,parcs|85;85;85-Parcs urbains et grands jardins|86;86;86-Villes,villages et sites industriels|87;87;87-Terrains en friche et terrains vagues|89;89;89-Lagunes et réservoirs industriels, canaux</itemlist>
+			</items>
+			<default_value id="20"  lastvalue="true" />
+        </field_list>
+	    <field_text id ="3">
+			<name>
+			   <label lang="fr">Commentaires</label>
+			   <display_label lang="fr">Commentaires</display_label>
+			   <label lang="en">Commentaires</label>
+			   <display_label lang="en">Commentaires</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			   <string_length>100</string_length>
+			   <multiline>true</multiline>
+			</constraints>
+			<default_value />
+		</field_text>
+	</fields>
+    <exports>
+     	<export name="CSV" format="csv">
+			<templateCsv>
+				<fields>WHEN;DATE;Date|WHEN;TIME;Heure|WHERE;LAT;latitude|WHERE;LON;longitude|WHERE;ELE;altitude|WHERE;WPT;Nom station|WHATOBS;2;Habitat|WHATOBS;3;Commentaires|WHO;FW1;Observateur|WHO;FW2;Projet</fields>
+			</templateCsv>
+		</export>   
+    </exports>
+    </protocol>	
+	<protocol id="5">
+       	<name>
+            <display_label>Inventaire faune</display_label>
+       	    <label  lang="fr">Inventaire faune</label>
+			<label  lang="en">Inventaire faune</label>
+       	</name>
+       	<description>
+       	    <label  lang="fr">Inventaire faune</label>
+			 <label  lang="en">Inventaire faune</label>
+       	</description>
+        <multispecies>true</multispecies>
+        <monitoring>false</monitoring>
+        <taxonomyFileName></taxonomyFileName>
+    <fields>
+		<field_numeric id="2">
+			<name>
+			   <label lang="fr">Quantité(exacte)</label>
+			   <display_label lang="fr">Quantité(exacte)</display_label>
+				<label lang="en">Quantité(exacte)</label>
+			   <display_label lang="en">Quantité(exacte)</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Quantité(exacte)</label>
+			   <label lang="en">Quantité(exacte)</label>
+			</description>
+			<unit></unit>
+			<constraints>
+			   <max_bound>1000</max_bound>
+				  <min_bound>0</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >0</default_value>
+		</field_numeric>	
+		<field_numeric id="3">
+			<name>
+			   <label lang="fr">Qté(estim) min</label>
+			   <display_label lang="fr">Qté(estim) min</display_label>
+				<label lang="en">Qté(estim) min</label>
+			   <display_label lang="en">Qté(estim) min</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Qté(estim) min</label>
+			   <label lang="en">Qté(estim) min</label>
+			</description>
+			<unit></unit>
+			<constraints>
+			   <max_bound>1000</max_bound>
+				  <min_bound>0</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >0</default_value>
+		</field_numeric>		
+		<field_numeric id="4">
+			<name>
+			   <label lang="fr">Qté(estim) max</label>
+			   <display_label lang="fr">Qté(estim) max</display_label>
+				<label lang="en">Qté(estim) max</label>
+			   <display_label lang="en">Qté(estim) max</display_label>
+			</name>
+			<description>
+			   <label lang="fr">Qté(estim) max</label>
+			   <label lang="en">Qté(estim) max</label>
+			</description>
+			<unit></unit>
+			<constraints>
+			   <max_bound>1000</max_bound>
+				  <min_bound>0</min_bound>
+			   <precision>1</precision>
+			</constraints>
+			<default_value lastvalue="false" >0</default_value>
+		</field_numeric>		
+		<field_list id="5">
+			<name>
+			   <label lang="fr">Quantité(fréquence)</label>
+			   <display_label lang="fr">Quantité(fréquence)</display_label>
+			   <label lang="en">Qantité(fréquence)</label>
+			   <display_label lang="en">Qantité(fréquence)</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">1;1;0|2;2;0.5|3;3;1</itemlist>
+				<itemlist lg="en">1;1;0|2;2;0.5|3;3;1</itemlist>
+			</items>
+			<default_value id="1"  lastvalue="true" />
+        </field_list>		
+		<field_list id="6">
+			<name>
+			   <label lang="fr">Statut activité 1</label>
+			   <display_label lang="fr">Statut activité 1</display_label>
+			   <label lang="en">Statut activité 1	</label>
+			   <display_label lang="en">Statut activité 1	</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">1;1;Reproduction|2;2;Hivernage|3;3;Halte migratoire|4;4;Swarming|5;5;Nourrissage|6;6;Non repro|7;7;Survol|8;8;Erratisme|9;9;Sédentaire|10;10;Indéfini|11;11;Non renseigné</itemlist>
+				<itemlist lg="en">1;1;Reproduction|2;2;Hivernage|3;3;Halte migratoire|4;4;Swarming|5;5;Nourrissage|6;6;Non repro|7;7;Survol|8;8;Erratisme|9;9;Sédentaire|10;10;Indéfini|11;11;Non renseigné</itemlist>
+			</items>
+			<default_value id="11"  lastvalue="true" />
+        </field_list>		
+		<field_list id="7">
+			<name>
+			   <label lang="fr">Statut activité 2</label>
+			   <display_label lang="fr">Statut activité 2</display_label>
+			   <label lang="en">Statut activité 2</label>
+			   <display_label lang="en">Statut activité 2</display_label>
+			</name>
+			<description>
+			   <label/>
+			</description>
+			<constraints>
+			   <required>false</required>
+			</constraints>
+			<items>
+				<itemlist lg="fr">1;1;Reproduction|2;2;Hivernage|3;3;Halte migratoire|4;4;Swarming|5;5;Nourrissage|6;6;Non repro|7;7;Survol|8;8;Erratisme|9;9;Sédentaire|10;10;Indéfini|11;11;Non renseigné</itemlist>
+				<itemlist lg="en">1;1;Reproduction|2;2;Hivernage|3;3;Halte migratoire|4;4;Swarming|5;5;Nourrissage|6;6;Non repro|7;7;Survol|8;8;Erratisme|9;9;Sédentaire|10;10;Indéfini|11;11;Non renseigné</itemlist>
+			</items>
+    </field_list>				
+	</fields>
+    <exports>
+     	<export name="CSV" format="csv">
+			<templateCsv>
+				<fields>WHEN;DATE;Date|WHEN;TIME;Heure|WHERE;LAT;latitude|WHERE;LON;longitude|WHERE;ELE;altitude|WHERE;WPT;Nom station|WHATTAX;TAXON_ID;Id_taxon|WHATTAX;TAXON;Nom_taxon|WHATOBS;2;Quantité(exacte)|WHATOBS;3;Quantité(estimée)min|WHATOBS;4;Quantité(estimée)max|WHATOBS;5;Quantité(fréquence)|WHATOBS;6;Statut d'activité 1|WHATOBS;7;Statut d'activité 2|WHO;FW1;Observateur|WHO;FW2;Projet</fields>
+			</templateCsv>
+		</export>   
+    </exports>
+    </protocol>	
+	<form/> 
+</Protocol_Form>

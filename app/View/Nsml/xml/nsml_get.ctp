@@ -54,7 +54,7 @@ if(isset($find['AppModel']['FieldWorker2']))
 <?php endfor?>
 </WHO>
 <WHAT>
-	<?php if(isset($find['AppModel']['Taxon']) || isset($find['AppModel']['Name_Taxon']) || isset($find['AppModel']['name_taxon'])):?>
+	<?php if(isset($find['AppModel']['Taxon']) || isset($find['AppModel']['Name_Taxon']) || isset($find['AppModel']['name_taxon']) || isset($find['AppModel']['species']) || isset($find['AppModel']['id34@TCaracThes_Species_Precision']) || isset($find['AppModel']['Vernacular_name']) || isset($find['AppModel']['Latin_name'])):?>
 	<TAXON>
 		<TAXON_ID><?php if(isset($find['AppModel']['Id_Taxon'])) echo $find['AppModel']['Id_Taxon'];
 						else if(isset($find['AppModel']['id_taxon'])) echo $find['AppModel']['id_taxon'];
@@ -63,19 +63,23 @@ if(isset($find['AppModel']['FieldWorker2']))
 					if(isset($find['AppModel']['Taxon']))echo htmlspecialchars($find['AppModel']['Taxon']);
 					else if(isset($find['AppModel']['Name_Taxon']))echo htmlspecialchars($find['AppModel']['Name_Taxon']);
 					else if(isset($find['AppModel']['name_taxon']))echo htmlspecialchars($find['AppModel']['name_taxon']);
+					else if(isset($find['AppModel']['species']))echo htmlspecialchars($find['AppModel']['species']);
+					else if(isset($find['AppModel']['id34@TCaracThes_Species_Precision']))echo htmlspecialchars($find['AppModel']['id34@TCaracThes_Species_Precision']);
+					else if(isset($find['AppModel']['Vernacular_name']))echo htmlspecialchars($find['AppModel']['Vernacular_name']);
+					else if(isset($find['AppModel']['Latin_name']))echo htmlspecialchars($find['AppModel']['Latin_name']);
 		?></TAXON_NAME>
 		<QUALITY></QUALITY>
 		<PHOTO></PHOTO>
 	</TAXON>
 	<?php endif?>
 	<OBSERVATIONS>
-		<?php  $j=14;$array_usecolumn=['ELE','NbFieldWorker','Date','StaName','StaDate','LON','LAT','Precision','FW1','TSta_PK_ID','DATE','FieldWorker1','FieldWorker2','FW2','Ind_ID','Id_Taxon','name_taxon','Name_Taxon','Taxon','Site_name'];
+		<?php  $j=14;$array_usecolumn=array('id34@TCaracThes_Species_Precision','species','Vernacular_name','Latin_name','ELE','NbFieldWorker','Date','StaName','StaDate','LON','LAT','Precision','FW1','TSta_PK_ID','DATE','FieldWorker1','FieldWorker2','FW2','Ind_ID','Id_Taxon','name_taxon','Name_Taxon','Taxon','Site_name');
 		foreach ($model->schema() as $key=>$val):?>
 			<?php if(!in_array($key,$array_usecolumn) && isset($find['AppModel'][$key]) && $find['AppModel'][$key]!="" && stripos($key, "id")===false && stripos($key, "fk")===false &&stripos($key, "pk")===false):?>
 				<OBSERVATION>
 					<ID><?php echo $j;?></ID>
 					<NAME><?php echo $key;?></NAME>
-					<VALUE><?php echo  str_replace(["<",">","&"], ["inferieur à","superieur à","et"], $find['AppModel'][$key]);?></VALUE>
+					<VALUE><?php echo  str_replace(array("<",">","&"), array("inferieur à","superieur à","et"), $find['AppModel'][$key]);?></VALUE>
 				</OBSERVATION>	
 				<?php $j++?>
 			<?php endif?>				
@@ -84,12 +88,12 @@ if(isset($find['AppModel']['FieldWorker2']))
 			<OBSERVATION>
 				<ID><?php echo $j+1;?></ID>
 				<NAME><?php echo 'Region';?></NAME>
-				<VALUE><?php echo  str_replace(["<",">","&"], ["inferieur à","superieur à","et"], $find['TStationsJoin']['Region']);?></VALUE>
+				<VALUE><?php echo  str_replace(array("<",">","&"), array("inferieur à","superieur à","et"), $find['TStationsJoin']['Region']);?></VALUE>
 			</OBSERVATION>
 			<OBSERVATION>
 				<ID><?php echo $j+1;?></ID>
 				<NAME><?php echo 'Place';?></NAME>
-				<VALUE><?php echo  str_replace(["<",">","&"], ["inferieur à","superieur à","et"], $find['TStationsJoin']['Place']);?></VALUE>
+				<VALUE><?php echo  str_replace(array("<",">","&"), array("inferieur à","superieur à","et"), $find['TStationsJoin']['Place']);?></VALUE>
 			</OBSERVATION>
 		<?php endif?>
 	</OBSERVATIONS>
