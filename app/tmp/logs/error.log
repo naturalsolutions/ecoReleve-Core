@@ -15263,3 +15263,1651 @@ Stack Trace:
 #8 C:\Users\tahamada\wamp\www\html\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
 #9 C:\Users\tahamada\wamp\www\html\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2013-10-21 14:58:22 Error: [MissingControllerException] Controller class StationGetController could not be found.
+Exception Attributes: array (
+  'class' => 'StationGetController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-coreTMP/station_get?url=station_get&id_proto=28&place=&region=&idate=&taxonsearch=&bbox=2.35%2C23.499999999999994%2C2.37%2C23.699999999999994
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#2 {main}
+2013-10-21 14:58:22 Error: [MissingControllerException] Controller class FaviconController could not be found.
+Exception Attributes: array (
+  'class' => 'FaviconController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-coreTMP/favicon.ico?url=favicon.ico
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#2 {main}
+2013-10-22 09:32:11 Error: [MissingControllerException] Controller class StationGet2Controller could not be found.
+Exception Attributes: array (
+  'class' => 'StationGet2Controller',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-coreTMP/station_get2?url=station_get2
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#2 {main}
+2013-10-22 09:32:12 Error: [MissingControllerException] Controller class FaviconController could not be found.
+Exception Attributes: array (
+  'class' => 'FaviconController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-coreTMP/favicon.ico?url=favicon.ico
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#2 {main}
+2013-10-25 11:15:33 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 441]
+2013-10-25 11:15:33 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/proto/station_get2?url=proto%2Fstation_get2
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:15:34 Error: [MissingControllerException] Controller class FaviconController could not be found.
+Exception Attributes: array (
+  'class' => 'FaviconController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-coreTMP/favicon.ico?url=favicon.ico
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#2 {main}
+2013-10-25 11:15:36 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 441]
+2013-10-25 11:15:36 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/get/4353?url=taxon%2Fget%2F4353
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:15:36 Error: [MissingControllerException] Controller class FaviconController could not be found.
+Exception Attributes: array (
+  'class' => 'FaviconController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-coreTMP/favicon.ico?url=favicon.ico
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#2 {main}
+2013-10-25 11:15:56 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 441]
+2013-10-25 11:15:56 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=colly+
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:15:57 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 441]
+2013-10-25 11:15:57 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=colly+bu
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:17:01 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 441]
+2013-10-25 11:17:01 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/get/4353?url=taxon%2Fget%2F4353
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:17:01 Error: [MissingControllerException] Controller class FaviconController could not be found.
+Exception Attributes: array (
+  'class' => 'FaviconController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-coreTMP/favicon.ico?url=favicon.ico
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#2 {main}
+2013-10-25 11:17:03 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 441]
+2013-10-25 11:17:03 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/get/4353?url=taxon%2Fget%2F4353
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 441, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:17:03 Error: [MissingControllerException] Controller class FaviconController could not be found.
+Exception Attributes: array (
+  'class' => 'FaviconController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-coreTMP/favicon.ico?url=favicon.ico
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#2 {main}
+2013-10-25 11:17:54 Error: Fatal Error (1): Class 'CartoModel' not found in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 441]
+2013-10-25 11:17:54 Error: [FatalErrorException] Class 'CartoModel' not found
+Request URL: /ecoReleve-coreTMP/proto/station_get2?url=proto%2Fstation_get2&format=geojson
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'CartoMod...', 'C:\inetpub\wwwr...', 441)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'CartoMod...', 'C:\inetpub\wwwr...', 441, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Class 'CartoMod...', 'C:\inetpub\wwwr...', 441, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:18:25 Error: [MissingViewException] View file "C:\inetpub\wwwroot\ecoReleve-coreTMP\app\View\Proto/geojson\station_get2.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\inetpub\\wwwroot\\ecoReleve-coreTMP\\app\\View\\Proto/geojson\\station_get2.ctp',
+)
+Request URL: /ecoReleve-coreTMP/proto/station_get2?url=proto%2Fstation_get2&format=geojson
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\inetpub\wwwroot\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 C:\inetpub\wwwroot\ecoReleve-coreTMP\index.php(43): require('C:\inetpub\wwwr...')
+#6 {main}
+2013-10-25 11:26:28 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:28 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/proto/station_get2?url=proto%2Fstation_get2&format=geojson&id_taxon=2
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:41 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:41 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=pax+
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:42 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:42 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=pax+fl
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:45 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:45 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=pax+f
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:46 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:46 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=pax+fil+
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:48 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:48 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=pax+fil
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:49 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:49 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=pax+fi
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:55 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:55 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=Coll
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:56 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:56 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=Colly+b
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:26:57 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR in [C:\inetpub\wwwroot\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 443]
+2013-10-25 11:26:57 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR
+Request URL: /ecoReleve-coreTMP/taxon/list?url=taxon%2Flist&filter=Colly+but
+Stack Trace:
+#0 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#2 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\inetpub\wwwr...', 443, Array)
+#3 C:\inetpub\wwwroot\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 11:47:19 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ',
+  'enabled' => true,
+)
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2?format=geojson
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('mycoflore')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1108): Model->setDataSource('mycoflore')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3243): Model->setSource('TStations')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2795): Model->getDataSource()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2732): Model->_findCount('before', Array)
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2691): Model->buildQuery('count', Array)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(408): Model->find('count')
+#9 [internal function]: ProtoController->station_get2()
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-10-25 12:29:35 Error: [XmlException] Invalid input.
+Request URL: /html/ecoReleve-coreTMP/user/listv?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Utility\Xml.php(100): Xml::fromArray(Array, Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\User\xml\listv.ctp(3): Xml::build(Object(Model))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(955): include('C:\Users\tahama...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(917): View->_evaluate('C:\Users\tahama...', Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(471): View->_render('C:\Users\tahama...')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-25 12:30:02 Error: [XmlException] Invalid input.
+Request URL: /html/ecoReleve-coreTMP/user/listv?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Utility\Xml.php(100): Xml::fromArray(Array, Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\User\xml\listv.ctp(3): Xml::build(Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(955): include('C:\Users\tahama...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(917): View->_evaluate('C:\Users\tahama...', Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(471): View->_render('C:\Users\tahama...')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-25 12:37:42 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\User\xml\listv.ctp, line 11]
+2013-10-25 12:37:43 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /html/ecoReleve-coreTMP/user/listv?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 11, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 11, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 12:37:51 Error: [XmlException] Invalid input.
+Request URL: /html/ecoReleve-coreTMP/user/listv?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Utility\Xml.php(100): Xml::fromArray(Array, Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\User\xml\listv.ctp(2): Xml::build(Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(955): include('C:\Users\tahama...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(917): View->_evaluate('C:\Users\tahama...', Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(471): View->_render('C:\Users\tahama...')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-25 13:07:01 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\User\xml\listv.ctp, line 13]
+2013-10-25 13:07:02 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /html/ecoReleve-coreTMP/user/listv?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 13, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 13, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 13:13:30 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[IMSSP]: An invalid encoding was specified for SQLSRV_ATTR_ENCODING.',
+  'enabled' => true,
+)
+Request URL: /html/ecoReleve-coreTMP/user/listv
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3454): ConnectionManager::getDataSource('user')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1124): Model->setDataSource('user')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('TUsers')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Model->getDataSource()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\UserController.php(56): Model->find('all', Array)
+#8 [internal function]: UserController->listv()
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-10-25 15:09:27 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 447]
+2013-10-25 15:09:27 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2?format=geojson&id_taxon=18978&cluster=yes
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 447)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 447, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 447, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-25 15:25:02 Error: [MissingLayoutException] Layout file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Layouts\datatablejs\datatablejs.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Layouts\\datatablejs\\datatablejs.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2?format=dataTablejs&id_taxon=18978&cluster=yes
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(500): View->_getLayoutFileName('datatablejs')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(470): View->renderLayout('', 'datatablejs')
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-10-25 15:47:29 Error: [MissingViewException] View file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto/xml\station_get2.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Proto/xml\\station_get2.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-25 15:49:17 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\xml\station_get2.ctp, line 2]
+2013-10-25 15:49:17 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 2, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 2, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 10:20:28 Error: [MissingActionException] Action ProtoController::prot_list() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProtoController',
+  'action' => 'prot_list',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/prot_list
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-10-28 10:20:44 Error: [MissingActionException] Action ProtoController::proto_list&format=json() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProtoController',
+  'action' => 'proto_list&format=json',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/proto_list&format=json
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-10-28 10:20:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 77]
+2013-10-28 10:20:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /html/ecoReleve-coreTMP/proto/proto_list?format=json
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\tahama...', 77)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\tahama...', 77, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\tahama...', 77, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 10:34:55 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\xml\station_get2.ctp, line 2]
+2013-10-28 10:34:55 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 2, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 2, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 10:35:19 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\xml\station_get2.ctp, line 2]
+2013-10-28 10:35:19 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 2, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 2, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 10:41:25 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\xml\station_get2.ctp, line 8]
+2013-10-28 10:41:25 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 8, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 8, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 12:29:44 Error: Fatal Error (1): Class 'ProtocoleTaxon' not found in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 576]
+2013-10-28 12:29:44 Error: [FatalErrorException] Class 'ProtocoleTaxon' not found
+Request URL: /html/ecoReleve-coreTMP/proto/proto_taxon_get?id_proto=2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Class 'Protocol...', 'C:\Users\tahama...', 576)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Protocol...', 'C:\Users\tahama...', 576, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Protocol...', 'C:\Users\tahama...', 576, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 12:30:26 Error: [MissingViewException] View file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto/json\proto_taxon_get.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Proto/json\\proto_taxon_get.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/proto_taxon_get?id_proto=2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-28 12:40:48 Error: Fatal Error (1): Call to undefined method ProtoController::find() in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 844]
+2013-10-28 12:40:48 Error: [FatalErrorException] Call to undefined method ProtoController::find()
+Request URL: /html/ecoReleve-coreTMP/proto/column_list
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Users\tahama...', 844)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Users\tahama...', 844, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Users\tahama...', 844, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 12:44:50 Error: [MissingTableException] Table TProtocole for model AppModel was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'TProtocole',
+  'class' => 'AppModel',
+  'ds' => 'mycoflore',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/column_list?table_name=TProtocole&column_name=Relation
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('TProtocole')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Model->getDataSource()
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(820): Model->find('all', Array)
+#4 [internal function]: ProtoController->column_list()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-28 12:48:52 Error: [MissingViewException] View file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto/json\column_list.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Proto/json\\column_list.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/column_list?table_name=TTaxa&column_name=NAME_VALID_WITHOUT_AUTHORITY&limit=20
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-28 12:52:37 Error: [MissingActionException] Action ProtoController::column_list&format=json() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProtoController',
+  'action' => 'column_list&format=json',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/column_list&format=json
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-10-28 13:10:49 Error: Fatal Error (4): syntax error, unexpected 'message' (T_STRING), expecting ',' or ';' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\json\proto_taxon_get.ctp, line 7]
+2013-10-28 13:10:49 Error: [FatalErrorException] syntax error, unexpected 'message' (T_STRING), expecting ',' or ';'
+Request URL: /html/ecoReleve-coreTMP/proto/proto_taxon_get?id_proto=1
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 7, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 7, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 13:11:31 Error: Fatal Error (4): syntax error, unexpected 't' (T_STRING), expecting ',' or ';' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\json\proto_taxon_get.ctp, line 10]
+2013-10-28 13:11:31 Error: [FatalErrorException] syntax error, unexpected 't' (T_STRING), expecting ',' or ';'
+Request URL: /html/ecoReleve-coreTMP/proto/proto_taxon_get?id_proto=1
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 10, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 10, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 13:22:30 Error: Fatal Error (4): syntax error, unexpected 'message' (T_STRING), expecting ',' or ';' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\json\column_list.ctp, line 6]
+2013-10-28 13:22:31 Error: [FatalErrorException] syntax error, unexpected 'message' (T_STRING), expecting ',' or ';'
+Request URL: /html/ecoReleve-coreTMP/proto/column_list?table_name=ttaxa&column_name=NAME_VALID_WITHOUT_AUTHORITY&limit=20&format=json
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 6, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 6, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 13:34:07 Error: Fatal Error (4): syntax error, unexpected ''group'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 820]
+2013-10-28 13:34:07 Error: [FatalErrorException] syntax error, unexpected ''group'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /html/ecoReleve-coreTMP/taxon/list
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 820)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 820, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 820, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 13:44:25 Error: Fatal Error (1): Call to undefined function prin_r() in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\xml\taxon_get.ctp, line 7]
+2013-10-28 13:44:25 Error: [FatalErrorException] Call to undefined function prin_r()
+Request URL: /html/ecoReleve-coreTMP/taxon/get/?FAMILY=Paxillaceae
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Users\tahama...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Users\tahama...', 7, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Users\tahama...', 7, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-28 14:22:12 Error: [MissingViewException] View file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto/test\taxon_get.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Proto/test\\taxon_get.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/taxon/get/?FAMILY=Paxillaceae&format=test
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-28 14:22:50 Error: [MissingViewException] View file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\taxon_get.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Proto\\taxon_get.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/taxon/get/?FAMILY=Paxillaceae&format=test
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-28 14:23:12 Error: [MissingViewException] View file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\taxon_get.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Proto\\taxon_get.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/taxon/get/?FAMILY=Paxillaceae&format=test
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-28 14:23:34 Error: [MissingViewException] View file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Proto\taxon_get.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Proto\\taxon_get.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/taxon/get/?FAMILY=Paxillaceae&format=test
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-28 14:23:56 Error: [MissingLayoutException] Layout file "C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\View\Layouts\test\default.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\Users\\tahamada\\wamp\\www\\html\\ecoReleve-coreTMP\\app\\View\\Layouts\\test\\default.ctp',
+)
+Request URL: /html/ecoReleve-coreTMP/taxon/get/?FAMILY=Paxillaceae&format=test
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(500): View->_getLayoutFileName('default')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\View\View.php(470): View->renderLayout('', 'default')
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-10-28 14:48:25 Error: Fixture creation for "TTaxa" failed "SQLSTATE[42S01]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Il existe déjà un objet nommé 'TTaxa' dans la base de données."
+2013-10-28 14:48:25 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Violation de la contrainte PRIMARY KEY 'TTaxa_PK'. Impossible d'insérer une clé en double dans l'objet 'dbo.TTaxa'.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2927): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TTaxa', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TTaxa', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-28 14:49:15 Error: Fixture creation for "TTaxa" failed "SQLSTATE[42S01]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Il existe déjà un objet nommé 'TTaxa' dans la base de données."
+2013-10-28 14:49:16 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Violation de la contrainte PRIMARY KEY 'TTaxa_PK'. Impossible d'insérer une clé en double dans l'objet 'dbo.TTaxa'.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2927): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TTaxa', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TTaxa', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-28 16:09:08 Error: [UnexpectedValueException] Referenced fixture class Taxon,app.TaxonName (Test\Fixture\Taxon,app.TaxonNameFixture.php) not found
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(79): CakeFixtureManager->_loadFixtures(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(57): CakeFixtureManager->fixturize(Object(ProtoController2Test))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#7 {main}
+2013-10-28 16:11:56 Error: [UnexpectedValueException] Referenced fixture class TaxonAddi (Test\Fixture\TaxonAddiFixture.php) not found
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(79): CakeFixtureManager->_loadFixtures(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(57): CakeFixtureManager->fixturize(Object(ProtoController2Test))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#7 {main}
+2013-10-29 09:31:01 Error: [MissingDatasourceConfigException] The datasource configuration "test" was not found in database.php
+Exception Attributes: array (
+  'config' => 'test',
+)
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('test')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(94): ConnectionManager::getDataSource('test')
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(73): CakeFixtureManager->_initDb()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(57): CakeFixtureManager->fixturize(Object(ProtoController2Test))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#9 {main}
+2013-10-29 09:34:21 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('posts', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('posts', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ToolbarAccessTestCase))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ToolbarAccessTestCase), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 09:59:11 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 09:59:32 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:03:18 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:04:51 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:05:40 Error: [PDOException] SQLSTATE[22003]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Une erreur de dépassement arithmétique s'est produite lors de la conversion de nvarchar en type de données numeric.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:06:21 Error: [PDOException] SQLSTATE[22003]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Une erreur de dépassement arithmétique s'est produite lors de la conversion de nvarchar en type de données numeric.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:09:38 Error: Fixture creation for "TStations" failed "SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'échelle (10) de la colonne 'LAT' doit être comprise entre 0 et 5."
+2013-10-29 10:09:38 Error: [PDOException] SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom d'objet 'TStations' non valide.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:10:19 Error: Fixture creation for "TStations" failed "SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'échelle (5) de la colonne 'LAT' doit être comprise entre 0 et 2."
+2013-10-29 10:10:19 Error: [PDOException] SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom d'objet 'TStations' non valide.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:10:39 Error: [PDOException] SQLSTATE[22003]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Une erreur de dépassement arithmétique s'est produite lors de la conversion de nvarchar en type de données numeric.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:19:02 Error: [UnexpectedValueException] Referenced fixture class TProtocolInventoryFixture (Test\Fixture\TProtocolInventoryFixtureFixture.php) not found
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(79): CakeFixtureManager->_loadFixtures(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(57): CakeFixtureManager->fixturize(Object(ProtoController2Test))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#7 {main}
+2013-10-29 10:34:50 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:39:44 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:41:46 Error: Fatal Error (4): syntax error, unexpected '/', expecting ')' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Fixture\StationFixture.php, line 67]
+2013-10-29 10:41:46 Error: [FatalErrorException] syntax error, unexpected '/', expecting ')'
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 67, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 67, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 10:43:32 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Échec de la conversion de la date et/ou de l'heure à partir d'une chaîne de caractères.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:48:07 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Échec de la conversion de la date et/ou de l'heure à partir d'une chaîne de caractères.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:48:25 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Échec de la conversion de la date et/ou de l'heure à partir d'une chaîne de caractères.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(654): DboSource->insertMulti('TStations', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('TStations', Array, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoController2Test))
+#5 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2013-10-29 10:53:02 Error: [PDOException] SQLSTATE[40001]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La transaction (ID de processus 54) a été bloquée sur les ressources verrou par un autre processus et a été choisie comme victime. Réexécutez la transaction.
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(760): DboSource->_execute('SELECT?????COLU...', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(216): Sqlserver->_execute('SELECT?????COLU...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(722): Sqlserver->describe('protocolelistwi...')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(644): Sqlserver->_getPrimaryKey('protocolelistwi...')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('protocolelistwi...', Array, Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ProtoControllerTest))
+#8 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#9 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoControllerTest), Object(PHPUnit_Framework_TestResult))
+#10 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#14 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#15 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#16 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#17 {main}
+2013-10-29 10:53:54 Error: Fixture creation for "TTaxa" failed "SQLSTATE[40001]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La transaction (ID de processus 60) a été bloquée sur les ressources verrou par un autre processus et a été choisie comme victime. Réexécutez la transaction."
+2013-10-29 10:53:56 Error: [PDOException] SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'objet "TProtocol_Inventory" est introuvable, car il n'existe pas ou vous ne disposez pas des autorisations requises.
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(763): PDO->exec('TRUNCATE TABLE ...')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(427): Sqlserver->_execute('TRUNCATE TABLE ...', Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(2040): DboSource->execute('TRUNCATE TABLE ...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(309): DboSource->truncate('TProtocol_Inven...')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(234): CakeTestFixture->truncate(Object(Sqlserver))
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestCase.php(86): CakeFixtureManager->unload(Object(ProtoController2Test))
+#6 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#7 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ProtoController2Test), Object(PHPUnit_Framework_TestResult))
+#8 C:\Users\tahamada\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(62): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#14 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#15 {main}
+2013-10-29 13:13:13 Error: [MissingDatasourceConfigException] The datasource configuration "narc_ereleve" was not found in database.php
+Exception Attributes: array (
+  'config' => 'narc_ereleve',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/proto_taxon_get?id_proto=28
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('narc_ereleve')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3454): ConnectionManager::getDataSource('narc_ereleve')
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1124): Model->setDataSource('narc_ereleve')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('TProtocole')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Model->getDataSource()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('first', Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(554): Model->find('first', Array)
+#7 [internal function]: ProtoController->proto_taxon_get()
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-10-29 13:26:11 Error: Fatal Error (4): syntax error, unexpected ',', expecting ')' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoController2Test.php, line 4]
+2013-10-29 13:26:11 Error: [FatalErrorException] syntax error, unexpected ',', expecting ')'
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 4, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 4, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 13:26:20 Error: [UnexpectedValueException] Referenced fixture class ProtocoleTaxon (Test\Fixture\ProtocoleTaxonFixture.php) not found
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(79): CakeFixtureManager->_loadFixtures(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(57): CakeFixtureManager->fixturize(Object(ProtoController2Test))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#7 {main}
+2013-10-29 13:26:38 Error: [UnexpectedValueException] Referenced fixture class TProtocoleProtocoleTaxon (Test\Fixture\TProtocoleProtocoleTaxonFixture.php) not found
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(79): CakeFixtureManager->_loadFixtures(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(57): CakeFixtureManager->fixturize(Object(ProtoController2Test))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#7 {main}
+2013-10-29 13:31:26 Error: [UnexpectedValueException] Referenced fixture class TProtocoleProtocoleTaxon (Test\Fixture\TProtocoleProtocoleTaxonFixture.php) not found
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(79): CakeFixtureManager->_loadFixtures(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(57): CakeFixtureManager->fixturize(Object(ProtoController2Test))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#7 {main}
+2013-10-29 13:38:48 Error: [MissingDatasourceConfigException] The datasource configuration "narc_ereleve" was not found in database.php
+Exception Attributes: array (
+  'config' => 'narc_ereleve',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/proto_list
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('narc_ereleve')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3454): ConnectionManager::getDataSource('narc_ereleve')
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1124): Model->setDataSource('narc_ereleve')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('TProtocole')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Model->getDataSource()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(83): Model->find('all', Array)
+#7 [internal function]: ProtoController->proto_list()
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-10-29 13:50:22 Error: [MissingDatasourceConfigException] The datasource configuration "mycoflore" was not found in database.php
+Exception Attributes: array (
+  'config' => 'mycoflore',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/station_get2?format=geojson&id_taxon=18978&cluster=yes
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('mycoflore')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3454): ConnectionManager::getDataSource('mycoflore')
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1124): Model->setDataSource('mycoflore')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('TStations')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Model->getDataSource()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(489): Model->find('all', Array)
+#7 [internal function]: ProtoController->station_get2()
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-10-29 14:04:56 Error: Fatal Error (4): syntax error, unexpected 'catch' (T_CATCH) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 591]
+2013-10-29 14:04:56 Error: [FatalErrorException] syntax error, unexpected 'catch' (T_CATCH)
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 591)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:05:12 Error: Fatal Error (4): syntax error, unexpected 'catch' (T_CATCH) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 591]
+2013-10-29 14:05:12 Error: [FatalErrorException] syntax error, unexpected 'catch' (T_CATCH)
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 591)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:06:08 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 589]
+2013-10-29 14:06:08 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 589)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 589, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 589, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:06:59 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 589]
+2013-10-29 14:07:00 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 589)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 589, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 589, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:08:26 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 591]
+2013-10-29 14:08:27 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 591)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:09:04 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 591]
+2013-10-29 14:09:04 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 591)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:09:36 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 591]
+2013-10-29 14:09:36 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 591)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 591, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:16:26 Error: [UnexpectedValueException] Referenced fixture class ProtocoleTaxon (Test\Fixture\ProtocoleTaxonFixture.php) not found
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(79): CakeFixtureManager->_loadFixtures(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestRunner.php(57): CakeFixtureManager->fixturize(Object(ProtoController2Test))
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteCommand.php(97): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(246): CakeTestSuiteCommand->run(Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(99): CakeTestSuiteDispatcher->_runTestCase()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(116): CakeTestSuiteDispatcher->dispatch()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#7 {main}
+2013-10-29 14:23:57 Error: Fatal Error (1): Call to a member function schema() on a non-object in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 582]
+2013-10-29 14:23:58 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\tahama...', 582)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\tahama...', 582, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\tahama...', 582, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:50:11 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 33]
+2013-10-29 14:50:11 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /html/ecoReleve-coreTMP/proto/
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 33, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 33, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-29 14:58:20 Error: [MissingTableException] Table TAutorisation for model TAutorisation was not found in datasource user.
+Exception Attributes: array (
+  'table' => 'TAutorisation',
+  'class' => 'TAutorisation',
+  'ds' => 'user',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('TAutorisation')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1350): Model->getDataSource()
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(865): Model->schema()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(893): Model->__isset('TAutorisation')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3552): Model->__get('TAutorisation')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1593): Model->joinModel('TAutorisation', Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1069): DboSource->generateAssociationQuery(Object(TUser), Object(TApplication), 'hasAndBelongsTo...', 'Application', Array, Array, false, NULL)
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(605): DboSource->read(Object(TUser), Array, NULL)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Sqlserver->read(Object(TUser), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(32): Model->find('all')
+#11 [internal function]: ProtoController->index()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#14 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-10-29 14:59:09 Error: [MissingTableException] Table TAutorisation for model TAutorisation was not found in datasource user.
+Exception Attributes: array (
+  'table' => 'TAutorisation',
+  'class' => 'TAutorisation',
+  'ds' => 'user',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('TAutorisation')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1350): Model->getDataSource()
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(865): Model->schema()
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(893): Model->__isset('TAutorisation')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3552): Model->__get('TAutorisation')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1593): Model->joinModel('TAutorisation', Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1069): DboSource->generateAssociationQuery(Object(TUser), Object(TApplication), 'hasAndBelongsTo...', 'Application', Array, Array, false, NULL)
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(605): DboSource->read(Object(TUser), Array, NULL)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Sqlserver->read(Object(TUser), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(32): Model->find('all')
+#11 [internal function]: ProtoController->index()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#14 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-10-29 15:09:29 Error: [MissingControllerException] Controller class TUserController could not be found.
+Exception Attributes: array (
+  'class' => 'TUserController',
+  'plugin' => NULL,
+)
+Request URL: /html/ecoReleve-coreTMP/TUser
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-29 15:29:38 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'identificateur en plusieurs parties "TAutorisations.TAut_PK_ID" ne peut pas être lié.
+Request URL: /html/ecoReleve-coreTMP/t_applications/view/25
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(760): DboSource->_execute('SELECT  [User]....', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(427): Sqlserver->_execute('SELECT  [User]....', Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(667): DboSource->execute('SELECT  [User]....', Array, Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1252): DboSource->fetchAll('SELECT  [User]....', false)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->queryAssociation(Object(TApplication), Object(TUser), 'hasAndBelongsTo...', 'User', Array, Array, true, Array, 0, Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(605): DboSource->read(Object(TApplication), Array, NULL)
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Sqlserver->read(Object(TApplication), Array)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('first', Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\TApplicationsController.php(32): Model->find('first', Array)
+#10 [internal function]: TApplicationsController->view('25')
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TApplicationsController), Array)
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TApplicationsController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-10-29 15:38:25 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers le mot clé 'select'.
+Request URL: /html/ecoReleve-coreTMP/t_applications/view/25
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(760): DboSource->_execute('SELECT  [User]....', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(427): Sqlserver->_execute('SELECT  [User]....', Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(667): DboSource->execute('SELECT  [User]....', Array, Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1252): DboSource->fetchAll('SELECT  [User]....', false)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->queryAssociation(Object(TApplication), Object(TUser), 'hasAndBelongsTo...', 'User', Array, Array, true, Array, 0, Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(605): DboSource->read(Object(TApplication), Array, NULL)
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Sqlserver->read(Object(TApplication), Array)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('first', Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\TApplicationsController.php(32): Model->find('first', Array)
+#10 [internal function]: TApplicationsController->view('25')
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TApplicationsController), Array)
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TApplicationsController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-10-29 15:45:20 Error: [CakeException] Error in Model TUser
+Request URL: /html/ecoReleve-coreTMP/t_users/index/page:2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->queryAssociation(Object(TUser), Object(TApplication), 'hasAndBelongsTo...', 'Application', Array, Array, true, true, 0, Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(605): DboSource->read(Object(TUser), Array, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Sqlserver->read(Object(TUser), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Component\PaginatorComponent.php(198): Model->find('all', Array)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(1079): PaginatorComponent->paginate(NULL, Array, Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\TUsersController.php(17): Controller->paginate()
+#7 [internal function]: TUsersController->index()
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TUsersController), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TUsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-10-29 15:45:50 Error: [CakeException] Error in Model TUser
+Request URL: /html/ecoReleve-coreTMP/t_users/index/page:2
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->queryAssociation(Object(TUser), Object(TApplication), 'hasAndBelongsTo...', 'Application', Array, Array, true, true, 1, Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(605): DboSource->read(Object(TUser), Array, NULL)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Sqlserver->read(Object(TUser), Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Component\PaginatorComponent.php(198): Model->find('all', Array)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(1079): PaginatorComponent->paginate(NULL, Array, Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\TUsersController.php(17): Controller->paginate()
+#7 [internal function]: TUsersController->index()
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TUsersController), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TUsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-10-29 15:55:56 Error: [MissingControllerException] Controller class TstationsController could not be found.
+Exception Attributes: array (
+  'class' => 'TstationsController',
+  'plugin' => NULL,
+)
+Request URL: /html/ecoReleve-coreTMP/tstations
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-29 16:14:24 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données varchar en type de données datetime a créé une valeur hors limites.
+Request URL: /html/ecoReleve-coreTMP/t_users/add
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(767): PDO->exec('INSERT INTO [TU...')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(427): Sqlserver->_execute('INSERT INTO [TU...', Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1005): DboSource->execute('INSERT INTO [TU...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(350): DboSource->create(Object(TUser), Array, Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1827): Sqlserver->create(Object(TUser), Array, Array)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\TUsersController.php(43): Model->save(Array)
+#6 [internal function]: TUsersController->add()
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TUsersController), Array)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TUsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-10-29 16:17:32 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données varchar en type de données datetime a créé une valeur hors limites.
+Request URL: /html/ecoReleve-coreTMP/t_users/add
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(764): PDO->exec('INSERT INTO [TU...')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(427): Sqlserver->_execute('INSERT INTO [TU...', Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1005): DboSource->execute('INSERT INTO [TU...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(350): DboSource->create(Object(TUser), Array, Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1827): Sqlserver->create(Object(TUser), Array, Array)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\TUsersController.php(47): Model->save(Array)
+#6 [internal function]: TUsersController->add()
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TUsersController), Array)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TUsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-10-29 16:17:40 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données varchar en type de données datetime a créé une valeur hors limites.
+Request URL: /html/ecoReleve-coreTMP/t_users/add
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(764): PDO->exec('INSERT INTO [TU...')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(427): Sqlserver->_execute('INSERT INTO [TU...', Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1005): DboSource->execute('INSERT INTO [TU...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(350): DboSource->create(Object(TUser), Array, Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1827): Sqlserver->create(Object(TUser), Array, Array)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\TUsersController.php(47): Model->save(Array)
+#6 [internal function]: TUsersController->add()
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TUsersController), Array)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TUsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-10-29 16:22:21 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Array'.
+Request URL: /html/ecoReleve-coreTMP/t_users/add
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(764): PDO->exec('INSERT INTO [TU...')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(427): Sqlserver->_execute('INSERT INTO [TU...', Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1005): DboSource->execute('INSERT INTO [TU...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(350): DboSource->create(Object(TUser), Array, Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1827): Sqlserver->create(Object(TUser), Array, Array)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\TUsersController.php(47): Model->save(Array)
+#6 [internal function]: TUsersController->add()
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TUsersController), Array)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TUsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-10-30 08:54:34 Error: [MissingControllerException] Controller class ChampignonsAgaricusController could not be found.
+Exception Attributes: array (
+  'class' => 'ChampignonsAgaricusController',
+  'plugin' => NULL,
+)
+Request URL: /html/ecoReleve-coreTMP/Champignons_Agaricus.jpg
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-30 09:30:56 Error: Fatal Error (4): syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Model\Taxon.php, line 12]
+2013-10-30 09:30:56 Error: [FatalErrorException] syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /html/ecoReleve-coreTMP/taxon/get/18978?format=test
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 12, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 12, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 09:31:12 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'FK_ID_NAME'.
+Request URL: /html/ecoReleve-coreTMP/taxon/get/18978?format=test
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(465): PDOStatement->execute(Array)
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(761): DboSource->_execute('SELECT  [Synony...', Array, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(427): Sqlserver->_execute('SELECT  [Synony...', Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(672): DboSource->execute('SELECT  [Synony...', Array, Array)
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1350): DboSource->fetchAll('SELECT  [Synony...', false)
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1212): DboSource->fetchAssociated(Object(Taxon), 'SELECT  [Synony...', Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(1121): DboSource->queryAssociation(Object(Taxon), Object(TaxonName), 'hasMany', 'Synonymous', Array, Array, true, Array, 0, Array)
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\Database\Sqlserver.php(605): DboSource->read(Object(Taxon), Array, NULL)
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2880): Sqlserver->read(Object(Taxon), Array)
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(2852): Model->_readDataSource('all', Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(1041): Model->find('all', Array)
+#11 [internal function]: ProtoController->taxon_get()
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#13 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#14 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-10-30 10:43:41 Error: Fatal Error (1): Call to undefined function get_description_col() in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 692]
+2013-10-30 10:43:41 Error: [FatalErrorException] Call to undefined function get_description_col()
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Users\tahama...', 692)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Users\tahama...', 692, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Users\tahama...', 692, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 10:44:16 Error: Fatal Error (1): Call to undefined function get_description_col() in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php, line 692]
+2013-10-30 10:44:16 Error: [FatalErrorException] Call to undefined function get_description_col()
+Request URL: /html/ecoReleve-coreTMP/proto/proto_get?id_proto=28
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Users\tahama...', 692)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Users\tahama...', 692, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Users\tahama...', 692, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 10:45:12 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[IMSSP]: An invalid encoding was specified for SQLSRV_ATTR_ENCODING.',
+  'enabled' => true,
+)
+Request URL: /html/ecoReleve-coreTMP/proto/proto_get?id_proto=28
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Datasource\DboSource.php(263): Sqlserver->connect()
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3454): ConnectionManager::getDataSource('default')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(1124): Model->setDataSource('default')
+#4 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('app_models')
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3283): Model->getDataSource()
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(749): Model->query('SELECT [table] ...')
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(692): ProtoController->get_description_col('TProtocol_Relea...')
+#8 [internal function]: ProtoController->proto_get()
+#9 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#10 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-10-30 10:45:30 Error: [MissingTableException] Table app_models for model AppModel was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'app_models',
+  'class' => 'AppModel',
+  'ds' => 'default',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/proto_get?id_proto=28
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('app_models')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3283): Model->getDataSource()
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(749): Model->query('SELECT [table] ...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(692): ProtoController->get_description_col('TProtocol_Relea...')
+#4 [internal function]: ProtoController->proto_get()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-30 10:47:45 Error: [MissingTableException] Table app_models for model AppModel was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'app_models',
+  'class' => 'AppModel',
+  'ds' => 'default',
+)
+Request URL: /html/ecoReleve-coreTMP/proto/proto_get?id_proto=28
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3476): Model->setSource('app_models')
+#1 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Model\Model.php(3283): Model->getDataSource()
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(749): Model->query('SELECT [table] ...')
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Controller\ProtoController.php(692): ProtoController->get_description_col('TProtocol_Relea...')
+#4 [internal function]: ProtoController->proto_get()
+#5 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#6 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-30 13:02:26 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 16]
+2013-10-30 13:02:26 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 16, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 16, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:02:47 Error: Fatal Error (4): syntax error, unexpected ',' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 17]
+2013-10-30 13:02:47 Error: [FatalErrorException] syntax error, unexpected ','
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 17, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 17, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:02:58 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 21]
+2013-10-30 13:02:58 Error: [FatalErrorException] syntax error, unexpected '}'
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 21, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 21, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:03:24 Error: Fatal Error (4): syntax error, unexpected 'Array' (T_ARRAY) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 13]
+2013-10-30 13:03:24 Error: [FatalErrorException] syntax error, unexpected 'Array' (T_ARRAY)
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 13, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 13, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:03:41 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 13]
+2013-10-30 13:03:41 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY)
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 13, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 13, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:04:02 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 13]
+2013-10-30 13:04:02 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY)
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 13, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 13, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:04:40 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY) in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 127]
+2013-10-30 13:04:41 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY)
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Users\tahama...', 127)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Users\tahama...', 127, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Users\tahama...', 127, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:07:09 Error: Fatal Error (1): Cannot access empty property in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 13]
+2013-10-30 13:07:09 Error: [FatalErrorException] Cannot access empty property
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Cannot access e...', 'C:\Users\tahama...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', 'C:\Users\tahama...', 13, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', 'C:\Users\tahama...', 13, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:30:09 Error: Fatal Error (1): Call to undefined method Mock_Proto_18d40949::get_description_col() in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\app\Test\Case\Controller\ProtoControllerTest.php, line 148]
+2013-10-30 13:30:09 Error: [FatalErrorException] Call to undefined method Mock_Proto_18d40949::get_description_col()
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Users\tahama...', 148)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Users\tahama...', 148, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Users\tahama...', 148, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-30 13:34:10 Error: Fatal Error (1): Call to a member function send() on a non-object in [C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Routing\Dispatcher.php, line 169]
+2013-10-30 13:34:10 Error: [FatalErrorException] Call to a member function send() on a non-object
+Request URL: /html/ecoReleve-coreTMP/proto/taxon_get?format=xml?format=xml
+Stack Trace:
+#0 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Users\tahama...', 169)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Users\tahama...', 169, Array)
+#2 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Users\tahama...', 169, Array)
+#3 C:\Users\tahamada\wamp\www\html\ecoReleve-coreTMP\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

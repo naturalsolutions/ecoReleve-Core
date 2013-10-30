@@ -9,6 +9,7 @@ class Taxon extends AppModel {
         'Synonymous' => array(
             'className' => 'TaxonName',
 			'foreignKey' => 'FK_Taxon',
+			'conditions' => "(select FK_PREFERED_NAME from TTaxa where FK_Taxon=ID_TAXON)!=ID_NAME"
         ),
 		'Additional' => array(
             'className' => 'TaxonAddi',

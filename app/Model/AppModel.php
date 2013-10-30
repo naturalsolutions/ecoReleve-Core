@@ -32,15 +32,7 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
-	var $actsAs = array("Containable"); 
-
-	public function __construct($id = false, $table = null, $ds = null) { 
-        parent::__construct($id, $table, $ds); 
-        $this->dom = new DOMDocument; 
-        if (isset($this->data[get_class($this)]["xml"])) { 
-            $this->dom->LoadXML($this->data[get_class($this)]["xml"]); 
-        } 
-    } 	
+	
 	//for debugging create file on C:\ 
 	function filedebug($string,$filename="debug"){
 		$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/$filename", 'w');

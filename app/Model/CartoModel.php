@@ -51,6 +51,9 @@
 			if(isset($markers[0]['AppModel'])){
 				$name_key='AppModel';
 			}
+			else if(isset($markers[0]['Station'])){
+				$name_key='Station';
+			}
 			/* Loop until all markers have been compared. */
 			while (count($markers)) {
 				$marker  = array_pop($markers);				

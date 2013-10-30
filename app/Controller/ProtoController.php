@@ -4,7 +4,11 @@
 	App::uses('AppController','Controller');
 	App::uses('Model', 'Model');
 	App::uses('AppModel', 'Model');
+	App::uses('ProtocoleTaxon', 'Model');
+	App::uses('Value', 'Model');	
+	App::uses('CartoModel', 'Model');
 	App::uses('Taxon', 'Model');
+	App::uses('TUser', 'Model');
 	App::uses('Taxon_Name', 'Model');
 	App::uses('Taxon_Addi', 'Model');
 	define("base", "narc_ereleve"); //name of database use
@@ -17,14 +21,19 @@
 		public $components = array('RequestHandler');
 		var $typereturn;			
 		public $cacheAction = array(  //set the method(webservice) with a cached result
-			'proto_list' => cache_time,
+			//'proto_list' => cache_time,
 			//'station_get' => cache_time,  
-			'proto_taxon_get' => cache_time,
-			'proto_get' => cache_time
+			//'proto_taxon_get' => cache_time,
+			//'proto_get' => cache_time
 		);
 		
 		function index(){
-			$this->loadModel('Taxon');
+			$this->loadModel('TUser');
+			$arr=$this->TUser->find("all");
+			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+				/*$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+				fwrite($fp, print_r($arr ,true));*/
+			}
 			//$this->loadModel('TaxonName');
 			//$this->loadModel('TaxonAddi');
 			//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
@@ -39,13 +48,32 @@
 			$base=base;
 			$table="TProtocole";
 			$test=false;
-			//verify if it's a test
-			if(isset($this->params['url']['test']) && $this->params['url']['test']==1 && $this->params['url']['tabletest']){
-				$base="test";
-				$table=$this->params['url']['tabletest'];
-				$test=true;
-				$this->set("test","test");
+			$format="xml";
+			$this->loadModel('Protocole');
+			
+		
+			//format from request
+			
+			if(stripos($this->request->header('Accept'),"application/xml")!==false)
+				$format="xml"; 
+			else if(stripos($this->request->header('Accept'),"application/json")!==false)
+				$format="json";	
+			
+			//format return from param
+			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
+				$tmp_format=$this->params['url']['format'];
+				if($tmp_format=="json"){
+					$format="json";
+				}
+				else if($tmp_format=="xml"){
+					$format="xml";
+				}
+				else if($tmp_format=="test"){
+					$format="test";
+				}
 			}
+		
+			
 		
 			$model = new AppModel("TProtocole",$table,$base);	
 			$conditions=array();
@@ -58,14 +86,15 @@
 				$conditions=array("Relation LIKE"=>"%$mot%");
 			}	
 			
-			$table = $model->find("all",array("conditions"=>array("Active" => 1)+$conditions));	
+			$table = $this->Protocole->find("all",array("conditions"=>array("Active" => 1)+$conditions));	
+			
 			$this->set("debug",$debug);
 			$this->set('protos', $table);
 			// Set response as XML
-			$this->RequestHandler->respondAs('xml');
-			$this->viewPath .= '/xml';
-			$this->layout='xml';
-			$this->layoutPath = 'xml';		
+			$this->RequestHandler->respondAs($format);
+			$this->viewPath .= '/'.$format;
+			$this->layout= $format;
+			$this->layoutPath = $format;		
 		}
 		
 		
@@ -248,9 +277,9 @@
 			$this->set("totaldisplay",$totaldisplay);
 			$this->set("ModelName",$ModelName);
 			$this->set("debug",$debug); 
-			$this->RequestHandler->respondAs('html');
+			$this->RequestHandler->respondAs('json');
 			$this->viewPath .= '/json';
-			$this->layoutPath = '';											
+			$this->layoutPath = 'json';											
 		}
 		
 		function station_get2(){
@@ -270,6 +299,46 @@
 			$lat="";
 			$find=1;
 			$column_array=array();
+			$id_taxon="";
+			$options=array();
+			$cluster="no";
+			$zoom=0;
+			
+			if(isset($this->params['url']['cluster']) && $this->params['url']['cluster']!=""){
+				if($this->params['url']['cluster']=="yes"){
+					$cluster="yes";
+				}
+			}	
+	
+			//get a list of station id from parameter
+			if(isset($this->params['url']['id_station']) && $this->params['url']['id_station']!=""){
+				$id_stations=$this->params['url']['id_station'];
+				$id_station_array=split(",",$id_stations);	
+				$condition_id_sta="";
+				for($i=0;$i<count($id_station_array);$i++){
+					$or="or";
+					if($i==count($id_station_array)-1)
+						$or=" ";
+					$condition_id_sta.="TSta_PK_ID = $id_station_array[$i] $or ";
+				}					
+				$condition_array[] = array($condition_id_sta);
+				//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
+				//fwrite($fp, print_r($condition_array,true));
+			}			
+				
+			if(isset($this->params['url']['zoom']) && $this->params['url']['zoom']!="")
+				$zoom=$this->params['url']['zoom'];
+			
+			//format from request
+			if(stripos($this->request->header('Accept'),"application/xml")!==false){
+				$format="xml"; 
+				$tmp_format="xml";
+			}
+			else if(stripos($this->request->header('Accept'),"application/json")!==false){
+				$tmp_format="json";
+				$format="json";
+			}	
+			 
 			
 			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
 				$tmp_format=$this->params['url']['format'];
@@ -281,11 +350,29 @@
 					,"Name","DATE","Area","Locality"
 					,"LAT","LON");
 				}
-				$this->params['url']['format'];
-			}
+				else if($tmp_format=="xml"){
+					$format="xml";
+				}
+				else if($tmp_format=="test"){
+					$format="test";
+				}
+			}				
 			
 			if(isset($this->params['url']['id_proto']) && $this->params['url']['id_proto']!=""){
 				$id_proto=$this->params['url']['id_proto'];
+			}
+			
+			if(isset($this->params['url']['id_taxon']) && $this->params['url']['id_taxon']!=""){
+				$id_taxon="and TProtocol_Inventory.Id_Taxon='".$this->params['url']['id_taxon']."'";
+				$options['joins'] = array(
+					array('table' => 'TProtocol_Inventory',
+						'alias' => 'TProtocol_Inventory',
+						'type' => 'INNER',
+						'conditions' => array(
+							"TSta_PK_ID = TProtocol_Inventory.FK_TSta_ID $id_taxon"
+						)
+					)
+				);
 			}
 			
 			$tsearch="";
@@ -374,42 +461,70 @@
 				$max_lat=$bbox_array[3];
 				$condition_array[] = array("LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon");
 			}
+			
 			$this->loadModel('Station');
+			//$this->loadModel('TProtocolInventory');
 			$condition_array=$this->Station->station_filter($db,$condition_array,$locality,$area,$name,$fa,$lat,$lon,$idate,true);
 			
-			$total=$this->Station->find('count');
-			$this->set('total',$total);
+			if(isset($tmp_format) && $tmp_format=="datatablejs"){
+				$total=$this->Station->find('count');
+				$this->set('total',$total);
+				
+				$count=$this->Station->find('count',array(
+					'limit'=>$limit,
+					'offset'=>$offset,
+					'conditions'=>$condition_array
+				)+$options);
+				
+				$this->set('totaldisplay',$count);		
+			}
+						
+			//$this->Station->Behaviors->attach('Containable');
 			
-			$count=$this->Station->find('count',array(
-				'limit'=>$limit,
-				'offset'=>$offset,
-				'conditions'=>$condition_array
-			));
-			$this->set('totaldisplay',$count);			
-			
+			//$options['conditions'] = array('TProtocol_Inventory.Id_Taxon' => $id_taxon);
+			//$this->Station->hasMany['StationProtocoles']['conditions']['StationProtocoles.PK']=2;
 			$result=$this->Station->find('all',array(
+				'contain'=>array('SationProtocoles'=>array('conditions'=>array('Id_Taxon'=>"5440"))),
+				'recursive'=>1,
 				'limit'=>$limit,
 				'offset'=>$offset,
 				'fields'=>$column_array,
 				'conditions'=>$condition_array
-			));
-			
+				
+				
+			)+$options);
+			/*
 			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
 				$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
 				fwrite($fp, print_r($result ,true));
-			}
-			
+			}*/
+						
 			$this->set("debug","");
 			$this->set("find",1);
 			$this->set("result",$result);
 			$this->set("schema",$column_array);
-			$this->RequestHandler->respondAs($format);
-			if(isset($tmp_format) && $tmp_format=="datatablejs")
-				$this->viewPath .= '/'."datatablejs";
-			else
-				$this->viewPath .= '/'.$format;
-			$this->layoutPath = $format;
-			$this->layout= $format;	
+			
+			if($format!="test"){
+				if(isset($tmp_format) && $tmp_format=="datatablejs") //datatatable view
+					$this->viewPath .= '/'."datatablejs";
+				else if(isset($tmp_format) && $tmp_format=="geojson"){ //geojson view
+					$this->viewPath .= '/'."geojson";
+					$format="json";
+					if($cluster=="yes"){
+						$cartomodel=new CartoModel();
+						$result=$cartomodel->cluster($result,20,$zoom);
+					}	
+				}
+				else                                                   //json or xml view   			
+					$this->viewPath .= '/'.$format;				
+				$this->RequestHandler->respondAs($format);							
+				$this->layoutPath = $format;
+				$this->layout= $format;	
+			}
+			else{
+				$this->RequestHandler->respondAs("html");
+				$this->viewPath .= '/'."json";
+			}			
 		}
 		
 		//controller method for the getting taxon from protocole service 
@@ -420,34 +535,40 @@
 			$base=base;
 			$test=false;
 			$taxons=array();
-			if(isset($this->params['url']['id_proto']) || ($this->params['url']['test']==1 && $this->params['url']['tabletest'])){
+			$format="xml";
+			$this->loadModel('Protocole');
+			$this->loadModel('ProtocoleTaxon');
+			//format from request
+			if(stripos($this->request->header('Accept'),"application/xml")!==false){
+				$format="xml"; 
+				$tmp_format="xml";
+			}
+			else if(stripos($this->request->header('Accept'),"application/json")!==false){
+				$tmp_format="json";
+				$format="json";
+			}	
+				
+			
+			if(isset($this->params['url']['format']) && $this->params['url']['format']!="")
+				$format=$this->params['url']['format'];
+			
+			
+			
+			if(isset($this->params['url']['id_proto']) ){
 				$id_proto = $this->params['url']['id_proto'];
-				//for test
-				if(isset($this->params['url']['test']) && $this->params['url']['test']==1){
-					$table_name=$this->params['url']['tabletest'];
-					$base='test';
-					$test=true;
-					$this->set("test","test");
-				}
-				//get the name of table from the id
-				$model_list_proto = new AppModel($table_name,$table_name,$base);
+				
+				//get the name of table from the id				
 				$pk_id_name="TTheEt_PK_ID";
-				if(isset($id_proto_array['AppModel']["TTheEt_PK_ID"]))
-					$id_proto=$id_proto_array['AppModel']["TTheEt_PK_ID"];
-				else if(isset($id_proto_array['AppModel']["ttheEt_PK_ID"])){
-					$id_proto=$id_proto_array['AppModel']["ttheEt_PK_ID"];	
-					$pk_id_name="ttheEt_PK_ID";
-				}
-				$table_name_array=$model_list_proto->find('first',array("conditions" => array($pk_id_name=>$id_proto)));
-				if(isset($table_name_array['AppModel']['Relation'])){
-					if(!$test)
-						$table_name="TProtocol_".$table_name_array['AppModel']['Relation'];
-					else
-						$table_name=$table_name_array['AppModel']['Relation']."s";
-					
+				
+				$table_name_array=$this->Protocole->find('first',array("conditions" => array($pk_id_name=>$id_proto)));
+				if(isset($table_name_array['Protocole']['Relation'])){
+					$table_name="TProtocol_".$table_name_array['Protocole']['Relation'];					
 				}	
 				else
 					$find=-1;
+				
+				
+				//Get detail after finding the protocole name 	
 				if($find!=-1){	
 					$array_conditions=array();
 					if(isset($this->params['url']['search']) && isset($this->params['url']['search'])!=""){
@@ -456,19 +577,27 @@
 					}				
 					//finding taxon from table
 					try{					
-						$model_proto = new AppModel($table_name,$table_name,$base);	
+						//$model_proto = new ProtocoleTaxon($table_name,$table_name);	
+						$this->ProtocoleTaxon->setSource($table_name);
 						//check if the table have taxon field
+						if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+							$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+							fwrite($fp, print_r($table_name ,true));	
+						}
 						$taxon_find=false;
-						foreach ($model_proto->schema() as $key=>$val){
+						//foreach ($model_proto->schema() as $key=>$val){
+						foreach ($this->ProtocoleTaxon->schema() as $key=>$val){
 							if($key=="Name_Taxon")
 								$taxon_find=true;							
 						}
+						
 						if($taxon_find){
-							$taxons=$model_proto->find('all',array(
+							//$taxons=$model_proto->find('all',array(
+							$taxons=$this->ProtocoleTaxon->find('all',array(
 								'fields'=>array('Name_Taxon'),
 								'group'=>array('Name_Taxon'),
 								'conditions'=>$array_conditions
-							));							
+							));	
 						}	
 						else
 							$find=-2;//no taxon in table
@@ -476,7 +605,8 @@
 					catch(Exception $e){
 						$this->set('find',-1); //table not exist
 					}	
-				}				
+				}
+					
 			}			
 			else
 				$find=0;	
@@ -486,10 +616,10 @@
 			$this->set("find",$find);
 			// Set response as XML
 			
-			$this->RequestHandler->respondAs('xml');		
-			$this->viewPath .= '/xml';
-			$this->layoutPath = 'xml';	
-			$this->layout= "xml";
+			$this->RequestHandler->respondAs($format);		
+			$this->viewPath .= '/'.$format;
+			$this->layoutPath = $format;	
+			$this->layout= $format;
 		}
 		
 		//controller method for the protocole struct service
@@ -497,18 +627,17 @@
 			//xdebug_start_code_coverage();
 			$debug="";
 			$find=1;
-			$test=false;		
-			if(isset($this->params['url']['test']) && $this->params['url']['test']==1 && $this->params['url']['tabletest']){
-				$base="test";
-				$table=$this->params['url']['tabletest'];
-				$test=true;
-				$this->set("test","test");
-			}
+			$test=false;	
+			$this->loadModel('AppModel');	
+			$this->loadModel('Protocole');
+									
+			
+			
 			if(isset($this->params['url']['proto_name']) || isset($this->params['url']['id_proto']) || isset($this->params['url']['id_proto'])){ 
 				$table_name="";
 				$id_proto="";
 				$pk_id_name="";
-				$model_list_proto = new AppModel("TProtocole","TProtocole",base);
+				$model_list_proto = $this->Protocole;//new AppModel("TProtocole","TProtocole",base);
 				
 				foreach ($model_list_proto->schema() as $key=>$val){
 					if($key=="TTheEt_PK_ID"){
@@ -543,58 +672,57 @@
 				}	
 				
 				if($id_proto!=""){
+					
 					$table_name_array=$model_list_proto->find('first',array("conditions" => array($pk_id_name=>$id_proto)));
-					if(isset($table_name_array['AppModel']['Relation']))
-						$table_name="TProtocol_".$table_name_array['AppModel']['Relation'];					
+					
+					if(isset($table_name_array['Protocole']['Relation']))
+						$table_name="TProtocol_".$table_name_array['Protocole']['Relation'];					
 					else{
 						$find=-1;
 						$this->set('find',-1);
 					}
+					
 				}
 				
 				if($find!=-1){	
 					//description view that contain the field type (if list contain also items)
 					//$desc_query="SELECT t,c,cd,td From V_Qry_Column_Descr where t='dbo.$table_name'";
-					$desc_query= "SELECT [table] as t,  [column] as c, CONVERT(nchar(40),column_desc)as cd, CONVERT(nchar(40),table_desc)as td
-FROM         (SELECT     u.name + '.' + t.name AS [table], td.value AS table_desc, c.name AS [column], cd.value AS column_desc
-                       FROM          sys.sysobjects AS t INNER JOIN
-                                              sys.sysusers AS u ON u.uid = t.uid LEFT OUTER JOIN
-                                              sys.extended_properties AS td ON td.major_id = t.id AND td.minor_id = 0 AND td.name = 'MS_Description' INNER JOIN
-                                              sys.syscolumns AS c ON c.id = t.id LEFT OUTER JOIN
-                                              sys.extended_properties AS cd ON cd.major_id = c.id AND cd.minor_id = c.colid AND cd.name = 'MS_Description'
-                       WHERE      (t.type = 'u')) AS derivedtbl_1 where  [table]='dbo.$table_name'";
-					try{
-						$desc_proto = new AppModel("V_Qry_Column_Descr","V_Qry_Column_Descr",base);	
-						$desc=$this->simply_table($desc_proto->query($desc_query));
+					
+					
+						//$desc_proto = new AppModel("V_Qry_Column_Descr","V_Qry_Column_Descr",base);
+						$desc=$this->get_description_col($table_name);
+						
+						//$desc=$this->simply_table($desc_proto->query($desc_query));
 						//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
 						//fwrite($fp, print_r($desc,true));
 						$this->set('desc',$desc);					
-					}
-					catch(Exception $e){
-						$this->set('find',-3); //View not create
-					}
+						/*if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+							$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+							fwrite($fp, "mockres\n".print_r($desc ,true));
+						}*/
 					//		
 					//create model from protocol and get table descr on the view for keyword protocol	
 					try{					
-						$model_proto = new Model($table_name,$table_name,base);		
+						//$model_proto = new AppModel($table_name,$table_name,base);
+						$this->AppModel->setSource($table_name);
+						$model_proto=$this->AppModel;
+						/*if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+							$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+							fwrite($fp, print_r($desc ,true));
+						}	*/
 						$this->set('find',1); //table find
 						//just for take one column name
 						$keycolarr=array_keys($model_proto->schema());
 						$keycol=$keycolarr[0];						
 						$table_desc= $desc[$keycol]['td'];
 						$this->set("table_desc",$table_desc);
+						$this->set('model',$model_proto);
 					}
 					catch(Exception $e){
 						$this->set('find',-1); //table not find
 					}
-					try{
-						$model_thesaurus = new Model("Tthesaurus","Tthesaurus",base);					
-						$this->set('model_T',$model_thesaurus);
-					}
-					catch(Exception $e){
-						$this->set('find',-2); //table not defined
-					}					
-					$this->set('model',$model_proto);
+										
+					
 					$this->set('nom',$table_name);
 					$this->set('id_proto',$id_proto);
 				}				
@@ -609,7 +737,24 @@ FROM         (SELECT     u.name + '.' + t.name AS [table], td.value AS table_des
 			$this->RequestHandler->respondAs('xml');
 			$this->viewPath .= '/xml';
 			$this->layoutPath = 'xml';
+			$this->layout = 'xml';
 			//var_dump(xdebug_get_code_coverage());
+		}
+		
+		//method that return description of column of a table
+		function get_description_col($table_name){
+			$desc_query= "SELECT [table] as t,  [column] as c, CONVERT(nchar(40),column_desc)as cd, CONVERT(nchar(40),table_desc)as td
+				FROM (SELECT     u.name + '.' + t.name AS [table], td.value AS table_desc, c.name AS [column], cd.value AS column_desc
+					FROM          sys.sysobjects AS t INNER JOIN
+								  sys.sysusers AS u ON u.uid = t.uid LEFT OUTER JOIN
+								  sys.extended_properties AS td ON td.major_id = t.id AND td.minor_id = 0 AND td.name = 'MS_Description' INNER JOIN
+								  sys.syscolumns AS c ON c.id = t.id LEFT OUTER JOIN
+								  sys.extended_properties AS cd ON cd.major_id = c.id AND cd.minor_id = c.colid AND cd.name = 'MS_Description'
+					WHERE      (t.type = 'u')) AS derivedtbl_1 where  [table]='dbo.$table_name'";
+		
+			$desc_proto=new AppModel("TProtocole","TProtocole");
+			$desc=$this->simply_table($desc_proto->query($desc_query));
+			return $desc;
 		}
 		
 		//column value list from a table webservice
@@ -620,25 +765,10 @@ FROM         (SELECT     u.name + '.' + t.name AS [table], td.value AS table_des
 			$total="";
 			$format="json";
 			$offset=0;
-			$limit=10;
+			$limit=0;
 			
 			if(isset($this->params['url']['table_name'])){
 				$table_name=$this->params['url']['table_name'];
-			}
-			
-			if(isset($this->params['url']['limit'])){
-				$limit=$this->params['url']['limit'];
-			}
-			
-			if(isset($this->params['url']['offset'])){
-				$offset=$this->params['url']['offset'];
-			}
-			
-			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
-				if(stripos($this->params['url']['format'],"xml")!= false )
-					$format="xml";
-				else if(stripos($this->params['url']['format'],"json")!= false)	
-					$format="json";
 			}
 			
 			if(isset($this->request->params['table_name'])){
@@ -653,40 +783,76 @@ FROM         (SELECT     u.name + '.' + t.name AS [table], td.value AS table_des
 				$column_name=$this->request->params['column_name'];
 			}
 			
+			if(isset($this->params['url']['limit'])){
+				$limit=$this->params['url']['limit'];
+			}
+			
+			if(isset($this->params['url']['offset'])){
+				$offset=$this->params['url']['offset'];
+			}
+			
+			//format from request
+				
+			if(stripos($this->request->header('Accept'),"application/xml")!==false){
+				$format="xml"; 
+			}
+			else if(stripos($this->request->header('Accept'),"application/json")!==false){
+				$format="json";
+			}
+			//format from param
+			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
+				if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+					/*$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+					fwrite($fp, print_r("$format" ,true));*/
+				}
+				if(stripos($this->params['url']['format'],"xml")!== false )
+					$format="xml";
+				else if(stripos($this->params['url']['format'],"json")!== false)	
+					$format="json";
+				else if(stripos($this->params['url']['format'],"test")!== false)	
+					$format="test";	
+			}			
+			
+				
 			if($column_name!="" && $table_name!=""){
 				$field_array=array($column_name);
 				if($table_name=="TTaxa_name"){
 					$field_array=array("ID_NAME",$column_name,"FK_Taxon");
 				}
 				if(isset($this->params['url']['filter'])){
-					$filter="%".str_replace(" ","%",$this->params['url']['filter'])."%";
+					$filter=str_replace(" ","% %",$this->params['url']['filter'])."%";
 					$array_conditions += array("$column_name LIKE"=>$filter);
 				}				
 			
-				$model=new AppModel($table_name,$table_name,"mycoflore");
+				$model=new Value($table_name,$table_name,"mycoflore");
 				
 				if($table_name=="TTaxa_name"){
+					$limit=10;
 					$this->loadModel('TaxonName');
 					$model_result=$this->TaxonName->find("all",array(
 									'fields'=>$field_array,
+									'order'=>"$column_name asc",
 									'group'=>$field_array,
 									'conditions'=>$array_conditions,
 									'limit'=>$limit,
 									'offset'=>intval($offset)
 									));
-									
-					$nb=$this->TaxonName->find("count",array(
+					$nb="";				
+					/*$nb=$this->TaxonName->find("count",array(
 									'fields'=>$field_array,
 									'group'=>$field_array,
 									'conditions'=>$array_conditions)
-									);					
+									);	*/		
 					
 				}
 				else{				
 					$model_result=$model->find("all",array(
 									'fields'=>$field_array,
+									'order'=>"$column_name asc",
 									'group'=>$field_array,
-									'conditions'=>$array_conditions)
+									'conditions'=>$array_conditions,
+									'limit'=>$limit,
+									'offset'=>intval($offset))
 									);
 					
 					$nb=$model->find("count",array(
@@ -711,19 +877,18 @@ FROM         (SELECT     u.name + '.' + t.name AS [table], td.value AS table_des
 				$this->set("result",$model_result);				
 			}
 			else{
-				$this->find("find",-1);
+				$this->set("find",-1);
 				if($column_name=="" && $table_name==""){
-					$this->find("mesage","Column name and table name parameter missing");					
+					$this->set("message","Column name and table name parameter missing");					
 				}
 				else if($table_name==""){
-					$this->find("mesage","table name parameter missing");					
+					$this->set("message","table name parameter missing");					
 				}
 				else if($column_name==""){
-					$this->find("mesage","Column name parameter missing");					
+					$this->set("message","Column name parameter missing");					
 				}
 			}
-			
-					
+							
 			// Set response as XML
 			$this->RequestHandler->respondAs($format);
 			$this->viewPath .= "/".$format;
@@ -758,17 +923,38 @@ FROM         (SELECT     u.name + '.' + t.name AS [table], td.value AS table_des
 			$join=array();
 			$format="json";
 			$this->loadModel('Taxon');
+			$limit=0;
+			$offset=0;
 			
 			//get id from param
 			if(isset($this->params['url']['id_taxon'])){
 				$id_taxon=$this->params['url']['id_taxon'];						
 			}
-
+			
+			//format from request
+				
+			if(stripos($this->request->header('Accept'),"application/xml")!==false){
+				$format="xml"; 
+			}
+			else if(stripos($this->request->header('Accept'),"application/json")!==false){
+				$format="json";
+			}
+			
 			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
-				if(stripos($this->params['url']['format'],"xml")!= false )
+				if(stripos($this->params['url']['format'],"xml")!== false )
 					$format="xml";
-				else if(stripos($this->params['url']['format'],"json")!= false)	
+				else if(stripos($this->params['url']['format'],"json")!== false)	
 					$format="json";
+				else if(stripos($this->params['url']['format'],"test")!== false)	
+					$format="test";	
+			}
+			
+			if(isset($this->params['url']['limit'])){
+				$limit=$this->params['url']['limit'];
+			}
+			
+			if(isset($this->params['url']['offset'])){
+				$offset=$this->params['url']['offset'];
 			}
 			
 			//get id from request param (case with this kind of url : proto/get/"id")
@@ -861,30 +1047,52 @@ FROM         (SELECT     u.name + '.' + t.name AS [table], td.value AS table_des
 			,$KINGDOM,$PHYLUM,$CLASS,$ORDER,$FAMILY,$RANK,$TAXREF_CD_NOM,$TAXREF_CD_TAXSUP,$TAXREF_CD_REF
 			,true);
 			
-			
+			//$this->Taxon->hasMany['Synonymous']['conditions']['Synonymous.']=2;
 			$taxons=$this->Taxon->find("all",array(
 				'conditions'=>$array_conditions,
-				'order'=>array("ID_TAXON asc")
+				'order'=>array("NAME_VALID_WITHOUT_AUTHORITY asc"),
+				'limit'=>$limit,
+				'offset'=>intval($offset)
 			));
 			
-			$nb_taxons=$this->Taxon->find("count",array(
-				'conditions'=>$array_conditions
-			));
+			$nb_taxons="";
+			/*$nb_taxons=$this->Taxon->find("count",array(
+				'conditions'=>$array_conditions,
+				'limit'=>$limit,
+				'offset'=>intval($offset)
+			));*/
 			
 			//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
 			//fwrite($fp, print_r($taxons,true));
 			
+			
+			
 			if(!($taxons && (count($taxons)>0)))
 				$taxons=array();
+			/*
+			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+				$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+				fwrite($fp, print_r($format ,true));
+			}*/
 			
 			$this->set("taxons",$taxons);
 			$this->set("nb",$nb_taxons);
 			
-			// Set response as XML
-			$this->RequestHandler->respondAs($format);
-			$this->viewPath .= "/".$format;
-			$this->layoutPath = $format;
-			$this->layout=$format;
+			if($format!="test"){
+				//$this->RequestHandler->setContent('json', 'text/x-json');
+				// Set response as XML
+				$this->RequestHandler->respondAs($format);
+				$this->viewPath .= "/".$format;
+				$this->layoutPath = $format;
+				$this->layout=$format;
+			}	
+			else{
+				// Set response as XML
+				$this->RequestHandler->respondAs("html");
+				$this->viewPath .= "/"."json";
+				//$this->layoutPath = $format;
+				//$this->layout=$format;
+			}
 		}
 			
 		//create a simplified table of this return by find->query
