@@ -9,10 +9,6 @@ This Software allow access to a lot of ecoReleve's webservices.
 
 ecoRelevé Core is a free and open source ser
 
-Screens shots
-------------
-
-![Screens](https://raw.github.com/NaturalSolutions/)
 
 Installation notes
 -----------------
