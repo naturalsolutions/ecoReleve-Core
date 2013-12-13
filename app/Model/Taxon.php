@@ -4,6 +4,7 @@ class Taxon extends AppModel {
 	public $useTable = 'TTaxa';
 	public $primaryKey = 'ID_TAXON';
 	public $taxon_id= "ID_TAXON";
+	public $actsAs = array('Containable');
 	
 	public $hasMany = array(
         'Synonymous' => array(
@@ -17,6 +18,23 @@ class Taxon extends AppModel {
         )
     );
 	
+	public function beforeSave($options = array()) {
+		//$fp = fopen("app/webroot/gps/file", 'w');	
+		//$fp2 = fopen("app/webroot/gps/file2", 'w');			
+		if (isset($this->data['Additional'])) {
+			$addi=$this->data['Additional'];
+			foreach($addi as $key=>$ad){
+				if($ad['Additional']['value']==""){
+					unset($this->data['Additional'][$key]);					
+				}
+			}
+			//fwrite($fp2, "in");	
+			//fwrite($fp, print_r($this->data,true));		
+		}
+		
+		
+		return true;
+	}
 	
 }	 
 ?>

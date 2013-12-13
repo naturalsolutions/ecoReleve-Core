@@ -44,11 +44,18 @@
 	Router::connect('/taxon/get',array('controller'=>'proto','action' => 'taxon_get','id_taxon'=>'[0-9]+'));  //get taxon url
 	Router::connect('/taxon/get/:id_taxon',array('controller'=>'proto','action' => 'taxon_get','id_taxon'=>'[0-9]+'));  //get taxon url with id
 	Router::connect('/COUNT/view/map_export/get',array('controller'=>'NSML','action' => 'nsml_get','count' => 'yes'));
-	Router::connect('/taxon/list',array('controller'=>'proto','action' => 'column_list','table_name' => 'TTaxa_name','column_name' => 'NAME_WITHOUT_AUTHORITY'));
+	Router::connect('/taxon/list',array('controller'=>'proto','action' => 'column_list','table_name' => 'TTaxa_name','column_name' => 'NAME_WITHOUT_AUTHORITY','fields'=>'NAME_WITHOUT_AUTHORITY'));
 	Router::connect('/user/list',array('controller'=>'User','action' => 'listv'));  //get nsml from view url
 	Router::connect('/carto/station/get',array('controller'=>'Carto','action' => 'station_get')); //get stations for openlayer url
-	
-	
+	Router::connect('/views/get/:table_name',array('controller'=>'views','action' => 'get_view'));
+	Router::connect('/views/get/:table_name/count',array('controller'=>'views','action' => 'get_view','count' => 'yes'));
+	Router::connect('/views/detail/:table_name',array('controller'=>'views','action' => 'detail_view'));
+	Router::connect('/taxon/list/table',array('controller'=>'proto','action' => 'column_list','table_name' => 'TTaxa_name','column_name' => 'NAME_WITHOUT_AUTHORITY',
+	'table_join'=>'TTaxa','fields'=>'ID_NAME,NAME_WITHOUT_AUTHORITY,AUTHORITY,FK_Taxon','join_column'=>'TTaxaJoin.NAME_VALID_WITH_AUTHORITY,TTaxaJoin.NAME_VERN_FR,TTaxaJoin.RANK',
+	'fk'=>'FK_Taxon','pk'=>'TTaxaJoin.ID_TAXON','column_name2'=>'TTaxaJoin.NAME_VERN_FR'));
+	Router::connect('/vernacular/list',array('controller'=>'proto','action' => 'column_list','table_name' => 'TTaxa','column_name' => 'NAME_VERN_FR','fields'=>'NAME_VERN_FR'));
+	Router::connect('/vernacular/list/table',array('controller'=>'proto','action' => 'column_list','table_name' => 'TTaxa','column_name' => 'NAME_VERN_FR'
+	,'fields'=>'ID_TAXON,NAME_VALID_WITHOUT_AUTHORITY,NAME_VALID_AUTHORITY,NAME_VALID_WITH_AUTHORITY,NAME_VERN_FR,RANK'));
 	
 /**
  * Load all plugin routes. See the CakePlugin documentation on

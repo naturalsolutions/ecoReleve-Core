@@ -16,5 +16,11 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-?>
+	header("Access-Control-Allow-Credentials: true");	
+	if(isset($origin)){
+		header("Access-Control-Allow-Origin: $origin");	
+	}	
+	else
+		header("Access-Control-Allow-Origin: *");
+ ?>
 <?php echo $this->fetch('content'); ?>

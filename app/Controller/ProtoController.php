@@ -11,15 +11,21 @@
 	App::uses('TUser', 'Model');
 	App::uses('Taxon_Name', 'Model');
 	App::uses('Taxon_Addi', 'Model');
+	App::uses('TaxonFamilyCount', 'Model');
+	
 	define("base", "narc_ereleve"); //name of database use
 	define("limit",0);  //sql limit default value
 	define("offset",0); //sql offset default value
 	define("cache_time",3600);
-	
+	App::uses('table1', 'Model');
+	App::uses('table2', 'Model');
+	App::uses('table3', 'Model');
 	class ProtoController extends AppController{
 		var $helpers = array('Xml', 'Text','form','html','Cache','Json');
-		public $components = array('RequestHandler');
-		var $typereturn;			
+		public $components = array('RequestHandler','Cookie','Session');
+		var $typereturn;
+		public $notauth=false;	
+		public $admin=false;
 		public $cacheAction = array(  //set the method(webservice) with a cached result
 			//'proto_list' => cache_time,
 			//'station_get' => cache_time,  
@@ -27,12 +33,63 @@
 			//'proto_get' => cache_time
 		);
 		
+		public function beforeFilter() {
+			
+			
+			parent::beforeFilter();
+			if(isset($_SERVER["HTTP_ORIGIN"])){
+				//$_SERVER["HTTP_ORIGIN"];
+				$origin=$_SERVER["HTTP_ORIGIN"];
+				$this->set('origin',$origin);
+			}
+			$this->Cookie->name = 'session';
+			$this->Cookie->key = 'q45678SI232qs*&sXOw!adre@34SAdejfjhv!@*(XSL#$%)asGb$@11~_+!@#HKis~#^';
+			$this->Cookie->httpOnly = true;
+			//print_r($this->Cookie->read('session'));
+			if((!$this->Cookie->read('connected') /* || !$this->Session->read('role')*/) && ($this->params['action']=='station_get2' || $this->params['action']=='import_csv' ||
+			$this->params['action']=='column_list' || $this->params['action']=='taxon_get' || $this->params['action']=='taxon_count')){
+				//$this->redirect(array('action' => 'not_autorized'));
+				$this->notauth=true;
+				if($this->Cookie->read('connected')=='Administrateur')
+					$this->admin=true;
+			}
+			else
+				$this->notauth=false;
+						
+		}
+		
+		//
+		public function not_autorized() {
+			$this->RequestHandler->respondAs('json');
+			$this->viewPath .= '/json';
+			$this->layout= 'json';
+			$this->layoutPath = 'json';	
+			$this->render('not_autorized');		
+		}
+		
 		function index(){
-			$this->loadModel('TUser');
-			$arr=$this->TUser->find("all");
+			$data=array(
+				'table1'=>array("c2"=>"fse","c3"=>"pmoo","c4"=>"aze"),
+				'table2'=>array(array("c10"=>"kih","c11"=>"poi")),
+				//'table3'=>array(array("c15"=>"sdgj","c16"=>"aznnh"))
+			);
+			$this->loadModel('Station');
+			//$this->table1->create();
+			//$this->table1->saveAssociated($data);
+			//$arr=$this->table1->find("all");
+			$filename=$this->params['form']['datafile']['tmp_name'];
+			/*if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+				$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+				
+				$fileData = fread(fopen($this->params['form']['datafile']['tmp_name'], "r"), 
+                                     $this->params['form']['datafile']['size']);
+				
+				fwrite($fp, print_r($fileData ,true));
+			}*/
+			$res=$this->Station->importcsv($filename);
 			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
-				/*$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
-				fwrite($fp, print_r($arr ,true));*/
+				$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');					
+				fwrite($fp, print_r($res ,true));
 			}
 			//$this->loadModel('TaxonName');
 			//$this->loadModel('TaxonAddi');
@@ -96,8 +153,6 @@
 			$this->layout= $format;
 			$this->layoutPath = $format;		
 		}
-		
-		
 		
 		//get station for a datatable js can be filtered by protocoles and other param
 		function station_get(){	
@@ -268,6 +323,29 @@
 			}
 			else
 				$find=-1;
+			
+			if(isset($this->params['url']['format']) && $this->params['url']['format']=="geojson"){
+				$zoom=0;
+				if(isset($this->params['url']['zoom'])){
+					$zoom=$this->params['url']['zoom'];
+				}
+				$cluster='no';
+				
+				if(isset($this->params['url']['cluster']) && $this->params['url']['cluster']=='yes')
+					$cluster='yes';
+				
+					
+					if($cluster=="yes"){
+						$cartomodel=new CartoModel();
+						$station=$cartomodel->cluster($station,20,$zoom);
+						
+					}	
+				
+				$this->viewPath .= '/geojson';
+			}
+			else
+				$this->viewPath .= '/json';	
+				
 			//$this->filedebug($totaldisplay);	
 			$this->set("find",$find);			
 			$this->set("sEcho",$sEcho);
@@ -278,253 +356,265 @@
 			$this->set("ModelName",$ModelName);
 			$this->set("debug",$debug); 
 			$this->RequestHandler->respondAs('json');
-			$this->viewPath .= '/json';
-			$this->layoutPath = 'json';											
+			$this->layoutPath = 'json';	
+			$this->layout = 'json';		
 		}
 		
 		function station_get2(){
-			$format="json";
-			$id_proto="";
-			$tsearch="";
-			$locality="";
-			$area="";
-			$fa="";
-			$name="";
-			$condition_array=array();
-			$db="mycoflore";
-			$limit="";
-			$offset="";
-			$bbox="";
-			$lon="";
-			$lat="";
-			$find=1;
-			$column_array=array();
-			$id_taxon="";
-			$options=array();
-			$cluster="no";
-			$zoom=0;
-			
-			if(isset($this->params['url']['cluster']) && $this->params['url']['cluster']!=""){
-				if($this->params['url']['cluster']=="yes"){
-					$cluster="yes";
-				}
-			}	
-	
-			//get a list of station id from parameter
-			if(isset($this->params['url']['id_station']) && $this->params['url']['id_station']!=""){
-				$id_stations=$this->params['url']['id_station'];
-				$id_station_array=split(",",$id_stations);	
-				$condition_id_sta="";
-				for($i=0;$i<count($id_station_array);$i++){
-					$or="or";
-					if($i==count($id_station_array)-1)
-						$or=" ";
-					$condition_id_sta.="TSta_PK_ID = $id_station_array[$i] $or ";
-				}					
-				$condition_array[] = array($condition_id_sta);
-				//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
-				//fwrite($fp, print_r($condition_array,true));
-			}			
-				
-			if(isset($this->params['url']['zoom']) && $this->params['url']['zoom']!="")
-				$zoom=$this->params['url']['zoom'];
-			
-			//format from request
-			if(stripos($this->request->header('Accept'),"application/xml")!==false){
-				$format="xml"; 
-				$tmp_format="xml";
-			}
-			else if(stripos($this->request->header('Accept'),"application/json")!==false){
-				$tmp_format="json";
+			if(!$this->notauth){
 				$format="json";
-			}	
-			 
-			
-			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
-				$tmp_format=$this->params['url']['format'];
-				if($tmp_format=="json"){
-					$format="json";
-				}
-				else if($tmp_format=="datatablejs"){
-					$column_array = array("TSta_PK_ID","Name_FieldActivity"
-					,"Name","DATE","Area","Locality"
-					,"LAT","LON");
-				}
-				else if($tmp_format=="xml"){
-					$format="xml";
-				}
-				else if($tmp_format=="test"){
-					$format="test";
-				}
-			}				
-			
-			if(isset($this->params['url']['id_proto']) && $this->params['url']['id_proto']!=""){
-				$id_proto=$this->params['url']['id_proto'];
-			}
-			
-			if(isset($this->params['url']['id_taxon']) && $this->params['url']['id_taxon']!=""){
-				$id_taxon="and TProtocol_Inventory.Id_Taxon='".$this->params['url']['id_taxon']."'";
-				$options['joins'] = array(
-					array('table' => 'TProtocol_Inventory',
-						'alias' => 'TProtocol_Inventory',
-						'type' => 'INNER',
-						'conditions' => array(
-							"TSta_PK_ID = TProtocol_Inventory.FK_TSta_ID $id_taxon"
-						)
-					)
-				);
-			}
-			
-			$tsearch="";
-			if(isset($this->params['url']['taxonsearch']) && $this->params['url']['taxonsearch']!=""){
-				$tsearch=$this->params['url']['taxonsearch'];
-			}
-			
-			$locality="";
-			if(isset($this->params['url']['locality']) && $this->params['url']['locality']!=""){
-				$locality=$this->params['url']['locality'];
-			}
-			
-			$area="";
-			if(isset($this->params['url']['area']) && $this->params['url']['area']!=""){
-				$area=$this->params['url']['area'];
-			}
-			
-			$lat="";
-			if(isset($this->params['url']['lat']) && $this->params['url']['lat']!=""){
-				$lat=$this->params['url']['lat'];
-			}
-			
-			$lon="";
-			if(isset($this->params['url']['lon']) && $this->params['url']['lon']!=""){
-				$lon=$this->params['url']['lon'];
-			}
-			
-			$name="";
-			if(isset($this->params['url']['name']) && $this->params['url']['name']!=""){
-				$name=$this->params['url']['name'];
-			}
-			
-			$fa="";
-			if(isset($this->params['url']['field_activity']) && $this->params['url']['field_activity']!=""){
-				$fa=$this->params['url']['field_activity'];
-			}
-			
-			$idate="";
-			if(isset($this->params['url']['idate']) && $this->params['url']['idate']!=""){
-				$idate=$this->params['url']['idate'];
-			}
-			
-			if(isset($this->params['url']['limit']) && $this->params['url']['limit']!=""){
-				$limit=$this->params['url']['limit'];
-			}
-			
-			if(isset($this->params['url']['offset']) && $this->params['url']['offset']!=""){
-				$offset=intval($this->params['url']['offset']);
-			}
-			
-			
-			
-			/*_____DATATABLE_JS___*/
-			if(isset($tmp_format) && $tmp_format=="datatablejs"){
-				//take limit paramater for a limit filter
-				if(isset($this->params['url']['iDisplayLength']) && $this->params['url']['iDisplayLength']!=""){
-					$limit=intval($this->params['url']['iDisplayLength']);
-				}
-				//take offset parameter for a offset filter
-				if(isset($this->params['url']['iDisplayStart']) && $this->params['url']['iDisplayStart']!=""){
-					$offset=intval($this->params['url']['iDisplayStart']);	
-				}
-				//take sEcho parameter (param for the datable js)
-				if(isset($this->params['url']['sEcho'])){
-					$sEcho=$this->params['url']['sEcho'];	
-					$this->set("sEcho",$sEcho);
-				}			
-				$sort_column=$column_array[0];
-				$sort_dir="asc";
-				//column sort
-				if(isset($this->params['url']['iSortCol_0']) &&  $this->params['url']['sSortDir_0']){
-					$index_col=intval($this->params['url']['iSortCol_0']);
-					$sort_dir= $this->params['url']['sSortDir_0'];
-					$sort_column=$column_array[$index_col];
-				}
-			}
-			/*______________________*/
-			
-			//BBOX param if map call
-			if(isset($this->params['url']['bbox']) && $this->params['url']['bbox']!=""){
-				$bbox=$this->params['url']['bbox'];
-				$bbox_array=split(",",$bbox);
-				$min_lon=$bbox_array[0];
-				$max_lon=$bbox_array[2];
-				$min_lat=$bbox_array[1];
-				$max_lat=$bbox_array[3];
-				$condition_array[] = array("LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon");
-			}
-			
-			$this->loadModel('Station');
-			//$this->loadModel('TProtocolInventory');
-			$condition_array=$this->Station->station_filter($db,$condition_array,$locality,$area,$name,$fa,$lat,$lon,$idate,true);
-			
-			if(isset($tmp_format) && $tmp_format=="datatablejs"){
-				$total=$this->Station->find('count');
-				$this->set('total',$total);
+				$id_proto="";
+				$tsearch="";
+				$locality="";
+				$area="";
+				$fa="";
+				$name="";
+				$condition_array=array();
+				$db="mycoflore";
+				$limit="";
+				$offset="";
+				$bbox="";
+				$lon="";
+				$lat="";
+				$find=1;
+				$column_array=array();
+				$id_taxon="";
+				$options=array();
+				$cluster="no";
+				$zoom=0;
 				
-				$count=$this->Station->find('count',array(
+				if(isset($this->params['url']['cluster']) && $this->params['url']['cluster']!=""){
+					if($this->params['url']['cluster']=="yes"){
+						$cluster="yes";
+					}
+				}	
+		
+				//get a list of station id from parameter
+				if(isset($this->params['url']['id_station']) && $this->params['url']['id_station']!=""){
+					$id_stations=$this->params['url']['id_station'];
+					$id_station_array=split(",",$id_stations);	
+					$condition_id_sta="";
+					for($i=0;$i<count($id_station_array);$i++){
+						$or="or";
+						if($i==count($id_station_array)-1)
+							$or=" ";
+						$condition_id_sta.="TSta_PK_ID = $id_station_array[$i] $or ";
+					}					
+					$condition_array[] = array($condition_id_sta);
+					//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
+					//fwrite($fp, print_r($condition_array,true));
+				}			
+					
+				if(isset($this->params['url']['zoom']) && $this->params['url']['zoom']!="")
+					$zoom=$this->params['url']['zoom'];
+				
+				//format from request
+				if(stripos($this->request->header('Accept'),"application/xml")!==false){
+					$format="xml"; 
+					$tmp_format="xml";
+				}
+				else if(stripos($this->request->header('Accept'),"application/json")!==false){
+					$tmp_format="json";
+					$format="json";
+				}	
+				 
+				
+				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
+					$tmp_format=$this->params['url']['format'];
+					if($tmp_format=="json"){
+						$format="json";
+					}
+					else if($tmp_format=="datatablejs"){
+						$column_array = $column_array = array("Area","Locality"
+						,'CONVERT(varchar(255), DATE, 103) as DATE',"FieldWorker1");
+					}
+					else if($tmp_format=="xml"){
+						$format="xml";
+					}
+					else if($tmp_format=="test"){
+						$format="test";
+					}
+				}				
+				
+				if(isset($this->params['url']['id_proto']) && $this->params['url']['id_proto']!=""){
+					$id_proto=$this->params['url']['id_proto'];
+				}
+				
+				if(isset($this->params['url']['id_taxon']) && $this->params['url']['id_taxon']!=""){
+					$id_taxon="and TProtocol_Inventory.Id_Taxon='".$this->params['url']['id_taxon']."'";
+					$options['joins'] = array(
+						array('table' => 'TProtocol_Inventory',
+							'alias' => 'TProtocol_Inventory',
+							'type' => 'INNER',
+							'conditions' => array(
+								"TSta_PK_ID = TProtocol_Inventory.FK_TSta_ID $id_taxon"
+							)
+						)
+					);
+				}
+				
+				$tsearch="";
+				if(isset($this->params['url']['taxonsearch']) && $this->params['url']['taxonsearch']!=""){
+					$tsearch=$this->params['url']['taxonsearch'];
+				}
+				
+				$locality="";
+				if(isset($this->params['url']['locality']) && $this->params['url']['locality']!=""){
+					$locality=$this->params['url']['locality'];
+				}
+				
+				$area="";
+				if(isset($this->params['url']['area']) && $this->params['url']['area']!=""){
+					$area=$this->params['url']['area'];
+				}
+				
+				$lat="";
+				if(isset($this->params['url']['lat']) && $this->params['url']['lat']!=""){
+					$lat=$this->params['url']['lat'];
+				}
+				
+				$lon="";
+				if(isset($this->params['url']['lon']) && $this->params['url']['lon']!=""){
+					$lon=$this->params['url']['lon'];
+				}
+				
+				$name="";
+				if(isset($this->params['url']['name']) && $this->params['url']['name']!=""){
+					$name=$this->params['url']['name'];
+				}
+				
+				$fa="";
+				if(isset($this->params['url']['field_activity']) && $this->params['url']['field_activity']!=""){
+					$fa=$this->params['url']['field_activity'];
+				}
+				
+				$idate="";
+				if(isset($this->params['url']['idate']) && $this->params['url']['idate']!=""){
+					$idate=$this->params['url']['idate'];
+				}
+				
+				if(isset($this->params['url']['limit']) && $this->params['url']['limit']!=""){
+					$limit=$this->params['url']['limit'];
+				}
+				
+				if(isset($this->params['url']['offset']) && $this->params['url']['offset']!=""){
+					$offset=intval($this->params['url']['offset']);
+				}
+				
+				
+				
+				/*_____DATATABLE_JS___*/
+				if(isset($tmp_format) && $tmp_format=="datatablejs"){
+					$sEcho=1;
+					//take limit paramater for a limit filter
+					if(isset($this->params['url']['iDisplayLength']) && $this->params['url']['iDisplayLength']!=""){
+						$limit=intval($this->params['url']['iDisplayLength']);
+					}
+					//take offset parameter for a offset filter
+					if(isset($this->params['url']['iDisplayStart']) && $this->params['url']['iDisplayStart']!=""){
+						$offset=intval($this->params['url']['iDisplayStart']);	
+					}
+					//take sEcho parameter (param for the datable js)
+					if(isset($this->params['url']['sEcho'])){
+						$sEcho=$this->params['url']['sEcho'];	
+						
+					}	
+					$this->set("sEcho",$sEcho);	
+					$sort_column=$column_array[0];
+					$sort_dir="asc";
+					//column sort
+					if(isset($this->params['url']['iSortCol_0']) &&  $this->params['url']['sSortDir_0']){
+						$index_col=intval($this->params['url']['iSortCol_0']);
+						$sort_dir= $this->params['url']['sSortDir_0'];
+						$sort_column=$column_array[$index_col];
+					}
+				}
+				/*______________________*/
+				
+				//BBOX param if map call
+				if(isset($this->params['url']['bbox']) && $this->params['url']['bbox']!=""){
+					$bbox=$this->params['url']['bbox'];
+					$bbox_array=split(",",$bbox);
+					$min_lon=$bbox_array[0];
+					$max_lon=$bbox_array[2];
+					$min_lat=$bbox_array[1];
+					$max_lat=$bbox_array[3];
+					$condition_array[] = array("LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon");
+				}
+				
+				$this->loadModel('Station');
+				//$this->loadModel('TProtocolInventory');
+				$condition_array=$this->Station->station_filter($db,$condition_array,$locality,$area,$name,$fa,$lat,$lon,$idate,true);
+				
+				if(isset($tmp_format) && $tmp_format=="datatablejs"){
+					$total=$this->Station->find('count');
+					$this->set('total',$total);
+					
+					$count=$this->Station->find('count',array(
+						'limit'=>$limit,
+						'offset'=>$offset,
+						'conditions'=>$condition_array
+					)+$options);
+					
+					$this->set('totaldisplay',$count);		
+				}
+							
+				//$this->Station->Behaviors->attach('Containable');
+				
+				//$options['conditions'] = array('TProtocol_Inventory.Id_Taxon' => $id_taxon);
+				//$this->Station->hasMany['StationProtocoles']['conditions']['StationProtocoles.PK']=2;
+				$result=$this->Station->find('all',array(
+					'contain'=>array('SationProtocoles'=>array('conditions'=>array('Id_Taxon'=>"5440"))),
+					'recursive'=>1,
 					'limit'=>$limit,
 					'offset'=>$offset,
+					'fields'=>$column_array,
 					'conditions'=>$condition_array
+					
+					
 				)+$options);
 				
-				$this->set('totaldisplay',$count);		
-			}
-						
-			//$this->Station->Behaviors->attach('Containable');
-			
-			//$options['conditions'] = array('TProtocol_Inventory.Id_Taxon' => $id_taxon);
-			//$this->Station->hasMany['StationProtocoles']['conditions']['StationProtocoles.PK']=2;
-			$result=$this->Station->find('all',array(
-				'contain'=>array('SationProtocoles'=>array('conditions'=>array('Id_Taxon'=>"5440"))),
-				'recursive'=>1,
-				'limit'=>$limit,
-				'offset'=>$offset,
-				'fields'=>$column_array,
-				'conditions'=>$condition_array
-				
-				
-			)+$options);
-			/*
-			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
-				$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
-				fwrite($fp, print_r($result ,true));
-			}*/
-						
-			$this->set("debug","");
-			$this->set("find",1);
-			$this->set("result",$result);
-			$this->set("schema",$column_array);
-			
-			if($format!="test"){
-				if(isset($tmp_format) && $tmp_format=="datatablejs") //datatatable view
-					$this->viewPath .= '/'."datatablejs";
-				else if(isset($tmp_format) && $tmp_format=="geojson"){ //geojson view
-					$this->viewPath .= '/'."geojson";
-					$format="json";
-					if($cluster=="yes"){
-						$cartomodel=new CartoModel();
-						$result=$cartomodel->cluster($result,20,$zoom);
+							
+				$this->set("debug","");
+				$this->set("find",1);
+				$this->set("result",$result);
+				$this->set("schema",$column_array);
+				/*
+				if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+					$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+					fwrite($fp, print_r($result ,true));
+				}*/
+				if($format!="test"){
+					if(isset($tmp_format) && $tmp_format=="datatablejs"){ //datatatable view
+						$this->viewPath .= '/'."datatablejs";
+						$format="json";
 					}	
+					else if(isset($tmp_format) && $tmp_format=="geojson"){ //geojson view
+						$this->viewPath .= '/'."geojson";
+						$format="json";
+						if($cluster=="yes"){
+							$cartomodel=new CartoModel();
+							$result=$cartomodel->cluster($result,20,$zoom);
+						}	
+					}
+					else                                                   //json or xml view   			
+						$this->viewPath .= '/'.$format;				
+					$this->RequestHandler->respondAs($format);							
+					$this->layoutPath = $format;
+					$this->layout= $format;	
 				}
-				else                                                   //json or xml view   			
-					$this->viewPath .= '/'.$format;				
-				$this->RequestHandler->respondAs($format);							
-				$this->layoutPath = $format;
-				$this->layout= $format;	
+				else{
+					$this->RequestHandler->respondAs("html");
+					$this->viewPath .= '/'."json";
+				}	
 			}
 			else{
-				$this->RequestHandler->respondAs("html");
-				$this->viewPath .= '/'."json";
-			}			
+				$this->RequestHandler->respondAs('json');
+				$this->viewPath .= '/json';
+				$this->layout= 'json';
+				$this->layoutPath = 'json';	
+				$this->render('not_autorized');	
+			}		
 		}
 		
 		//controller method for the getting taxon from protocole service 
@@ -667,8 +757,8 @@
 				}
 
 				//get id from request param (case with this kind of url : proto/get/"id")
-				if(isset($this->params['url']['id_proto'])){
-					$id_proto= $this->params['url']['id_proto'];
+				if(isset($this->request->params['id_proto'])){
+					$id_proto= $this->request->params['url']['id_proto'];
 				}	
 				
 				if($id_proto!=""){
@@ -759,325 +849,515 @@
 		
 		//column value list from a table webservice
 		function column_list(){
-			$table_name="";
-			$column_name="";
-			$array_conditions=array();
-			$total="";
-			$format="json";
-			$offset=0;
-			$limit=0;
-			
-			if(isset($this->params['url']['table_name'])){
-				$table_name=$this->params['url']['table_name'];
-			}
-			
-			if(isset($this->request->params['table_name'])){
-				$table_name=$this->request->params['table_name'];
-			}
-			
-			if(isset($this->params['url']['column_name'])){
-				$column_name=$this->params['url']['column_name'];
-			}
-			
-			if(isset($this->request->params['column_name'])){
-				$column_name=$this->request->params['column_name'];
-			}
-			
-			if(isset($this->params['url']['limit'])){
-				$limit=$this->params['url']['limit'];
-			}
-			
-			if(isset($this->params['url']['offset'])){
-				$offset=$this->params['url']['offset'];
-			}
-			
-			//format from request
-				
-			if(stripos($this->request->header('Accept'),"application/xml")!==false){
-				$format="xml"; 
-			}
-			else if(stripos($this->request->header('Accept'),"application/json")!==false){
+			if(!$this->notauth){	
+				$table_name="";
+				$column_name="";
+				$array_conditions=array();
+				$total="";
 				$format="json";
-			}
-			//format from param
-			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
-				if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
-					/*$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
-					fwrite($fp, print_r("$format" ,true));*/
+				$offset=0;
+				$limit=0;
+				$find=1;
+
+				if(isset($this->params['url']['table_name'])){
+					$table_name=$this->params['url']['table_name'];
 				}
-				if(stripos($this->params['url']['format'],"xml")!== false )
-					$format="xml";
-				else if(stripos($this->params['url']['format'],"json")!== false)	
+
+				if(isset($this->request->params['table_name'])){
+					$table_name=$this->request->params['table_name'];
+				}
+
+				if(isset($this->params['url']['column_name'])){
+					$column_name=$this->params['url']['column_name'];
+				}
+
+				if(isset($this->request->params['column_name'])){
+					$column_name=$this->request->params['column_name'];
+				}
+
+				$column_name2="";
+				if(isset($this->params['url']['column_name2'])){
+					$column_name2=$this->params['url']['column_name2'];
+				}
+
+				if(isset($this->request->params['column_name2'])){
+					$column_name2=$this->request->params['column_name2'];
+				}			
+
+				if(isset($this->params['url']['limit'])){
+					$limit=$this->params['url']['limit'];
+				}
+
+				if(isset($this->params['url']['offset'])){
+					$offset=$this->params['url']['offset'];
+				}
+
+				//format from request
+					
+				if(stripos($this->request->header('Accept'),"application/xml")!==false){
+					$format="xml"; 
+				}
+				else if(stripos($this->request->header('Accept'),"application/json")!==false){
 					$format="json";
-				else if(stripos($this->params['url']['format'],"test")!== false)	
-					$format="test";	
-			}			
-			
-				
-			if($column_name!="" && $table_name!=""){
-				$field_array=array($column_name);
-				if($table_name=="TTaxa_name"){
-					$field_array=array("ID_NAME",$column_name,"FK_Taxon");
 				}
-				if(isset($this->params['url']['filter'])){
-					$filter=str_replace(" ","% %",$this->params['url']['filter'])."%";
-					$array_conditions += array("$column_name LIKE"=>$filter);
-				}				
-			
-				$model=new Value($table_name,$table_name,"mycoflore");
-				
-				if($table_name=="TTaxa_name"){
-					$limit=10;
-					$this->loadModel('TaxonName');
-					$model_result=$this->TaxonName->find("all",array(
-									'fields'=>$field_array,
-									'order'=>"$column_name asc",
-									'group'=>$field_array,
-									'conditions'=>$array_conditions,
-									'limit'=>$limit,
-									'offset'=>intval($offset)
-									));
-					$nb="";				
-					/*$nb=$this->TaxonName->find("count",array(
-									'fields'=>$field_array,
-									'group'=>$field_array,
-									'conditions'=>$array_conditions)
-									);	*/		
-					
+				//format from param
+				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
+					if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+						/*$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+						fwrite($fp, print_r("$format" ,true));*/
+					}
+					if(stripos($this->params['url']['format'],"xml")!== false )
+						$format="xml";
+					else if(stripos($this->params['url']['format'],"json")!== false)	
+						$format="json";
+					else if(stripos($this->params['url']['format'],"test")!== false)	
+						$format="test";	
+				}			
+
+				$fields=array();
+				if(isset($this->params['url']['fields']) && $this->params['url']['fields']!=""){
+					$fields=split(",",$this->params['url']['fields']);
 				}
-				else{				
-					$model_result=$model->find("all",array(
-									'fields'=>$field_array,
-									'order'=>"$column_name asc",
-									'group'=>$field_array,
-									'conditions'=>$array_conditions,
-									'limit'=>$limit,
-									'offset'=>intval($offset))
-									);
+
+				if(isset($this->request->params['fields']) && $this->request->params['fields']!=""){
+					$fields=split(",",$this->request->params['fields']);
+				}
+
+				$join_column=array();
+				if(isset($this->params['url']['join_column']) && $this->params['url']['join_column']!=""){
+					$join_column=split(",",$this->params['url']['join_column']);
+				}
+
+				if(isset($this->request->params['join_column']) && $this->request->params['join_column']!=""){
+					$join_column=split(",",$this->request->params['join_column']);
+				}
+
+				$table_join="";
+				if(isset($this->params['url']['table_join']) && $this->params['url']['table_join']!=""){
+					$table_join=$this->params['url']['table_join'];
+				}
+
+				if(isset($this->request->params['table_join']) && $this->request->params['table_join']!=""){
+					$table_join=$this->request->params['table_join'];
+				}
+
+				$pk_join="";
+				if(isset($this->params['url']['pk']) && $this->params['url']['pk']!=""){
+					$pk_join=$this->params['url']['pk'];
+				}
+
+				if(isset($this->request->params['pk']) && $this->request->params['pk']!=""){
+					$pk_join=$this->request->params['pk'];
+				}
+
+				$fk_join="";
+				if(isset($this->params['url']['fk']) && $this->params['url']['fk']!=""){
+					$fk_join=$this->params['url']['fk'];
+				}
+
+				if(isset($this->request->params['fk']) && $this->request->params['fk']!=""){
+					$fk_join=$this->request->params['fk'];
+				}
+
+				$options=array();
+				if($table_join!="" && $join_column!=""){
+					$options['joins'] = array(
+						array('table' => $table_join,
+							'alias' => $table_join.'Join',
+							'type' => 'INNER',
+							'conditions' => array(
+								"$fk_join = $pk_join"
+							)
+						)
+					);
+				}
+
+				if($column_name!="" && $table_name!=""){
+					$field_array=array($column_name);
+					if($table_name=="TTaxa_name"){
+						//$field_array=array("ID_NAME",$column_name,"FK_Taxon");
+						$field_array=array($column_name);
+					}
+					if(isset($this->params['url']['filter'])){
+						$filter=str_replace(" ","% ",$this->params['url']['filter'])."%";
+						/*if($column_name2!="")
+							$array_conditions += array(array("or",array("$column_name LIKE"=>$filter,"$column_name2 LIKE"=>$filter)));
+						else*/	
+							$array_conditions += array("$column_name LIKE"=>$filter);
+					}				
+
+					$model=new Value($table_name,$table_name,"mycoflore");
+					$count=false;
+					//check if it's a count request
+					if(isset($this->params['url']['count']) && $this->params['url']['count']!=""){
+						$count=true;
+					}
 					
-					$nb=$model->find("count",array(
-									'fields'=>$field_array,
-									'group'=>$field_array,
-									'conditions'=>$array_conditions)
-									);	
-				}				
-				/*
-				$total=$model->find("count",array(
-								'fields'=>array($column_name),
-								'group'=>array($column_name))								
-								);		*/
+					if(isset($this->request->params['count']))
+						$count=true;
+					
+					if(count($fields)!=0){
+						$field_array=$fields;
+					}
+					
+					if($count){
+						
+					}				
+					else if($table_name=="TTaxa_name"){
+						//$limit=10;
+						$this->loadModel('TaxonName');
+						if(count($fields)!=0 && count($join_column)!=0){
+							$field_array=array_merge($fields,$join_column);
+							
+						}
+						$model_result=$this->TaxonName->find("all",array(
+										'fields'=>$field_array,
+										'order'=>"$column_name asc",
+										'group'=>$field_array,
+										'conditions'=>$array_conditions,
+										'limit'=>$limit,
+										'offset'=>intval($offset)
+										)+$options);
+						$nb="";		
+
+						/*if(count($fields)!=0 && count($join_column)!=0){
+							$dbo = $this->TaxonName->getDatasource();
+							$logs = $dbo->getLog();
+							$lastLog = end($logs['log']);
+							print_r(" table ");
+							print_r($lastLog);
+							
+						}	*/										
+						/*$nb=$this->TaxonName->find("count",array(
+										'fields'=>$field_array,
+										'group'=>$field_array,
+										'conditions'=>$array_conditions)
+										);	*/		
+						
+					}
+					else{				
+						$model_result=$model->find("all",array(
+										'fields'=>$field_array+$fields,
+										'order'=>"$column_name asc",
+										'group'=>$field_array,
+										'conditions'=>$array_conditions,
+										'limit'=>$limit,
+										'offset'=>intval($offset))+$options
+										);
+						
+						$nb=$model->find("count",array(
+										'fields'=>$field_array,
+										'group'=>$field_array,
+										'conditions'=>$array_conditions)+$options
+										);	
+					}				
+					/*
+					$total=$model->find("count",array(
+									'fields'=>array($column_name),
+									'group'=>array($column_name))								
+									);		*/
+									
+					//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
+					//fwrite($fp, print_r($model_result,true));				
+					$this->set("find",$find);
+					$this->set("nb",$nb);
+					$this->set("total",$total);
+					$this->set("table_name",$table_name);
+					$this->set("column_name",$column_name);
+					$this->set("result",$model_result);				
+				}
+				else{
+					$this->set("find",-1);
+					if($column_name=="" && $table_name==""){
+						$this->set("message","Column name and table name parameter missing");					
+					}
+					else if($table_name==""){
+						$this->set("message","table name parameter missing");					
+					}
+					else if($column_name==""){
+						$this->set("message","Column name parameter missing");					
+					}
+				}
 								
-				//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
-				//fwrite($fp, print_r($model_result,true));				
-				$this->set("find",1);
-				$this->set("nb",$nb);
-				$this->set("total",$total);
-				$this->set("table_name",$table_name);
-				$this->set("column_name",$column_name);
-				$this->set("result",$model_result);				
+				// Set response as XML
+				$this->RequestHandler->respondAs($format);
+				$this->viewPath .= "/".$format;
+				$this->layoutPath =$format;
+				$this->layout = $format;
+				if(($table_name=="TTaxa_name" && $column_name=="NAME_WITHOUT_AUTHORITY") || ($table_name=="TTaxa" && $column_name=="NAME_VERN_FR")){
+					$this->set("verna",false);	
+					if(count($fields)>1)
+							$this->set("table",true);
+					//print_r("ici");
+					if($table_name=="TTaxa" && $column_name=="NAME_VERN_FR"){
+						$this->set("verna",true);
+						
+					}	
+					$this->render('taxon_name_list');		
+				}		
 			}
 			else{
-				$this->set("find",-1);
-				if($column_name=="" && $table_name==""){
-					$this->set("message","Column name and table name parameter missing");					
-				}
-				else if($table_name==""){
-					$this->set("message","table name parameter missing");					
-				}
-				else if($column_name==""){
-					$this->set("message","Column name parameter missing");					
-				}
-			}
-							
-			// Set response as XML
-			$this->RequestHandler->respondAs($format);
-			$this->viewPath .= "/".$format;
-			$this->layoutPath =$format;
-			$this->layout = $format;
-			if($table_name=="TTaxa_name" && $column_name=="NAME_WITHOUT_AUTHORITY")
-				$this->render('taxon_name_list');
+				$this->RequestHandler->respondAs('json');
+				$this->viewPath .= '/json';
+				$this->layout= 'json';
+				$this->layoutPath = 'json';	
+				$this->render('not_autorized');	
+			}	
 		}
 		
 		//taxon get webservice
 		function taxon_get(){
-			$model_taxon = new AppModel("TTaxa","TTaxa","mycoflore");
-			$condition_array=array();
-			$KINGDOM="";
-			$NAME_VALID="";
-			$NAME_WITHOUT_AUTHORITY="";
-			$NAME_WITH_AUTHORITY="";
-			$id_taxon="";
-			$ID_NAME="";
-			$ID_HIGHER_TAXON="";
-			$AUTHORITY="";
-			$NOM_VERN_FR="";
-			$NOM_VERN_ENG="";
-			$PHYLUM="";
-			$CLASS="";
-			$ORDER="";
-			$FAMILY="";
-			$RANK="";
-			$TAXREF_CD_NOM="";
-			$TAXREF_CD_TAXSUP="";
-			$TAXREF_CD_REF="";
-			$join=array();
-			$format="json";
-			$this->loadModel('Taxon');
-			$limit=0;
-			$offset=0;
-			
-			//get id from param
-			if(isset($this->params['url']['id_taxon'])){
-				$id_taxon=$this->params['url']['id_taxon'];						
-			}
-			
-			//format from request
-				
-			if(stripos($this->request->header('Accept'),"application/xml")!==false){
-				$format="xml"; 
-			}
-			else if(stripos($this->request->header('Accept'),"application/json")!==false){
+			if(!$this->notauth){
+				$model_taxon = new AppModel("TTaxa","TTaxa","mycoflore");
+				$condition_array=array();
+				$KINGDOM="";
+				$NAME_VALID="";
+				$NAME_WITHOUT_AUTHORITY="";
+				$NAME_WITH_AUTHORITY="";
+				$id_taxon="";
+				$ID_NAME="";
+				$ID_HIGHER_TAXON="";
+				$AUTHORITY="";
+				$NOM_VERN_FR="";
+				$NOM_VERN_ENG="";
+				$PHYLUM="";
+				$CLASS="";
+				$ORDER="";
+				$FAMILY="";
+				$RANK="";
+				$TAXREF_CD_NOM="";
+				$TAXREF_CD_TAXSUP="";
+				$TAXREF_CD_REF="";
+				$join=array();
 				$format="json";
-			}
-			
-			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
-				if(stripos($this->params['url']['format'],"xml")!== false )
-					$format="xml";
-				else if(stripos($this->params['url']['format'],"json")!== false)	
+				$this->loadModel('Taxon');
+				$limit=0;
+				$offset=0;
+				
+				//get id from param
+				if(isset($this->params['url']['id_taxon'])){
+					$id_taxon=$this->params['url']['id_taxon'];						
+				}
+				
+				//format from request
+					
+				if(stripos($this->request->header('Accept'),"application/xml")!==false){
+					$format="xml"; 
+				}
+				else if(stripos($this->request->header('Accept'),"application/json")!==false){
 					$format="json";
-				else if(stripos($this->params['url']['format'],"test")!== false)	
-					$format="test";	
-			}
-			
-			if(isset($this->params['url']['limit'])){
-				$limit=$this->params['url']['limit'];
-			}
-			
-			if(isset($this->params['url']['offset'])){
-				$offset=$this->params['url']['offset'];
-			}
-			
-			//get id from request param (case with this kind of url : proto/get/"id")
-			if(isset($this->request->params['id_taxon']) && $this->request->params['id_taxon']!="[0-9]+"){
-				$id_taxon= $this->request->params['id_taxon'];
-			}
+				}
+				
+				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
+					if(stripos($this->params['url']['format'],"xml")!== false )
+						$format="xml";
+					else if(stripos($this->params['url']['format'],"json")!== false)	
+						$format="json";
+					else if(stripos($this->params['url']['format'],"test")!== false)	
+						$format="test";	
+				}
+				
+				if(isset($this->params['url']['limit'])){
+					$limit=$this->params['url']['limit'];
+				}
+				
+				if(isset($this->params['url']['offset'])){
+					$offset=$this->params['url']['offset'];
+				}
+				
+				//get id from request param (case with this kind of url : proto/get/"id")
+				if(isset($this->request->params['id_taxon']) && $this->request->params['id_taxon']!="[0-9]+"){
+					$id_taxon= $this->request->params['id_taxon'];
+				}
 
-			//get kingdom param
-			if(isset($this->params['url']['KINGDOM'])){
-				$KINGDOM= $this->params['url']['KINGDOM'];
-			}	
-			
-			//get name_valid param
-			if(isset($this->params['url']['NAME_VALID'])){
-				$NAME_VALID= $this->params['url']['NAME_VALID'];
+				//get kingdom param
+				if(isset($this->params['url']['KINGDOM'])){
+					$KINGDOM= $this->params['url']['KINGDOM'];
+				}	
+				
+				//get name_valid param
+				if(isset($this->params['url']['NAME_VALID'])){
+					$NAME_VALID= $this->params['url']['NAME_VALID'];
+				}
+				
+				//get name_id param
+				if(isset($this->params['url']['ID_NAME'])){
+					$ID_NAME= $this->params['url']['ID_NAME'];
+				}
+				
+				//get name_without_authority param
+				if(isset($this->params['url']['NAME_WITHOUT_AUTHORITY'])){
+					$NAME_WITHOUT_AUTHORITY= $this->params['url']['Name_without_Authority'];
+				}
+				
+				//get ID_HIGHER_TAXON param
+				if(isset($this->params['url']['ID_HIGHER_TAXON'])){
+					$ID_HIGHER_TAXON= $this->params['url']['ID_HIGHER_TAXON'];
+				}
+				
+				//get NOM_VERN_FR param
+				if(isset($this->params['url']['NOM_VERN_FR'])){
+					$NOM_VERN_FR= $this->params['url']['NOM_VERN_FR'];
+				}
+							
+				//get AUTHORITY param
+				if(isset($this->params['url']['AUTHORITY'])){
+					$AUTHORITY= $this->params['url']['AUTHORITY'];
+				}
+				
+				//get NOM_VERN_ENG param
+				if(isset($this->params['url']['NOM_VERN_ENG'])){
+					$NOM_VERN_ENG= $this->params['url']['NOM_VERN_ENG'];
+				}
+				
+				//get PHYLUM param
+				if(isset($this->params['url']['PHYLUM'])){
+					$PHYLUM= $this->params['url']['PHYLUM'];
+				}
+				
+				//get CLASS param
+				if(isset($this->params['url']['CLASS'])){
+					$CLASS= $this->params['url']['CLASS'];
+				}
+				
+				//get ORDER param
+				if(isset($this->params['url']['ORDER'])){
+					$ORDER= $this->params['url']['ORDER'];
+				}
+				
+				//get FAMILY param
+				if(isset($this->params['url']['FAMILY'])){
+					$FAMILY= $this->params['url']['FAMILY'];
+				}
+				
+				//get RANK param
+				if(isset($this->params['url']['RANK'])){
+					$RANK= $this->params['url']['RANK'];
+				}
+				
+				//get TAXREF_CD_NOM param
+				if(isset($this->params['url']['TAXREF_CD_NOM'])){
+					$TAXREF_CD_NOM= $this->params['url']['TAXREF_CD_NOM'];
+				}
+				
+				//get TAXREF_CD_NOM param
+				if(isset($this->params['url']['TAXREF_CD_TAXSUP'])){
+					$TAXREF_CD_TAXSUP= $this->params['url']['TAXREF_CD_TAXSUP'];
+				}
+				
+				//get TAXREF_CD_REF param
+				if(isset($this->params['url']['TAXREF_CD_REF'])){
+					$TAXREF_CD_REF= $this->params['url']['TAXREF_CD_REF'];
+				}
+				
+				$array_conditions=$model_taxon->taxon_filter($condition_array,$id_taxon,$ID_HIGHER_TAXON,$ID_NAME
+				,$NAME_WITH_AUTHORITY,$AUTHORITY,$NAME_WITHOUT_AUTHORITY,$NAME_VALID,$NOM_VERN_FR,$NOM_VERN_ENG,$NOM_VERN_FR
+				,$KINGDOM,$PHYLUM,$CLASS,$ORDER,$FAMILY,$RANK,$TAXREF_CD_NOM,$TAXREF_CD_TAXSUP,$TAXREF_CD_REF
+				,true);
+				
+				//$this->Taxon->hasMany['Synonymous']['conditions']['Synonymous.']=2;
+				$taxons=$this->Taxon->find("all",array(
+					'contain' => array(
+						'Synonymous'=> array(
+							'conditions'=> array('Synonymous.FK_Taxon'=>'17286')
+						)
+					),
+					'fields'=>array(),
+					'conditions'=>$array_conditions,
+					'order'=>array("NAME_VALID_WITHOUT_AUTHORITY asc"),
+					'limit'=>$limit,
+					'offset'=>intval($offset)
+					
+				));
+				
+				$nb_taxons="";
+				/*$nb_taxons=$this->Taxon->find("count",array(
+					'conditions'=>$array_conditions,
+					'limit'=>$limit,
+					'offset'=>intval($offset)
+				));*/
+				
+							
+				if(!($taxons && (count($taxons)>0)))
+					$taxons=array();
+				
+				if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+					$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+					fwrite($fp, print_r($taxons ,true));
+				}
+				
+				$this->set("taxons",$taxons);
+				$this->set("nb",$nb_taxons);
+				
+				if($format!="test"){
+					//$this->RequestHandler->setContent('json', 'text/x-json');
+					// Set response as XML
+					$this->RequestHandler->respondAs($format);
+					$this->viewPath .= "/".$format;
+					$this->layoutPath = $format;
+					$this->layout=$format;
+				}	
+				else{
+					// Set response as XML
+					$this->RequestHandler->respondAs("html");
+					$this->viewPath .= "/"."json";
+					//$this->layoutPath = $format;
+					//$this->layout=$format;
+				}
 			}
+			else{
+				$this->RequestHandler->respondAs('json');
+				$this->viewPath .= '/json';
+				$this->layout= 'json';
+				$this->layoutPath = 'json';	
+				$this->render('not_autorized');	
+			}		
+		}
+		
+		//
+		function taxon_count(){
+			$format='json';
+			$this->loadModel('TaxonFamilyCount');
+			$find_field=false;
+			$field="";
 			
-			//get name_id param
-			if(isset($this->params['url']['ID_NAME'])){
-				$ID_NAME= $this->params['url']['ID_NAME'];
+			if(isset($this->params['url']['field']) && $this->params['url']['field']!=""){
+				$field= $this->params['url']['field'];
 			}
+			if($field!="")
+				foreach ($this->TaxonFamilyCount->schema() as $key=>$val){
+					//check if the field exist with insensitive case
+					if(stripos($key,$field)!==false){
+						$field=$key;
+						$find_field=true;
+						break;
+					}											
+				}
 			
-			//get name_without_authority param
-			if(isset($this->params['url']['NAME_WITHOUT_AUTHORITY'])){
-				$NAME_WITHOUT_AUTHORITY= $this->params['url']['Name_without_Authority'];
+			$options['joins'] = array(
+				array('table' => 'TProtocol_Inventory',
+					'alias' => 'TProtocol_Inventory',
+					'type' => 'INNER',
+					'conditions' => array(
+						"TaxonFamilyCount.ID_TAXON = TProtocol_Inventory.Id_Taxon"
+					)
+				)
+			);	
+					
+			if($find_field){
+				$familycount=$this->TaxonFamilyCount->find('all',array(
+					'fields'=>array("$field",'COUNT(*) as nb'),
+					'group'=>"[$field]"
+				)+$options);
+				if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+					$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
+					fwrite($fp, print_r($familycount ,true));
+				}							
+				$this->set('result',$familycount);			
 			}
-			
-			//get ID_HIGHER_TAXON param
-			if(isset($this->params['url']['ID_HIGHER_TAXON'])){
-				$ID_HIGHER_TAXON= $this->params['url']['ID_HIGHER_TAXON'];
-			}
-			
-			//get NOM_VERN_FR param
-			if(isset($this->params['url']['NOM_VERN_FR'])){
-				$NOM_VERN_FR= $this->params['url']['NOM_VERN_FR'];
-			}
-						
-			//get AUTHORITY param
-			if(isset($this->params['url']['AUTHORITY'])){
-				$AUTHORITY= $this->params['url']['AUTHORITY'];
-			}
-			
-			//get NOM_VERN_ENG param
-			if(isset($this->params['url']['NOM_VERN_ENG'])){
-				$NOM_VERN_ENG= $this->params['url']['NOM_VERN_ENG'];
-			}
-			
-			//get PHYLUM param
-			if(isset($this->params['url']['PHYLUM'])){
-				$PHYLUM= $this->params['url']['PHYLUM'];
-			}
-			
-			//get CLASS param
-			if(isset($this->params['url']['CLASS'])){
-				$CLASS= $this->params['url']['CLASS'];
-			}
-			
-			//get ORDER param
-			if(isset($this->params['url']['ORDER'])){
-				$ORDER= $this->params['url']['ORDER'];
-			}
-			
-			//get FAMILY param
-			if(isset($this->params['url']['FAMILY'])){
-				$FAMILY= $this->params['url']['FAMILY'];
-			}
-			
-			//get RANK param
-			if(isset($this->params['url']['RANK'])){
-				$RANK= $this->params['url']['RANK'];
-			}
-			
-			//get TAXREF_CD_NOM param
-			if(isset($this->params['url']['TAXREF_CD_NOM'])){
-				$TAXREF_CD_NOM= $this->params['url']['TAXREF_CD_NOM'];
-			}
-			
-			//get TAXREF_CD_NOM param
-			if(isset($this->params['url']['TAXREF_CD_TAXSUP'])){
-				$TAXREF_CD_TAXSUP= $this->params['url']['TAXREF_CD_TAXSUP'];
-			}
-			
-			//get TAXREF_CD_REF param
-			if(isset($this->params['url']['TAXREF_CD_REF'])){
-				$TAXREF_CD_REF= $this->params['url']['TAXREF_CD_REF'];
-			}
-			
-			$array_conditions=$model_taxon->taxon_filter($condition_array,$id_taxon,$ID_HIGHER_TAXON,$ID_NAME
-			,$NAME_WITH_AUTHORITY,$AUTHORITY,$NAME_WITHOUT_AUTHORITY,$NAME_VALID,$NOM_VERN_FR,$NOM_VERN_ENG,$NOM_VERN_FR
-			,$KINGDOM,$PHYLUM,$CLASS,$ORDER,$FAMILY,$RANK,$TAXREF_CD_NOM,$TAXREF_CD_TAXSUP,$TAXREF_CD_REF
-			,true);
-			
-			//$this->Taxon->hasMany['Synonymous']['conditions']['Synonymous.']=2;
-			$taxons=$this->Taxon->find("all",array(
-				'conditions'=>$array_conditions,
-				'order'=>array("NAME_VALID_WITHOUT_AUTHORITY asc"),
-				'limit'=>$limit,
-				'offset'=>intval($offset)
-			));
-			
-			$nb_taxons="";
-			/*$nb_taxons=$this->Taxon->find("count",array(
-				'conditions'=>$array_conditions,
-				'limit'=>$limit,
-				'offset'=>intval($offset)
-			));*/
-			
-			//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
-			//fwrite($fp, print_r($taxons,true));
-			
-			
-			
-			if(!($taxons && (count($taxons)>0)))
-				$taxons=array();
-			/*
-			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
-				$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
-				fwrite($fp, print_r($format ,true));
-			}*/
-			
-			$this->set("taxons",$taxons);
-			$this->set("nb",$nb_taxons);
-			
+			else
+				$this->set('result',"Nom de champs manquant ou mal ecrit. param: field='nom_champ'");
+			$this->set('field',$field);	
 			if($format!="test"){
 				//$this->RequestHandler->setContent('json', 'text/x-json');
 				// Set response as XML
@@ -1094,7 +1374,7 @@
 				//$this->layout=$format;
 			}
 		}
-			
+		
 		//create a simplified table of this return by find->query
 		function simply_table($table){
 			$sTable = array();

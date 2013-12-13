@@ -121,7 +121,7 @@
  *	`manager_index()` and `/manager/controller/index`
  *
  */
-Configure::write('Routing.prefixes', array('admin'));
+	//Configure::write('Routing.prefixes', array('admin'));
 
 /**
  * Turn off all caching application-wide.
@@ -199,7 +199,7 @@ Configure::write('Routing.prefixes', array('admin'));
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '768593096ZAnbf542496749683645');
+	Configure::write('Security.cipherSeed', '7685930968755236654249674968364123545');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).

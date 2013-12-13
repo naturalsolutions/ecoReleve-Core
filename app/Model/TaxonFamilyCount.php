@@ -1,0 +1,1 @@
+<?phpclass TaxonFamilyCount extends AppModel {	public $useDbConfig = 'mycoflore';	public $useTable = 'TTaxa';}	 ?>

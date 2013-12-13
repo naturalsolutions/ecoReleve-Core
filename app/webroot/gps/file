@@ -1,0 +1,38 @@
+Array
+(
+    [Taxon] => Array
+        (
+            [FK_PREFERED_NAME] => 
+            [ID_HIGHER_TAXON] => 
+            [KINGDOM] => 
+            [PHYLUM] => 
+            [CLASS] => 
+            [ORDER] => 
+            [FAMILY] => 
+            [RANK] => 
+            [NAME_VALID_AUTHORITY] => 
+            [NAME_VALID_WITH_AUTHORITY] => 
+            [NAME_VALID_WITHOUT_AUTHORITY] => zz
+            [NAME_VERN_FR] => 
+            [NAME_VERN_ENG] => 
+            [TAXREF_CD_TAXSUP] => 
+            [TAXREF_CD_REF] => 
+        )
+
+    [Additional] => Array
+        (
+            [0] => Array
+                (
+                    [Additional] => Array
+                        (
+                            [value] => kjh
+                            [value_precision] => bnb
+                            [aditional_value_Pk] => 
+                            [FK_value_type] => image
+                        )
+
+                )
+
+        )
+
+)

@@ -1,18 +1,12 @@
 <div class="tUsers index">
-	<h2><?php echo __('T Users'); ?></h2>
+	<h2><?php echo __('Users'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('TUse_Pk_ID'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_Nom'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_Prenom'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_Actif'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_DateCreation'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_Login'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_Password'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_Departement'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_Language'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_DateModif'); ?></th>
-			<th><?php echo $this->Paginator->sort('TUse_Observateur'); ?></th>
+			<th><?php echo $this->Paginator->sort('TUse_Pk_ID','ID'); ?></th>
+			<th><?php echo $this->Paginator->sort('TUse_Nom','Nom'); ?></th>
+			<th><?php echo $this->Paginator->sort('TUse_Prenom','Prenom'); ?></th>
+			<th><?php echo $this->Paginator->sort('TUse_DateCreation','Date de Creation'); ?></th>
+			<th><?php echo $this->Paginator->sort('TUse_Login','Login'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($tUsers as $tUser): ?>
@@ -20,14 +14,8 @@
 		<td><?php echo h($tUser['TUser']['TUse_Pk_ID']); ?>&nbsp;</td>
 		<td><?php echo h($tUser['TUser']['TUse_Nom']); ?>&nbsp;</td>
 		<td><?php echo h($tUser['TUser']['TUse_Prenom']); ?>&nbsp;</td>
-		<td><?php echo h($tUser['TUser']['TUse_Actif']); ?>&nbsp;</td>
 		<td><?php echo h($tUser['TUser']['TUse_DateCreation']); ?>&nbsp;</td>
 		<td><?php echo h($tUser['TUser']['TUse_Login']); ?>&nbsp;</td>
-		<td><?php echo h($tUser['TUser']['TUse_Password']); ?>&nbsp;</td>
-		<td><?php echo h($tUser['TUser']['TUse_Departement']); ?>&nbsp;</td>
-		<td><?php echo h($tUser['TUser']['TUse_Language']); ?>&nbsp;</td>
-		<td><?php echo h($tUser['TUser']['TUse_DateModif']); ?>&nbsp;</td>
-		<td><?php echo h($tUser['TUser']['TUse_Observateur']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $tUser['TUser']['TUse_Pk_ID'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $tUser['TUser']['TUse_Pk_ID'])); ?>
@@ -53,8 +41,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New T User'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List T Applications'), array('controller' => 't_applications', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Application'), array('controller' => 't_applications', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New'), array('action' => 'add')); ?></li>
 	</ul>
 </div>

@@ -1,0 +1,1 @@
+<?php echo '[{"result":"'.$result.'","message":"'.$message.'","role":"'.$role.'","login":"'.$login.'"}]'?>

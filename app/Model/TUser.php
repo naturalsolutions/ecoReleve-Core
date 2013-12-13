@@ -1,5 +1,5 @@
 <?php
-App::uses('TAutorisation', 'Model');
+App::uses('AppModel', 'Model');
 /**
  * TUser Model
  *
@@ -27,14 +27,30 @@ class TUser extends AppModel {
  */
 	public $primaryKey = 'TUse_Pk_ID';
 	
-	public $hasAndBelongsToMany  = array(
-        'Application' => array(
-            'className' => 'TApplication',
-			'joinTable' => 'TAutorisations',
-			'foreignKey' => 'TAut_FK_TUse_PK_ID',
-			'associationForeignKey' => 'TAut_FK_TApp_PK_ID',
-			'conditions' => "((select TRol_Type from TRoles where TRol_PK_ID=[TAutorisation].TAut_FK_TRol_PK_ID)!='Interdit')"
+	
+	
+	public $hasMany = array(
+        'Autorisations' => array(
+            'className' => 'TAutorisation',
+			'foreignKey' => 'TAut_FK_TUse_PK_ID'
+        )
+	);
+	
+	public $validate = array(
+        'TUse_Login' => array(
+			'rule' => 'notEmpty'
+        ),
+		 'TUse_Password' => array(
+			'rule' => 'notEmpty'
         )
     );
+	
+	public function beforeSave($options = array()) {
+		if (!empty($this->data['TUser']['TUse_DateCreation'])) {
+			$this->data['TUser']['TUse_DateCreation'] = str_replace("-","",$this->data['TUser']['TUse_DateCreation']);			
+		}
+		return true;
+	}
 
+	
 }

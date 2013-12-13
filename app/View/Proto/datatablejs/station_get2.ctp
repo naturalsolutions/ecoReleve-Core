@@ -8,10 +8,7 @@
 <?php if($result):?>
 <?php $i=0; foreach ($result as $t): ?>
 [
-<?php $j=0;foreach($t['Station'] as $key=>$val): ?>
-"<?php echo $val?>"<?php if($j<sizeof($t['Station'])-1)echo ",";?>
-<?php $j++;?>
-<?php endforeach?>
+"<?php echo $t['Station']['Area']?>","<?php echo $t['Station']['Locality']?>","<?php echo $t[0]['DATE']?>","<?php echo $t['Station']['FieldWorker1']?>"
 ]<?php if($i<sizeof($result)-1)echo ",";?>	
 <?php $i++;?>
 <?php endforeach?>

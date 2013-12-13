@@ -54,6 +54,10 @@
 			else if(isset($markers[0]['Station'])){
 				$name_key='Station';
 			}
+			else if(isset($markers[0]['TStationsJoin'])){
+				$name_key='TStationsJoin';
+			}
+			
 			/* Loop until all markers have been compared. */
 			while (count($markers)) {
 				$marker  = array_pop($markers);				
