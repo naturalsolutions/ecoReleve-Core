@@ -111,9 +111,15 @@ List of ecoReleve-core webservices routes :
 	• /user
 	CRUD user
 -----------------
+	• /doc
+	CRUD doc
+	
 	• /doc/list
 	Return the list of documents
 -----------------
+	• /taxon
+	CRUD taxon
+	
 	• /taxon/get/:id_taxon
 	Return data of the taxon with id='id_taxon'
 	
