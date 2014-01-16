@@ -7,12 +7,10 @@ A free and open source application.
 
 This Software allow access to a lot of ecoReleve's webservices.
 
-ecoRelevé Core is a free and open source ser
-
 
 Installation notes
 -----------------
- * Deploy on a apache server, with "sqlserver for php" plugin
+ * Deploy on a apache or IIS server, with "sqlserver for php" plugin
  * Have sqlserver database with a eReleve base (Natural Solution's base)
  * Intall sqlserver native client 2012 
 
@@ -29,6 +27,11 @@ Technical details
 
 • CakePHP Framework
 
+Application details
+-----------------
+List of ecoReleve-core webservices routes :
+
+• /protocole/list parameter(s) : motcle
 
 Twitter
 ------------
