@@ -42,8 +42,15 @@ List of ecoReleve-core webservices routes :
 	
 	• /protocole/taxon/list parameter(s) : id_proto
 	Return  protocole's taxons from the protocole with id_proto=proto_name
-	-----------------
+-----------------
+	• /fieldactivity/list/autocomplete
+	List of field activity used
 	
+	• /region/list/autocomplete
+	List of field activity used
+	
+	• /place/list/autocomplete
+	List of field activity used
 
 Twitter
 ------------
