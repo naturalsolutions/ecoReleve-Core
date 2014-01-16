@@ -37,6 +37,13 @@ List of ecoReleve-core webservices routes :
 	• /protocole/get/:id_proto
 	Return one protocole with id=id_proto
 	
+	• /protocole/get parameter(s) : proto_name
+	Return one protocole with protocole name=proto_name
+	
+	• /protocole/taxon/list parameter(s) : id_proto
+	Return  protocole's taxons from the protocole with id_proto=proto_name
+	-----------------
+	
 
 Twitter
 ------------
