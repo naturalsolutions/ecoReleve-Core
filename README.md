@@ -32,6 +32,7 @@ Application details
 List of ecoReleve-core webservices routes :
 
 	• /protocole/list parameter(s) : motcle
+	Return the list of protocols
 
 Twitter
 ------------
