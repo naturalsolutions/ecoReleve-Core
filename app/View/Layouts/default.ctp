@@ -16,12 +16,14 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-	header("Access-Control-Allow-Credentials: true");	
+ 
 	if(isset($origin)){
+		header("Access-Control-Allow-Credentials: true");
 		header("Access-Control-Allow-Origin: $origin");	
 	}	
 	else
-		header("Access-Control-Allow-Origin: *");	
+		header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: x-requested-With");
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 ?>
 <!DOCTYPE html>
@@ -45,7 +47,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php //echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 		</div>
 		<div id="content">
 

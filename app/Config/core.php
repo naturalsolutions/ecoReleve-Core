@@ -188,18 +188,30 @@
  *
  */
 	Configure::write('Session', array(
-		'defaults' => 'php'
-	));
+		'defaults' => 'php',
+		'ini' => array(
+        'session.cookie_secure' => false)
+    ));
 
-/**
+	Configure::write('Session.checkAgent', false);
+	
+	 
+
+	/**
+	 * The level of CakePHP security.
+	 */
+	Configure::write('Security.level', 'medium');
+	/**
+	
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'DYhG93b0qyMLKazs2guVoUubWwvniR2G0FgaC9mi');
+	Configure::write('Security.salt', 'DYhG93b0qyMLKazs2guVoUubWwvniR2G0FgaC9mi478541ljkhbdg516546546814');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '7685930968755236654249674968364123545');
+	//Configure::write('Security.cipherSeed', '192669981614262282798756412554865486545486541798564416984');
+	Configure::write('Security.rijndael', '192669981614262282798756412554865486545486541798564416984');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).

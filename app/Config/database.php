@@ -3,75 +3,63 @@ class DATABASE_CONFIG {
 	public $default = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "NS24422",
+	 "host" => "WIN7PRO-PC\WIN7SERVER",
 	 "login" => "",
 	 "password" => "",
-	 "database" => "ECWP_eReleve",
-	 "prefix" => "",
-	 "encoding" => "",
+	 "database" => "eReleve",
+	 "prefix" => ""
 	);
 	
 	public $mycoflore = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "NS24422",
+	 "host" => "WIN7PRO-PC\WIN7SERVER",
 	 "login" => "",
 	 "password" => "",
 	 "database" => "DB_mycoflore",
 	 "prefix" => ""
 	);	
 	
-	public $mycoflorevide = array(
+	public $narc_ereleve = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "NS24422",
+	 "host" => "WIN7PRO-PC\WIN7SERVER",
 	 "login" => "",
 	 "password" => "",
-	 "database" => "DB_mycoflorevide",
+	 "database" => "NARC_eReleve",
 	 "prefix" => ""
 	);	
+	
+	public $ecwp_ereleve = array(
+	 "datasource" => "Database/Sqlserver",
+	 "persistent" => false,
+	 "host" => "WIN7PRO-PC\WIN7SERVER",
+	 "login" => "",
+	 "password" => "",
+	 "database" => "eReleve",
+	 "prefix" => ""
+	);
 	
 	public $ereleve = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "NS24422",
+	 "host" => "WIN7PRO-PC\WIN7SERVER",
 	 "login" => "",
 	 "password" => "",
-	 "database" => "ECWP_eReleve",
-	 "prefix" => "",
-	 "encoding" => "",
-	);
-	
-	public $narc_ereleve = array(
-	 "datasource" => "Database/Sqlserver",
-	 "persistent" => false,
-	 "host" => "NS24422",
-	 "login" => "",
-	 "password" => "",
-	 "database" => "NARC_eReleve",
-	 "prefix" => "",
-	 "encoding" => "",
+	 "database" => "eReleve",
+	 "prefix" => ""
 	);
 	
 	public $user = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "NS24422",
+	 "host" => "WIN7PRO-PC\WIN7SERVER",
 	 "login" => "",
 	 "password" => "",
 	 "database" => "NARC_TRACK_SECURITE",
 	 "prefix" => "",
 	 "encoding" => "",
 	);
-	public $model = array(
-	 "datasource" => "Database/Sqlserver",
-	 "persistent" => false,
-	 "host" => "NS24422",
-	 "login" => "",
-	 "password" => "",
-	 "database" => "model",
-	 "prefix" => "",
-	 "encoding" => "",
-	);
+
 }
 ?>

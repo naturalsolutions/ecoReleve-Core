@@ -11,13 +11,16 @@ class MapSelectionManager extends AppModel {
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">';
 		$error=false;
+		$i=0;
+		$date="";
+		$ele="";
+		$lat="";
+		$lon="";
+		$name="";
 		foreach($stations as $rmodel){
 			if(!isset($rmodel['MapSelectionManager']['LAT']) || !isset($rmodel['MapSelectionManager']['LON'])
-			&& (!isset($rmodel['MapSelectionManager']['Date']) || !isset($rmodel['MapSelectionManager']['DATE']) 
-			|| !isset($rmodel['MapSelectionManager']['StaDate'])) 
-			&& (!isset($rmodel['MapSelectionManager']['Station']) || !isset($rmodel['MapSelectionManager']['Site_name']) ||
-			!isset($rmodel['MapSelectionManager']['PTT']) || !isset($rmodel['MapSelectionManager']['Name_Station'])
-			|| !isset($rmodel['MapSelectionManager']['StaName']))){
+			&& (!isset($rmodel['MapSelectionManager']['Date']) || !isset($rmodel['MapSelectionManager']['DATE'])) 
+			&& (!isset($rmodel['MapSelectionManager']['Station']) || !isset($rmodel['MapSelectionManager']['Site_name']))){
 				$error=true;
 				break;
 			}
@@ -26,25 +29,17 @@ class MapSelectionManager extends AppModel {
 			$lon=$rmodel['MapSelectionManager']['LON'];
 			if(isset($rmodel['MapSelectionManager']['ELE']))
 				$ele=$rmodel['MapSelectionManager']['ELE'];
-			else 
+			else if(isset($rmodel['MapSelectionManager']['ELE']))
 				$ele="";
 			if(isset($rmodel['MapSelectionManager']['Date']))
 				$date=$rmodel['MapSelectionManager']['Date'];
 			else if(isset($rmodel['MapSelectionManager']['DATE']))
 				$date=$rmodel['MapSelectionManager']['DATE'];
-			else if(isset($rmodel['MapSelectionManager']['StaDate']))
-				$date=$rmodel['MapSelectionManager']['StaDate'];	
 			$date=str_replace(" ","T",$date)."Z";		
 			if(isset($rmodel['MapSelectionManager']['Station']))
 				$name=$rmodel['MapSelectionManager']['Station'];
 			else if(isset($rmodel['MapSelectionManager']['Site_name']))	
 				$name=$rmodel['MapSelectionManager']['Site_name'];
-			else if(isset($rmodel['MapSelectionManager']['PTT']))	
-				$name=$rmodel['MapSelectionManager']['PTT'];
-			else if(isset($rmodel['MapSelectionManager']['Name_Station']))	
-				$name=$rmodel['MapSelectionManager']['Name_Station'];
-			else if(isset($rmodel['MapSelectionManager']['StaName']))	
-				$name=$rmodel['MapSelectionManager']['StaName'];	
 			$sym="";
 			
 			$gpx.="\n<wpt lat='$lat' lon='$lon'>\n";
@@ -54,6 +49,7 @@ class MapSelectionManager extends AppModel {
 			$gpx.="<name>$name</name>\n";
 			$gpx.="<sym>Flag, Blue</sym>\n";			
 			$gpx.="</wpt>\n";
+			$i++;
 		}
 		
 		$gpx.='</gpx>';
@@ -71,7 +67,7 @@ class MapSelectionManager extends AppModel {
 	
 		if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
 			$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res2", 'w');			
-			fwrite($fp, print_r($gpx,true));
+			fwrite($fp, "size:".($i-1)."\n".print_r($gpx,true));
 		}
 	}
 	

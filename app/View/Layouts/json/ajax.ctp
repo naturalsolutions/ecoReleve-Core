@@ -17,4 +17,11 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<?php echo $this->fetch('content'); ?>
+<?php 
+	header("Access-Control-Allow-Credentials: true");
+	if(isset($origin))
+		header("Access-Control-Allow-Origin: $origin");	
+	else
+		header("Access-Control-Allow-Origin: *");	
+	echo $this->fetch('content'); 
+?>

@@ -475,15 +475,4 @@ class AppModel extends Model {
 		//fwrite($fp, print_r("tablename:".$table_name."//",true));
 		return false;
 	}
-	
-	//creation of attribut for geojson point from an array of field => value
-	function create_geojson_attribut($data){
-		$i=0;
-		$attrs="";
-		foreach($data as $key=>$val){
-			$i==0?$attrs.='"'.$key.'":"'.$val.'"':$attrs.=',"'.$key.'"'.':"'.$val.'"';
-			$i++;
-		}
-		return $attrs;
-	}
 }

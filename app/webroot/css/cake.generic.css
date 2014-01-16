@@ -23,7 +23,7 @@
 
 /** General Style Info **/
 body {
-	background: #003d4c;
+	background: #FFFFF;
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
@@ -230,6 +230,11 @@ table td.actions a {
 	color: #c73e14;
 }
 
+.blank{
+	visibility:hidden;
+	position:absolute;
+}
+
 /** Scaffold View **/
 dl {
 	line-height: 2em;
@@ -248,7 +253,7 @@ dt {
 	width: 10em;
 }
 dd {
-	margin-left: 10em;
+	margin-left: 11em;
 	margin-top: -2em;
 	vertical-align: top;
 }

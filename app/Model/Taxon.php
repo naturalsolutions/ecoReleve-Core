@@ -14,7 +14,7 @@ class Taxon extends AppModel {
         ),
 		'Additional' => array(
             'className' => 'TaxonAddi',
-			'foreignKey' => 'FK_ID_NAME',
+			'foreignKey' => 'FK_ID_TAXON',
         )
     );
 	

@@ -106,3 +106,6 @@ if(isset($find['AppModel']['FieldWorker2']))
 <?php if($exist==2):?>
 	<count><?php echo $finds?></count>
 <?php endif?>
+<?php if($exist==0):?>
+	<message>Table not found. Use the 'table' parameter for the table or view name</message> 
+<?php endif?>

@@ -1,10 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
-/**
- * TApplication Model
- *
- */
-class Docs extends AppModel {
+
+class Doc extends AppModel {
 
 /**
  * Use database config

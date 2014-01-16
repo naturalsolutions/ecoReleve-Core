@@ -121,10 +121,10 @@ class DocsController extends AppController {
 	}
 	
 	public function docs_list(){
-		$this->loadModel('Docs');
+		$this->loadModel('Doc');
 		$format='json';
 		
-		$this->set('result',$this->Docs->find("all"));
+		$this->set('result',$this->Doc->find("all"));
 		
 		$this->RequestHandler->respondAs($format);		
 		$this->viewPath .= '/'.$format;

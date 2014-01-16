@@ -34,28 +34,26 @@
 		);
 		
 		public function beforeFilter() {
-			
-			
+			$this->Cookie->name = 'session';
+			$this->Cookie->key = 'q45678SI232qs*&sXOw!adre@34SAdejfjhv!@*(XSL#$%)asGb$@11~_+!@#HKis~#^';
+			$this->Cookie->httpOnly = true;
 			parent::beforeFilter();
+			if((!$this->Cookie->read('connected') /* || !$this->Session->read('role')*/) && ($this->params['action']=='station_get2' || $this->params['action']=='import_csv' ||
+			$this->params['action']=='column_list' || $this->params['action']=='taxon_get' || $this->params['action']=='taxon_count')){
+				$this->notauth=true;				
+				//$this->redirect(array('action' => 'not_autorized'));
+			}
+			else {
+				$this->notauth=false;
+				if($this->Cookie->read('connected')=='Administrateur')
+					$this->admin=true;
+			}
 			if(isset($_SERVER["HTTP_ORIGIN"])){
 				//$_SERVER["HTTP_ORIGIN"];
 				$origin=$_SERVER["HTTP_ORIGIN"];
 				$this->set('origin',$origin);
 			}
-			$this->Cookie->name = 'session';
-			$this->Cookie->key = 'q45678SI232qs*&sXOw!adre@34SAdejfjhv!@*(XSL#$%)asGb$@11~_+!@#HKis~#^';
-			$this->Cookie->httpOnly = true;
-			//print_r($this->Cookie->read('session'));
-			if((!$this->Cookie->read('connected') /* || !$this->Session->read('role')*/) && ($this->params['action']=='station_get2' || $this->params['action']=='import_csv' ||
-			$this->params['action']=='column_list' || $this->params['action']=='taxon_get' || $this->params['action']=='taxon_count')){
-				//$this->redirect(array('action' => 'not_autorized'));
-				$this->notauth=true;
-				if($this->Cookie->read('connected')=='Administrateur')
-					$this->admin=true;
-			}
-			else
-				$this->notauth=false;
-						
+			
 		}
 		
 		//
@@ -168,8 +166,13 @@
 			$Stationjoin=array();
 			$Stationjoinstringname="";
 			$dot="";
+			$limit=0;
 			$Distinct=array();
 			$ModelName="AppModel"; //for the array returned by find
+			
+			if(isset($this->params['url']['limit'])){
+				$limit=$this->params['url']['limit'];
+			}
 			
 			if(isset($this->params['url']['to_carto']) && $this->params['url']['to_carto']!=""){
 				if($this->params['url']['to_carto']=="yes"){
@@ -239,8 +242,8 @@
 					$condition_array[] = array("LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon");
 				}
 				
-				if(isset($this->params['url']['id_station']) && $this->params['url']['id_station']!=""){
-					$id_stations=$this->params['url']['id_station'];
+				if(isset($this->params['url']['id_stations']) && $this->params['url']['id_stations']!=""){
+					$id_stations=$this->params['url']['id_stations'];
 					$id_station_array=split(",",$id_stations);	
 					$condition_id_sta="";
 					for($i=0;$i<count($id_station_array);$i++){
@@ -390,7 +393,7 @@
 				}	
 		
 				//get a list of station id from parameter
-				if(isset($this->params['url']['id_station']) && $this->params['url']['id_station']!=""){
+				if(isset($this->params['url']['id_stations']) && $this->params['url']['id_stations']!=""){
 					$id_stations=$this->params['url']['id_station'];
 					$id_station_array=split(",",$id_stations);	
 					$condition_id_sta="";
@@ -447,10 +450,10 @@
 							'alias' => 'TProtocol_Inventory',
 							'type' => 'INNER',
 							'conditions' => array(
-								"TSta_PK_ID = TProtocol_Inventory.FK_TSta_ID $id_taxon"
+								"TSta_PK_ID = TProtocol_Inventory.FK_TSta_ID $id_taxon" 
 							)
 						)
-					);
+					);					
 				}
 				
 				$tsearch="";
@@ -617,6 +620,49 @@
 			}		
 		}
 		
+		function import_csv(){
+			if($this->admin){
+				$this->loadModel('Station');
+				$format="json";
+				$find=1;
+				$res=array();
+				if(isset($this->params['form']['datafile']['tmp_name'])
+				&& $this->params['form']['datafile']['tmp_name']!=""){	
+					$filename=$this->params['form']['datafile']['tmp_name'];
+					$res=$this->Station->importcsv2($filename);
+					//print_r($res);
+					$count_success = count($res['messages']);
+					$count_error = count($res['errors']);
+					$count_warning = count($res['warning']);
+					$this->set('result',$res);
+					$this->set('nb_success',$count_success);
+					$this->set('nb_error',$count_error);
+					$this->set('nb_warning',$count_warning);
+				}
+				else{
+					$find=-1;
+					$this->set('message','Aucun fichier');
+				}
+				$this->set("find",$find);
+				$this->set("result",$res);
+				/*if(isset($this->params['url']['format']) && $this->params['url']['format']=='text')
+					$this->viewPath .= '/text';		
+				else	
+					$this->viewPath .= '/'.$format;	*/
+				$this->viewPath .= '/text';				
+				$this->RequestHandler->respondAs($format);							
+				$this->layoutPath = $format;
+				$this->layout= $format;	
+			}	
+			else{
+				$this->RequestHandler->respondAs('json');
+				$this->viewPath .= '/json';
+				$this->layout= 'json';
+				$this->layoutPath = 'json';	
+				$this->render('not_autorized');	
+			}		
+		}	
+		
 		//controller method for the getting taxon from protocole service 
 		function proto_taxon_get(){
 			$debug="";
@@ -670,10 +716,10 @@
 						//$model_proto = new ProtocoleTaxon($table_name,$table_name);	
 						$this->ProtocoleTaxon->setSource($table_name);
 						//check if the table have taxon field
-						if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
+						/*if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
 							$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
 							fwrite($fp, print_r($table_name ,true));	
-						}
+						}*/
 						$taxon_find=false;
 						//foreach ($model_proto->schema() as $key=>$val){
 						foreach ($this->ProtocoleTaxon->schema() as $key=>$val){
@@ -719,11 +765,9 @@
 			$find=1;
 			$test=false;	
 			$this->loadModel('AppModel');	
-			$this->loadModel('Protocole');
-									
+			$this->loadModel('Protocole');			
 			
-			
-			if(isset($this->params['url']['proto_name']) || isset($this->params['url']['id_proto']) || isset($this->params['url']['id_proto'])){ 
+			if(isset($this->params['url']['proto_name']) || isset($this->params['url']['id_proto']) || isset($this->request->params['id_proto'])){ 
 				$table_name="";
 				$id_proto="";
 				$pk_id_name="";
@@ -758,20 +802,17 @@
 
 				//get id from request param (case with this kind of url : proto/get/"id")
 				if(isset($this->request->params['id_proto'])){
-					$id_proto= $this->request->params['url']['id_proto'];
+					$id_proto= $this->request->params['id_proto'];
 				}	
 				
-				if($id_proto!=""){
-					
+				if($id_proto!=""){					
 					$table_name_array=$model_list_proto->find('first',array("conditions" => array($pk_id_name=>$id_proto)));
-					
 					if(isset($table_name_array['Protocole']['Relation']))
 						$table_name="TProtocol_".$table_name_array['Protocole']['Relation'];					
 					else{
 						$find=-1;
 						$this->set('find',-1);
-					}
-					
+					}					
 				}
 				
 				if($find!=-1){	
@@ -978,6 +1019,7 @@
 						//$field_array=array("ID_NAME",$column_name,"FK_Taxon");
 						$field_array=array($column_name);
 					}
+					
 					if(isset($this->params['url']['filter'])){
 						$filter=str_replace(" ","% ",$this->params['url']['filter'])."%";
 						/*if($column_name2!="")
@@ -999,7 +1041,12 @@
 					if(count($fields)!=0){
 						$field_array=$fields;
 					}
-					
+					if(count($fields)>1 && ($table_name=="TTaxa_name" || $table_name=="TTaxa")){
+						$rankname="RANK";
+						if($table_name=="TTaxa_name")
+							$rankname="TTaxaJoin.RANK";
+						$array_conditions[]=array("($rankname = 'ES' or $rankname  = 'SSES' or $rankname  = 'VAR' or $rankname  = 'FO' or $rankname  = 'SSFO')");
+					}
 					if($count){
 						
 					}				
@@ -1019,7 +1066,10 @@
 										'offset'=>intval($offset)
 										)+$options);
 						$nb="";		
-
+						//$dbo = $this->TaxonName->getDatasource();
+						//$logs = $dbo->getLog();
+						//$lastLog = end($logs['log']);
+						//print_r($lastLog);
 						/*if(count($fields)!=0 && count($join_column)!=0){
 							$dbo = $this->TaxonName->getDatasource();
 							$logs = $dbo->getLog();
@@ -1050,7 +1100,8 @@
 										'group'=>$field_array,
 										'conditions'=>$array_conditions)+$options
 										);	
-					}				
+					}	
+					
 					/*
 					$total=$model->find("count",array(
 									'fields'=>array($column_name),

@@ -19,7 +19,7 @@
 		//return a NSML file from a filtered export view 
 		function nsml_get(){
 			$this->set("debug","");
-			$table="V_Qry_Plant_Transects";  //default view
+			$table=""; 
 			$datedep="";
 			$datearr="";
 			$place="";
@@ -32,103 +32,123 @@
 			$exist=1;			
 			$date_name="DATE";
 			$array_column=array();
+			$find=array();
+			$model="";
+			$limit=0;
+			$offset=0;
 			
 			if(isset($this->params['url']['table']))
 				$table=$this->params['url']['table'];
 			
-			//try to load the table find to 0 if not
-			try{
-				$model = new AppModel($table,str_replace(" ","",$table),base);
-				$protocolemodel = new AppModel("TProtocole","TProtocole",base);
+			if(isset($this->params['url']['limit'])){
+				$limit=$this->params['url']['limit'];
 			}
-			catch(Exception $e){
-				$this->set("exist",0);	
-			}	
+
+			if(isset($this->params['url']['offset'])){
+				$offset=$this->params['url']['offset'];
+			}
 			
-			//check if the view contain a station
-			foreach ($model->schema() as $key=>$val){
-				if($key=="LON" || $key=="LAT"){
-					$typestation=true;
+			if($table!=""){
+				//try to load the table find to 0 if not
+				try{
+					$model = new AppModel($table,str_replace(" ","",$table),base);
+					$protocolemodel = new AppModel("TProtocole","TProtocole",base);
 				}
-				if($key=="StaDate"){
-					$date_name="StaDate";
-				}
-				if($key=="lastArgosDate"){
-					$date_name="lastArgosDate";
+				catch(Exception $e){
+					$this->set("exist",0);	
 				}	
-				array_push($array_column,$key);		
-			}			
-			$condition_array=array("$date_name IS NOT NULL");
-			
-			
-			//check if is count request or not
-			if(isset($this->params['url']['count']))
-				$count=$this->params['url']['count'];
-			
-			//
-			if(isset($this->request->params['count']))
-				$count=$this->request->params['count'];
-			//take place parameter for a place filter
-			if(isset($this->params['url']['place']) && $this->params['url']['place']!="" && $this->params['url']['place']!="null"){
-				$place=$this->params['url']['place'];				
-			}
-			
-			//take region parameter for a region filter
-			if(isset($this->params['url']['region']) && $this->params['url']['region']!="" && $this->params['url']['region']!="null"){
-				$region=$this->params['url']['region'];				
-			}	
-			
-			if(isset($this->params['url']['fieldactivity']) && $this->params['url']['fieldactivity']!="" && $this->params['url']['fieldactivity']!="null"){
-				$fieldactivity=$this->params['url']['fieldactivity'];
-			}
-			
-			//take min-date parameter for a min-date filter
-			if(isset($this->params['url']['min-date']) && $this->params['url']['min-date']!="" && $this->params['url']['min-date']!="null"){
-				$datedep=$this->params['url']['min-date'];		
-			}	
-			
-			//take max-date parameter for a max-date filter when min date is set because when we have no date only min-date is empty
-			if(isset($this->params['url']['max-date']) && $this->params['url']['max-date']!="" && $this->params['url']['max-date']!="null"){	
-				$datearr=$this->params['url']['max-date'];
-			}
-			
-			$condition_array=$model->filter_create($condition_array,$place,$region,"",$datedep,$datearr,$fieldactivity,"","",$date_name,false);						
 				
-			$prototable=$table;	
-			if(strpos($table,"TProtocol_")!==false)
-				$prototable=substr($table, strlen("TProtocol_"));
-			$isprotocole=$protocolemodel->find("all",array("conditions"=>array("Relation"=>$prototable)));
-			$arrayjoin=array();
-			if($isprotocole){
-				$arrayjoin=array('joins' => array(
-												array(
-													'table' => 'TStations',
-													'alias' => 'TStationsJoin',
-													'type' => 'INNER',
-													'conditions' => array(
-														'FK_TSta_ID = TStationsJoin.TSta_PK_ID'
+				//check if the view contain a station
+				foreach ($model->schema() as $key=>$val){
+					if($key=="LON" || $key=="LAT"){
+						$typestation=true;
+					}
+					if($key=="StaDate"){
+						$date_name="StaDate";
+					}
+					if($key=="lastArgosDate"){
+						$date_name="lastArgosDate";
+					}	
+					array_push($array_column,$key);		
+				}			
+				$condition_array=array("$date_name IS NOT NULL");
+				
+				
+				//check if is count request or not
+				if(isset($this->params['url']['count']))
+					$count=$this->params['url']['count'];
+				
+				//
+				if(isset($this->request->params['count']))
+					$count=$this->request->params['count'];
+				
+				//take place parameter for a place filter
+				if(isset($this->params['url']['place']) && $this->params['url']['place']!="" && $this->params['url']['place']!="null"){
+					$place=$this->params['url']['place'];				
+				}
+				
+				//take region parameter for a region filter
+				if(isset($this->params['url']['region']) && $this->params['url']['region']!="" && $this->params['url']['region']!="null"){
+					$region=$this->params['url']['region'];				
+				}	
+				
+				if(isset($this->params['url']['fieldactivity']) && $this->params['url']['fieldactivity']!="" && $this->params['url']['fieldactivity']!="null"){
+					$fieldactivity=$this->params['url']['fieldactivity'];
+				}
+				
+				//take min-date parameter for a min-date filter
+				if(isset($this->params['url']['min-date']) && $this->params['url']['min-date']!="" && $this->params['url']['min-date']!="null"){
+					$datedep=$this->params['url']['min-date'];		
+				}	
+				
+				//take max-date parameter for a max-date filter when min date is set because when we have no date only min-date is empty
+				if(isset($this->params['url']['max-date']) && $this->params['url']['max-date']!="" && $this->params['url']['max-date']!="null"){	
+					$datearr=$this->params['url']['max-date'];
+				}
+				
+				$condition_array=$model->filter_create($condition_array,$place,$region,"",$datedep,$datearr,$fieldactivity,"","",$date_name,false);						
+					
+				$prototable=$table;	
+				if(strpos($table,"TProtocol_")!==false)
+					$prototable=substr($table, strlen("TProtocol_"));
+				$isprotocole=$protocolemodel->find("all",array("conditions"=>array("Relation"=>$prototable)));
+				$arrayjoin=array();
+				if($isprotocole){
+					$arrayjoin=array('joins' => array(
+													array(
+														'table' => 'TStations',
+														'alias' => 'TStationsJoin',
+														'type' => 'INNER',
+														'conditions' => array(
+															'FK_TSta_ID = TStationsJoin.TSta_PK_ID'
+														)
 													)
-												)
-											));
-				array_push($array_column,"TStationsJoin.$date_name","TStationsJoin.LON","TStationsJoin.LAT","TStationsJoin.Precision","TStationsJoin.ELE","TStationsJoin.Region","TStationsJoin.Place");							
-			}	
-			
-			if($count=="no"){
-				$find = $model->find('all',array(	
-												'recursive' => 0,
-												'fields' => $array_column
-												,'conditions'=>$condition_array
-												)+$arrayjoin 
-									);
-			}		
+												));
+					array_push($array_column,"TStationsJoin.$date_name","TStationsJoin.LON","TStationsJoin.LAT","TStationsJoin.Precision","TStationsJoin.ELE","TStationsJoin.Region","TStationsJoin.Place");							
+				}	
+				
+				if($count=="no"){
+					$find = $model->find('all',array(	
+													'recursive' => 0,
+													'fields' => $array_column
+													,'conditions'=>$condition_array
+													,'limit'=>$limit
+													,'offset'=>intval($offset)
+													)+$arrayjoin 
+										);
+				}		
+				else{
+					$exist=2;
+					$find = $model->find('count',array(	
+													'recursive' => 0,
+													'fields' => $array_column
+													,'conditions'=>$condition_array
+													)+$arrayjoin 
+										);
+				}
+			}
 			else{
-				$exist=2;
-				$find = $model->find('count',array(	
-												'recursive' => 0,
-												'fields' => $array_column
-												,'conditions'=>$condition_array
-												)+$arrayjoin 
-									);
+				$exist=0;
 			}	
 			//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
 			//fwrite($fp, print_r(,true));

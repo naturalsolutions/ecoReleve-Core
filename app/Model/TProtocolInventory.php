@@ -76,14 +76,17 @@ class TProtocolInventory extends AppModel {
 			$habitat=$proto['Name_Habitat'];
 			if($habitat=="habitats" || $habitat=="substrats"){
 				//fwrite($fp, "falsehab: ".print_r($habitat,true)."\n");
-				return false;
+				$this->invalidate("Name_Habitat", "Message d'erreur");
+				return "'$habitat' is not a good habibat";
 			}
 			else if($habitat!=""){
 				$thesau=new Tthesaurus();
 				//fwrite($fp, "hab: ".print_r($habitat,true)."\n");
 				$thesauarray=$thesau->find('first',array('conditions'=>array('Id_Type'=>'1','topic_fr'=>$habitat)));
-				if(count($thesauarray)==0 || !is_array($thesauarray))
-					return false;
+				if(count($thesauarray)==0 || !is_array($thesauarray)){
+					$this->invalidate("Name_Habitat", "Message d'erreur");
+					return "'$habitat' is not a good habibat";
+				}	
 			}
 		}
 		return true;	
@@ -93,13 +96,13 @@ class TProtocolInventory extends AppModel {
 		if(isset($proto['Name_Substatum'])){
 			$substrat=$proto['Name_Substatum'];
 			if($substrat=="substrats"){
-				return false;
+				return "'$substrat' is not a good substrat.";
 			}
 			else if($substrat!=""){
 				$thesau=new Tthesaurus();
 				$thesauarray=$thesau->find('first',array('conditions'=>array('Id_Type'=>'2','topic_fr'=>$substrat)));
 				if(count($thesauarray)==0 || !is_array($thesauarray))
-					return false;
+					return "'$substrat' is not a good substrat.";
 			}
 		}
 		return true;	
