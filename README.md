@@ -60,29 +60,77 @@ List of ecoReleve-core webservices routes :
 -----------------		
 	• /station/list parameter(s) : id_proto, bbox, id_stations
 	List of station for a datatable js. Based in the old version of eReleve's station on database
-		'id_proto' parameter allow to show only the stations of that protocole
-		'bbox' open layer bbox
-		'id_stations' a list of station's id. The stations with this ids will be shown
+		• 'id_proto' allow to show only the stations of that protocole
+		• 'bbox' open layer bbox
+		• 'id_stations' a list of station's id. The stations with this ids will be shown
 	
 	• /station/carto parameter(s) : bbox, zoom, cluster
 	Return stations in a geojson
 	Based in the old version of eReleve's station on database
-		'zoom' open layer zoom value
-		'cluster' = yes if we want clustered data
+		• 'zoom' open layer zoom value
+		• 'cluster' = yes if we want clustered data
 	
 	• /station/list2 parameter(s) : bbox, id_taxon, id_stations, format
 	List of station for a table (with 'format'=datatablejs will return data for a datatablejs)
 	Based in the new version of eReleve's station on database
-		'id_taxon' paramater allow to show only stations of that taxon
+		• 'id_taxon' allow to show only stations of that taxon
 	
 	• /station/carto2 parameter(s) : bbox, zoom, id_taxon, id_stations, cluster
 	Return stations in a geojson. Based in the new version of eReleve's station on database
-	'
-	
+		
 	• /station/import_csv parameter(s) : file
 	Import of data (Stations and protocoles) from a csv
-		•'file' is the file to import (with form file)
+		• 'file' is the file to import (with form file)
 -----------------	
+	• /view/theme/list
+	List of topic's view
+	This is sql views of stations
+	
+	• /view/list parameter(s) : id_theme
+	List of sql views from eReleve sortable by topic with 'id_theme'
+		
+	• /view/get/:table_name parameter(s) : filters 
+	List of stations for a table from the view 'table_name' filtered or not 
+		• 'filters' contains columns value to filter result
+		
+	• /view/carto/:table_name parameter(s) : filters 
+	Return stations in a geojson from the view 'table_name' filtered or not 
+	
+	• /view/get/:table_name/count parameter(s) : filters 
+	Return the number stations from the view 'table_name' filtered or not 
+	
+	• /view/detail/:table_name
+	Return the columns and their types of the view 'table_name'
+-----------------
+	• /user/list
+	Return the list of users
+	
+	• /user/login parameter(s) : login, password
+	Login webservice with 'login' and 'password' parameter
+	
+	• /user
+	CRUD user
+-----------------
+	• /doc/list
+	Return the list of documents
+-----------------
+	• /taxon/get/:id_taxon
+	Return data of the taxon with id='id_taxon'
+	
+	• /taxon/list/autocomplete parameter(s) : filter
+	List of taxon that begin with 'filter' for autocomplete
+	
+	• /taxon/list parameter(s) : filter
+	List of taxon that begin with 'filter' for a table
+	
+	• /taxon/list/count parameter(s) : filter
+	Count the number of taxon that begin with 'filter'
+	
+	• /vernacular/list/autocomplete : filter
+	List of taxon with vernacular name that begin with 'filter' for autocomplete
+	
+	• /vernacular/list parameter(s) : filter
+	List of taxon with vernacular name that begin with 'filter' for a table
 
 Twitter
 ------------
