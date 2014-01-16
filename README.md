@@ -60,20 +60,20 @@ List of ecoReleve-core webservices routes :
 -----------------		
 	• /station/list parameter(s) : id_proto, bbox, id_stations
 	List of station for a datatable js. Based in the old version of eReleve's station on database
-	'id_proto' parameter allow to show only the stations of that protocole
-	'bbox' open layer bbox
-	'id_stations' a list of station's id. The stations with this ids will be shown
+		'id_proto' parameter allow to show only the stations of that protocole
+		'bbox' open layer bbox
+		'id_stations' a list of station's id. The stations with this ids will be shown
 	
 	• /station/carto parameter(s) : bbox, zoom, cluster
 	Return stations in a geojson
 	Based in the old version of eReleve's station on database
-	'zoom' open layer zoom value
-	'cluster' = yes if we want clustered data
+		'zoom' open layer zoom value
+		'cluster' = yes if we want clustered data
 	
 	• /station/list2 parameter(s) : bbox, id_taxon, id_stations, format
 	List of station for a table (with 'format'=datatablejs will return data for a datatablejs)
 	Based in the new version of eReleve's station on database
-	'id_taxon' paramater allow to show only stations of that taxon
+		'id_taxon' paramater allow to show only stations of that taxon
 	
 	• /station/carto2 parameter(s) : bbox, zoom, id_taxon, id_stations, cluster
 	Return stations in a geojson. Based in the new version of eReleve's station on database
@@ -81,7 +81,7 @@ List of ecoReleve-core webservices routes :
 	
 	• /station/import_csv parameter(s) : file
 	Import of data (Stations and protocoles) from a csv
-	'file' is the file to import (with form file)
+		'file' is the file to import (with form file)
 
 Twitter
 ------------
