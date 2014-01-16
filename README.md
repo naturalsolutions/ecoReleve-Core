@@ -33,6 +33,10 @@ List of ecoReleve-core webservices routes :
 
 	• /protocole/list parameter(s) : motcle
 	Return the list of protocols
+	
+	• /protocole/get/:id_proto
+	Return one protocole with id=id_proto
+	
 
 Twitter
 ------------
