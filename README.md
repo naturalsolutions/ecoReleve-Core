@@ -81,7 +81,8 @@ List of ecoReleve-core webservices routes :
 	
 	• /station/import_csv parameter(s) : file
 	Import of data (Stations and protocoles) from a csv
-		'file' is the file to import (with form file)
+		•'file' is the file to import (with form file)
+-----------------	
 
 Twitter
 ------------
