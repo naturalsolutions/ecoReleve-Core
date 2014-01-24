@@ -39,13 +39,11 @@
 
 <p>This Software allow access to a lot of ecoReleve's webservices.</p>
 
-<p>ecoRelevé Core is a free and open source ser</p>
-
 <h2>
 <a name="installation-notes" class="anchor" href="#installation-notes"><span class="octicon octicon-link"></span></a>Installation notes</h2>
 
 <ul>
-<li>Deploy on a apache server, with "sqlserver for php" plugin</li>
+<li>Deploy on a apache or IIS server, with "sqlserver for php" plugin</li>
 <li>Have sqlserver database with a eReleve base (Natural Solution's base)</li>
 <li>Intall sqlserver native client 2012 </li>
 </ul><h2>
@@ -59,6 +57,126 @@
 <a name="technical-details-" class="anchor" href="#technical-details-"><span class="octicon octicon-link"></span></a>Technical details </h2>
 
 <p>• CakePHP Framework</p>
+
+<h2>
+<a name="application-details" class="anchor" href="#application-details"><span class="octicon octicon-link"></span></a>Application details</h2>
+
+<p>List of ecoReleve-core webservices routes :</p>
+
+<pre><code>• /protocole/list parameter(s) : motcle
+Return the list of protocols. Can be filtered by 'motcle'
+
+• /protocole/get/:id_proto
+Return one protocole with id='id_proto'
+
+• /protocole/get parameter(s) : proto_name
+Return one protocole with protocole name='proto_name'
+
+• /protocole/taxon/list parameter(s) : id_proto
+Return  protocole's taxons from the protocole with id='id_proto'
+</code></pre>
+
+<hr><pre><code>• /fieldactivity/list/autocomplete
+List of field activity used
+
+• /region/list/autocomplete
+List of field activity used
+
+• /place/list/autocomplete
+List of field activity used
+</code></pre>
+
+<hr><pre><code>• /nsml/get parameter(s) : table, place, region, fieldactivity, min-date, max-date
+Return a NSML from 'table'. It's a list of stations in a xml format from Natural Solution
+
+• /nsml/get/count parameter(s) : table
+Return the number of station concern by the request.
+</code></pre>
+
+<hr><pre><code>• /station/list parameter(s) : id_proto, bbox, id_stations
+List of station for a datatable js. Based in the old version of eReleve's station on database
+    • 'id_proto' allow to show only the stations of that protocole
+    • 'bbox' open layer bbox
+    • 'id_stations' a list of station's id. The stations with this ids will be shown
+
+• /station/carto parameter(s) : bbox, zoom, cluster
+Return stations in a geojson
+Based in the old version of eReleve's station on database
+    • 'zoom' open layer zoom value
+    • 'cluster' = yes if we want clustered data
+
+• /station/list2 parameter(s) : bbox, id_taxon, id_stations, format
+List of station for a table (with 'format'=datatablejs will return data for a datatablejs)
+Based in the new version of eReleve's station on database
+    • 'id_taxon' allow to show only stations of that taxon
+
+• /station/carto2 parameter(s) : bbox, zoom, id_taxon, id_stations, cluster
+Return stations in a geojson. Based in the new version of eReleve's station on database
+
+• /station/import_csv parameter(s) : file
+Import of data (Stations and protocoles) from a csv
+    • 'file' is the file to import (with form file)
+</code></pre>
+
+<hr><pre><code>• /view/theme/list
+List of topic's view
+This is sql views of stations
+
+• /view/list parameter(s) : id_theme
+List of sql views from eReleve sortable by topic with 'id_theme'
+
+• /view/get/:table_name parameter(s) : filters 
+List of stations for a table from the view 'table_name' filtered or not 
+    • 'filters' contains columns value to filter result
+
+• /view/carto/:table_name parameter(s) : filters 
+Return stations in a geojson from the view 'table_name' filtered or not 
+
+• /view/get/:table_name/count parameter(s) : filters 
+Return the number stations from the view 'table_name' filtered or not 
+
+• /view/detail/:table_name
+Return the columns and their types of the view 'table_name'
+</code></pre>
+
+<hr><pre><code>• /user/list
+Return the list of users
+
+• /user/login parameter(s) : login, password
+Login webservice with 'login' and 'password' parameter
+
+• /user
+CRUD user
+</code></pre>
+
+<hr><pre><code>• /doc
+CRUD doc
+
+• /doc/list
+Return the list of documents
+</code></pre>
+
+<hr><pre><code>• /taxon
+CRUD taxon
+
+• /taxon/get/:id_taxon
+Return data of the taxon with id='id_taxon'
+
+• /taxon/list/autocomplete parameter(s) : filter
+List of taxon that begin with 'filter' for autocomplete
+
+• /taxon/list parameter(s) : filter
+List of taxon that begin with 'filter' for a table
+
+• /taxon/list/count parameter(s) : filter
+Count the number of taxon that begin with 'filter'
+
+• /vernacular/list/autocomplete : filter
+List of taxon with vernacular name that begin with 'filter' for autocomplete
+
+• /vernacular/list parameter(s) : filter
+List of taxon with vernacular name that begin with 'filter' for a table
+</code></pre>
 
 <h2>
 <a name="twitter" class="anchor" href="#twitter"><span class="octicon octicon-link"></span></a>Twitter</h2>
