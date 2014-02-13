@@ -1,4 +1,5 @@
 <?php
+	App::uses('AppController','Controller');
 	class ViewsController extends AppController{
 		var $helpers = array('Xml', 'Text','form','html','Cache','Json');
 		public $components = array('RequestHandler');
@@ -161,8 +162,11 @@
 				$format="json";	
 			
 			//format return from param
-			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
-				$tmp_format=$this->params['url']['format'];
+			if((isset($this->params['url']['format']) && $this->params['url']['format']!="") || isset($this->request->params['format'])){
+				if(isset($this->request->params['format']))
+					$tmp_format=$this->request->params['format'];
+				else
+					$tmp_format=$this->params['url']['format'];
 				if($tmp_format=="json"){
 					$format="json";
 				}
@@ -186,6 +190,10 @@
 			
 			if(isset($this->params['url']['offset']) && $this->params['url']['offset']!=""){
 				$offset=intval($this->params['url']['offset']);
+			}
+			
+			if(isset($this->params['url']['skip']) && $this->params['url']['skip']!=""){
+				$offset=intval($this->params['url']['skip']);
 			}
 			
 			//BBOX param if map call
@@ -215,6 +223,21 @@
 			if(isset($this->request->params['count']))
 				$count=true;
 			
+			if(isset($this->params['url']['filters']) && count($this->params['url']['filters'])>0){
+				$filters=$this->params['url']['filters'];
+				//$condition_array[];
+				foreach($filters as $f){
+					if($f){
+						list($col,$val)=split(":",$f,2);
+						if($col=='DATE'){
+							$condition_array[]=array("CONVERT(char(10),[DATE],126)='$val'");
+						}
+						else
+							$condition_array+=array($col=>$val);
+					}
+				}
+			}
+			
 			$table_name=str_replace(" ","",$table_name);
 			if($table_name!=""){
 				try{
@@ -242,8 +265,8 @@
 				}
 				if($find==0){
 					//create a condition array with filters
-					if(isset($this->params['url']['filters']) && $table_name!=""){
-						$filters=$this->params['url']['filters'];
+					if(isset($this->params['url']['filter']) && $table_name!=""){
+						$filters=$this->params['url']['filter'];
 						
 						//add filters on the array condition
 						$filters=split(",",$filters);
@@ -351,6 +374,12 @@
 							'fields'=>$fields,
 							'conditions'=>array()+$condition)
 						);
+						$total=$this->MapSelectionManager->find('count',array(
+							'fields'=>$fields,
+							'conditions'=>array()+$condition)
+						);
+						$this->set('totaldisplay',$total);
+						$this->set('ModelName','MapSelectionManager');
 						$this->MapSelectionManager->gpx_save($result,$gpx_name);
 						$gpx_array=array('gpx_url'=>$gpx_url);
 						//$result=array_merge($result, $gpx_array);

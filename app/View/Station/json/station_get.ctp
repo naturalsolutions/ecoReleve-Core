@@ -1,29 +1,10 @@
 <?php if($find == 1):?>
-{
-<?php echo $debug;?>
-"sEcho":<?php echo $sEcho?>,
-"iTotalRecords": <?php echo $total?>,
-"iTotalDisplayRecords": <?php echo $totaldisplay?>,
-"aaData":[
-<?php if($table):?>
-<?php $i=0; foreach ($table as $t): ?>
-[
-<?php $j=0;foreach($t[$ModelName] as $key=>$val): ?>
-"<?php echo $val?>"<?php if($j<sizeof($t[$ModelName])-1)echo ",";?>
+{"count":"<?php echo $totaldisplay?>","values":[<?php $i=0; foreach ($table as $t): ?>
+{<?php $j=0;foreach($t[$ModelName] as $key=>$val): ?><?php echo '"'.$key.'":"'.$val.'"';?><?php if($j<sizeof($t[$ModelName])-1)echo ",";?>
 <?php $j++;?>
+<?php endforeach?>}<?php if($i<sizeof($table)-1)echo ",";?><?php $i++;?>	
 <?php endforeach?>
-]<?php if($i<sizeof($table)-1)echo ",";?>	
-<?php $i++;?>
-<?php endforeach?>
-<?php endif?>
-],
-"aoColumns": [
-<?php $i=0; foreach($schema as $key=>$val): ?>
-{"sTitle":"<?php echo preg_replace('/(\w+)\.(\w+)/','\2',$val)?>"}<?php if($i<sizeof($schema)-1)echo ",";?>	
-<?php $i++;?>
-<?php endforeach?>
-]
-}
+]}
 <?php endif?>
 
 <?php if($find == 2):?>	

@@ -25097,3 +25097,1720 @@ Stack Trace:
 #6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
 #7 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2014-01-16 16:32:00 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2014-01-16 16:32:00 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/view/get/V_Qry_Argos_AllIndivs_AllStations
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 460, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 460, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-16 16:37:57 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procédure stockée 'create_geojson_attribut' introuvable.
+Request URL: /ecoReleve-core/view/carto/V_Qry_Argos_AllIndivs_AllStations?limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('create_geojson_...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('create_geojson_...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('create_geojson_...', Array, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('create_geojson_...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(800): DboSource->query('create_geojson_...', Array, Object(MapSelectionManager))
+#5 C:\wamp\www\ecoReleve-core\app\View\Views\geojson\get_view.ctp(26): Model->__call('create_geojson_...', Array)
+#6 C:\wamp\www\ecoReleve-core\app\View\Views\geojson\get_view.ctp(26): MapSelectionManager->create_geojson_attribut(Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(947): include('C:\wamp\www\eco...')
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\eco...', Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(471): View->_render('C:\wamp\www\eco...')
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ViewsController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-16 16:39:13 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procédure stockée 'create_geojson_attribut' introuvable.
+Request URL: /ecoReleve-core/view/carto/V_Qry_Chiro_capture?limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('create_geojson_...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('create_geojson_...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('create_geojson_...', Array, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('create_geojson_...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(800): DboSource->query('create_geojson_...', Array, Object(MapSelectionManager))
+#5 C:\wamp\www\ecoReleve-core\app\View\Views\geojson\get_view.ctp(26): Model->__call('create_geojson_...', Array)
+#6 C:\wamp\www\ecoReleve-core\app\View\Views\geojson\get_view.ctp(26): MapSelectionManager->create_geojson_attribut(Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(947): include('C:\wamp\www\eco...')
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\eco...', Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(471): View->_render('C:\wamp\www\eco...')
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ViewsController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-16 16:39:28 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procédure stockée 'create_geojson_attribut' introuvable.
+Request URL: /ecoReleve-core/view/carto/V_Qry_Chiro_capture
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('create_geojson_...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('create_geojson_...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('create_geojson_...', Array, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('create_geojson_...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(800): DboSource->query('create_geojson_...', Array, Object(MapSelectionManager))
+#5 C:\wamp\www\ecoReleve-core\app\View\Views\geojson\get_view.ctp(26): Model->__call('create_geojson_...', Array)
+#6 C:\wamp\www\ecoReleve-core\app\View\Views\geojson\get_view.ctp(26): MapSelectionManager->create_geojson_attribut(Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(947): include('C:\wamp\www\eco...')
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\eco...', Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(471): View->_render('C:\wamp\www\eco...')
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ViewsController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-17 10:12:07 Error: [MissingTableException] Table Table_Import_Error for model Table_Import was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'Table_Import_Error',
+  'class' => 'Table_Import',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('Table_Import_Er...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Model\Station.php(77): Model->find('first', Array)
+#3 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(534): Station->importcsv2('C:\wamp\tmp\php...')
+#4 [internal function]: StationController->import_csv()
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-01-17 14:17:34 Error: Fatal Error (1): Call to a member function write() on a non-object in [C:\wamp\www\ecoReleve-core\app\Model\Station.php, line 84]
+2014-01-17 14:17:35 Error: [FatalErrorException] Call to a member function write() on a non-object
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\eco...', 84)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\eco...', 84, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\eco...', 84, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-17 13:26:09 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\ecoReleve-core\app\Model\Station.php, line 261]
+2014-01-17 13:26:09 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 261)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 261, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 261, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-17 14:14:17 Error: [MissingActionException] Action UserController::get_mail() could not be found.
+Exception Attributes: array (
+  'controller' => 'UserController',
+  'action' => 'get_mail',
+)
+Request URL: /ecoReleve-core/user/get_mail
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-17 14:15:28 Error: [XmlException] Invalid input.
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(175): Xml::build(false)
+#1 [internal function]: UserController->mail_get()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-01-17 14:17:30 Error: Fatal Error (1): ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 594]
+2014-01-17 14:17:30 Error: [FatalErrorException] ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594)
+#1 [internal function]: ErrorHandler::handleError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-17 14:17:46 Error: Fatal Error (1): ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 594]
+2014-01-17 14:17:47 Error: [FatalErrorException] ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594)
+#1 [internal function]: ErrorHandler::handleError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-17 14:18:09 Error: Fatal Error (4): syntax error, unexpected '"' in [C:\wamp\www\ecoReleve-core\app\Controller\UserController.php, line 174]
+2014-01-17 14:18:09 Error: [FatalErrorException] syntax error, unexpected '"'
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 174)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 174, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 174, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-17 14:18:41 Error: Fatal Error (1): ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 594]
+2014-01-17 14:18:41 Error: [FatalErrorException] ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594)
+#1 [internal function]: ErrorHandler::handleError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-17 14:19:14 Error: Fatal Error (1): ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 594]
+2014-01-17 14:19:15 Error: [FatalErrorException] ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594)
+#1 [internal function]: ErrorHandler::handleError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-17 14:19:48 Error: Fatal Error (1): ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 594]
+2014-01-17 14:19:48 Error: [FatalErrorException] ReflectionClass::getProperties() [<a href='http://php.net/reflectionclass.getproperties'>reflectionclass.getproperties</a>]: Internal error: Failed to retrieve the reflection object
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594)
+#1 [internal function]: ErrorHandler::handleError(1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'ReflectionClass...', 'C:\wamp\www\eco...', 594, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-17 14:20:35 Error: [XmlException] Invalid input.
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(176): Xml::build(false)
+#1 [internal function]: UserController->mail_get()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-01-17 14:37:44 Error: [XmlException] Invalid input.
+Request URL: /ecoReleve-core/user/mail_get
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(181): Xml::build(false)
+#1 [internal function]: UserController->mail_get()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-01-17 14:40:30 Error: [XmlException] Invalid input.
+Request URL: /ecoReleve-core/user/inscrip_set
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(61): Xml::build(false)
+#1 [internal function]: UserController->inscrip_set()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-01-17 15:24:31 Error: [MissingDatasourceConfigException] The datasource configuration "test" was not found in database.php
+Exception Attributes: array (
+  'config' => 'test',
+)
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('test')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(94): ConnectionManager::getDataSource('test')
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(73): CakeFixtureManager->_initDb()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestRunner.php(58): CakeFixtureManager->fixturize(Object(CartoControllerTest))
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteCommand.php(115): CakeTestRunner->doRun(Object(CakeTestSuite), Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(247): CakeTestSuiteCommand->run(Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(100): CakeTestSuiteDispatcher->_runTestCase()
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(117): CakeTestSuiteDispatcher->dispatch()
+#8 C:\wamp\www\ecoReleve-core\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#9 {main}
+2014-01-17 15:25:05 Error: Fatal Error (64): Cannot redeclare DATABASE_CONFIG::$default in [C:\wamp\www\ecoReleve-core\app\Config\database.php, line 21]
+2014-01-17 15:25:05 Error: [FatalErrorException] Cannot redeclare DATABASE_CONFIG::$default
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 21)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 21, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 21, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-20 15:30:16 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Source'.
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [TProto...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [TProto...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [TProto...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [TProto...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TProtocolInventory), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TProtocolInventory), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Model\Station.php(437): Model->find('all', Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(536): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#9 [internal function]: StationController->import_csv()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-20 15:47:33 Error: Fatal Error (1): Class 'AppController' not found in [C:\wamp\www\ecoReleve-core\app\Controller\ViewsController.php, line 2]
+2014-01-20 15:47:33 Error: [FatalErrorException] Class 'AppController' not found
+Request URL: /ecoReleve-core/view/list?format=json?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppContr...', 'C:\wamp\www\eco...', 2)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppContr...', 'C:\wamp\www\eco...', 2, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Class 'AppContr...', 'C:\wamp\www\eco...', 2, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-20 16:00:53 Error: Fatal Error (64): Cannot redeclare UserControllerTest::test_view_get() in [C:\wamp\www\ecoReleve-core\app\Test\Case\Controller\ViewsControllerTest.php, line 56]
+2014-01-20 16:00:53 Error: [FatalErrorException] Cannot redeclare UserControllerTest::test_view_get()
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 56)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 56, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 56, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-20 16:12:40 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Network\CakeSocket.php, line 302]
+2014-01-20 16:12:40 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core//station/carto
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 302)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 302, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 302, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-20 16:12:49 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2014-01-20 16:12:49 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/station/list?limit=0&offset=0&id_proto=&place=&region=&idate=&taxonsearch=&to_carto=yes&bbox=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 460, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 460, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-20 16:27:28 Error: [MissingTableException] Table Stationsimpleexemples for model AppModel was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'Stationsimpleexemples',
+  'class' => 'AppModel',
+  'ds' => 'test',
+)
+Request URL: /ecoReleve-core/station/list?limit=0&offset=0&id_proto=&place=&region=&idate=&taxonsearch=&to_carto=yes&bbox=&test=1&tabletest=Stationsimpleexemples
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('Stationsimpleex...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2795): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2732): Model->_findCount('before', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2691): Model->buildQuery('count', Array)
+#4 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(126): Model->find('count', Array)
+#5 [internal function]: StationController->station_get()
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-01-20 16:42:26 Error: Fatal Error (64): Cannot redeclare ViewsControllerTest::test_nsml_get() in [C:\wamp\www\ecoReleve-core\app\Test\Case\Controller\ERExplorerControllerTest.php, line 20]
+2014-01-20 16:42:26 Error: [FatalErrorException] Cannot redeclare ViewsControllerTest::test_nsml_get()
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 20)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 20, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 20, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-21 09:17:44 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers '='.
+Request URL: /ecoReleve-core/proto/station_get2?id_stations=3067
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [Statio...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [Statio...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [Statio...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [Statio...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\ProtoController.php(578): Model->find('all', Array)
+#8 [internal function]: ProtoController->station_get2()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-21 09:30:25 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\ecoReleve-core\app\Test\Case\Controller\ProtoControllerTest.php, line 62]
+2014-01-21 09:30:26 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 62)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 62, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 62, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-21 09:48:22 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(2924): PDOStatement->execute()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(648): DboSource->insertMulti('V_Qry_Chiro_cap...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\Fixture\CakeTestFixture.php(284): Sqlserver->insertMulti('V_Qry_Chiro_cap...', Array, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\Fixture\CakeFixtureManager.php(214): CakeTestFixture->insert(Object(Sqlserver))
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestCase.php(82): CakeFixtureManager->load(Object(ViewsControllerTest))
+#5 C:\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(775): CakeTestCase->run(Object(PHPUnit_Framework_TestResult))
+#6 C:\wamp\bin\php\php5.4.16\pear\PHPUnit\Framework\TestSuite.php(745): PHPUnit_Framework_TestSuite->runTest(Object(ViewsControllerTest), Object(PHPUnit_Framework_TestResult))
+#7 C:\wamp\bin\php\php5.4.16\pear\PHPUnit\TextUI\TestRunner.php(349): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult), false, Array, Array, false)
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestRunner.php(63): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteCommand.php(115): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(247): CakeTestSuiteCommand->run(Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(100): CakeTestSuiteDispatcher->_runTestCase()
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteDispatcher.php(117): CakeTestSuiteDispatcher->dispatch()
+#13 C:\wamp\www\ecoReleve-core\app\webroot\test.php(100): CakeTestSuiteDispatcher::run()
+#14 {main}
+2014-01-21 10:04:06 Error: Fatal Error (64): Cannot redeclare class ViewsControllerTest in [C:\wamp\www\ecoReleve-core\app\Test\Case\Controller\ViewsControllerTest.php, line 66]
+2014-01-21 10:04:06 Error: [FatalErrorException] Cannot redeclare class ViewsControllerTest
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-21 10:04:30 Error: Fatal Error (1): Class 'PHPUnit_Util_Skeleton_Test' not found in [C:\wamp\www\ecoReleve-core\lib\Cake\TestSuite\CakeTestSuiteCommand.php, line 79]
+2014-01-21 10:04:30 Error: [FatalErrorException] Class 'PHPUnit_Util_Skeleton_Test' not found
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'PHPUnit_...', 'C:\wamp\www\eco...', 79)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'PHPUnit_...', 'C:\wamp\www\eco...', 79, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Class 'PHPUnit_...', 'C:\wamp\www\eco...', 79, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-21 10:06:13 Error: Fatal Error (64): Cannot redeclare class ViewsControllerTest in [C:\wamp\www\ecoReleve-core\app\Test\Case\Controller\ViewsControllerTest.php, line 66]
+2014-01-21 10:06:14 Error: [FatalErrorException] Cannot redeclare class ViewsControllerTest
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-21 10:12:16 Error: Fatal Error (64): Cannot redeclare class ViewsControllerTest in [C:\wamp\www\ecoReleve-core\app\Test\Case\Controller\ViewsControllerTest.php, line 66]
+2014-01-21 10:12:16 Error: [FatalErrorException] Cannot redeclare class ViewsControllerTest
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\eco...', 66, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-23 09:39:27 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/user/login/Rovellotti%20Olivier/zobb1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('user')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('user')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TUsers')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(339): Model->find('first', Array)
+#7 [internal function]: UserController->login()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-01-23 10:58:54 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers 'Abies'.
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [TProto...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [TProto...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [TProto...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [TProto...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TProtocolInventory), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TProtocolInventory), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Model\Station.php(438): Model->find('all', Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(536): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#9 [internal function]: StationController->import_csv()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-23 13:27:47 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\ecoReleve-core\app\Model\Station.php, line 421]
+2014-01-23 13:27:47 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 421)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 421, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 421, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-23 14:37:13 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 124403712 bytes) in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 806]
+2014-01-23 14:37:13 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 124403712 bytes)
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\eco...', 806)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\eco...', 806, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\eco...', 806, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-23 13:37:14 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\CakeSession.php, line 612]
+2014-01-23 13:37:14 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-23 13:37:14 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\CakeSession.php, line 612]
+2014-01-23 13:37:15 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-23 13:37:15 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\CakeSession.php, line 612]
+2014-01-23 13:37:15 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-23 13:37:16 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\CakeSession.php, line 612]
+2014-01-23 13:37:16 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-23 13:37:16 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\CakeSession.php, line 612]
+2014-01-23 13:37:16 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 612, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-23 15:05:07 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TProtocol_Inventory_ON_TStations". Le conflit s'est produit dans la base de données "DB_mycoflore", table "dbo.TStations", column 'TSta_PK_ID'.
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TP...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TP...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TP...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TProtocolInventory), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TProtocolInventory), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\app\Model\Station.php(599): Model->saveMany(Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', NULL)
+#8 [internal function]: StationController->import_csv()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-23 14:42:14 Error: [MissingActionException] Action TaxonController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaxonController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/taxon/list/table?filter=Collybia+dryophila&limit=0
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-23 14:42:17 Error: [MissingActionException] Action TaxonController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaxonController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/taxon/list/table?filter=Collybia+dryophila&limit=0
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-23 14:42:20 Error: [MissingActionException] Action TaxonController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaxonController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/taxon/list/table?filter=Collybia+dryophila&limit=0
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-23 17:51:23 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers 'Yzeron'.
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [Statio...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [Statio...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [Statio...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [Statio...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Model\Station.php(280): Model->find('all', Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#9 [internal function]: StationController->import_csv()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-23 17:54:21 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers 'Yzeron'.
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [Statio...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [Statio...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [Statio...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [Statio...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Model\Station.php(280): Model->find('all', Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#9 [internal function]: StationController->import_csv()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-24 09:27:45 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers 'entuel'.
+Request URL: /ecoReleve-core/station/import_csv
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [Statio...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [Statio...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [Statio...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [Statio...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Model\Station.php(280): Model->find('all', Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#9 [internal function]: StationController->import_csv()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-28 09:16:59 Error: [MissingActionException] Action TaxonController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaxonController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/taxon/list/table?filter=Puccinia+menthae&limit=0
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-28 09:17:10 Error: [MissingActionException] Action TaxonController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaxonController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/taxon/list/table?filter=Puccinia+buxi&limit=0
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-28 09:17:26 Error: [MissingActionException] Action TaxonController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaxonController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/taxon/list/table?filter=Puccinia+menthae&limit=0
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-28 09:18:07 Error: [MissingActionException] Action TaxonController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaxonController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/taxon/list/table?filter=Puccinia+menthae&limit=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-28 09:18:23 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Taxon/xml\taxon_name_list.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Taxon/xml\\taxon_name_list.ctp',
+)
+Request URL: /ecoReleve-core/taxon/list?filter=Puccinia+menthae&limit=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName('taxon_name_list')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render('taxon_name_list', NULL)
+#2 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(338): Controller->render('taxon_name_list')
+#3 [internal function]: AppController->column_list()
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TaxonController), Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-01-28 09:22:17 Error: [MissingActionException] Action TaxonController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaxonController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/taxon/list/table?filter=Puccinia+menthae&limit=0
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TaxonController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-28 12:32:37 Error: [PDOException] SQLSTATE[07002]: [Microsoft][SQL Server Native Client 11.0]COUNT field incorrect or syntax error
+Request URL: /ecoReleve-core/proto/column_list?table_name=TStations&column_name=Area%3Fformat%3Djson
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [Value]...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [Value]...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [Value]...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [Value]...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\ProtoController.php(1098): Model->find('all', Array)
+#8 [internal function]: ProtoController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-28 15:18:36 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procédure stockée 'sp_hierarchie' introuvable.
+Request URL: /ecoReleve-core/taxon/get/14836
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('EXECUTE sp_hier...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('EXECUTE sp_hier...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('EXECUTE sp_hier...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('EXECUTE sp_hier...')
+#5 [internal function]: DboSource->query('EXECUTE sp_hier...')
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3061): call_user_func_array(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\ProtoController.php(1313): Model->query('EXECUTE sp_hier...')
+#8 [internal function]: ProtoController->taxon_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-28 15:18:36 Error: [MissingTableException] Table TStations_additional_values for model Additionnal was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'TStations_additional_values',
+  'class' => 'Additionnal',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/proto/station_get2?format=geojson&id_taxon=14836
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TStations_addit...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#4 C:\wamp\www\ecoReleve-core\app\Controller\ProtoController.php(578): Model->find('all', Array)
+#5 [internal function]: ProtoController->station_get2()
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-01-28 15:19:58 Error: [MissingTableException] Table TStations_additional_values for model Additionnal was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'TStations_additional_values',
+  'class' => 'Additionnal',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/proto/station_get2?format=geojson&id_taxon=14836
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TStations_addit...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#4 C:\wamp\www\ecoReleve-core\app\Controller\ProtoController.php(578): Model->find('all', Array)
+#5 [internal function]: ProtoController->station_get2()
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-01-28 15:20:00 Error: [MissingTableException] Table TTaxa_additional_values for model Additional was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'TTaxa_additional_values',
+  'class' => 'Additional',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/taxon/get/14836
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TTaxa_additiona...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Taxon), Array, NULL)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Taxon), Array)
+#4 C:\wamp\www\ecoReleve-core\app\Controller\ProtoController.php(1327): Model->find('all', Array)
+#5 [internal function]: ProtoController->taxon_get()
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ProtoController), Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProtoController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-01-28 15:22:36 Error: [MissingActionException] Action DocsController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'DocsController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/docs/list
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DocsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-28 15:23:39 Error: [MissingActionException] Action DocsController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'DocsController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/docs/list
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DocsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-29 09:55:30 Error: [MissingTableException] Table Table_Import_Error for model Table_Import was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'Table_Import_Error',
+  'class' => 'Table_Import',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('Table_Import_Er...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Model\Station.php(79): Model->find('first', Array)
+#3 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#4 [internal function]: StationController->import_csv()
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-01-29 09:55:45 Error: [MissingTableException] Table Table_Import_Error for model Table_Import was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'Table_Import_Error',
+  'class' => 'Table_Import',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('Table_Import_Er...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Model\Station.php(79): Model->find('first', Array)
+#3 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#4 [internal function]: StationController->import_csv()
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-01-29 09:56:22 Error: [MissingTableException] Table Table_Import_Error for model Table_Import was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'Table_Import_Error',
+  'class' => 'Table_Import',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('Table_Import_Er...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Model\Station.php(79): Model->find('first', Array)
+#3 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#4 [internal function]: StationController->import_csv()
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-01-29 09:56:42 Error: [MissingTableException] Table Table_Import_Error for model Table_Import was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'Table_Import_Error',
+  'class' => 'Table_Import',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('Table_Import_Er...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Model\Station.php(79): Model->find('first', Array)
+#3 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#4 [internal function]: StationController->import_csv()
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-01-29 09:56:58 Error: [MissingTableException] Table Table_Import_Error for model Table_Import was not found in datasource mycoflore.
+Exception Attributes: array (
+  'table' => 'Table_Import_Error',
+  'class' => 'Table_Import',
+  'ds' => 'mycoflore',
+)
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('Table_Import_Er...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Model\Station.php(79): Model->find('first', Array)
+#3 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#4 [internal function]: StationController->import_csv()
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-01-29 09:58:32 Error: [PDOException] SQLSTATE[22001]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Les données de chaîne ou binaires seront tronquées.
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [Ta...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [Ta...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [Ta...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(Table_Import), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(Table_Import), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\app\Model\Station.php(611): Model->saveMany(Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#8 [internal function]: StationController->import_csv()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 09:58:37 Error: [PDOException] SQLSTATE[22001]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Les données de chaîne ou binaires seront tronquées.
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [Ta...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [Ta...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [Ta...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(Table_Import), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(Table_Import), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\app\Model\Station.php(611): Model->saveMany(Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#8 [internal function]: StationController->import_csv()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 09:59:46 Error: [PDOException] SQLSTATE[22001]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Les données de chaîne ou binaires seront tronquées.
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [Ta...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [Ta...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [Ta...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(Table_Import), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(Table_Import), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\app\Model\Station.php(611): Model->saveMany(Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#8 [internal function]: StationController->import_csv()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 10:03:06 Error: [PDOException] SQLSTATE[22001]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Les données de chaîne ou binaires seront tronquées.
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [Ta...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [Ta...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [Ta...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(Table_Import), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(Table_Import), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\app\Model\Station.php(611): Model->saveMany(Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#8 [internal function]: StationController->import_csv()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 10:05:29 Error: [PDOException] SQLSTATE[22001]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Les données de chaîne ou binaires seront tronquées.
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [Ta...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [Ta...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [Ta...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(Table_Import), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(Table_Import), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\app\Model\Station.php(611): Model->saveMany(Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#8 [internal function]: StationController->import_csv()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 12:55:29 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\ecoReleve-core\app\Controller\StationController.php, line 585]
+2014-01-29 12:55:29 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 585)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 585, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 585, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 12:55:47 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La colonne 'TStations.TSta_PK_ID' n'est pas valide dans la liste de sélection parce qu'elle n'est pas contenue dans une fonction d'agrégation ou dans la clause GROUP BY.
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  sum(cas...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  sum(cas...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  sum(cas...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  sum(cas...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(588): Model->find('all', Array)
+#8 [internal function]: StationController->month_repartion()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 12:58:35 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Un nom d'objet ou de colonne est manquant ou vide. Pour les instructions SELECT INTO, vérifiez si chaque colonne a un nom. Pour les autres instructions, recherchez des noms d'alias vides. Les alias définis sous la forme " " ou [] ne sont pas autorisés. Remplacez l'alias par un nom valide.
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  sum(cas...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  sum(cas...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  sum(cas...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  sum(cas...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(589): Model->find('all', Array)
+#8 [internal function]: StationController->month_repartion()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 13:00:28 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Un nom d'objet ou de colonne est manquant ou vide. Pour les instructions SELECT INTO, vérifiez si chaque colonne a un nom. Pour les autres instructions, recherchez des noms d'alias vides. Les alias définis sous la forme " " ou [] ne sont pas autorisés. Remplacez l'alias par un nom valide.
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  sum(cas...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  sum(cas...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  sum(cas...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  sum(cas...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(590): Model->find('all', Array)
+#8 [internal function]: StationController->month_repartion()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 13:24:53 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Un nom d'objet ou de colonne est manquant ou vide. Pour les instructions SELECT INTO, vérifiez si chaque colonne a un nom. Pour les autres instructions, recherchez des noms d'alias vides. Les alias définis sous la forme " " ou [] ne sont pas autorisés. Remplacez l'alias par un nom valide.
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  sum(cas...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  sum(cas...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  sum(cas...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  sum(cas...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(590): Model->find('all', Array)
+#8 [internal function]: StationController->month_repartion()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 13:27:48 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Un nom d'objet ou de colonne est manquant ou vide. Pour les instructions SELECT INTO, vérifiez si chaque colonne a un nom. Pour les autres instructions, recherchez des noms d'alias vides. Les alias définis sous la forme " " ou [] ne sont pas autorisés. Remplacez l'alias par un nom valide.
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  sum(cas...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  sum(cas...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  sum(cas...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  sum(cas...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(590): Model->find('all', Array)
+#8 [internal function]: StationController->month_repartion()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 13:28:27 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Un nom d'objet ou de colonne est manquant ou vide. Pour les instructions SELECT INTO, vérifiez si chaque colonne a un nom. Pour les autres instructions, recherchez des noms d'alias vides. Les alias définis sous la forme " " ou [] ne sont pas autorisés. Remplacez l'alias par un nom valide.
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  sum(cas...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  sum(cas...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  sum(cas...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  sum(cas...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(590): Model->find('all', Array)
+#8 [internal function]: StationController->month_repartion()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 13:36:36 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers ')'.
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  sum(cas...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  sum(cas...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  sum(cas...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  sum(cas...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Station), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Station), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(592): Model->find('all', Array)
+#8 [internal function]: StationController->month_repartion()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 13:41:25 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Station\month_repartion.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Station\\month_repartion.ctp',
+)
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 13:41:35 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Station\month_repartion.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Station\\month_repartion.ctp',
+)
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 13:41:53 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La colonne 'TStations.DATE' n'est pas valide dans la liste de sélection parce qu'elle n'est pas contenue dans une fonction d'agrégation ou dans la clause GROUP BY.
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('Select sum(case...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('Select sum(case...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('Select sum(case...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('Select sum(case...')
+#5 [internal function]: DboSource->query('Select sum(case...')
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3061): call_user_func_array(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(591): Model->query('Select sum(case...')
+#8 [internal function]: StationController->month_repartion()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-29 13:43:11 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Station\month_repartion.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Station\\month_repartion.ctp',
+)
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 13:44:35 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\ecoReleve-core\app\Controller\StationController.php, line 590]
+2014-01-29 13:44:35 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 590)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 590, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 590, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 13:45:10 Error: [MissingActionException] Action StationController::month_repartion() could not be found.
+Exception Attributes: array (
+  'controller' => 'StationController',
+  'action' => 'month_repartion',
+)
+Request URL: /ecoReleve-core/station/month_repartion
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-29 13:45:27 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Station/json\number_by_month.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Station/json\\number_by_month.ctp',
+)
+Request URL: /ecoReleve-core/station/number_by_month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 14:12:56 Error: Fatal Error (4): syntax error, unexpected '$last12month' (T_VARIABLE) in [C:\wamp\www\ecoReleve-core\app\Controller\StationController.php, line 594]
+2014-01-29 14:12:56 Error: [FatalErrorException] syntax error, unexpected '$last12month' (T_VARIABLE)
+Request URL: /ecoReleve-core/station/number_by_month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 594)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 594, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 594, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 14:23:16 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\ecoReleve-core\app\Controller\StationController.php, line 608]
+2014-01-30 14:23:17 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /ecoReleve-core/station/number_by_month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 608)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 608, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 608, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-31 10:26:47 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Source'.
+Request URL: /ecoReleve-core/station/import_csv?format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [TProto...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [TProto...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [TProto...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [TProto...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TProtocolInventory), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TProtocolInventory), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Model\Station.php(491): Model->find('all', Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(543): Station->importcsv2('C:\wamp\tmp\php...', '1')
+#9 [internal function]: StationController->import_csv()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-31 13:45:04 Error: [XmlException] Invalid input.
+Request URL: /ecoReleve-core/user/inscrip_set
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(65): Xml::build(false)
+#1 [internal function]: UserController->inscrip_set()
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-01-31 14:03:42 Error: [MissingActionException] Action StationController::get() could not be found.
+Exception Attributes: array (
+  'controller' => 'StationController',
+  'action' => 'get',
+)
+Request URL: /ecoReleve-core/station/get/limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-31 14:04:27 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2014-01-31 14:04:28 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/station/get?limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 460, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 460, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-31 14:21:06 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php, line 611]
+2014-01-31 14:21:06 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/station/get?limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 611)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 611, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 611, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-31 14:37:08 Error: Fatal Error (64): Cannot use [] for reading in [C:\wamp\www\ecoReleve-core\app\Controller\StationController.php, line 216]
+2014-01-31 14:37:08 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=id%3A20&filters%5B1%5D=der
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\wamp\www\eco...', 216)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\wamp\www\eco...', 216, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\wamp\www\eco...', 216, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-31 14:39:16 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\ecoReleve-core\app\Controller\StationController.php, line 219]
+2014-01-31 14:39:16 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=id%3A20
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 219)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 219, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 219, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-31 14:39:26 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'id'.
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=id%3A20
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(243): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-31 14:39:52 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'id'.
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=id%3A20
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(243): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-31 14:40:29 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'id'.
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=id%3A20
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(243): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-31 14:46:39 Error: Fatal Error (4): syntax error, unexpected 'endforeach' (T_ENDFOREACH) in [C:\wamp\www\ecoReleve-core\app\View\Station\json\station_get.ctp, line 31]
+2014-01-31 14:46:40 Error: [FatalErrorException] syntax error, unexpected 'endforeach' (T_ENDFOREACH)
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=TSta_PK_ID%3A8
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 31, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 31, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-31 14:54:23 Error: Fatal Error (4): syntax error, unexpected '}', expecting ',' or ';' in [C:\wamp\www\ecoReleve-core\app\View\Station\json\station_get.ctp, line 31]
+2014-01-31 14:54:23 Error: [FatalErrorException] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=TSta_PK_ID%3A8
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 31, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 31, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-31 15:00:26 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers le mot clé 'IS'.
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(243): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-31 15:01:57 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers le mot clé 'IS'.
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(243): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-01-31 15:09:20 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers le mot clé 'IS'.
+Request URL: /ecoReleve-core/station/get?limit=10&filters%5B0%5D=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(247): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-11 15:29:18 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/station/list?limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('narc_ereleve')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('narc_ereleve')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TStations')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2795): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2732): Model->_findCount('before', Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2691): Model->buildQuery('count', Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(127): Model->find('count', Array)
+#9 [internal function]: StationController->station_get()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-11 16:04:55 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewIndividual/json\not_autorized.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewIndividual/json\\not_autorized.ctp',
+)
+Request URL: /ecoReleve-core/TViewIndividual/list
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName('not_autorized')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render('not_autorized', NULL)
+#2 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(346): Controller->render('not_autorized')
+#3 [internal function]: AppController->column_list()
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-02-11 16:06:09 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/TViewIndividual/list
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('mycoflore')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('mycoflore')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TViewIndividual')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(292): Model->find('all', Array)
+#7 [internal function]: AppController->column_list()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-02-11 16:06:27 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('mycoflore')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('mycoflore')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TViewIndividual')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(292): Model->find('all', Array)
+#7 [internal function]: AppController->column_list()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-02-11 16:07:53 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewIndividual/xml\column_list.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewIndividual/xml\\column_list.ctp',
+)
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-02-11 16:16:32 Error: [MissingActionException] Action TViewIndividualController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'TViewIndividualController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/TViewIndividual/list/count?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-12 09:59:02 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near 'Status'.
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(293): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-12 10:01:50 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near ']'.
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(293): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-12 10:15:42 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name '
+id34@TCaracThes_Species'.
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(293): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-12 10:17:03 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]The identifier that starts with '[
+id9@TCarac_Release_Ring_Code] AS [Value__[
+id9@TCarac_Release_Ring_Code], [Value.[ id12@TCarac_Breeding_Ring_Code] AS [Value__' is too long. Maximum length is 128.
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(293): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-12 10:18:01 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'Individual_Obj_PK'.
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(293): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-12 10:18:56 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near '*'.
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(293): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-12 10:43:21 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\ecoReleve-core\app\Controller\AppController.php, line 245]
+2014-02-12 10:43:22 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json&filter1_=+id36%40Death_date%3D2009-10-28
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 245)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 245, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 245, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-12 10:44:39 Error: Fatal Error (1): Call to undefined function stri_pos() in [C:\wamp\www\ecoReleve-core\app\Controller\AppController.php, line 244]
+2014-02-12 10:44:39 Error: [FatalErrorException] Call to undefined function stri_pos()
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json&filter1=+id36%40Death_date%3D2009-10-28
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 244)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 244, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\eco...', 244, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-12 10:49:13 Error: Fatal Error (1): Call to undefined function stri_pos() in [C:\wamp\www\ecoReleve-core\app\Controller\AppController.php, line 244]
+2014-02-12 10:49:14 Error: [FatalErrorException] Call to undefined function stri_pos()
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json&filter1=+id36%40Death_date%3D2009-10-28
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 244)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 244, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\eco...', 244, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-12 10:49:19 Error: Fatal Error (1): Call to undefined function str_pos() in [C:\wamp\www\ecoReleve-core\app\Controller\AppController.php, line 244]
+2014-02-12 10:49:19 Error: [FatalErrorException] Call to undefined function str_pos()
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json&filter1=+id36%40Death_date%3D2009-10-28
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 244)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 244, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\eco...', 244, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-12 13:06:31 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\ecoReleve-core\app\Controller\AppController.php, line 286]
+2014-02-12 13:06:31 Error: [FatalErrorException] Unsupported operand types
+Request URL: /ecoReleve-core/TViewIndividual/list?limit=10&format=json&filter2%5B0%5D=id37%40Comments%3ADirect+release
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 286)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 286, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\wamp\www\eco...', 286, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-12 13:26:05 Error: [MissingControllerException] Controller class TViewTrxSatController could not be found.
+Exception Attributes: array (
+  'class' => 'TViewTrxSatController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-core/TViewTrx_Sat/list?limit=10&format=json&filter2%5B0%5D=id37%40Comments%3ADirect+release
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-12 13:26:13 Error: [MissingControllerException] Controller class TViewTrxSatController could not be found.
+Exception Attributes: array (
+  'class' => 'TViewTrxSatController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-core/TViewTrx_Sat/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-12 13:27:19 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'id1@Thes_Status'.
+Request URL: /ecoReleve-core/TViewTrx_Sat/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 10 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 10 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 10 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 10 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(386): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxSatController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-12 13:28:58 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewTrxSat/json\column_list.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewTrxSat/json\\column_list.ctp',
+)
+Request URL: /ecoReleve-core/TViewTrx_Sat/list?limit=10&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

@@ -3,10 +3,20 @@ class DATABASE_CONFIG {
 	public $default = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
+	 "host" => "WIN7PRO-PC\SQLSERVER2008",
+	 "login" => "",
+	 "password" => "",
+	 "database" => "ECWP-eReleveData",
+	 "prefix" => ""
+	);
+	
+	public $test = array(
+	 "datasource" => "Database/Sqlserver",
+	 "persistent" => false,
 	 "host" => "WIN7PRO-PC\WIN7SERVER",
 	 "login" => "",
 	 "password" => "",
-	 "database" => "eReleve",
+	 "database" => "test",
 	 "prefix" => ""
 	);
 	
@@ -56,7 +66,7 @@ class DATABASE_CONFIG {
 	 "host" => "WIN7PRO-PC\WIN7SERVER",
 	 "login" => "",
 	 "password" => "",
-	 "database" => "NARC_TRACK_SECURITE",
+	 "database" => "ECWP_TRACK_SECURITE",
 	 "prefix" => "",
 	 "encoding" => "",
 	);

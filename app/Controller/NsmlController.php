@@ -1,16 +1,16 @@
 <?php
 	App::uses('Model', 'Model');
 	App::uses('AppModel', 'Model');
-	define("base", "ereleve");
+	define("basen", "ereleve");
 	//include_once '../../lib/Cake/Model/ConnectionManager.php';
 	include_once 'AppController.php';	
-	define("cache_time",3600);
+	define("cache_timen",3600);
 	class NsmlController extends AppController{		
 		var $helpers = array('Xml', 'Text','form','html','Cache');
 		public $components = array('RequestHandler');
 		var $typereturn;	
 		public $cacheAction = array(
-			//'nsml_get' => cache_time,
+			//'nsml_get' => cache_timen,
 			'fa_list' => 2592000, //1 month
 			'region_list' => 2592000,
 			'place_list' => 2592000
@@ -51,8 +51,8 @@
 			if($table!=""){
 				//try to load the table find to 0 if not
 				try{
-					$model = new AppModel($table,str_replace(" ","",$table),base);
-					$protocolemodel = new AppModel("TProtocole","TProtocole",base);
+					$model = new AppModel($table,str_replace(" ","",$table),basen);
+					$protocolemodel = new AppModel("TProtocole","TProtocole",basen);
 				}
 				catch(Exception $e){
 					$this->set("exist",0);	
@@ -165,14 +165,14 @@
 		
 		//Return a list of expot view  
 		function map_views_list(){
-			$model = new AppModel("TMapSelectionManager","TMapSelectionManager",base);	
+			$model = new AppModel("TMapSelectionManager","TMapSelectionManager",basen);	
 			$conditions=array();
 			$debug="";	
 			$date_name=array("DATE","StaDate","lastArgosDate");
 			//$model->column_exist("V_Qry_VGroups_AllTaxons_EnjilDamStations",$date_name);
 			$table = $model->find("all",array('order'=> array("TSMan_Layer_Name asc"))+$conditions);				
 			$this->set('date_name',$date_name);
-			$this->set('base',base);			
+			$this->set('basen',basen);			
 			$this->set('model',$model);
 			$this->set('views', $table);
 			$this->set("debug",$debug);
@@ -185,7 +185,7 @@
 
 		//list of fieldactivity
 		function fa_list(){
-			$model = new AppModel("TStations","TStations",base);
+			$model = new AppModel("TStations","TStations",basen);
 			$debug="";
 			//Cache::clear(); 
 			$tables = $model->find("all",array(
@@ -202,7 +202,7 @@
 		
 		//list of region
 		function region_list(){
-			$model = new AppModel("TStations","TStations",base);
+			$model = new AppModel("TStations","TStations",basen);
 			$debug="";
 			$tables = $model->find("all",array(
 							'fields'=>array('Region'),
@@ -218,7 +218,7 @@
 		
 		//list of place
 		function place_list(){
-			$model = new AppModel("TStations","TStations",base);
+			$model = new AppModel("TStations","TStations",basen);
 			$debug="";
 			$region="";
 			$conditions=array();

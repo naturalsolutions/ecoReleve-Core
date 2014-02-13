@@ -69,6 +69,7 @@
 			$dot="";
 			$Distinct=array();
 			$ModelName="AppModel"; //for the array returned by find
+			$totaldisplay=0;
 			
 			if(isset($this->params['url']['to_carto']) && $this->params['url']['to_carto']!=""){
 				if($this->params['url']['to_carto']=="yes"){
@@ -166,10 +167,19 @@
 				if(isset($this->params['url']['iDisplayStart']) && $this->params['url']['iDisplayStart']!=""){
 					$offset=intval($this->params['url']['iDisplayStart']);	
 				}
+				
+				if(isset($this->params['url']['offset']) && $this->params['url']['offset']!=""){
+					$offset=intval($this->params['url']['offset']);
+				}
+				
+				if(isset($this->params['url']['skip']) && $this->params['url']['skip']!=""){
+					$offset=intval($this->params['url']['skip']);
+				}
 				//take sEcho parameter (param for the datable js)
 				if(isset($this->params['url']['sEcho'])){
 					$sEcho=$this->params['url']['sEcho'];	
-				}			
+				}		
+				
 				$sort_column=$column_array[0];
 				$sort_dir="asc";
 				//column sort
@@ -178,6 +188,14 @@
 					$sort_dir= $this->params['url']['sSortDir_0'];
 					$sort_column=$column_array[$index_col];
 				}
+				
+				if(isset($this->params['url']['sortColumn']) &&  $this->params['url']['sortColumn']!=""){
+				
+					if(isset($this->params['url']['sortOrder']) && $this->params['url']['sortOrder']!="")
+						$sort_dir= $this->params['url']['sortOrder'];
+					$sort_column=$this->params['url']['sortColumn'];
+				}
+				
 				//take taxonsearch parameter for a taxon filter
 				if(isset($this->params['url']['taxonsearch']) && $this->params['url']['taxonsearch']!=""){
 					$tsearch=$this->params['url']['taxonsearch'];
@@ -192,6 +210,21 @@
 				if(isset($this->params['url']['region']) && $this->params['url']['region']!=""){
 					$region=$this->params['url']['region'];
 				}
+				
+				if(isset($this->params['url']['filters']) && count($this->params['url']['filters'])>0){
+					$filters=$this->params['url']['filters'];
+					//$condition_array[];
+					foreach($filters as $f){
+						if($f){
+							list($col,$val)=split(":",$f,2);
+							if($col=='DATE'){
+								$condition_array[]=array("CONVERT(char(10),[DATE],126)='$val'");
+							}
+							else							
+								$condition_array+=array($col=>$val);
+						}						
+					}
+				}
 				//if date filter
 				if(isset($this->params['url']['idate']) && $this->params['url']['idate']!=""){
 					date_default_timezone_set('UTC');
@@ -203,25 +236,37 @@
 					$search=$this->params['url']['sSearch'];				
 				}
 				
-				//create condition array for the sql request
-				$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true);				
-				//find station with the right parameter without search				
-				$station = $model_proto->find("all",array('recursive' => 0
-														,'limit'=>$limit
-														,'offset'=>$offset
-														,'fields'=>$column_array
-														,'order'=> array("$sort_column $sort_dir")
-														,'conditions'=>$condition_array)+$Stationjoin
-												);
-				if($station){
-					$totaldisplay = $model_proto->find("count",array('recursive' => 0
-														,'fields'=>$column_array
-														,'conditions'=>$condition_array)+$Stationjoin
-												);	
-				}								
-				else 
-					$totaldisplay=0;
+				$count=false;
+				if(isset($this->request->params['count']))
+					$count=true;
 				
+				if(!$count){
+					//create condition array for the sql request
+					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true);				
+					//print_r($condition_array);
+					//find station with the right parameter without search				
+					$station = $model_proto->find("all",array('recursive' => 0
+															,'limit'=>$limit
+															,'offset'=>$offset
+															,'fields'=>$column_array
+															,'order'=> array("$sort_column $sort_dir")
+															,'conditions'=>$condition_array)+$Stationjoin
+													);
+					if($station){
+						$totaldisplay = $model_proto->find("count",array('recursive' => 0
+															,'fields'=>$column_array
+															,'conditions'=>$condition_array)+$Stationjoin
+													);	
+					}								
+					else 
+						$totaldisplay=0;
+				}
+				else{
+					$totaldisplay = $model_proto->find("count",array('recursive' => 0
+															,'conditions'=>$condition_array)+$Stationjoin
+													);
+					$find=2;								
+				}
 			}
 			else
 				$find=-1;
@@ -468,22 +513,33 @@
 				
 				//$options['conditions'] = array('TProtocol_Inventory.Id_Taxon' => $id_taxon);
 				//$this->Station->hasMany['StationProtocoles']['conditions']['StationProtocoles.PK']=2;
-				$result=$this->Station->find('all',array(
-					'contain'=>array('SationProtocoles'=>array('conditions'=>array('Id_Taxon'=>"5440"))),
-					'recursive'=>1,
-					'limit'=>$limit,
-					'offset'=>$offset,
-					'fields'=>$column_array,
-					'conditions'=>$condition_array
-					
-					
-				)+$options);
+				$count=false;
+				if(isset($this->request->params['count']))
+					$count=true;
+				
+				if(!$count){				
+					$result=$this->Station->find('all',array(
+						'recursive'=>1,
+						'limit'=>$limit,
+						'offset'=>$offset,
+						'fields'=>$column_array,
+						'conditions'=>$condition_array					
+					)+$options);
+					$this->set("debug","");
+					$this->set("find",1);
+					$this->set("result",$result);
+					$this->set("schema",$column_array);
+				}
+				else{
+					$result=$this->Station->find('count',array(
+						'conditions'=>$condition_array					
+					)+$options);
+					$this->set("find",2);
+					$this->set("result",$result);
+				}		
 				
 							
-				$this->set("debug","");
-				$this->set("find",1);
-				$this->set("result",$result);
-				$this->set("schema",$column_array);
+				
 				/*
 				if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
 					$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
@@ -526,12 +582,21 @@
 			if($this->admin){
 				$this->loadModel('Station');
 				$format="json";
+				$viewpath='/text';
 				$find=1;
 				$res=array();
+				$user=$this->Session->read('user');
+				$iduser=$user['User']['TUse_Pk_ID'];
+				
+				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
+					if($this->params['url']['format']=='json')
+						$viewpath='/json';
+				}
+				
 				if(isset($this->params['form']['datafile']['tmp_name'])
 				&& $this->params['form']['datafile']['tmp_name']!=""){	
 					$filename=$this->params['form']['datafile']['tmp_name'];
-					$res=$this->Station->importcsv2($filename);
+					$res=$this->Station->importcsv2($filename,$iduser);
 					//print_r($res);
 					$count_success = count($res['messages']);
 					$count_error = count($res['errors']);
@@ -551,7 +616,7 @@
 					$this->viewPath .= '/text';		
 				else	
 					$this->viewPath .= '/'.$format;	*/
-				$this->viewPath .= '/text';				
+				$this->viewPath .= "$viewpath";				
 				$this->RequestHandler->respondAs($format);							
 				$this->layoutPath = $format;
 				$this->layout= $format;	
@@ -563,6 +628,70 @@
 				$this->layoutPath = 'json';	
 				$this->render('not_autorized');	
 			}		
-		}			
+		}
+
+		function number_by_month(){
+			$this->loadModel('Station');
+			$this->Station->useDbConfig = 'ereleve';
+			$find=1;
+			$date="";
+			if(isset($this->params['url']['date']) && $this->params['url']['date']!=""){
+				$date=$this->params['url']['date'];
+				if(!preg_match('/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/', $date)){
+					$find=-1;
+				}
+			}
+			if($find==1){
+				$fields=array();
+				$conditions=array();
+				$y=date('Y');
+				$m=date('m');
+				$d=1;
+				if($date!="")
+					list($y,$m,$d2)=split("-",$date);
+				
+				$last12month=$this->last12month($y,$m,$d);
+				$mkmonthlast = mktime(0, 0, 0, $m-11, 1, $y);
+				$datemonthlast = date("Y-m-d",$mkmonthlast);
+				$mkmonthfirst = mktime(0, 0, 0, $m, 31, $y);
+				$datemonthfirst = date("Y-m-d",$mkmonthfirst);
+				$nbbym=array();
+				
+				for($i=0;$i<12;$i++){
+					$month12 = date("F",mktime(0, 0, 0, $m-$i, 1, $y));
+					$nbbym+=array($month12=>null);
+				}
+				//print_r(date("F",mktime(0, 0, 0, 01, 1, $y)));
+				
+				$query="Select count(*) as nb,CONVERT(CHAR(4), DATE, 100) as month,month(DATE) as nummonth FROM      TStations 
+				WHERE CONVERT(varchar(255), DATE, 21) <= '$datemonthfirst' and 
+				CONVERT(varchar(255), DATE, 21) >= '$datemonthlast'
+				GROUP BY  month(DATE),CONVERT(CHAR(4), DATE, 100)";
+				
+				//print_r($query);
+				/*foreach($last12month as $month=>$date){
+					$begin=$this->begin_month($date);
+					$end=$this->end_month($date);
+					$fields[]="sum(case when (CONVERT(varchar(255), DATE, 21) >= '$begin' and CONVERT(varchar(255), DATE, 21) <= '$end') then 1 end) as $month";
+				}*/
+				$fields=implode(",",$fields);
+				//$query="Select $fields from TStations";
+				$queryresult=$this->Station->query($query);
+				//print_r($queryresult);
+				foreach($queryresult as $r){
+					$cmonth=date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y));
+					$nbbym[$cmonth]=$r[0]['nb'];
+				}	
+				$nbbym=array(array($nbbym));
+				$this->set('result',$nbbym);
+			}
+			$this->set('find',$find);
+			
+			$this->RequestHandler->respondAs('json');
+			$this->viewPath .= '/json';
+			$this->layout= 'json';
+			$this->layoutPath = 'json';	
+		}	
+		
 	}
 ?>

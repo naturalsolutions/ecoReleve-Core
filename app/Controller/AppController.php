@@ -74,7 +74,7 @@ class AppController extends Controller {
 	
 	//column value list from a table webservice
 	function column_list(){
-		if(!$this->notauth){	
+		if(true/*!$this->notauth*/){	
 			$table_name="";
 			$column_name="";
 			$array_conditions=array();
@@ -208,8 +208,88 @@ class AppController extends Controller {
 					else*/	
 						$array_conditions += array("$column_name LIKE"=>$filter);
 				}				
-
-				$model=new Value($table_name,$table_name,"mycoflore");
+				//phpinfo();
+				//case with field filter separated by ',': 'col op val, col2 op2 val2'
+				if(isset($this->params['url']['filter1']) && $this->params['url']['filter1']!=""){
+						$filters=$this->params['url']['filter1'];
+						//print_r("ici1");
+						//add filters on the array condition
+						$filters=split(",",$filters);
+						$isdate=false;
+						for($i=0;$i<count($filters);$i++){
+							if(count(($condi=split("<=",$filters[$i])))>1){
+								$tmpfield=str_ireplace("date","",$condi[0]);
+								if($tmpfield!=$condi[0])
+									$isdate=true;
+								if($isdate)
+									$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' <='=>$condi[1]);	
+								else
+									$array_conditions+=array($condi[0].' <='=>$condi[1]);							
+							}
+							else if(count(($condi=split(">=",$filters[$i])))>1){
+								$tmpfield=str_ireplace("date","",$condi[0]);
+								if($tmpfield!=$condi[0])
+									$isdate=true;
+								if($isdate)
+									$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' >='=>$condi[1]);	
+								else
+									$array_conditions+=array($condi[0].' >='=>$condi[1]);							
+							}
+							else if(count(($condi=split(">",$filters[$i])))>1){
+								$tmpfield=str_ireplace("date","",$condi[0]);
+								if($tmpfield!=$condi[0])
+									$isdate=true;
+								if($isdate)
+									$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' >'=>$condi[1]);	
+								else
+									$array_conditions+=array($condi[0].' >'=>$condi[1]);							
+							}
+							else if(count(($condi=split("<",$filters[$i])))>1){
+								$tmpfield=str_ireplace("date","",$condi[0]);
+								if($tmpfield!=$condi[0])
+									$isdate=true;
+								if($isdate)
+									$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' <'=>$condi[1]);	
+								else
+									$array_conditions+=array($condi[0].' <'=>$condi[1]);							
+							}
+							else if(count(($condi=split("=",$filters[$i])))>1){
+								$tmpfield=str_ireplace("date","",$condi[0]);
+								if($tmpfield!=$condi[0])
+									$isdate=true;
+								if($isdate)
+									$array_conditions+=array("CONVERT(char(10),$condi[0],126)" => $condi[1]);
+								else
+									$array_conditions+=array($condi[0]=>$condi[1]);							
+							}	
+							else if(count(($condi=split(" LIKE ",$filters[$i])))>1){
+								$mot=$condi[1];
+								$mot=str_replace(" ","% ",$mot);
+								$array_conditions+=array($condi[0].' like '=>'%'.$mot.'%');							
+							}	
+						}								
+				}
+				
+				if(isset($this->params['url']['filter2']) && count($this->params['url']['filter2'])>0){
+					$filters=$this->params['url']['filter2'];
+					//$condition_array[];
+					$isdate=false;
+					foreach($filters as $f){
+						if($f){
+							list($col,$val)=split(":",$f,2);
+							$tmpfield=str_ireplace("date","",$col);
+							if($tmpfield!=$col)
+								$isdate=true;
+							if($isdate){
+								$array_conditions[]=array("CONVERT(char(10),$col,126)='$val'");
+							}
+							else							
+								$array_conditions+=array($col=>$val);
+						}						
+					}
+				}
+				
+				$model=new Value($table_name,$table_name);
 				$count=false;
 				//check if it's a count request
 				if(isset($this->params['url']['count']) && $this->params['url']['count']!=""){
@@ -230,12 +310,18 @@ class AppController extends Controller {
 					($rankname != 'Classe' and $rankname  != 'Famille' and $rankname  != 'Ordre' and $rankname  != 'Règne' and $rankname  != 'Phylum'))");
 				}
 				if($count){
+					$field_arrayg=$field_array;
+					
+					if(isset($field_array[0]) && $field_array[0]=='*')
+						$field_arrayg=array();
+						
 					$nb=$model->find("count",array(
 									'fields'=>$field_array,
-									'group'=>$field_array,
+									'group'=>$field_arrayg,
 									'conditions'=>$array_conditions)+$options
 									);	
-					$this->set('count',"");				
+					$this->set('result',$nb);
+					$find=2;	
 				}				
 				else if($table_name=="TTaxa_Name"){
 					/*print_r(array(
@@ -253,10 +339,14 @@ class AppController extends Controller {
 						$field_array=array_merge($fields,$join_column);
 						
 					}
+					$field_arrayg=$field_array;
+					if(isset($field_array[0]) && $field_array[0]=='*')
+						$field_arrayg=array();
+						
 					$model_result=$this->TaxonName->find("all",array(
 									'fields'=>$field_array,
 									'order'=>"$column_name asc",
-									'group'=>$field_array,
+									'group'=>$field_arrayg,
 									'conditions'=>$array_conditions,
 									'limit'=>$limit,
 									'offset'=>intval($offset)
@@ -281,11 +371,15 @@ class AppController extends Controller {
 									);	*/		
 					$this->set("result",$model_result);	
 				}
-				else{				
+				else{
+					$field_arrayg=$field_array;
+					if(isset($field_array[0]) && $field_array[0]=='*')
+						$field_arrayg=array();
+						
 					$model_result=$model->find("all",array(
 									'fields'=>$field_array+$fields,
 									'order'=>"$column_name asc",
-									'group'=>$field_array,
+									'group'=>$field_arrayg,
 									'conditions'=>$array_conditions,
 									'limit'=>$limit,
 									'offset'=>intval($offset))+$options
@@ -346,4 +440,95 @@ class AppController extends Controller {
 			$this->render('not_autorized');	
 		}	
 	}
+	
+	/*
+	@arg $date string date in that format yyyy-mm-dd
+	@return yyyy-mm-01 
+	*/
+	function begin_month($date){
+		$splitdate=split("-",$date);
+		if(count($splitdate)!=3)
+			return -1;
+		$splitdate[2]="01";
+		$date=implode("-",$splitdate);
+		return $date;	
+	}
+
+
+	/*
+	@arg $date string date in that format yyyy-mm-dd
+	@return yyyy-mm-31 
+	*/
+	function end_month($date){
+		$splitdate=split("-",$date);
+		if(count($splitdate)!=3)
+			return -1;
+		$splitdate[2]="31";
+		$date=implode("-",$splitdate);
+		return $date;
+	}
+
+	function last12month($y=null,$m=null,$d=null){
+		if($m==null)
+			$m=date("m");
+		if($d==null)
+			$d=date("d");
+		if($y==null)
+			$y=date("Y");
+
+		$mkmonth1 = mktime(0, 0, 0, $m, $d, $y);
+		$datemonth1 = date("Y-m-d",$mkmonth1);
+		$month1 = date("F",$mkmonth1);
+
+		$mkmonth2 = mktime(0, 0, 0, $m-1, $d, $y);
+		$datemonth2 = date("Y-m-d",$mkmonth2);
+		$month2 = date("F",$mkmonth2);
+
+		$mkmonth3 = mktime(0, 0, 0, $m-2, $d, $y);
+		$datemonth3 = date("Y-m-d",$mkmonth3);
+		$month3 = date("F",$mkmonth3);
+
+		$mkmonth4 = mktime(0, 0, 0, $m-3, $d, $y);
+		$datemonth4 = date("Y-m-d",$mkmonth4);
+		$month4 = date("F",$mkmonth4);
+
+		$mkmonth5 = mktime(0, 0, 0, $m-4, $d, $y);
+		$datemonth5 = date("Y-m-d",$mkmonth5);
+		$month5 = date("F",$mkmonth5);
+
+		$mkmonth6 = mktime(0, 0, 0, $m-5, $d, $y);
+		$datemonth6 = date("Y-m-d",$mkmonth6);
+		$month6 = date("F",$mkmonth6);
+
+		$mkmonth7 = mktime(0, 0, 0, $m-6, $d, $y);
+		$datemonth7 = date("Y-m-d",$mkmonth7);
+		$month7 = date("F",$mkmonth7);
+
+		$mkmonth8 = mktime(0, 0, 0, $m-7, $d, $y);
+		$datemonth8 = date("Y-m-d",$mkmonth8);
+		$month8 = date("F",$mkmonth8);
+
+		$mkmonth9 = mktime(0, 0, 0, $m-8, $d, $y);
+		$datemonth9 = date("Y-m-d",$mkmonth9);
+		$month9 = date("F",$mkmonth9);
+
+		$mkmonth10 = mktime(0, 0, 0, $m-9, $d, $y);
+		$datemonth10 = date("Y-m-d",$mkmonth10);
+		$month10 = date("F",$mkmonth10);
+
+		$mkmonth11 = mktime(0, 0, 0, $m-10, $d, $y);
+		$datemonth11 = date("Y-m-d",$mkmonth11);
+		$month11 = date("F",$mkmonth11);
+
+		$mkmonth12 = mktime(0, 0, 0, $m-11, $d, $y);
+		$datemonth12 = date("Y-m-d",$mkmonth12);
+		$month12 = date("F",$mkmonth12);
+
+		$months=array($month1=>$datemonth1,$month2=>$datemonth2,$month3=>$datemonth3,$month4=>$datemonth4,$month5=>$datemonth5,
+		$month6=>$datemonth6,$month7=>$datemonth7,$month8=>$datemonth8,$month9=>$datemonth9,$month10=>$datemonth10,
+		$month11=>$datemonth11,$month12=>$datemonth12);
+		
+		return $months;
+	}
+	
 }

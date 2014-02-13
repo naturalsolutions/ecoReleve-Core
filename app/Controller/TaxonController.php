@@ -409,7 +409,7 @@ class TaxonController extends AppController {
 			'offset'=>intval($offset)
 			
 		));
-		$taxons['hierarchie']=$hierarchie;
+		
 		
 		$nb_taxons="";
 		/*$nb_taxons=$this->Taxon->find("count",array(
@@ -417,11 +417,12 @@ class TaxonController extends AppController {
 			'limit'=>$limit,
 			'offset'=>intval($offset)
 		));*/
-		
-		
-					
+							
 		if(!($taxons && (count($taxons)>0)))
 			$taxons=array();
+		else{
+			$taxons['hierarchie']=$hierarchie;
+		}		
 		/*
 		if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
 			$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			

@@ -2,10 +2,10 @@
 	include_once 'AppController.php';
 	App::uses('AppModel', 'Model');
 	App::uses('User', 'Model');
-	define("base", "user");
-	define("limit",0);
-	define("offset",0);
-	define("cache_time",3600);
+	define("baseu", "user");
+	define("limitu",0);
+	define("offsetu",0);
+	define("cache_timeu",3600);
 	//require '../Lib/PHPMailer/PHPMailerAutoload.php';
 	App::import('Lib', 'PHPMailer/PHPMailerAutoload');
 	
@@ -57,7 +57,15 @@
 			if(true){
 				$format='json';
 				//$fp=fopen("app/webroot/config/adminmail","r");
-				$smtpxmlstr=file_get_contents("app/webroot/config/smtpconf.xml");
+				error_reporting(0);				
+				$smtpxmlstr = file_get_contents("app/webroot/config/smtpconf.xml");				
+				if(!$smtpxmlstr)
+				$smtpxmlstr = file_get_contents("config/smtpconf.xml");	
+				error_reporting(E_ERROR | E_WARNING | E_PARSE);
+				//if(!$smtpxmlstr)
+				
+				//$smtpxmlstr = file_get_contents("config/smtpconf.xml");	
+				
 				$smtpArray = Xml::toArray(Xml::build($smtpxmlstr));
 				//ini_set("upload_tmp_dir","C:\Inetpub\vhosts\fmbds.org\httpdocs\mycoflore\tmp");
 				//print_r(ini_get("upload_tmp_dir"));
@@ -70,18 +78,36 @@
 				$association="";
 				$name="";
 				
+				
+				
 				$mail = new PHPMailer();
 				//$mail->ClearAddresses();
 				$mail->IsSMTP();
 				$mail->CharSet = 'UTF-8';
-
+				
 				$mail->Host       = $smtpArray['smtp']['host']; // SMTP server example
 				$mail->SMTPDebug  = 0;                     // enables SMTP debug information (for testing)
-				$mail->SMTPAuth   = true;                  // enable SMTP authentication
-				$mail->Port       = 25;                    // set the SMTP port for the GMAIL server
+				$mail->SMTPAuth   = false;                  // enable SMTP authentication
+				$mail->Port       = 25;                    // set the SMTP port 
 				$mail->Username   = $smtpArray['smtp']['login']; // SMTP account username example
 				$mail->Password   = $smtpArray['smtp']['password']; 
 				//$mail->SMTPSecure = 'tls'; 
+				
+				
+				/*$mail->SMTPDebug  = 0;
+				$mail->IsSMTP();
+				$mail->Mailer = 'smtp';
+				$mail->SMTPAuth = true;
+				$mail->Host = 'smtp.gmail.com'; // "ssl://smtp.gmail.com" didn't worked
+				$mail->Port = 465;
+				$mail->SMTPSecure = 'ssl';
+				// or try these settings (worked on XAMPP and WAMP):
+				//$mail->Port = 587;
+				//$mail->SMTPSecure = 'tls';
+
+
+				$mail->Username = "natu170114@gmail.com";
+				$mail->Password = "natural170114";*/
 				
 				$mail->addAddress($ademail); 
 				
@@ -132,12 +158,24 @@
 				$orig=array('\n','\t','$email','$name','$firstName','$password','$association');
 				$replace=array("\n","\t",$email,$name,$firstName,$password,$association);
 				$mail->Body = str_replace($orig,$replace,$smtpArray['smtp']['mailbody']);
-				
 				$this->set("result","unknown");
 				$this->set("message","unknown");
-				if(!$mail->send()) {
-					$this->set("result","error");
-					$this->set("message","mail send error");
+				if(!$mail->send()){					
+					//If phpmailer don't work try with mail()
+					$to      = $ademail;
+					$subject = $smtpArray['smtp']['mailsubject'];
+					$message = str_replace($orig,$replace,$smtpArray['smtp']['mailbody']);
+					$from = $smtpArray['smtp']['mailfrom'];
+					$headers = "From: $from"."\r\n"."Reply-To: $from"."\r\n".'X-Mailer: PHP/'.phpversion();
+					
+					if(mail($to, $subject, $message, $headers)){					  
+						$this->set("result","success");
+						$this->set("message","success");
+					}
+					else{
+						$this->set("result","error");
+						$this->set("message","mail send error");						
+					}
 				}
 				else{
 					$this->set("result","success");
@@ -170,8 +208,14 @@
 		public function mail_get(){
 			if($this->admin){
 				$format='json';
+				//$fp=fopen("coucou","w");
 				//$fp=fopen("app/webroot/config/adminmail","r");
+				error_reporting(0);				
 				$smtpxmlstr = file_get_contents("app/webroot/config/smtpconf.xml");				
+				if(!$smtpxmlstr)
+					$smtpxmlstr = file_get_contents("config/smtpconf.xml");
+				// Rapporte les erreurs d'exécution de script
+				error_reporting(E_ERROR | E_WARNING | E_PARSE);		
 				$smtpArray = Xml::toArray(Xml::build($smtpxmlstr));				
 				$email=$smtpArray['smtp']['mailadmin'];
 				$this->set("email",$email);
@@ -203,7 +247,11 @@
 				$regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 	
 				if(preg_match($regex, $email)){
 					//$fp=fopen("app/webroot/config/adminmail","w");
-					$smtpxmlstr = file_get_contents("app/webroot/config/smtpconf.xml");					
+					error_reporting(0);				
+					$smtpxmlstr = file_get_contents("app/webroot/config/smtpconf.xml");				
+					if(!$smtpxmlstr)
+					$smtpxmlstr = file_get_contents("config/smtpconf.xml");	
+					error_reporting(E_ERROR | E_WARNING | E_PARSE);
 					$smtpArray = Xml::toArray(Xml::build($smtpxmlstr));
 					$smtpArray['smtp']['mailadmin']=$email;
 					$smtpxml=Xml::build($smtpArray);
@@ -326,7 +374,6 @@
 						$this->Session->write('login',$login);
 						$this->Session->write('role',$role);
 						$this->Session->write('user',$result);
-						
 						//print_r($result);	
 					}	
 					else{
@@ -361,7 +408,7 @@
 			$format="json";
 			if(isset($this->params['url']['format']))
 				$format = $this->params['url']['format'];
-			$model_view = new AppModel("TUsers","TUsers",base);
+			$model_view = new AppModel("TUsers","TUsers",baseu);
 			$model_view->name='User';
 			$this->set('model',$model_view);	
 			$views = $this->User->find('all',array(			

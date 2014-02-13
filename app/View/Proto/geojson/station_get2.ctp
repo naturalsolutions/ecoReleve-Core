@@ -23,9 +23,12 @@
 				$lon=$result[$i][$ModelName]['LON'];
 				$id=$result[$i][$ModelName]['TSta_PK_ID'];
 				$date=$result[$i][$ModelName]['DATE'];
+				$formatdate=new DateTime($date);
+				$year=date_format($formatdate, 'Y');
+				
 			}	
 		?>
-		{"type":"Feature","properties":{"count":<?php echo $count;?>,"id":"<?php echo $id;?>","year":"<?php echo date("Y", strtotime($date));?>"},"geometry":{"type": "Point", "coordinates":[ <?php echo $lon;?>, <?php echo $lat;?>]}}
+		{"type":"Feature","properties":{"count":<?php echo $count;?>,"id":"<?php echo $id;?>","year":"<?php echo $year;?>"},"geometry":{"type": "Point", "coordinates":[ <?php echo $lon;?>, <?php echo $lat;?>]}}
 		<?php if($i<count($result)-1)echo ",";?>
 	<?php endfor?>
 ]

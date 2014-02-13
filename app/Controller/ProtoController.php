@@ -13,10 +13,10 @@
 	App::uses('Taxon_Addi', 'Model');
 	App::uses('TaxonFamilyCount', 'Model');
 	
-	define("base", "narc_ereleve"); //name of database use
-	define("limit",0);  //sql limit default value
-	define("offset",0); //sql offset default value
-	define("cache_time",3600);
+	define("basep", "narc_ereleve"); //name of database use
+	define("limitp",0);  //sql limit default value
+	define("offsetp",0); //sql offset default value
+	define("cache_timep",3600);
 	App::uses('table1', 'Model');
 	App::uses('table2', 'Model');
 	App::uses('table3', 'Model');
@@ -27,10 +27,10 @@
 		public $notauth=false;	
 		public $admin=false;
 		public $cacheAction = array(  //set the method(webservice) with a cached result
-			//'proto_list' => cache_time,
-			//'station_get' => cache_time,  
-			//'proto_taxon_get' => cache_time,
-			//'proto_get' => cache_time
+			//'proto_list' => cache_timep,
+			//'station_get' => cache_timep,  
+			//'proto_taxon_get' => cache_timep,
+			//'proto_get' => cache_timep
 		);
 		
 		public function beforeFilter() {
@@ -100,7 +100,7 @@
 		
 		//controller method for the list of protocole
 		function proto_list(){
-			$base=base;
+			$basep=basep;
 			$table="TProtocole";
 			$test=false;
 			$format="xml";
@@ -130,7 +130,7 @@
 		
 			
 		
-			$model = new AppModel("TProtocole",$table,$base);	
+			$model = new AppModel("TProtocole",$table,$basep);	
 			$conditions=array();
 			$debug="";			
 			
@@ -181,11 +181,11 @@
 			}
 			
 			$test=0;
-			$base=base;
+			$basep=basep;
 			//verify if it's a test
 			if(isset($this->params['url']['test']) && $this->params['url']['test']==1 && $this->params['url']['tabletest']){
 				$test=1;
-				$base="test";
+				$basep="test";
 				$table_name=$this->params['url']['tabletest'];
 				$this->set("test","test");
 			}
@@ -194,7 +194,7 @@
 			if(isset($this->params['url']['id_proto']) && $this->params['url']['id_proto']!="" && $test==0){
 				$Distinct= array();
 				$id_proto=$this->params['url']['id_proto'];
-				$model_list_proto = new AppModel("TProtocole","TProtocole",base);
+				$model_list_proto = new AppModel("TProtocole","TProtocole",basep);
 				$table_name_array=$model_list_proto->find('first',array("conditions" => array("TTheEt_PK_ID"=>$id_proto)));
 				if(isset($table_name_array['AppModel']['Relation']))
 					$table_name="TProtocol_".$table_name_array['AppModel']['Relation'];
@@ -219,15 +219,15 @@
 			
 			if($table_name!="TProtocol_"&& $table_name!=""){
 				$Stationjoinstringnamedot=$Stationjoinstringname.$dot;
-				$model_proto = new AppModel('TStation',$table_name,$base);
+				$model_proto = new AppModel('TStation',$table_name,$basep);
 				$this->set("Model",$model_proto);
 				//array that contain the column return
 				$column_array = array($Stationjoinstringnamedot."TSta_PK_ID",$Stationjoinstringnamedot."FieldActivity_Name"
 				,$Stationjoinstringnamedot."Name",$Stationjoinstringnamedot."DATE",$Stationjoinstringnamedot."Region",$Stationjoinstringnamedot."Place"
 				,$Stationjoinstringnamedot."LAT",$Stationjoinstringnamedot."LON");
 				$condition_array = array('LAT IS NOT NULL','LON IS NOT NULL');
-				$limit=limit;
-				$offset=offset;
+				$limit=limitp;
+				$offset=offsetp;
 				$sEcho="1";
 				$total=$model_proto->find("count",array()+$Stationjoin);
 				
@@ -394,7 +394,7 @@
 		
 				//get a list of station id from parameter
 				if(isset($this->params['url']['id_stations']) && $this->params['url']['id_stations']!=""){
-					$id_stations=$this->params['url']['id_station'];
+					$id_stations=$this->params['url']['id_stations'];
 					$id_station_array=split(",",$id_stations);	
 					$condition_id_sta="";
 					for($i=0;$i<count($id_station_array);$i++){
@@ -626,10 +626,12 @@
 				$format="json";
 				$find=1;
 				$res=array();
+				$user=$this->Session->read('user');
+				$iduser=$user['User']['TUse_Pk_ID'];
 				if(isset($this->params['form']['datafile']['tmp_name'])
 				&& $this->params['form']['datafile']['tmp_name']!=""){	
 					$filename=$this->params['form']['datafile']['tmp_name'];
-					$res=$this->Station->importcsv2($filename);
+					$res=$this->Station->importcsv2($filename,$iduser);
 					//print_r($res);
 					$count_success = count($res['messages']);
 					$count_error = count($res['errors']);
@@ -668,7 +670,7 @@
 			$debug="";
 			$find=1;
 			$table_name="TProtocole";
-			$base=base;
+			$basep=basep;
 			$test=false;
 			$taxons=array();
 			$format="xml";
@@ -771,7 +773,7 @@
 				$table_name="";
 				$id_proto="";
 				$pk_id_name="";
-				$model_list_proto = $this->Protocole;//new AppModel("TProtocole","TProtocole",base);
+				$model_list_proto = $this->Protocole;//new AppModel("TProtocole","TProtocole",basep);
 				
 				foreach ($model_list_proto->schema() as $key=>$val){
 					if($key=="TTheEt_PK_ID"){
@@ -820,7 +822,7 @@
 					//$desc_query="SELECT t,c,cd,td From V_Qry_Column_Descr where t='dbo.$table_name'";
 					
 					
-						//$desc_proto = new AppModel("V_Qry_Column_Descr","V_Qry_Column_Descr",base);
+						//$desc_proto = new AppModel("V_Qry_Column_Descr","V_Qry_Column_Descr",basep);
 						$desc=$this->get_description_col($table_name);
 						
 						//$desc=$this->simply_table($desc_proto->query($desc_query));
@@ -834,7 +836,7 @@
 					//		
 					//create model from protocol and get table descr on the view for keyword protocol	
 					try{					
-						//$model_proto = new AppModel($table_name,$table_name,base);
+						//$model_proto = new AppModel($table_name,$table_name,basep);
 						$this->AppModel->setSource($table_name);
 						$model_proto=$this->AppModel;
 						/*if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
@@ -1307,6 +1309,9 @@
 				,true);
 				
 				//$this->Taxon->hasMany['Synonymous']['conditions']['Synonymous.']=2;
+				
+				$hierarchie=$this->Taxon->query("EXECUTE sp_hierarchie $id_taxon");
+				
 				$taxons=$this->Taxon->find("all",array(
 					'contain' => array(
 						'Synonymous'=> array(
@@ -1331,7 +1336,9 @@
 							
 				if(!($taxons && (count($taxons)>0)))
 					$taxons=array();
-				
+				else{
+					$taxons['hierarchie']=$hierarchie;
+				}
 				if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
 					$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
 					fwrite($fp, print_r($taxons ,true));
@@ -1475,7 +1482,7 @@
 						  Country char(25), 
 						  Birth_Date date)";*/
 			//$query = "Drop TABLE customer";			  
-			$db = ConnectionManager::getDataSource(base);
+			$db = ConnectionManager::getDataSource(basep);
 			
 			if($db->rawQuery($query))
 				$this->set("query_result","true");
