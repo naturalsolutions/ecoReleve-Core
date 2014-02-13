@@ -90,7 +90,6 @@
 	Router::connect('/user',array('controller'=>'tusers','action' => 'index'));  
 	Router::connect('/user/login/:login/:password',array('controller'=>'User','action' => 'login'));  //login action	
 	
-	
 	Router::connect('/doc/list',array('controller'=>'Docs','action' => 'docs_list'));
 	
 	Router::connect('/taxon/get',array('controller'=>'taxon','action' => 'taxon_get'));  //get taxon url
@@ -118,6 +117,8 @@
 	,'column_name' => 'id1@Thes_Status','fields'=>'*'));
 	Router::connect('/TViewTrx_Sat/list/count',array('controller'=>'TViewTrx_Sat','action' => 'column_list','table_name' => 'TViewTrx_Sat'
 	,'column_name' => 'id1@Thes_Status','fields'=>'*','count' => 'yes'));
+	
+	Router::connect('/list/autocomplete',array('controller'=>'app','action' => 'column_list'));
 	
 	/**
  * Load all plugin routes. See the CakePlugin documentation on

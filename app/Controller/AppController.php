@@ -317,7 +317,7 @@ class AppController extends Controller {
 						
 					$nb=$model->find("count",array(
 									'fields'=>$field_array,
-									'group'=>$field_arrayg,
+									//'group'=>$field_arrayg,
 									'conditions'=>$array_conditions)+$options
 									);	
 					$this->set('result',$nb);

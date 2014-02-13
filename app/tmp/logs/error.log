@@ -26814,3 +26814,53 @@ Stack Trace:
 #3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
 #4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2014-02-12 15:33:05 Error: [MissingActionException] Action ViewsController::list() could not be found.
+Exception Attributes: array (
+  'controller' => 'ViewsController',
+  'action' => 'list',
+)
+Request URL: /ecoReleve-core/views/list
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ViewsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-12 16:17:07 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\App/xml\column_list.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\App/xml\\column_list.ctp',
+)
+Request URL: /ecoReleve-core//list/autocomplete
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-02-12 16:20:40 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'Name_FieldActivity'.
+Request URL: /ecoReleve-core/list/autocomplete?table_name=tstations&column_name=Name_FieldActivity&fields=Name_FieldActivity&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [Value]...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [Value]...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [Value]...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [Value]...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(386): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AppController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-12 16:37:25 Error: Fatal Error (1): Call to undefined function tml_entity_decode() in [C:\wamp\www\ecoReleve-core\app\View\App\json\column_list.ctp, line 2]
+2014-02-12 16:37:26 Error: [FatalErrorException] Call to undefined function tml_entity_decode()
+Request URL: /ecoReleve-core/list/autocomplete?table_name=tstations&column_name=FieldActivity_Name&fields=FieldActivity_Name&format=json&filter=pl
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 2)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 2, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\eco...', 2, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
