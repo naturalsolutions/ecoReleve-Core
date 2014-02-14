@@ -134,7 +134,6 @@
 			$gpx_name=$this->gpx_name;
 			$gpx_url="";
 			$cluster="no";
-			$agrwhere="";
 			
 			//creation of the gpx's url
 			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
@@ -184,38 +183,17 @@
 					$format="test";
 				}
 			}			
-			$top="";
+			
 			if(isset($this->params['url']['limit']) && $this->params['url']['limit']!=""){
 				$limit=$this->params['url']['limit'];
-				$top="TOP $limit";
 			}
-			$offs="";
-			$offseton=false;
+			
 			if(isset($this->params['url']['offset']) && $this->params['url']['offset']!=""){
-				$agrwhere="WHERE";
 				$offset=intval($this->params['url']['offset']);
-				$offs="_cake_paging_.Row > $offset";
-				$offseton=true;	
 			}
 			
 			if(isset($this->params['url']['skip']) && $this->params['url']['skip']!=""){
 				$offset=intval($this->params['url']['skip']);
-				$offs="WHERE _cake_paging_.Row > $offset";
-				$offseton=true;	
-			}
-			$rowstring="";
-			if(isset($this->params['url']['rows']) && $this->params['url']['rows']!=""){
-				$agrwhere="WHERE";
-				$row=$this->params['url']['rows'];
-				$splitrow=explode(",",$row);
-				//print_r($row);
-				$and="";
-				if($offseton)
-					$and="and";
-				foreach($splitrow as $r){
-					$rowstring==""?$rowstring.="_cake_paging_.Row=$r":$rowstring.=" or _cake_paging_.Row=$r";	
-				}
-				$rowstring=" $and (".$rowstring.")";			
 			}
 			
 			//BBOX param if map call
@@ -266,7 +244,7 @@
 					$this->MapSelectionManager->setSource($table_name);
 					$this->set('model',$this->MapSelectionManager);
 					$schema=$this->MapSelectionManager->schema();
-					$fields=array_keys($schema); 					
+					$fields=array_keys($schema); 
 					//take column parameter
 					if(isset($this->params['url']['columns']) && $this->params['url']['columns']!=""){
 						$column=$this->params['url']['columns'];
@@ -281,7 +259,6 @@
 						}
 						$fields=$columnarray;
 					}
-					//print_r($fields);
 					$this->set('schema',$fields);	
 				}catch(Exception $e){
 					$find=-1;
@@ -390,29 +367,17 @@
 							fwrite($fp,print_r($result,true));
 						}
 					}
-					else{
-						//$condition[]=array("row = 11");
-						//print_r($condition);
-						/*$result=$this->MapSelectionManager->find('all',array(
+					else{		
+						$result=$this->MapSelectionManager->find('all',array(
 							'limit'=>$limit,
 							'offset'=>$offset,
 							'fields'=>$fields,
 							'conditions'=>array()+$condition)
-						);*/
-						$conditionstring=implode(" and ", $filters);
-						if($conditionstring!="")
-							$conditionstring="WHERE $conditionstring";
-						$fieldsstring=implode(" , ", $fields);
-						$result=$this->MapSelectionManager->query("SELECT $top * FROM ( 
-						SELECT ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS Row, $fieldsstring 
-						FROM [$table_name] AS [MapSelectionManager] $conditionstring ) AS _cake_paging_ 
-						$agrwhere $offs $rowstring
-						ORDER BY _cake_paging_.Row");
+						);
 						$total=$this->MapSelectionManager->find('count',array(
 							'fields'=>$fields,
 							'conditions'=>array()+$condition)
 						);
-						
 						$this->set('totaldisplay',$total);
 						$this->set('ModelName','MapSelectionManager');
 						$this->MapSelectionManager->gpx_save($result,$gpx_name);

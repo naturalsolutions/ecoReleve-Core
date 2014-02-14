@@ -91,7 +91,7 @@
 			if(isset($this->params['url']['id_proto']) && $this->params['url']['id_proto']!="" && $test==0){
 				$Distinct= array();
 				$id_proto=$this->params['url']['id_proto'];
-				$model_list_proto = new AppModel("TProtocole","TProtocole");
+				$model_list_proto = new AppModel("TProtocole","TProtocole",base);
 				$table_name_array=$model_list_proto->find('first',array("conditions" => array("TTheEt_PK_ID"=>$id_proto)));
 				if(isset($table_name_array['AppModel']['Relation']))
 					$table_name="TProtocol_".$table_name_array['AppModel']['Relation'];
@@ -114,7 +114,7 @@
 			
 			if($table_name!="TProtocol_"&& $table_name!=""){
 				$Stationjoinstringnamedot=$Stationjoinstringname.$dot;
-				$model_proto = new AppModel('TStation',$table_name);
+				$model_proto = new AppModel('TStation',$table_name,$base);
 				$this->set("Model",$model_proto);
 				//array that contain the column return
 				$column_array = array($Stationjoinstringnamedot."TSta_PK_ID",$Stationjoinstringnamedot."FieldActivity_Name"
@@ -308,7 +308,7 @@
 		}
 		
 		function station_get2(){
-			if(true/*!$this->notauth*/){
+			if(!$this->notauth){
 				$format="json";
 				$id_proto="";
 				$tsearch="";
@@ -317,7 +317,7 @@
 				$fa="";
 				$name="";
 				$condition_array=array();
-				$db="default";
+				$db="mycoflore";
 				$limit="";
 				$offset="";
 				$bbox="";
@@ -632,7 +632,7 @@
 
 		function number_by_month(){
 			$this->loadModel('Station');
-			//$this->Station->useDbConfig = 'ereleve';
+			$this->Station->useDbConfig = 'ereleve';
 			$find=1;
 			$date="";
 			if(isset($this->params['url']['date']) && $this->params['url']['date']!=""){
@@ -650,18 +650,16 @@
 				if($date!="")
 					list($y,$m,$d2)=split("-",$date);
 				
-				//$last12month=$this->last12month($y,$m,$d);
+				$last12month=$this->last12month($y,$m,$d);
 				$mkmonthlast = mktime(0, 0, 0, $m-11, 1, $y);
 				$datemonthlast = date("Y-m-d",$mkmonthlast);
 				$mkmonthfirst = mktime(0, 0, 0, $m, 31, $y);
 				$datemonthfirst = date("Y-m-d",$mkmonthfirst);
 				$nbbym=array();
-				$monthyear=array();
+				
 				for($i=0;$i<12;$i++){
-					$month12 = date("F",mktime(0, 0, 0, $m-$i, 1, $y))." ".date("Y",mktime(0, 0, 0, $m-$i, 1, $y));
+					$month12 = date("F",mktime(0, 0, 0, $m-$i, 1, $y));
 					$nbbym+=array($month12=>null);
-					$monthyear+=array(date("F",mktime(0, 0, 0, $m-$i, 1, $y)) => date("Y",mktime(0, 0, 0, $m-$i, 1, $y)));
-					//print_r($nbbym);
 				}
 				//print_r(date("F",mktime(0, 0, 0, 01, 1, $y)));
 				
@@ -680,9 +678,8 @@
 				//$query="Select $fields from TStations";
 				$queryresult=$this->Station->query($query);
 				//print_r($queryresult);
-				$i=0;	
-				foreach($queryresult as $r){					
-					$cmonth=date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y))." ".$monthyear[date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y))];;
+				foreach($queryresult as $r){
+					$cmonth=date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y));
 					$nbbym[$cmonth]=$r[0]['nb'];
 				}	
 				$nbbym=array(array($nbbym));
