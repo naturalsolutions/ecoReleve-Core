@@ -6,7 +6,7 @@ App::uses('Table_Import', 'Model');
 App::uses('Tthesaurus', 'Model');
 
 class Station extends AppModel {
-	public $useDbConfig = 'mycoflore';
+	//public $useDbConfig = 'mycoflore';
 	public $useTable = 'TStations';
 	public $primaryKey = 'TSta_PK_ID';
 	//public $actsAs = array('Containable');

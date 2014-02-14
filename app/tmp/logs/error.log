@@ -26864,3 +26864,133 @@ Stack Trace:
 #3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-02-14 12:46:39 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/station/count/month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('ereleve')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('ereleve')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TStations')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3060): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(679): Model->query('Select count(*)...')
+#7 [internal function]: StationController->number_by_month()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-02-14 12:57:54 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/station/count/month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('ereleve')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('ereleve')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TStations')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3060): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(679): Model->query('Select count(*)...')
+#7 [internal function]: StationController->number_by_month()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-02-14 12:59:03 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/station/count/month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('ereleve')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('ereleve')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TStations')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3060): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(679): Model->query('Select count(*)...')
+#7 [internal function]: StationController->number_by_month()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-02-14 13:00:43 Error: Fatal Error (4): syntax error, unexpected '$fields' (T_VARIABLE) in [C:\wamp\www\ecoReleve-core\app\Controller\StationController.php, line 677]
+2014-02-14 13:00:43 Error: [FatalErrorException] syntax error, unexpected '$fields' (T_VARIABLE)
+Request URL: /ecoReleve-core/station/count/month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 677)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 677, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 677, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-14 13:01:53 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/station/count/month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('ereleve')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('ereleve')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TStations')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3060): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(679): Model->query('Select count(*)...')
+#7 [internal function]: StationController->number_by_month()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-02-14 13:02:15 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in [C:\wamp\www\ecoReleve-core\app\Model\Station.php, line 11]
+2014-02-14 13:02:15 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';'
+Request URL: /ecoReleve-core/station/count/month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 11, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 11, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-14 13:03:13 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]TCP Provider: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/station/count/month
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('ereleve')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('ereleve')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TStations')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3060): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(679): Model->query('Select count(*)...')
+#7 [internal function]: StationController->number_by_month()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
