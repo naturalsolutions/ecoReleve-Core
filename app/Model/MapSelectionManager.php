@@ -88,11 +88,11 @@ class MapSelectionManager extends CartoModel {
 			//fwrite($fpcsv, print_r($gpx,true)); 
 		}
 		else{
-			$fpcsv = fopen("app/webroot/gps/$file_name.gpx", 'w');			
+			$fpcsv = fopen("app/webroot/csv/$file_name.csv", 'w');			
 			//fwrite($fpcsv, print_r($gpx,true)); 
 		}
 		//csv header
-		fputcsv($fpcsv,$keyarr,';');
+		fputcsv($fpcsv,array_slice($keyarr,1),';');
 				
 		$fontsize=11;
 		$pdf->SetFont('Times','',$fontsize);				
@@ -103,7 +103,7 @@ class MapSelectionManager extends CartoModel {
 			$pdf->Row(array_slice($rmodel[0],1,$limitnbcell));			
 			
 			//csv part
-			fputcsv($fpcsv,$rmodel[0],';');			
+			fputcsv($fpcsv,array_slice($rmodel[0],1),';');			
 			
 			//gpx part
 			if(!isset($rmodel[0]['LAT']) || !isset($rmodel[0]['LON'])

@@ -412,6 +412,7 @@
 					$min_lat=$bbox_array[1];
 					$max_lat=$bbox_array[3];
 					$condition = array("LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon");
+					$conditionstring2==""?$conditionstring2.="LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon":$conditionstring2.=" and LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon";
 				}
 				
 				
@@ -428,52 +429,52 @@
 							if(count(($condi=split("<=",$filters2[$i])))>1){
 								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate'){
 									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' <='=>$condi[1]);
-									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120)<= '$condi[1]'":$conditionstring2.=",CONVERT(nchar(200),$condi[0],120) <= '$condi[1]'";			
+									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120)<= '$condi[1]'":$conditionstring2.=" and CONVERT(nchar(200),$condi[0],120) <= '$condi[1]'";			
 								}	
 								else{
 									$condition+=array($condi[0].' <='=>$condi[1]);
-									$conditionstring2==""?$conditionstring2.="$condi[0] <= '$condi[1]'":$conditionstring2.=",$condi[0] <= '$condi[1]'";		
+									$conditionstring2==""?$conditionstring2.="$condi[0] <= '$condi[1]'":$conditionstring2.=" and $condi[0] <= '$condi[1]'";		
 								}
 							}
 							else if(count(($condi=split(">=",$filters2[$i])))>1){
 								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate'){
 									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' >='=>$condi[1]);	
-									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) >= '$condi[1]'":$conditionstring2.=",CONVERT(nchar(200),$condi[0],120) >= '$condi[1]'";	
+									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) >= '$condi[1]'":$conditionstring2.=" and CONVERT(nchar(200),$condi[0],120) >= '$condi[1]'";	
 								}	
 								else{
 									$condition+=array($condi[0].' >='=>$condi[1]);							
-									$conditionstring2==""?$conditionstring2.="$condi[0] >= '$condi[1]'":$conditionstring2.=",$condi[0] >= '$condi[1]'";		
+									$conditionstring2==""?$conditionstring2.="$condi[0] >= '$condi[1]'":$conditionstring2.=" and $condi[0] >= '$condi[1]'";		
 								}
 							}
 							else if(count(($condi=split(">",$filters2[$i])))>1){
 								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate'){
 									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' >'=>$condi[1]);	
-									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) > '$condi[1]'":$conditionstring2.=",CONVERT(nchar(200),$condi[0],120) > '$condi[1]'";
+									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) > '$condi[1]'":$conditionstring2.=" and CONVERT(nchar(200),$condi[0],120) > '$condi[1]'";
 								}	
 								else{
 									$condition+=array($condi[0].' >'=>$condi[1]);							
-									$conditionstring2==""?$conditionstring2.="$condi[0] > '$condi[1]'":$conditionstring2.=",$condi[0] > '$condi[1]'";		
+									$conditionstring2==""?$conditionstring2.="$condi[0] > '$condi[1]'":$conditionstring2.=" and $condi[0] > '$condi[1]'";		
 								}
 							}
 							else if(count(($condi=split("<",$filters2[$i])))>1){
 								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate'){
 									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' <'=>$condi[1]);
-									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) < '$condi[1]'":$conditionstring2.=",CONVERT(nchar(200),$condi[0],120) < '$condi[1]'";
+									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) < '$condi[1]'":$conditionstring2.=" and CONVERT(nchar(200),$condi[0],120) < '$condi[1]'";
 								}		
 								else{
 									$condition+=array($condi[0].' <'=>$condi[1]);							
-									$conditionstring2==""?$conditionstring2.="$condi[0] < '$condi[1]'":$conditionstring2.=",$condi[0] < '$condi[1]'";		
+									$conditionstring2==""?$conditionstring2.="$condi[0] < '$condi[1]'":$conditionstring2.=" and $condi[0] < '$condi[1]'";		
 								}
 							}
 							else if(count(($condi=split("=",$filters2[$i])))>1){
 								$condition+=array($condi[0]=>$condi[1]);	
-								$conditionstring2==""?$conditionstring2.="$condi[0] = '$condi[1]'":$conditionstring2.=",$condi[0] = '$condi[1]'";	
+								$conditionstring2==""?$conditionstring2.="$condi[0] = '$condi[1]'":$conditionstring2.=" and $condi[0] = '$condi[1]'";	
 							}	
 							else if(count(($condi=split(" LIKE ",$filters2[$i])))>1){
 								$mot=$condi[1];
 								$mot=str_replace(" ","% ",$mot);
 								$condition+=array($condi[0].' like '=>$mot);
-								$conditionstring2==""?$conditionstring2.="$condi[0] like '$condi[1]'":$conditionstring2.=",$condi[0] like '$condi[1]'";			
+								$conditionstring2==""?$conditionstring2.="$condi[0] like '$condi[1]'":$conditionstring2.=" and $condi[0] like '$condi[1]'";			
 							}
 							else if(count(($condi=split(" IN ",$filters2[$i])))>1){
 								$mot=str_replace(";",",",$condi[1]);
@@ -485,7 +486,7 @@
 								$motarray = array_map($func, $motarray);
 								$mot=implode(" , ", $motarray);
 								
-								$conditionstring2==""?$conditionstring2.="$condi[0] IN ($mot)":$conditionstring2.=",$condi[0] IN ($mot)";			
+								$conditionstring2==""?$conditionstring2.="$condi[0] IN ($mot)":$conditionstring2.=" and $condi[0] IN ($mot)";			
 							}	
 						}
 						$filters2=$this->params['url']['filter'];	
@@ -644,8 +645,8 @@
 			$this->set('find',$find);
 			$this->set('debug',$debug);
 			// Set response as $format
-			$this->RequestHandler->respondAs($format);
-			// $this->RequestHandler->respondAs("html");
+			//$this->RequestHandler->respondAs($format);
+			$this->RequestHandler->respondAs("html");
 			if(isset($tmp_format) && $tmp_format=="datatablejs") //datatatable view
 					$this->viewPath .= '/'."datatablejs";
 			else if(isset($tmp_format) && $tmp_format=="geojson"){ //geojson view
@@ -660,8 +661,8 @@
 			}
 			else
 				$this->viewPath .= '/'.$format;
-			$this->layout = $format;
-			$this->layoutPath = $format;
+			//$this->layout = $format;
+			//$this->layoutPath = $format;
 				
 		}
 				

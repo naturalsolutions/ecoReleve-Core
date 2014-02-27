@@ -10941,3 +10941,29 @@ Stack Trace:
 #3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-02-27 13:04:01 Error: [MissingControllerException] Controller class EcoReleve-coreController could not be found.
+Exception Attributes: array (
+  'class' => 'EcoReleve-coreController',
+  'plugin' => NULL,
+)
+Request URL: /ecoReleve-core/ecoReleve-core/views/get/V_Qry_Chiro_capture?filter=Latin_name+LIKE+Myotis%25&bbox=-16.930596930296375%2C19.931784852080906%2C22.620184319703796%2C40.613745358752105&columns=DATE%2CLAT%2CLON%2CSite_name%2CLatin_name&limit=10&skip=80
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-27 13:08:21 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near ','.
+Request URL: /ecoReleve-core/views/get/V_Qry_Chiro_capture?filter=Latin_name+LIKE+Myotis%25%2CLatin_name+LIKE+My&bbox=-16.930596930296375%2C19.931784852080906%2C22.620184319703796%2C40.613745358752105&columns=DATE%2CLAT%2CLON%2CSite_name%2CLatin_name&limit=10&skip=0&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT TOP 10 *...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT TOP 10 *...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT TOP 10 *...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('SELECT TOP 10 *...')
+#5 [internal function]: DboSource->query('SELECT TOP 10 *...')
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3061): call_user_func_array(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\ViewsController.php(622): Model->query('SELECT TOP 10 *...')
+#8 [internal function]: ViewsController->get_view()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ViewsController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ViewsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
