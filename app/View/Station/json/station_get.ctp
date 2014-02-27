@@ -8,7 +8,7 @@
 <?php endif?>
 
 <?php if($find == 2):?>	
-	<?php echo json_encode($table);?>
+	[{"count":<?php echo $nb;?>}]
 <?php endif?>
 
 <?php if($find == 0):?>	

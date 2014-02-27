@@ -81,7 +81,7 @@ class AppController extends Controller {
 			$total="";
 			$format="json";
 			$offset=0;
-			$limit=0;
+			$limit=100;
 			$find=1;
 			$nb="";
 			
@@ -118,6 +118,10 @@ class AppController extends Controller {
 				$offset=$this->params['url']['offset'];
 			}
 
+			if(isset($this->params['url']['skip'])){
+				$offset=$this->params['url']['skip'];
+			}
+			
 			//format from request
 				
 			if(stripos($this->request->header('Accept'),"application/xml")!==false){
@@ -375,15 +379,38 @@ class AppController extends Controller {
 					$field_arrayg=$field_array;
 					if(isset($field_array[0]) && $field_array[0]=='*')
 						$field_arrayg=array();
-						
+					
+					if(isset($this->request->params['nogroup']))
+						$field_arrayg=array();	
+					
+					$field_arrayg_wthoutas=$field_arrayg;
+					for($x=0;$x<count($field_arrayg);$x++){
+						$asexplode=explode(" as ",$field_arrayg[$x]);
+						if(count($asexplode)>1)
+							$field_arrayg[$x]=$asexplode[0];
+							
+					}					
+					
 					$model_result=$model->find("all",array(
-									'fields'=>$field_array+$fields,
-									'order'=>"$column_name asc",
-									'group'=>$field_arrayg,
-									'conditions'=>$array_conditions,
-									'limit'=>$limit,
-									'offset'=>intval($offset))+$options
-									);					
+						'fields'=>$field_array+$fields,
+						'order'=>"$column_name asc",
+						'group'=>$field_arrayg,
+						'conditions'=>$array_conditions,
+						'limit'=>$limit,
+						'offset'=>intval($offset))+$options
+					);	
+
+					if(isset($this->request->params['count2'])){
+						$nb=$model->find("count",array(
+							'fields'=>$field_array+$fields,
+							'order'=>"$column_name asc",
+							'group'=>$field_arrayg,
+							'conditions'=>$array_conditions
+							)+$options
+						);
+						
+						$this->set("totaldisplay",$nb);	
+					}				
 					$this->set("result",$model_result);	
 				}	
 				

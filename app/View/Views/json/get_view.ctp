@@ -9,7 +9,7 @@
 <?php endif?>
 <?php if($find==1):?>
 {"count":"<?php echo $totaldisplay?>","values":[<?php $i=0; foreach ($result as $t): ?>
-{<?php $j=0;foreach($t[$ModelName] as $key=>$val): ?><?php echo '"'.$key.'":"'.$val.'"';?><?php if($j<sizeof($t[$ModelName])-1)echo ",";?>
+{<?php $j=0;foreach($t[0] as $key=>$val): ?><?php echo '"'.$key.'":"'.$val.'"';?><?php if($j<sizeof($t[0])-1)echo ",";?>
 <?php $j++;?>
 <?php endforeach?>}<?php if($i<sizeof($result)-1)echo ",";?><?php $i++;?>	
 <?php endforeach?>

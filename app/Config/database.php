@@ -10,7 +10,7 @@ class DATABASE_CONFIG {
 	 "prefix" => ""
 	);
 	
-	public $test = array(
+	/*public $test = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
 	 "host" => "WIN7PRO-PC\WIN7SERVER",
@@ -59,7 +59,7 @@ class DATABASE_CONFIG {
 	 "database" => "eReleve",
 	 "prefix" => ""
 	);
-	
+	*/
 	public $user = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,

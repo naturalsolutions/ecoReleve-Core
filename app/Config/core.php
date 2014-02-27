@@ -138,7 +138,7 @@
  * or in each action using $this->cacheAction = true.
  *
  */
-	Configure::write('Cache.check', true);
+	//Configure::write('Cache.check', true);
 
 /**
  * Enable cache view prefixes.
@@ -188,30 +188,18 @@
  *
  */
 	Configure::write('Session', array(
-		'defaults' => 'php',
-		'ini' => array(
-        'session.cookie_secure' => false)
-    ));
+		'defaults' => 'php'
+	));
 
-	Configure::write('Session.checkAgent', false);
-	
-	 
-
-	/**
-	 * The level of CakePHP security.
-	 */
-	Configure::write('Security.level', 'medium');
-	/**
-	
+/**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'DYhG93b0qyMLKazs2guVoUubWwvniR2G0FgaC9mi478541ljkhbdg516546546814');
+	Configure:: write('Security.salt', 'MYhG93b0qyJfIxfs2gu3VoUbWwvniR2G0Fga9mi');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	//Configure::write('Security.cipherSeed', '192669981614262282798756412554865486545486541798564416984');
-	Configure::write('Security.rijndael', '192669981614262282798756412554865486545486541798564416984');
+	Configure:: write('Security.cipherSeed', '71159309657453542496749683645');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
@@ -324,9 +312,7 @@
  *       Please check the comments in bootstrap.php for more info on the cache engines available
  *       and their settings.
  */
-$engine = 'File'; 
-if (extension_loaded('apc') && function_exists('apc_dec') && (php_sapi_name() !== 'cli' || ini_get('apc.enable_cli'))) 
-    $engine = 'Apc';
+$engine = 'File';
 
 // In development mode, caches should expire quickly.
 $duration = '+999 days';

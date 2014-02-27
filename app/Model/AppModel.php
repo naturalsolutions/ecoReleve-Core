@@ -47,7 +47,7 @@ class AppModel extends Model {
 	}
 	
 	//Create a condition array with pamameter for the find method of model 
-	function filter_create($ca,$place,$region,$date,$min_date,$max_date,$fieldactivity,$datatablesearch,$taxon_name,$date_name,$autocomplete){
+	function filter_create($ca,$place,$region,$date,$min_date,$max_date,$fieldactivity,$datatablesearch,$taxon_name,$date_name,$autocomplete,$currentdate=null){
 		$condition_array=$ca;
 		//take place parameter for a place filter
 		if(isset($place) && $place!="" && $place!="null"){
@@ -95,17 +95,24 @@ class AppModel extends Model {
 		if(isset($date) && $date!=""){
 			date_default_timezone_set('UTC');
 			$idate=$date;
-			if($idate=="hier"){
-				$yesterday = date("Y-m-d",mktime(0,0,0,date("m"),date("d")-1,date("Y")));
-				$condition_array+=array("CONVERT(VARCHAR, DATE, 120) LIKE"=>$yesterday);
+			$idate=$date;
+			$m=date("m");
+			$d=date("d");
+			$y=date("Y");
+			if($currentdate)
+				list($y,$m,$d)=explode("-",$currentdate);	
+			$today = date("Y-m-d",mktime(0,0,0,$m,$d,$y));
+			if($idate=="week"){				
+				$condition_array[]=array("CONVERT(char(10),DATE,120) >= CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, cast('$today' as date))/7, 0), 120)",
+				"CONVERT(char(10),DATE,120) <= CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, cast('$today' as date))/7, 6),120)");
 			}
-			else if($idate=="2ans"){
-				$twoyear = date("Y-m-d",mktime(0,0,0,date("m"),date("d"),date("Y")-2));
-				$condition_array+=array("CONVERT(VARCHAR, DATE, 120) >="=>$twoyear);
+			else if($idate=="month"){
+				$currentmonth = date("Y-m",mktime(0,0,0,$m,$d,$y));
+				$condition_array+=array("CONVERT(char(7), DATE, 120) ="=>$currentmonth);
 			}
-			else if($idate=="1ans"){
-				$twoyear = date("Y-m-d",mktime(0,0,0,date("m"),date("d"),date("Y")-1));
-				$condition_array+=array("CONVERT(VARCHAR, DATE, 120) >="=>$twoyear);
+			else if($idate=="year"){				
+				$currentyear = date("Y",mktime(0,0,0,$m,$d,$y));
+				$condition_array+=array("CONVERT(char(4), DATE, 120) ="=>$currentyear);
 			}
 			else if(stripos($idate,";")!==false){
 				$idatearray=split(";",$idate);
@@ -120,7 +127,13 @@ class AppModel extends Model {
 					$datedep.="-01";
 					$datearr.="-31";
 				}
-				$condition_array+=array("CONVERT(VARCHAR, DATE, 120) >="=>$datedep,"CONVERT(VARCHAR, DATE, 120) <="=>$datearr);
+				if($datearr=="")
+					$datearr=$today;
+				
+				if($datedep=="")
+					$condition_array+=array("CONVERT(VARCHAR, DATE, 120) <="=>$datearr);
+				else	
+					$condition_array+=array("CONVERT(VARCHAR, DATE, 120) >="=>$datedep,"CONVERT(VARCHAR, DATE, 120) <="=>$datearr);
 			}
 		}
 		
@@ -370,7 +383,6 @@ class AppModel extends Model {
 				$locality="%".$locality."%";
 			$condition_array+=array("Locality $like"=>$locality);
 		}
-		
 		//take area parameter for a area filter
 		if(isset($area) && $area!="" && $area!="null"){
 			$like="LIKE";
@@ -380,7 +392,7 @@ class AppModel extends Model {
 			}	
 			else
 				$area="%".$area."%";
-			$condition_array+=array("Area $like"=>$area);	
+			//$condition_array[]=array("Area $like"=>$area);	
 		}	
 		
 		if(isset($name) && $name!="" && $name!="null"){
@@ -423,21 +435,22 @@ class AppModel extends Model {
 				$fa="%".$fa."%";
 			$condition_array+=array("Name_FieldActivity $like"=>$fa);
 		}
-		
 		if(isset($date) && $date!=""){
 			date_default_timezone_set('UTC');
-			$idate=$date;
-			if($idate=="hier"){
-				$yesterday = date("Y-m-d",mktime(0,0,0,date("m"),date("d")-1,date("Y")));
-				$condition_array+=array("CONVERT(VARCHAR, DATE, 120) LIKE"=>$yesterday);
+			$idate=$date;			
+			$today = date("Y-m-d",mktime(0,0,0,date("m"),date("d"),date("Y")));
+			if($idate=="week"){				
+				$condition_array+=array("CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, getdate())/7, 0), 120) <="=>$today,
+				"CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, getdate())/7, 5),120 >="=>$today);
 			}
-			else if($idate=="2ans"){
-				$twoyear = date("Y-m-d",mktime(0,0,0,date("m"),date("d"),date("Y")-2));
-				$condition_array+=array("CONVERT(VARCHAR, DATE, 120) >="=>$twoyear);
+			else if($idate=="month"){
+				$currentmonth = date("Y-m",mktime(0,0,0,date("m"),date("d"),date("Y")));
+				$condition_array+=array("CONVERT(char(7), DATE, 120) ="=>$currentmonth);
 			}
-			else if($idate=="1ans"){
-				$twoyear = date("Y-m-d",mktime(0,0,0,date("m"),date("d"),date("Y")-1));
-				$condition_array+=array("CONVERT(VARCHAR, DATE, 120) >="=>$twoyear);
+			else if($idate=="year"){
+				
+				$currentyear = date("Y",mktime(0,0,0,date("m"),date("d"),date("Y")));
+				$condition_array+=array("CONVERT(char(4), DATE, 120) >="=>$currentyear);
 			}
 			else if(stripos($idate,";")!==false){
 				$idatearray=split(";",$idate);

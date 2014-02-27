@@ -15,7 +15,7 @@ class TProtocolInventory extends AppModel {
  *
  * @var string
  */
-	public $useDbConfig = 'mycoflore';
+	// public $useDbConfig = 'mycoflore';
 
 /**
  * Use table

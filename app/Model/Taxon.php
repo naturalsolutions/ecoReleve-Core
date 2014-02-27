@@ -1,6 +1,6 @@
 <?php
 class Taxon extends AppModel {
-	public $useDbConfig = 'mycoflore';
+	// public $useDbConfig = 'mycoflore';
 	public $useTable = 'TTaxa';
 	public $primaryKey = 'ID_TAXON';
 	public $taxon_id= "ID_TAXON";

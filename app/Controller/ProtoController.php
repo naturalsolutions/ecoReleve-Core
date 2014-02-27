@@ -14,7 +14,7 @@
 	App::uses('TaxonFamilyCount', 'Model');
 	
 	define("basep", "narc_ereleve"); //name of database use
-	define("limitp",0);  //sql limit default value
+	define("limitp",100);  //sql limit default value
 	define("offsetp",0); //sql offset default value
 	define("cache_timep",3600);
 	App::uses('table1', 'Model');

@@ -54,6 +54,7 @@
 	Router::connect('/views/get/:table_name',array('controller'=>'views','action' => 'get_view'));
 	Router::connect('/views/get/:table_name/count',array('controller'=>'views','action' => 'get_view','count' => 'yes'));
 	Router::connect('/views/detail/:table_name',array('controller'=>'views','action' => 'detail_view'));	
+	Router::connect('/views/get/:table_name/export',array('controller'=>'views','action' => 'get_view','export'=>'yes'));
 	Router::connect('/docs/list',array('controller'=>'Docs','action' => 'docs_list'));
 	/*______________________________*/
  
@@ -85,6 +86,7 @@
 	Router::connect('/view/carto/:table_name',array('controller'=>'views','action' => 'get_view','format' => 'geojson'));
 	Router::connect('/view/get/:table_name/count',array('controller'=>'views','action' => 'get_view','count' => 'yes'));
 	Router::connect('/view/detail/:table_name',array('controller'=>'views','action' => 'detail_view'));
+	Router::connect('/view/get/:table_name/export',array('controller'=>'views','action' => 'get_view','export'=>'yes'));
 	
 	Router::connect('/user/list',array('controller'=>'User','action' => 'listv'));  //get list of user
 	Router::connect('/user',array('controller'=>'tusers','action' => 'index'));  
@@ -103,18 +105,44 @@
 	Router::connect('/vernacular/list',array('controller'=>'taxon','action' => 'column_list','table_name' => 'TTaxa','column_name' => 'NAME_VERN_FR'
 	,'fields'=>'ID_TAXON,NAME_VALID_WITHOUT_AUTHORITY,NAME_VALID_AUTHORITY,NAME_VALID_WITH_AUTHORITY,NAME_VERN_FR,RANK'));
 
+	
+	Router::connect('/TViewIndividual/:id',array('controller'=>'TViewIndividual','action' => 'detail'));
 	Router::connect('/TViewIndividual/list',array('controller'=>'TViewIndividual','action' => 'column_list','table_name' => 'TViewIndividual'
-	,'column_name' => 'id2@Thes_Age','fields'=>'*'));
+	,'column_name' => 'Individual_Obj_PK','fields'=>'Individual_Obj_PK as ID
+	,id60@TCaracThes_Monitoring_Status_Precision as Monitoring_status,
+	id61@TCaracThes_Survey_type as Survey_type
+	,id5@TCarac_Transmitter_Frequency as VHF_frequency
+	,id19@TCarac_PTT as PTT
+	,id9@TCarac_Release_Ring_Code as Release_ring_code
+	,id12@TCarac_Breeding_Ring_Code as Breeding_ring_code
+	,id13@TCarac_Chip_Code as Chip_code
+	,id55@TCarac_Mark_code_1 as Mark1_code
+	,id56@TCarac_Mark_code_2 as Mark2_code,
+	id30@TCaracThes_Sex_Precision as sex'
+	,'count2' => 'yes','nogroup'=>'yes'));
 	Router::connect('/TViewIndividual/list/count',array('controller'=>'TViewIndividual','action' => 'column_list','table_name' => 'TViewIndividual'
-	,'column_name' => 'id2@Thes_Age','fields'=>'Individual_Obj_PK,id2@Thes_Age','count' => 'yes'));
+	,'column_name' => 'id2@Thes_Age','fields'=>'Individual_Obj_PK,id2@Thes_Age'
+	,'count' => 'yes'));
 	
 	Router::connect('/TViewTrx_Radio/list',array('controller'=>'TViewTrx_Radio','action' => 'column_list','table_name' => 'TViewTrx_Radio'
-	,'column_name' => 'id1@Thes_Status','fields'=>'*'));
+	,'column_name' => 'id1@Thes_Status','fields'=>'Trx_Radio_Obj_PK as ID
+	,id5@TCarac_Transmitter_Frequency as VHF_frequency
+	,id6@TCarac_Transmitter_Serial_Number as Serial_number
+	,id42@TCaracThes_Company_Precision as Manufacturer
+	,id41@TCaracThes_Model_Precision as Model
+	,id1@Thes_Status_Precision as Status'
+	,'count2' => 'yes','nogroup'=>'yes'));
 	Router::connect('/TViewTrx_Radio/list/count',array('controller'=>'TViewTrx_Radio','action' => 'column_list','table_name' => 'TViewTrx_Radio'
 	,'column_name' => 'id1@Thes_Status','fields'=>'*','count' => 'yes'));
 	
 	Router::connect('/TViewTrx_Sat/list',array('controller'=>'TViewTrx_Sat','action' => 'column_list','table_name' => 'TViewTrx_Sat'
-	,'column_name' => 'id1@Thes_Status','fields'=>'*'));
+	,'column_name' => 'id1@Thes_Status','fields'=>'Trx_Sat_Obj_PK as ID
+	,id19@TCarac_PTT as PTT
+	,id49@TCarac_PTTAssignmentDate as PTT_date
+	,id42@TCaracThes_Company_Precision as Manufacturer
+	,id41@TCaracThes_Model_Precision as Model
+	,id1@Thes_Status_Precision as Status'
+	,'count2' => 'yes','nogroup'=>'yes'));
 	Router::connect('/TViewTrx_Sat/list/count',array('controller'=>'TViewTrx_Sat','action' => 'column_list','table_name' => 'TViewTrx_Sat'
 	,'column_name' => 'id1@Thes_Status','fields'=>'*','count' => 'yes'));
 	

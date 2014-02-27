@@ -54,10 +54,15 @@
 			else if(isset($markers[0]['Station'])){
 				$name_key='Station';
 			}
+			else if(isset($markers[0][0])){
+				$name_key=0;
+			}
+			//print_r($markers);
 			/* Loop until all markers have been compared. */
 			while (count($markers)) {
-				$marker  = array_pop($markers);				
+				$marker  = array_pop($markers);	
 				if(isset($marker[$name_key]['LAT'])){
+					
 					$cluster = array();
 					/* Compare against all markers which are left. */
 					foreach ($markers as $key => $target) {				
@@ -87,6 +92,7 @@
 					}
 				}	
 			}
+			//print_r($clustered);
 			return $clustered;
 		}
 		

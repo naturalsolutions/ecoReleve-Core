@@ -1,5 +1,5 @@
 <?php if ($find==1):?>
-	<?php echo html_entity_decode(json_encode($result))?>
+	<?php echo json_encode($result)?>
 <?php endif?>
 <?php if($find==2):?>
 	[{"count":<?php echo $result;?>}]

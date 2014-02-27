@@ -14,7 +14,7 @@
 	App::uses('TaxonFamilyCount', 'Model');
 	
 	define("base", "narc_ereleve"); //name of database use
-	define("limit",0);  //sql limit default value
+	define("limit",100);  //sql limit default value
 	define("offset",0); //sql offset default value
 	define("cache_time",3600);
 	
@@ -32,6 +32,10 @@
 		);
 		
 		public function beforeFilter() {
+			ini_set ("max_input_time","300");
+			ini_set ("memory_limit","2280M");
+			//ini_set ("memory_limit",-1);
+			ini_set ("max_execution_time","300");
 			$this->Cookie->name = 'session';
 			$this->Cookie->key = 'q45678SI232qs*&sXOw!adre@34SAdejfjhv!@*(XSL#$%)asGb$@11~_+!@#HKis~#^';
 			$this->Cookie->httpOnly = true;
@@ -79,19 +83,17 @@
 			
 			$test=0;
 			$base=base;
-			//verify if it's a test
-			if(isset($this->params['url']['test']) && $this->params['url']['test']==1 && $this->params['url']['tabletest']){
-				$test=1;
-				$base="test";
-				$table_name=$this->params['url']['tabletest'];
-				$this->set("test","test");
-			}
+			
+			$currentdate=null;
+			if(isset($this->params['url']['currentdate']) && $this->params['url']['currentdate']!=""){
+				$currentdate=$this->params['url']['currentdate'];
+			}			
 			
 			//if protocole filter join to station
-			if(isset($this->params['url']['id_proto']) && $this->params['url']['id_proto']!="" && $test==0){
+			if(isset($this->params['url']['id_proto']) && $this->params['url']['id_proto']!=""){
 				$Distinct= array();
 				$id_proto=$this->params['url']['id_proto'];
-				$model_list_proto = new AppModel("TProtocole","TProtocole",base);
+				$model_list_proto = new AppModel("TProtocole","TProtocole");
 				$table_name_array=$model_list_proto->find('first',array("conditions" => array("TTheEt_PK_ID"=>$id_proto)));
 				if(isset($table_name_array['AppModel']['Relation']))
 					$table_name="TProtocol_".$table_name_array['AppModel']['Relation'];
@@ -114,7 +116,7 @@
 			
 			if($table_name!="TProtocol_"&& $table_name!=""){
 				$Stationjoinstringnamedot=$Stationjoinstringname.$dot;
-				$model_proto = new AppModel('TStation',$table_name,$base);
+				$model_proto = new AppModel('TStation',$table_name);
 				$this->set("Model",$model_proto);
 				//array that contain the column return
 				$column_array = array($Stationjoinstringnamedot."TSta_PK_ID",$Stationjoinstringnamedot."FieldActivity_Name"
@@ -242,7 +244,7 @@
 				
 				if(!$count){
 					//create condition array for the sql request
-					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true);				
+					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true,$currentdate);				
 					//print_r($condition_array);
 					//find station with the right parameter without search				
 					$station = $model_proto->find("all",array('recursive' => 0
@@ -257,21 +259,29 @@
 															,'fields'=>$column_array
 															,'conditions'=>$condition_array)+$Stationjoin
 													);	
+													
 					}								
 					else 
 						$totaldisplay=0;
+					$this->set("table",$station);
+					$this->set("schema",$column_array);
+					$this->set("total",$total);
+					$this->set("totaldisplay",$totaldisplay);	
 				}
-				else{
+				else{					
+					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true,$currentdate);
+					//print_r($condition_array);
 					$totaldisplay = $model_proto->find("count",array('recursive' => 0
 															,'conditions'=>$condition_array)+$Stationjoin
 													);
+					$this->set("nb",$totaldisplay);	
 					$find=2;								
 				}
 			}
 			else
 				$find=-1;
 			
-			if(isset($this->params['url']['format']) && $this->params['url']['format']=="geojson"){
+			if(isset($this->params['url']['format']) && $this->params['url']['format']=="geojson" && !$count){
 				$zoom=0;
 				if(isset($this->params['url']['zoom'])){
 					$zoom=$this->params['url']['zoom'];
@@ -279,15 +289,14 @@
 				$cluster='no';
 				
 				if(isset($this->params['url']['cluster']) && $this->params['url']['cluster']=='yes')
-					$cluster='yes';
-				
+					$cluster='yes';				
 					
 					if($cluster=="yes"){
 						$cartomodel=new CartoModel();
 						$station=$cartomodel->cluster($station,20,$zoom);
-						
-					}	
-				
+						$this->set("table",$station);
+					}
+					
 				$this->viewPath .= '/geojson';
 			}
 			else
@@ -295,20 +304,17 @@
 				
 			//$this->filedebug($totaldisplay);	
 			$this->set("find",$find);			
-			$this->set("sEcho",$sEcho);
-			$this->set("table",$station);
-			$this->set("schema",$column_array);
-			$this->set("total",$total);
-			$this->set("totaldisplay",$totaldisplay);
+			$this->set("sEcho",$sEcho);			
 			$this->set("ModelName",$ModelName);
 			$this->set("debug",$debug); 
+			//print_r($condition_array);
 			$this->RequestHandler->respondAs('json');
 			$this->layoutPath = 'json';	
 			$this->layout = 'json';		
 		}
 		
 		function station_get2(){
-			if(!$this->notauth){
+			if(true/*!$this->notauth*/){
 				$format="json";
 				$id_proto="";
 				$tsearch="";
@@ -317,7 +323,7 @@
 				$fa="";
 				$name="";
 				$condition_array=array();
-				$db="mycoflore";
+				$db="default";
 				$limit="";
 				$offset="";
 				$bbox="";
@@ -632,7 +638,7 @@
 
 		function number_by_month(){
 			$this->loadModel('Station');
-			$this->Station->useDbConfig = 'ereleve';
+			//$this->Station->useDbConfig = 'ereleve';
 			$find=1;
 			$date="";
 			if(isset($this->params['url']['date']) && $this->params['url']['date']!=""){
@@ -650,16 +656,18 @@
 				if($date!="")
 					list($y,$m,$d2)=split("-",$date);
 				
-				$last12month=$this->last12month($y,$m,$d);
+				//$last12month=$this->last12month($y,$m,$d);
 				$mkmonthlast = mktime(0, 0, 0, $m-11, 1, $y);
 				$datemonthlast = date("Y-m-d",$mkmonthlast);
 				$mkmonthfirst = mktime(0, 0, 0, $m, 31, $y);
 				$datemonthfirst = date("Y-m-d",$mkmonthfirst);
 				$nbbym=array();
-				
+				$monthyear=array();
 				for($i=0;$i<12;$i++){
-					$month12 = date("F",mktime(0, 0, 0, $m-$i, 1, $y));
+					$month12 = date("F",mktime(0, 0, 0, $m-$i, 1, $y))." ".date("Y",mktime(0, 0, 0, $m-$i, 1, $y));
 					$nbbym+=array($month12=>null);
+					$monthyear+=array(date("F",mktime(0, 0, 0, $m-$i, 1, $y)) => date("Y",mktime(0, 0, 0, $m-$i, 1, $y)));
+					//print_r($nbbym);
 				}
 				//print_r(date("F",mktime(0, 0, 0, 01, 1, $y)));
 				
@@ -678,8 +686,9 @@
 				//$query="Select $fields from TStations";
 				$queryresult=$this->Station->query($query);
 				//print_r($queryresult);
-				foreach($queryresult as $r){
-					$cmonth=date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y));
+				$i=0;	
+				foreach($queryresult as $r){					
+					$cmonth=date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y))." ".$monthyear[date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y))];;
 					$nbbym[$cmonth]=$r[0]['nb'];
 				}	
 				$nbbym=array(array($nbbym));

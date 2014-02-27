@@ -1,6 +1,6 @@
 <?php
 class TaxonAddi extends AppModel {
-	public $useDbConfig = 'mycoflore';
+	// public $useDbConfig = 'mycoflore';
 	public $useTable = 'TTaxa_additional_values';	
 	public $primaryKey = 'aditional_value_Pk';
 

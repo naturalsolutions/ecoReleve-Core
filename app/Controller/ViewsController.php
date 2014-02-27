@@ -8,6 +8,14 @@
 			//'proto_list' => cache_time
 		);
 		public $gpx_name ="data";
+		
+		public function beforeFilter() {
+			ini_set ("max_input_time","300");
+			ini_set ("memory_limit","2280M");
+			//ini_set ("memory_limit",-1);
+			ini_set ("max_execution_time","300");
+		}
+		
 		function index(){
 			
 		}	
@@ -129,11 +137,15 @@
 			$fields=array();
 			$debug="";
 			$find=0;
-			$limit=0;
+			$limit=50;
 			$offset=0;
 			$gpx_name=$this->gpx_name;
 			$gpx_url="";
 			$cluster="no";
+			$agrwhere="";
+			$filters=array();
+			$format="json";
+			$conditionstring2="";
 			
 			//creation of the gpx's url
 			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
@@ -144,13 +156,21 @@
 				$gpx_url=$_SERVER['HTTP_HOST'].'/'.$app_name.'/gps/'.$gpx_name.".gpx";				
 			}
 			
+			//cluster parameter
 			if(isset($this->params['url']['cluster']) && $this->params['url']['cluster']!=""){
 				if($this->params['url']['cluster']=="yes"){
 					$cluster="yes";
 				}
 			}
-
+			
+			$round="";
+			//round cluster parameter
+			if(isset($this->params['url']['round']) && $this->params['url']['round']!=""){
+				$round=$this->params['url']['round'];				
+			}
+			
 			//zoom param for cluster	
+			$zoom=0;
 			if(isset($this->params['url']['zoom']) && $this->params['url']['zoom']!="")
 				$zoom=$this->params['url']['zoom'];	
 			
@@ -183,37 +203,55 @@
 					$format="test";
 				}
 			}			
-			
+			$top="TOP $limit";
 			if(isset($this->params['url']['limit']) && $this->params['url']['limit']!=""){
 				$limit=$this->params['url']['limit'];
+				if($limit!=0)
+					$top="TOP $limit";
+				else 
+					$top="";
 			}
-			
+			$offs="";
+			$offseton=false;
 			if(isset($this->params['url']['offset']) && $this->params['url']['offset']!=""){
+				$agrwhere="WHERE";
 				$offset=intval($this->params['url']['offset']);
+				$offs="_cake_paging_.Id > $offset";
+				$offseton=true;	
 			}
 			
 			if(isset($this->params['url']['skip']) && $this->params['url']['skip']!=""){
 				$offset=intval($this->params['url']['skip']);
+				$offs="WHERE _cake_paging_.Id > $offset";
+				$offseton=true;	
+			}
+			$rowstring="";
+			if(isset($this->params['url']['rows']) && $this->params['url']['rows']!=""){
+				$agrwhere="WHERE";
+				$row=$this->params['url']['rows'];
+				$splitrow=explode(",",$row);
+				//print_r($row);
+				$and="";
+				if($offseton)
+					$and="and";
+				foreach($splitrow as $r){
+					$rowstring==""?$rowstring.="_cake_paging_.Id=$r":$rowstring.=" or _cake_paging_.Id=$r";	
+				}
+				$rowstring=" $and (".$rowstring.")";			
 			}
 			
-			//BBOX param if map call
-			if(isset($this->params['url']['bbox']) && $this->params['url']['bbox']!=""){
-				$bbox=$this->params['url']['bbox'];
-				$bbox_array=split(",",$bbox);
-				$min_lon=$bbox_array[0];
-				$max_lon=$bbox_array[2];
-				$min_lat=$bbox_array[1];
-				$max_lat=$bbox_array[3];
-				$condition = array("LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon");
-			}
-						
+			
+			
+			//$condition[]=array("LAT is not NULL and LON is not NULL");	
 			//take the table name parameter
 			if(isset($this->params['url']['table_name']) && $this->params['url']['table_name']!=""){
 				$table_name=$this->params['url']['table_name'];
 			}
 			
-			if(isset($this->request->params['table_name']) && $this->request->params['table_name']!="")
+			if(isset($this->request->params['table_name']) && $this->request->params['table_name']!=""){
 				$table_name=$this->request->params['table_name'];
+					
+			}	
 			
 			//check if it's a count request
 			if(isset($this->params['url']['count']) && $this->params['url']['count']!=""){
@@ -223,6 +261,7 @@
 			if(isset($this->request->params['count']))
 				$count=true;
 			
+			
 			if(isset($this->params['url']['filters']) && count($this->params['url']['filters'])>0){
 				$filters=$this->params['url']['filters'];
 				//$condition_array[];
@@ -230,21 +269,119 @@
 					if($f){
 						list($col,$val)=split(":",$f,2);
 						if($col=='DATE'){
-							$condition_array[]=array("CONVERT(char(10),[DATE],126)='$val'");
+							//equal date search with DATE:[DATE]
+							if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$val)){
+								$condition[]=array("CONVERT(char(10),[DATE],126)='$val'");
+								$conditionstring2==""?$conditionstring2.="CONVERT(char(10),[DATE],126)='$val'":$conditionstring2.=" and CONVERT(char(10),[DATE],126)='$val'";	
+							}
+							//search with real date format		
+							else if(strpos($val, ":")!==false){
+								list($typedatesearch,$date)=split(":",$val,2);
+								//equal date search with DATE:exact:[DATE]
+								if($typedatesearch=="exact"){
+									if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+										$condition[]=array("CONVERT(char(10),[DATE],126)='$date'");
+										$conditionstring2==""?$conditionstring2.="CONVERT(char(10),[DATE],126)='$date'":$conditionstring2.=" and CONVERT(char(10),[DATE],126)='$date'";
+									}	
+								}
+								//before date search with DATE:before:[DATE]
+								else if($typedatesearch=="before"){
+									if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+										$condition[]=array("CONVERT(char(10),[DATE],126)<'$date'");
+										$conditionstring2==""?$conditionstring2.="CONVERT(char(10),[DATE],126)<='$date'":$conditionstring2.=" and CONVERT(char(10),[DATE],126)<='$date'";
+									}	
+								}
+								//after date search with DATE:after:[DATE]
+								else if($typedatesearch=="after"){
+									if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+										$condition[]=array("CONVERT(char(10),[DATE],126)>'$date'");
+										$conditionstring2==""?$conditionstring2.="CONVERT(char(10),[DATE],126)>='$date'":$conditionstring2.=" and CONVERT(char(10),[DATE],126)>='$date'";
+									}	
+								}
+							}
+							//search with known predefined date
+							else{
+								$m=date("m");
+								$d=date("d");
+								$y=date("Y");
+								//if($currentdate)
+									//list($y,$m,$d)=explode("-",$currentdate);	
+								
+								if($val=="today"){
+									$today = date("Y-m-d",mktime(0,0,0,$m,$d,$y));
+									$condition[]=array("CONVERT(char(10),[DATE],126)='$today'");
+									$conditionstring2==""?$conditionstring2.="CONVERT(char(10),[DATE],126)='$today'":$conditionstring2.=" and CONVERT(char(10),[DATE],126)='$today'";
+								}
+								else if($val=="yesterday"){
+									$yesterday = date("Y-m-d",mktime(0,0,0,$m,$d-1,$y));
+									$condition[]=array("CONVERT(char(10),[DATE],126)='$yesterday'");
+									$conditionstring2==""?$conditionstring2.="CONVERT(char(10),[DATE],126)='$yesterday'":$conditionstring2.=" and CONVERT(char(10),[DATE],126)='$yesterday'";
+								}
+								else if($val=="lastweek"){
+									$lastweek=date("Y-m-d",mktime(0,0,0,$m,$d-7,$y));
+									$weekreq="CONVERT(char(10),DATE,120) >= CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, cast('$lastweek' as date))/7, 0), 120) and
+				CONVERT(char(10),DATE,120) <= CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, cast('$lastweek' as date))/7, 6),120)";
+									$condition[]=array($weekreq);
+									$conditionstring2==""?$conditionstring2.="$weekreq":$conditionstring2.=" and $weekreq";
+								}
+								else if($val=="lastmonth"){
+									$lastmonth = date("Y-m",mktime(0,0,0,$m-1,$d,$y));
+									$condition[]=array("CONVERT(char(7), DATE, 120)='$lastmonth'");
+									$conditionstring2==""?$conditionstring2.="CONVERT(char(7), DATE, 120)='$lastmonth'":$conditionstring2.=" and CONVERT(char(7), DATE, 120)='$lastmonth'";
+								}
+								else if($val=="lastyear"){
+									$lastyear = date("Y",mktime(0,0,0,$m,$d,$y-1));
+									$condition[]=array("CONVERT(char(4), DATE, 120)='$lastyear'");
+									$conditionstring2==""?$conditionstring2.="CONVERT(char(4), DATE, 120)='$lastyear'":$conditionstring2.=" and CONVERT(char(4), DATE, 120)='$lastyear'";
+								}
+							}	
 						}
-						else
-							$condition_array+=array($col=>$val);
+						else {
+							//No date search
+							if(strpos($val, ":")!==false){
+								list($typesearch,$search)=split(":",$val,2);
+								//exact search
+								if($typesearch=="exact"){
+									$condition+=array($col=>$search);
+									$conditionstring2==""?$conditionstring2.="$col='$search'":$conditionstring2.=" and $col='$search'";	
+								}
+								//begin search
+								else if($typesearch=="begin"){
+									$condition+=array($col.' like'=>$search.'%');
+									$conditionstring2==""?$conditionstring2.="$col like '$search%'":$conditionstring2.=" and $col like '$search%'";	
+								}
+								//end search
+								else if($typesearch=="end"){
+									$condition+=array($col.' like'=>'%'.$search);
+									$conditionstring2==""?$conditionstring2.="$col like '%$search'":$conditionstring2.=" and $col like '%$search'";	
+								}
+								//contain search
+								else if($typesearch=="contain"){
+									$condition+=array($col.' like'=>'%'.$search.'%');
+									$conditionstring2==""?$conditionstring2.="$col like '%$search%'":$conditionstring2.=" and $col like '%$search%'";	
+								}
+							}
+							else{
+								$condition+=array($col.' like'=>$val.'%');
+								$conditionstring2==""?$conditionstring2.="$col like '$val%'":$conditionstring2.=" and $col like '$val%'";
+							}	
+						}	
 					}
 				}
+				
 			}
 			
+			//if table parameter exist
 			$table_name=str_replace(" ","",$table_name);
 			if($table_name!=""){
 				try{
 					$this->MapSelectionManager->setSource($table_name);
 					$this->set('model',$this->MapSelectionManager);
 					$schema=$this->MapSelectionManager->schema();
-					$fields=array_keys($schema); 
+					$fields=array_keys($schema);
+					$latlonnull="";
+					if(in_array('LAT', $fields))
+						$latlonnull="where LAT is not NULL and LON is not NULL";
 					//take column parameter
 					if(isset($this->params['url']['columns']) && $this->params['url']['columns']!=""){
 						$column=$this->params['url']['columns'];
@@ -259,58 +396,128 @@
 						}
 						$fields=$columnarray;
 					}
+					//print_r($fields);
 					$this->set('schema',$fields);	
 				}catch(Exception $e){
 					$find=-1;
 				}
+				//print_r("ici2 $latlonnull");
+				//BBOX param if map call
+				if(isset($this->params['url']['bbox']) && $this->params['url']['bbox']!="" && $latlonnull!=""){
+					
+					$bbox=$this->params['url']['bbox'];
+					$bbox_array=split(",",$bbox);
+					$min_lon=$bbox_array[0];
+					$max_lon=$bbox_array[2];
+					$min_lat=$bbox_array[1];
+					$max_lat=$bbox_array[3];
+					$condition = array("LAT >= $min_lat and LAT <= $max_lat and LON >= $min_lon and LON <= $max_lon");
+				}
+				
+				
+				$filters2="";
+				//if table exist
 				if($find==0){
 					//create a condition array with filters
 					if(isset($this->params['url']['filter']) && $table_name!=""){
-						$filters=$this->params['url']['filter'];
+						$filters2=$this->params['url']['filter'];
 						
 						//add filters on the array condition
-						$filters=split(",",$filters);
-						for($i=0;$i<count($filters);$i++){
-							if(count(($condi=split("<=",$filters[$i])))>1){
-								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate')
-									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' <='=>$condi[1]);	
-								else
-									$condition+=array($condi[0].' <='=>$condi[1]);							
+						$filters2=split(",",$filters2);
+						for($i=0;$i<count($filters2);$i++){
+							if(count(($condi=split("<=",$filters2[$i])))>1){
+								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate'){
+									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' <='=>$condi[1]);
+									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120)<= '$condi[1]'":$conditionstring2.=",CONVERT(nchar(200),$condi[0],120) <= '$condi[1]'";			
+								}	
+								else{
+									$condition+=array($condi[0].' <='=>$condi[1]);
+									$conditionstring2==""?$conditionstring2.="$condi[0] <= '$condi[1]'":$conditionstring2.=",$condi[0] <= '$condi[1]'";		
+								}
 							}
-							else if(count(($condi=split(">=",$filters[$i])))>1){
-								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate')
+							else if(count(($condi=split(">=",$filters2[$i])))>1){
+								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate'){
 									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' >='=>$condi[1]);	
-								else
+									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) >= '$condi[1]'":$conditionstring2.=",CONVERT(nchar(200),$condi[0],120) >= '$condi[1]'";	
+								}	
+								else{
 									$condition+=array($condi[0].' >='=>$condi[1]);							
+									$conditionstring2==""?$conditionstring2.="$condi[0] >= '$condi[1]'":$conditionstring2.=",$condi[0] >= '$condi[1]'";		
+								}
 							}
-							else if(count(($condi=split(">",$filters[$i])))>1){
-								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate')
+							else if(count(($condi=split(">",$filters2[$i])))>1){
+								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate'){
 									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' >'=>$condi[1]);	
-								else
+									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) > '$condi[1]'":$conditionstring2.=",CONVERT(nchar(200),$condi[0],120) > '$condi[1]'";
+								}	
+								else{
 									$condition+=array($condi[0].' >'=>$condi[1]);							
+									$conditionstring2==""?$conditionstring2.="$condi[0] > '$condi[1]'":$conditionstring2.=",$condi[0] > '$condi[1]'";		
+								}
 							}
-							else if(count(($condi=split("<",$filters[$i])))>1){
-								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate')
-									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' <'=>$condi[1]);	
-								else
+							else if(count(($condi=split("<",$filters2[$i])))>1){
+								if($condi[0]=='DATE' || $condi[0]=='Date' || $condi[0]=='StaDate'){
+									$condition+=array("CONVERT(nchar(200),$condi[0],120)".' <'=>$condi[1]);
+									$conditionstring2==""?$conditionstring2.="CONVERT(nchar(200),$condi[0],120) < '$condi[1]'":$conditionstring2.=",CONVERT(nchar(200),$condi[0],120) < '$condi[1]'";
+								}		
+								else{
 									$condition+=array($condi[0].' <'=>$condi[1]);							
+									$conditionstring2==""?$conditionstring2.="$condi[0] < '$condi[1]'":$conditionstring2.=",$condi[0] < '$condi[1]'";		
+								}
 							}
-							else if(count(($condi=split("=",$filters[$i])))>1){
-								$condition+=array($condi[0]=>$condi[1]);							
+							else if(count(($condi=split("=",$filters2[$i])))>1){
+								$condition+=array($condi[0]=>$condi[1]);	
+								$conditionstring2==""?$conditionstring2.="$condi[0] = '$condi[1]'":$conditionstring2.=",$condi[0] = '$condi[1]'";	
 							}	
-							else if(count(($condi=split(" LIKE ",$filters[$i])))>1){
+							else if(count(($condi=split(" LIKE ",$filters2[$i])))>1){
 								$mot=$condi[1];
 								$mot=str_replace(" ","% ",$mot);
-								$condition+=array($condi[0].' like '=>'%'.$mot.'%');							
+								$condition+=array($condi[0].' like '=>$mot);
+								$conditionstring2==""?$conditionstring2.="$condi[0] like '$condi[1]'":$conditionstring2.=",$condi[0] like '$condi[1]'";			
+							}
+							else if(count(($condi=split(" IN ",$filters2[$i])))>1){
+								$mot=str_replace(";",",",$condi[1]);
+								$motarray=explode(",",$mot);
+								//$condition+=array(' IN '."(".$mot.")");
+								$func = function($value) {
+									return "'".$value."'";
+								};	
+								$motarray = array_map($func, $motarray);
+								$mot=implode(" , ", $motarray);
+								
+								$conditionstring2==""?$conditionstring2.="$condi[0] IN ($mot)":$conditionstring2.=",$condi[0] IN ($mot)";			
 							}	
-						}								
+						}
+						$filters2=$this->params['url']['filter'];	
 					}
 					
-					$sort_column=$fields[0];
+					$export=false;
+					//check if it's export call
+					if(isset($this->params['url']['export']) && $this->params['url']['export']!=""){
+						$export=true;
+						$top="";
+					}					
+					if(isset($this->request->params['export'])){
+						$export=true;
+						$top="";
+					}
+
+					//ns grid order	
+					$orderstring="";
+					$sort_column=$fields[0];					
 					$sort_dir="asc";
+					$orderstring="ORDER BY (SELECT NULL)";
+					if(isset($this->params['url']['sortColumn']) &&  $this->params['url']['sortColumn']!=""){
+						if(isset($this->params['url']['sortOrder']) && $this->params['url']['sortOrder']!="")
+							$sort_dir= $this->params['url']['sortOrder'];
+						$sort_column=$this->params['url']['sortColumn'];
+						$orderstring="ORDER BY $sort_column $sort_dir";
+					}
+					
+					//count
 					if($count){
 						$result=$this->MapSelectionManager->find('count',array(
-							'conditions'=>array()+$condition)
+							'conditions'=>array_merge(array()+$condition))
 						);
 						$find=2;
 					}
@@ -367,26 +574,67 @@
 							fwrite($fp,print_r($result,true));
 						}
 					}
-					else{		
+					//round cluster
+					else if($round!=""){
+						$roundlat=
+						$fields=array("round(LAT,$round) as LAT","round(LON,$round) as LON","count(*) as nb");
 						$result=$this->MapSelectionManager->find('all',array(
+							'fields'=>$fields,
+							'limit'=>$limit,
+							'offset'=>$offset,
+							'group'=>array("round(LAT,$round)","round(LON,$round)"),
+							'conditions'=>array()+$condition
+						));	
+						$this->set('result',$result);
+						$this->set('table_name',$table_name);
+						$find=1;
+					}
+					//map and ns grid
+					else{
+						//old method without rowcount field
+						//$condition[]=array("row = 11");
+						//print_r($condition);
+						/*$result=$this->MapSelectionManager->find('all',array(
 							'limit'=>$limit,
 							'offset'=>$offset,
 							'fields'=>$fields,
 							'conditions'=>array()+$condition)
-						);
+						);*/
+						
+						//$conditionstring2=implode(" and ", $filters);
+						//print_r($conditionstring2);
+						if($conditionstring2!="" && $latlonnull!="")
+							$conditionstring2="and $conditionstring2";
+						else if($conditionstring2!="" && $latlonnull=="")
+							$conditionstring2="where $conditionstring2";
+						//print_r($conditionstring2);
+
+						$func = function($value) {
+							return "[".$value."]";
+						};	
+						
+						$fieldmapped = array_map($func, $fields);
+						$fieldsstring=implode(" , ", $fieldmapped);
+						$result=$this->MapSelectionManager->query("SELECT $top * FROM ( 
+						SELECT ROW_NUMBER() OVER ($orderstring) AS Id, $fieldsstring 
+						FROM [$table_name] AS [MapSelectionManager] $latlonnull $conditionstring2 ) AS _cake_paging_ 
+						$agrwhere $offs $rowstring 
+						");
 						$total=$this->MapSelectionManager->find('count',array(
 							'fields'=>$fields,
 							'conditions'=>array()+$condition)
 						);
+						
 						$this->set('totaldisplay',$total);
 						$this->set('ModelName','MapSelectionManager');
-						$this->MapSelectionManager->gpx_save($result,$gpx_name);
-						$gpx_array=array('gpx_url'=>$gpx_url);
-						//$result=array_merge($result, $gpx_array);
-						
-						$find=1;
-					}
-					
+						if($export){
+							$this->MapSelectionManager->export_save($result,$gpx_name,$table_name,$filters2);
+							$gpx_array=array('gpx_url'=>$gpx_url);
+							$find=3;	
+						}
+						else	
+							$find=1;
+					}					
 					
 					$this->set('result',$result);
 					$this->set('table_name',$table_name);
@@ -397,13 +645,17 @@
 			$this->set('debug',$debug);
 			// Set response as $format
 			$this->RequestHandler->respondAs($format);
+			// $this->RequestHandler->respondAs("html");
 			if(isset($tmp_format) && $tmp_format=="datatablejs") //datatatable view
 					$this->viewPath .= '/'."datatablejs";
 			else if(isset($tmp_format) && $tmp_format=="geojson"){ //geojson view
 				$this->viewPath .= '/'."geojson";
 				if($cluster=="yes"){
-					$cartomodel=new CartoModel();
-					$result=$cartomodel->cluster($result,20,$zoom);
+					//$cartomodel=new CartoModel();
+					$this->set('cluster',true);
+					$result=$this->MapSelectionManager->cluster($result,20,$zoom);
+					$this->set('result',$result);
+					//print_r($result);
 				}	
 			}
 			else
@@ -412,7 +664,7 @@
 			$this->layoutPath = $format;
 				
 		}
-		
+				
 		function gpx_url(){
 			//creation of the gpx's url
 			$gpx_name=$this->gpx_name;
@@ -472,7 +724,7 @@
 				$this->MapSelectionManager->setSource($table_name);
 				
 			$schema=$this->MapSelectionManager->schema();
-			
+			$schema=array_merge(array(""=>""),$schema);
 			$this->set('schema',$schema);
 			$this->set('table_name',$table_name);
 			
