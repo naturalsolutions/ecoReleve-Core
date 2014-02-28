@@ -105,6 +105,7 @@
 	Router::connect('/vernacular/list',array('controller'=>'taxon','action' => 'column_list','table_name' => 'TTaxa','column_name' => 'NAME_VERN_FR'
 	,'fields'=>'ID_TAXON,NAME_VALID_WITHOUT_AUTHORITY,NAME_VALID_AUTHORITY,NAME_VALID_WITH_AUTHORITY,NAME_VERN_FR,RANK'));
 
+	
 	Router::connect('/TViewIndividual/list',array('controller'=>'TViewIndividual','action' => 'column_list','table_name' => 'TViewIndividual'
 	,'column_name' => 'Individual_Obj_PK','fields'=>'Individual_Obj_PK as ID
 	,id60@TCaracThes_Monitoring_Status_Precision as Monitoring_status,
@@ -122,7 +123,7 @@
 	,'column_name' => 'id2@Thes_Age','fields'=>'Individual_Obj_PK,id2@Thes_Age'
 	,'count' => 'yes'));
 	Router::connect('/TViewIndividual/:id',array('controller'=>'TViewIndividual','action' => 'detail'));
-	
+		
 	Router::connect('/TViewTrx_Radio/list',array('controller'=>'TViewTrx_Radio','action' => 'column_list','table_name' => 'TViewTrx_Radio'
 	,'column_name' => 'id1@Thes_Status','fields'=>'Trx_Radio_Obj_PK as ID
 	,id5@TCarac_Transmitter_Frequency as VHF_frequency
@@ -144,6 +145,8 @@
 	,'count2' => 'yes','nogroup'=>'yes'));
 	Router::connect('/TViewTrx_Sat/list/count',array('controller'=>'TViewTrx_Sat','action' => 'column_list','table_name' => 'TViewTrx_Sat'
 	,'column_name' => 'id1@Thes_Status','fields'=>'*','count' => 'yes'));
+	
+	Router::connect('/argos/stat',array('controller'=>'Argos','action' => 'argos_stat'));
 	
 	Router::connect('/list/autocomplete',array('controller'=>'app','action' => 'column_list'));
 	

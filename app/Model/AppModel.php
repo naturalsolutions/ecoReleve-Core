@@ -53,24 +53,38 @@ class AppModel extends Model {
 		if(isset($place) && $place!="" && $place!="null"){
 			$like="LIKE";
 			//verify if its a like research or not		
-			if(!$autocomplete || (strlen($place)>0 && $place[sizeof($place)-1]=="\"" && $place[strlen($place)-1]=="\"")){
+			/*if(!$autocomplete || (strlen($place)>0 && $place[sizeof($place)-1]=="\"" && $place[strlen($place)-1]=="\"")){
 				$like="";
 			}	
 			else
 				$place="%".$place."%";
-			$condition_array+=array("Place $like"=>$place);
+			$condition_array+=array("Place $like"=>$place);*/
+			$func = function($value) {
+				return "'".$value."'";
+			};
+			$placearraysplit=explode(",",$place);
+			$placearraysplit=array_map($func,$placearraysplit);
+			$place=implode(",",$placearraysplit);
+			$condition_array[]=array("Place IN ($place)");
 		}
 		
 		//take region parameter for a region filter
 		if(isset($region) && $region!="" && $region!="null"){
 			$like="LIKE";
 			//verify if its a like research or not		
-			if(!$autocomplete || (strlen($region)>0 && $region[sizeof($region)-1]=="\"" && $region[strlen($region)-1]=="\"")){
+			/*if(!$autocomplete || (strlen($region)>0 && $region[sizeof($region)-1]=="\"" && $region[strlen($region)-1]=="\"")){
 				$like="";
 			}	
 			else
 				$region="%".$region."%";
-			$condition_array+=array("Region $like"=>$region);	
+			$condition_array+=array("Region $like"=>$region);*/	
+			$func = function($value) {
+				return "'".$value."'";
+			};
+			$placearraysplit=explode(",",$region);
+			$placearraysplit=array_map($func,$placearraysplit);
+			$region=implode(",",$placearraysplit);
+			$condition_array[]=array("Region IN ($region)");
 		}	
 		
 		//take taxonsearch parameter for a taxon filter

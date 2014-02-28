@@ -40,7 +40,7 @@ class MapSelectionManager extends CartoModel {
 		$pdf->SetFont('Arial','B',$fontsize);
 		$pdf->Cell(20,10,"Filter(s) : ",0,0,'');
 		$pdf->SetFont('Arial','',$fontsize);
-		if(strlen($filters)>99)
+		if(strlen($filters)>90)
 			$pdf->Row(array("$filters"),false);	
 		else
 			$pdf->Cell(20,10,"$filters",0,0,'');			
@@ -58,8 +58,11 @@ class MapSelectionManager extends CartoModel {
 		
 		$pdf->SetFont('Arial','B',$fontsize);
 		$fontsize=13;
+		$limitfield="";
+		if($l>7)
+			$limitfield="(fields limited to 6 for pdf export)";
 		$table_title_width=$l<=6?$cellwidth*($l-1):0;
-		$pdf->Cell($table_title_width,10,"Export Table : ",0,1,'C');
+		$pdf->Cell($table_title_width,10,"Export Table $limitfield: ",0,1,'C');
 		
 		
 		//ini val

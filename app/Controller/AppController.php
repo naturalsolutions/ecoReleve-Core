@@ -28,6 +28,7 @@ App::uses('Taxon', 'Model');
 App::uses('Taxon_Name', 'Model');
 App::uses('Taxon_Addi', 'Model');
 App::uses('Taxon', 'Model');
+App::uses('CorrelationTable', 'Model');
 /**
  * Application Controller
  *
@@ -143,14 +144,32 @@ class AppController extends Controller {
 				else if(stripos($this->params['url']['format'],"test")!== false)	
 					$format="test";	
 			}			
-
-			$fields=array();
+			
+			if($table_name!=""){
+				$corr_table_name=$table_name."_Correlation_Tablee";
+				$corr_table=new CorrelationTable($corr_table_name,$corr_table_name);				
+			}
+			
+			$fields=array();	
 			if(isset($this->params['url']['fields']) && $this->params['url']['fields']!=""){
 				$fields=split(",",$this->params['url']['fields']);
+				
 			}
 
 			if(isset($this->request->params['fields']) && $this->request->params['fields']!=""){
 				$fields=split(",",$this->request->params['fields']);
+				$value_label_array=array();
+				foreach($fields as $f){
+					$f_split=explode(" as ",$f);					
+					if(count($f_split)>1){
+						$value_label_array=array_merge($value_label_array,array(trim($f_split[1])=>trim($f_split[0])));
+					}
+					/*try{
+						$corr_table->find("all");
+					}
+					catch(Exception $e){
+					}*/
+				}
 			}
 
 			$join_column=array();
@@ -294,6 +313,7 @@ class AppController extends Controller {
 				}
 				
 				$model=new Value($table_name,$table_name);
+				
 				$count=false;
 				//check if it's a count request
 				if(isset($this->params['url']['count']) && $this->params['url']['count']!=""){
@@ -306,6 +326,25 @@ class AppController extends Controller {
 				if(count($fields)!=0){
 					$field_array=$fields;
 				}
+				
+				$firstcsplit=explode(" as ",$field_array[0]);
+				if(isset($firstcsplit[1]) && isset($value_label_array[trim($firstcsplit[1])]))
+					$sort_column=$value_label_array[trim($firstcsplit[1])];
+				else 
+					$sort_column=$field_array[0];
+					
+				$sort_dir="asc";
+				//column sort
+				if(isset($this->params['url']['sortColumn']) &&  $this->params['url']['sortColumn']!=""){
+				
+					if(isset($this->params['url']['sortOrder']) && $this->params['url']['sortOrder']!="")
+						$sort_dir= $this->params['url']['sortOrder'];
+					if(isset($value_label_array[$this->params['url']['sortColumn']]))
+						$sort_column=$value_label_array[$this->params['url']['sortColumn']];
+					else
+						$sort_column=$this->params['url']['sortColumn'];
+				}
+				
 				if(count($fields)>1 && ($table_name=="TTaxa_Name" || $table_name=="TTaxa")){
 					$rankname="RANK";
 					if($table_name=="TTaxa_Name")
@@ -393,7 +432,7 @@ class AppController extends Controller {
 					
 					$model_result=$model->find("all",array(
 						'fields'=>$field_array+$fields,
-						'order'=>"$column_name asc",
+						'order'=>"$sort_column $sort_dir",
 						'group'=>$field_arrayg,
 						'conditions'=>$array_conditions,
 						'limit'=>$limit,

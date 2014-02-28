@@ -272,8 +272,8 @@
 					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true,$currentdate);
 					//print_r($condition_array);
 					$totaldisplay = $model_proto->find("count",array('recursive' => 0
-															,'conditions'=>$condition_array)+$Stationjoin
-													);
+						,'conditions'=>$condition_array)+$Stationjoin
+					);
 					$this->set("nb",$totaldisplay);	
 					$find=2;								
 				}

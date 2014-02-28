@@ -629,7 +629,15 @@
 						$this->set('totaldisplay',$total);
 						$this->set('ModelName','MapSelectionManager');
 						if($export){
-							$this->MapSelectionManager->export_save($result,$gpx_name,$table_name,$filters2);
+							$exportfilter="";
+							if($filters2=="" && $bbox!="")
+								$exportfilter="bbox: $bbox";
+							else if($filters2!="" && $bbox=="")
+								$exportfilter=$filters2;
+							else if($filters2!="" && $bbox!="")	
+								$exportfilter="$filters2, \nbbox:".$bbox;
+								
+							$this->MapSelectionManager->export_save($result,$gpx_name,$table_name,$exportfilter);
 							$gpx_array=array('gpx_url'=>$gpx_url);
 							$find=3;	
 						}
@@ -645,8 +653,8 @@
 			$this->set('find',$find);
 			$this->set('debug',$debug);
 			// Set response as $format
-			//$this->RequestHandler->respondAs($format);
-			$this->RequestHandler->respondAs("html");
+			$this->RequestHandler->respondAs($format);
+			// $this->RequestHandler->respondAs("html");
 			if(isset($tmp_format) && $tmp_format=="datatablejs") //datatatable view
 					$this->viewPath .= '/'."datatablejs";
 			else if(isset($tmp_format) && $tmp_format=="geojson"){ //geojson view
@@ -661,8 +669,8 @@
 			}
 			else
 				$this->viewPath .= '/'.$format;
-			//$this->layout = $format;
-			//$this->layoutPath = $format;
+			$this->layout = $format;
+			$this->layoutPath = $format;
 				
 		}
 				

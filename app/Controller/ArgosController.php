@@ -43,18 +43,47 @@
 			
 			$conditions=array();
 			$debug="";
-				
-			$table = $this->Argos->find("all",array(
-					'fields'=>array('TProt_PK_ID','Caption'),	
-					'order'=> array("DATE desc"),
+			
+			$m=date("m");
+			$d=date("d");
+			$y=date("Y");
+			$today = date("Y-m-d",mktime(0,0,0,$m,$d,$y));	
+			
+			$result = $this->Argos->find("all",array(
+					'fields'=>array("CONVERT(char(10),date,120) as date","nbArgos","nbGPS","nbPTT"),
 					'limit'=>7
-					'group'=>array('Caption','TProt_PK_ID')
 				)+$conditions
-			);				
+			);	
+			
+			
+			$resultfinal=array('label'=>array(),'nbArgos'=>array(),'nbGPS'=>array(),'nbPTT'=>array());	
+			for($i=0;$i<7;$i++){
+				$exist=false;
+				$today = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
+				array_push($resultfinal['label'],$today);
+				for($j=0;$j<count($result);$j++){
+					if(is_array($result) && count($result)>0 && $result[$j][0]['date']==$today){
+						array_push($resultfinal['nbArgos'],$result[$j]['Argos']['nbArgos']);
+						array_push($resultfinal['nbGPS'],$result[$j]['Argos']['nbGPS']);
+						array_push($resultfinal['nbPTT'],$result[$j]['Argos']['nbPTT']);
+						$exist=true;
+						break;
+					}
+				}
+				if(!$exist){
+					array_push($resultfinal['nbArgos'],0);
+					array_push($resultfinal['nbGPS'],0);
+					array_push($resultfinal['nbPTT'],0);
+				}
+			}
+		
+			
+			
+			
 			
 			//$this->set('date_name',$date_name);
 			$this->set('model',$this->Argos);
-			$this->set('Argos', $table);
+			$this->set('result', $resultfinal);
 			$this->set("debug",$debug);
 			// Set response as XML
 			$this->RequestHandler->respondAs($format);

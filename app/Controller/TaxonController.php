@@ -203,10 +203,7 @@ class TaxonController extends AppController {
 					//$model_proto = new ProtocoleTaxon($table_name,$table_name);	
 					$this->ProtocoleTaxon->setSource($table_name);
 					//check if the table have taxon field
-					if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
-						$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');			
-						fwrite($fp, print_r($table_name ,true));	
-					}
+					
 					$taxon_find=false;
 					//foreach ($model_proto->schema() as $key=>$val){
 					foreach ($this->ProtocoleTaxon->schema() as $key=>$val){

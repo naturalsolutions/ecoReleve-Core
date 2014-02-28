@@ -4,7 +4,7 @@
 ?>">
 	<?php if($find==1):?>
 		<?php foreach($taxons as $taxon):?>
-			<taxon><?php echo $taxon['ProtocoleTaxon']['Name_Taxon']?></taxon>
+			<taxon><?php echo str_replace("&"," and ",$taxon['ProtocoleTaxon']['Name_Taxon'])?></taxon>
 		<?php endforeach?>	
 	<?php endif?>
 	<?php if($find==0):?>
