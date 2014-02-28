@@ -156,7 +156,101 @@
 				//$fp = fopen($_SERVER['DOCUMENT_ROOT']."/tmp/res", 'w');		
 				//fwrite($fp, print_r($condition_array,true));
 				
-							
+				if(isset($this->params['url']['filters']) && count($this->params['url']['filters'])>0){
+					$filters=$this->params['url']['filters'];
+					//$condition_array[];
+					foreach($filters as $f){
+						if($f){
+							list($col,$val)=split(":",$f,2);
+							if($col=='DATE'){
+								//equal date search with DATE:[DATE]
+								if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$val)){
+									$condition_array[]=array("CONVERT(char(10),[DATE],126)='$val'");
+								}
+								//search with real date format		
+								else if(strpos($val, ":")!==false){
+									list($typedatesearch,$date)=split(":",$val,2);
+									//equal date search with DATE:exact:[DATE]
+									if($typedatesearch=="exact"){
+										if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+											$condition_array[]=array("CONVERT(char(10),[DATE],126)='$date'");
+										}	
+									}
+									//before date search with DATE:before:[DATE]
+									else if($typedatesearch=="before"){
+										if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+											$condition_array[]=array("CONVERT(char(10),[DATE],126)<'$date'");
+										}	
+									}
+									//after date search with DATE:after:[DATE]
+									else if($typedatesearch=="after"){
+										if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+											$condition_array[]=array("CONVERT(char(10),[DATE],126)>'$date'");
+										}	
+									}
+								}
+								//search with known predefined date
+								else{
+									$m=date("m");
+									$d=date("d");
+									$y=date("Y");
+									//if($currentdate)
+										//list($y,$m,$d)=explode("-",$currentdate);	
+									
+									if($val=="today"){
+										$today = date("Y-m-d",mktime(0,0,0,$m,$d,$y));
+										$condition_array[]=array("CONVERT(char(10),[DATE],126)='$today'");
+									}
+									else if($val=="yesterday"){
+										$yesterday = date("Y-m-d",mktime(0,0,0,$m,$d-1,$y));
+										$condition_array[]=array("CONVERT(char(10),[DATE],126)='$yesterday'");
+									}
+									else if($val=="lastweek"){
+										$lastweek=date("Y-m-d",mktime(0,0,0,$m,$d-7,$y));
+										$weekreq="CONVERT(char(10),DATE,120) >= CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, cast('$lastweek' as date))/7, 0), 120) and
+					CONVERT(char(10),DATE,120) <= CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, cast('$lastweek' as date))/7, 6),120)";
+										$condition_array[]=array($weekreq);
+									}
+									else if($val=="lastmonth"){
+										$lastmonth = date("Y-m",mktime(0,0,0,$m-1,$d,$y));
+										$condition_array[]=array("CONVERT(char(7), DATE, 120)='$lastmonth'");
+									}
+									else if($val=="lastyear"){
+										$lastyear = date("Y",mktime(0,0,0,$m,$d,$y-1));
+										$condition_array[]=array("CONVERT(char(4), DATE, 120)='$lastyear'");
+									}
+								}	
+							}
+							else {
+								//No date search
+								if(strpos($val, ":")!==false){
+									list($typesearch,$search)=split(":",$val,2);
+									//exact search
+									if($typesearch=="exact"){
+										$condition_array+=array($col=>$search);
+									}
+									//begin search
+									else if($typesearch=="begin"){
+										$condition_array+=array($col.' like'=>$search.'%');
+									}
+									//end search
+									else if($typesearch=="end"){
+										$condition_array+=array($col.' like'=>'%'.$search);
+									}
+									//contain search
+									else if($typesearch=="contain"){
+										$condition_array+=array($col.' like'=>'%'.$search.'%');
+									}
+								}
+								else{
+									$condition_array+=array($col.' like'=>$val.'%');
+								}	
+							}	
+						}
+					}
+					
+				}				
+				
 				//take limit paramater for a limit filter
 				if(isset($this->params['url']['iDisplayLength']) && $this->params['url']['iDisplayLength']!=""){
 					$limit=intval($this->params['url']['iDisplayLength']);
@@ -213,20 +307,6 @@
 					$region=$this->params['url']['region'];
 				}
 				
-				if(isset($this->params['url']['filters']) && count($this->params['url']['filters'])>0){
-					$filters=$this->params['url']['filters'];
-					//$condition_array[];
-					foreach($filters as $f){
-						if($f){
-							list($col,$val)=split(":",$f,2);
-							if($col=='DATE'){
-								$condition_array[]=array("CONVERT(char(10),[DATE],126)='$val'");
-							}
-							else							
-								$condition_array+=array($col=>$val);
-						}						
-					}
-				}
 				//if date filter
 				if(isset($this->params['url']['idate']) && $this->params['url']['idate']!=""){
 					date_default_timezone_set('UTC');
@@ -272,8 +352,8 @@
 					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true,$currentdate);
 					//print_r($condition_array);
 					$totaldisplay = $model_proto->find("count",array('recursive' => 0
-						,'conditions'=>$condition_array)+$Stationjoin
-					);
+															,'conditions'=>$condition_array)+$Stationjoin
+													);
 					$this->set("nb",$totaldisplay);	
 					$find=2;								
 				}
