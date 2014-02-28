@@ -479,7 +479,7 @@
 							else if(count(($condi=split(" IN ",$filters2[$i])))>1){
 								$mot=str_replace(";",",",$condi[1]);
 								$motarray=explode(",",$mot);
-								//$condition+=array(' IN '."(".$mot.")");
+								$condition+=array(' IN '."(".$mot.")");
 								$func = function($value) {
 									return "'".$value."'";
 								};	
