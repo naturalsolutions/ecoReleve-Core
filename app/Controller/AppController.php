@@ -234,82 +234,160 @@ class AppController extends Controller {
 				//phpinfo();
 				//case with field filter separated by ',': 'col op val, col2 op2 val2'
 				if(isset($this->params['url']['filter1']) && $this->params['url']['filter1']!=""){
-						$filters=$this->params['url']['filter1'];
-						//print_r("ici1");
-						//add filters on the array condition
-						$filters=split(",",$filters);
-						$isdate=false;
-						for($i=0;$i<count($filters);$i++){
-							if(count(($condi=split("<=",$filters[$i])))>1){
-								$tmpfield=str_ireplace("date","",$condi[0]);
-								if($tmpfield!=$condi[0])
-									$isdate=true;
-								if($isdate)
-									$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' <='=>$condi[1]);	
-								else
-									$array_conditions+=array($condi[0].' <='=>$condi[1]);							
-							}
-							else if(count(($condi=split(">=",$filters[$i])))>1){
-								$tmpfield=str_ireplace("date","",$condi[0]);
-								if($tmpfield!=$condi[0])
-									$isdate=true;
-								if($isdate)
-									$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' >='=>$condi[1]);	
-								else
-									$array_conditions+=array($condi[0].' >='=>$condi[1]);							
-							}
-							else if(count(($condi=split(">",$filters[$i])))>1){
-								$tmpfield=str_ireplace("date","",$condi[0]);
-								if($tmpfield!=$condi[0])
-									$isdate=true;
-								if($isdate)
-									$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' >'=>$condi[1]);	
-								else
-									$array_conditions+=array($condi[0].' >'=>$condi[1]);							
-							}
-							else if(count(($condi=split("<",$filters[$i])))>1){
-								$tmpfield=str_ireplace("date","",$condi[0]);
-								if($tmpfield!=$condi[0])
-									$isdate=true;
-								if($isdate)
-									$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' <'=>$condi[1]);	
-								else
-									$array_conditions+=array($condi[0].' <'=>$condi[1]);							
-							}
-							else if(count(($condi=split("=",$filters[$i])))>1){
-								$tmpfield=str_ireplace("date","",$condi[0]);
-								if($tmpfield!=$condi[0])
-									$isdate=true;
-								if($isdate)
-									$array_conditions+=array("CONVERT(char(10),$condi[0],126)" => $condi[1]);
-								else
-									$array_conditions+=array($condi[0]=>$condi[1]);							
-							}	
-							else if(count(($condi=split(" LIKE ",$filters[$i])))>1){
-								$mot=$condi[1];
-								$mot=str_replace(" ","% ",$mot);
-								$array_conditions+=array($condi[0].' like '=>'%'.$mot.'%');							
-							}	
-						}								
+					$filters=$this->params['url']['filter1'];
+					//print_r("ici1");
+					//add filters on the array condition
+					$filters=split(",",$filters);
+					$isdate=false;
+					for($i=0;$i<count($filters);$i++){
+						if(count(($condi=split("<=",$filters[$i])))>1){
+							$tmpfield=str_ireplace("date","",$condi[0]);
+							if($tmpfield!=$condi[0])
+								$isdate=true;
+							if($isdate)
+								$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' <='=>$condi[1]);	
+							else
+								$array_conditions+=array($condi[0].' <='=>$condi[1]);							
+						}
+						else if(count(($condi=split(">=",$filters[$i])))>1){
+							$tmpfield=str_ireplace("date","",$condi[0]);
+							if($tmpfield!=$condi[0])
+								$isdate=true;
+							if($isdate)
+								$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' >='=>$condi[1]);	
+							else
+								$array_conditions+=array($condi[0].' >='=>$condi[1]);							
+						}
+						else if(count(($condi=split(">",$filters[$i])))>1){
+							$tmpfield=str_ireplace("date","",$condi[0]);
+							if($tmpfield!=$condi[0])
+								$isdate=true;
+							if($isdate)
+								$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' >'=>$condi[1]);	
+							else
+								$array_conditions+=array($condi[0].' >'=>$condi[1]);							
+						}
+						else if(count(($condi=split("<",$filters[$i])))>1){
+							$tmpfield=str_ireplace("date","",$condi[0]);
+							if($tmpfield!=$condi[0])
+								$isdate=true;
+							if($isdate)
+								$array_conditions+=array("CONVERT(char(10),$condi[0],126)".' <'=>$condi[1]);	
+							else
+								$array_conditions+=array($condi[0].' <'=>$condi[1]);							
+						}
+						else if(count(($condi=split("=",$filters[$i])))>1){
+							$tmpfield=str_ireplace("date","",$condi[0]);
+							if($tmpfield!=$condi[0])
+								$isdate=true;
+							if($isdate)
+								$array_conditions+=array("CONVERT(char(10),$condi[0],126)" => $condi[1]);
+							else
+								$array_conditions+=array($condi[0]=>$condi[1]);							
+						}	
+						else if(count(($condi=split(" LIKE ",$filters[$i])))>1){
+							$mot=$condi[1];
+							$mot=str_replace(" ","% ",$mot);
+							$array_conditions+=array($condi[0].' like '=>'%'.$mot.'%');							
+						}	
+					}								
 				}
 				
-				if(isset($this->params['url']['filter2']) && count($this->params['url']['filter2'])>0){
-					$filters=$this->params['url']['filter2'];
+				//ns grid filter
+				if(isset($this->params['url']['filters']) && count($this->params['url']['filters'])>0){
+					$filters=$this->params['url']['filters'];
 					//$condition_array[];
-					$isdate=false;
 					foreach($filters as $f){
 						if($f){
 							list($col,$val)=split(":",$f,2);
-							$tmpfield=str_ireplace("date","",$col);
-							if($tmpfield!=$col)
-								$isdate=true;
-							if($isdate){
-								$array_conditions[]=array("CONVERT(char(10),$col,126)='$val'");
+							if(isset($value_label_array[trim($col)]))
+								$col=$value_label_array[$col];
+							if($col=='DATE'){
+								//equal date search with DATE:[DATE]
+								if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$val)){
+									$array_conditions[]=array("CONVERT(char(10),[DATE],126)='$val'");
+								}
+								//search with real date format		
+								else if(strpos($val, ":")!==false){
+									list($typedatesearch,$date)=split(":",$val,2);
+									//equal date search with DATE:exact:[DATE]
+									if($typedatesearch=="exact"){
+										if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+											$array_conditions[]=array("CONVERT(char(10),[$col],126)='$date'");
+										}	
+									}
+									//before date search with DATE:before:[DATE]
+									else if($typedatesearch=="before"){
+										if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+											$array_conditions[]=array("CONVERT(char(10),[$col],126)<'$date'");
+										}	
+									}
+									//after date search with DATE:after:[DATE]
+									else if($typedatesearch=="after"){
+										if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$date)){
+											$array_conditions[]=array("CONVERT(char(10),[$col],126)>'$date'");
+										}	
+									}
+								}
+								//search with known predefined date
+								else{
+									$m=date("m");
+									$d=date("d");
+									$y=date("Y");
+									//if($currentdate)
+										//list($y,$m,$d)=explode("-",$currentdate);	
+									
+									if($val=="today"){
+										$today = date("Y-m-d",mktime(0,0,0,$m,$d,$y));
+										$array_conditions[]=array("CONVERT(char(10),[$col],126)='$today'");
+									}
+									else if($val=="yesterday"){
+										$yesterday = date("Y-m-d",mktime(0,0,0,$m,$d-1,$y));
+										$array_conditions[]=array("CONVERT(char(10),[$col],126)='$yesterday'");
+									}
+									else if($val=="lastweek"){
+										$lastweek=date("Y-m-d",mktime(0,0,0,$m,$d-7,$y));
+										$weekreq="CONVERT(char(10),$col,120) >= CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, cast('$lastweek' as date))/7, 0), 120) and
+					CONVERT(char(10),$col,120) <= CONVERT(char(10), DATEADD(week, DATEDIFF(day, 0, cast('$lastweek' as date))/7, 6),120)";
+										$array_conditions[]=array($weekreq);
+									}
+									else if($val=="lastmonth"){
+										$lastmonth = date("Y-m",mktime(0,0,0,$m-1,$d,$y));
+										$array_conditions[]=array("CONVERT(char(7), $col, 120)='$lastmonth'");
+									}
+									else if($val=="lastyear"){
+										$lastyear = date("Y",mktime(0,0,0,$m,$d,$y-1));
+										$array_conditions[]=array("CONVERT(char(4), $col, 120)='$lastyear'");
+									}
+								}	
 							}
-							else							
-								$array_conditions+=array($col=>$val);
-						}						
-					}
+							else {
+								//No date search
+								if(strpos($val, ":")!==false){
+									list($typesearch,$search)=split(":",$val,2);
+									//exact search
+									if($typesearch=="exact"){
+										$array_conditions+=array($col=>$search);
+									}
+									//begin search
+									else if($typesearch=="begin"){
+										$array_conditions+=array($col.' like'=>$search.'%');
+									}
+									//end search
+									else if($typesearch=="end"){
+										$array_conditions+=array($col.' like'=>'%'.$search);
+									}
+									//contain search
+									else if($typesearch=="contain"){
+										$array_conditions+=array($col.' like'=>'%'.$search.'%');
+									}
+								}
+								else{
+									$array_conditions+=array($col.' like'=>$val.'%');
+								}	
+							}	
+						}
+					}				
 				}
 				
 				$model=new Value($table_name,$table_name);

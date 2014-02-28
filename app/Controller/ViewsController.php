@@ -367,8 +367,7 @@
 							}	
 						}	
 					}
-				}
-				
+				}				
 			}
 			
 			//if table parameter exist
@@ -479,13 +478,13 @@
 							else if(count(($condi=split(" IN ",$filters2[$i])))>1){
 								$mot=str_replace(";",",",$condi[1]);
 								$motarray=explode(",",$mot);
-								$condition+=array(' IN '."(".$mot.")");
+								
 								$func = function($value) {
-									return "'".$value."'";
+									return "'".trim($value)."'";
 								};	
 								$motarray = array_map($func, $motarray);
 								$mot=implode(" , ", $motarray);
-								
+								$condition+=array("$condi[0]  IN "."(".$mot.")");
 								$conditionstring2==""?$conditionstring2.="$condi[0] IN ($mot)":$conditionstring2.=" and $condi[0] IN ($mot)";			
 							}	
 						}

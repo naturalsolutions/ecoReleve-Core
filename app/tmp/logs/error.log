@@ -11312,3 +11312,13 @@ Stack Trace:
 #11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2014-02-28 13:20:33 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\wamp\www\ecoReleve-core\app\Controller\ViewsController.php, line 480]
+2014-02-28 13:20:33 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /ecoReleve-core/views/get/V_Qry_Chiro_capture/count?filter=Vernacular_name+IN+Asellia+tridens%2CVernacular_name+IN+Desert+Long-eared+Bat&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 480)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 480, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 480, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
