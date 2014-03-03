@@ -122,6 +122,7 @@
 	Router::connect('/TViewIndividual/list/count',array('controller'=>'TViewIndividual','action' => 'column_list','table_name' => 'TViewIndividual'
 	,'column_name' => 'id2@Thes_Age','fields'=>'Individual_Obj_PK,id2@Thes_Age'
 	,'count' => 'yes'));
+	Router::connect('/TViewIndividual/testapparition',array('controller'=>'TViewIndividual','action' => 'testapparition'));
 	Router::connect('/TViewIndividual/:id',array('controller'=>'TViewIndividual','action' => 'detail'));
 		
 	Router::connect('/TViewTrx_Radio/list',array('controller'=>'TViewTrx_Radio','action' => 'column_list','table_name' => 'TViewTrx_Radio'

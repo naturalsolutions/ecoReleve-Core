@@ -11410,3 +11410,187 @@ Stack Trace:
 #3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-03-03 12:50:02 Error: [PDOException] SQLSTATE[22018]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Échec de la conversion de la valeur varchar 'testapparition' en type de données int.
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  Individ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  Individ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  Individ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  Individ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewIndividual), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TViewIndividual), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(58): Model->find('all', Array)
+#8 [internal function]: TViewIndividualController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-03 12:51:10 Error: [PDOException] SQLSTATE[22018]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Échec de la conversion de la valeur varchar 'testapparition' en type de données int.
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  Individ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  Individ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  Individ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  Individ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewIndividual), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TViewIndividual), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(58): Model->find('all', Array)
+#8 [internal function]: TViewIndividualController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-03 12:52:14 Error: [PDOException] SQLSTATE[22018]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Échec de la conversion de la valeur varchar 'testapparition' en type de données int.
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  Individ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  Individ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  Individ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  Individ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewIndividual), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TViewIndividual), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(58): Model->find('all', Array)
+#8 [internal function]: TViewIndividualController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-03 12:53:23 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php, line 611]
+2014-03-03 12:53:23 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 611)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 611, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 611, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 12:53:55 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewIndividual/json\testapparition.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewIndividual/json\\testapparition.ctp',
+)
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-03-03 12:57:10 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewIndividual/json\testapparition.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewIndividual/json\\testapparition.ctp',
+)
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-03-03 12:58:06 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 112]
+2014-03-03 12:58:06 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 112)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 112, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 112, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 12:58:22 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewIndividual/json\testapparition.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewIndividual/json\\testapparition.ctp',
+)
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-03-03 13:03:56 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 820]
+2014-03-03 13:03:57 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 820)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 820, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 820, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 13:11:05 Error: Fatal Error (1): Maximum execution time of 300 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 826]
+2014-03-03 13:11:06 Error: [FatalErrorException] Maximum execution time of 300 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 13:19:31 Error: Fatal Error (1): Maximum execution time of 300 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 472]
+2014-03-03 13:19:31 Error: [FatalErrorException] Maximum execution time of 300 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/testapparition?bbox=27.104285625001%2C7.6655668564119%2C78.959754374999%2C39.713580550086
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 472)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 472, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 472, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 13:19:35 Error: Fatal Error (1): Maximum execution time of 300 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 493]
+2014-03-03 13:19:35 Error: [FatalErrorException] Maximum execution time of 300 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/testapparition
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 493)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 493, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 493, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 15:31:45 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\ecoReleve-core\app\Controller\ViewsController.php, line 399]
+2014-03-03 15:31:45 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ecoReleve-core/views/get/V_Qry_Chiro_capture/export?filter=&bbox=&columns=DATE%2CLAT%2CLON%2CSite_name&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 399)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 399, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 399, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 15:31:57 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'distinct DATE as DATE'.
+Request URL: /ecoReleve-core/views/get/V_Qry_Chiro_capture/export?filter=&bbox=&columns=DATE%2CLAT%2CLON%2CSite_name&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  * FROM ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  * FROM ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  * FROM ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('SELECT  * FROM ...')
+#5 [internal function]: DboSource->query('SELECT  * FROM ...')
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3061): call_user_func_array(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\ViewsController.php(624): Model->query('SELECT  * FROM ...')
+#8 [internal function]: ViewsController->get_view()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ViewsController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ViewsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-03 15:47:38 Error: Fatal Error (4): syntax error, unexpected '$keyarr' (T_VARIABLE) in [C:\wamp\www\ecoReleve-core\app\Model\MapSelectionManager.php, line 92]
+2014-03-03 15:47:38 Error: [FatalErrorException] syntax error, unexpected '$keyarr' (T_VARIABLE)
+Request URL: /ecoReleve-core/views/get/V_Qry_VIndiv_MonitoredLostPostReleaseIndividuals_LastStations/export?format=json&filter=Fk_TInd_ID%3D1732&columns=Name%2CFreqOpti%2CSex
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 92)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 92, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 92, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

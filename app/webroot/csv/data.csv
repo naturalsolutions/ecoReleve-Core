@@ -1,573 +1,2081 @@
-Station;Date;LAT;LON;Site_name;family
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Aizoaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Aizoaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Alliaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Alliaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Asteraceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Asteraceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Asteraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Asteraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Asteraceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Asteraceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Asteraceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Asteraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Asteraceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Asteraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Boraginaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Boraginaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Boraginaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Boraginaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Boraginaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Boraginaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Boraginaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Boraginaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Boraginaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Boraginaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Boraginaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Boraginaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Boraginaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Boraginaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Boraginaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Boraginaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Boraginaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Boraginaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Boraginaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Boraginaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Boraginaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Boraginaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Boraginaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Boraginaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Boraginaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Boraginaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Boraginaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Boraginaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Boraginaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Boraginaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Boraginaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Boraginaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Boraginaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Boraginaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Boraginaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Boraginaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Boraginaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Boraginaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Boraginaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Boraginaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Boraginaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Boraginaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Boraginaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Boraginaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Boraginaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Boraginaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Boraginaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Boraginaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Boraginaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Boraginaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Boraginaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Brassicaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Brassicaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Brassicaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Brassicaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Brassicaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Brassicaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Brassicaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Brassicaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Brassicaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Brassicaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Brassicaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Brassicaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Brassicaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Brassicaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Brassicaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Brassicaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Brassicaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Brassicaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Brassicaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Brassicaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Brassicaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Brassicaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Brassicaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Brassicaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Brassicaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Brassicaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Brassicaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Brassicaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Brassicaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Brassicaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Brassicaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Caryophyllaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Caryophyllaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Caryophyllaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Caryophyllaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Caryophyllaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Caryophyllaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Caryophyllaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Caryophyllaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Caryophyllaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Caryophyllaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Caryophyllaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Caryophyllaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Caryophyllaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Chenopodiaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Chenopodiaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Chenopodiaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Chenopodiaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Chenopodiaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Chenopodiaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Chenopodiaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Chenopodiaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Chenopodiaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Cistaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Cistaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Cistaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Cistaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Cistaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Cistaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Cistaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Cistaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Cistaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Cistaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Cistaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Cistaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Cistaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Cistaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Cistaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Cistaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Cistaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Cistaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Cistaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Cistaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Cistaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Cistaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Cistaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Cistaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Cistaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Cistaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Cistaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Cistaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Cistaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Cistaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Convolvulaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Dipsacaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Dipsacaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Dipsacaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Dipsacaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Dipsacaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Dipsacaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Dipsacaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Dipsacaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Dipsacaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Dipsacaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Fabaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Fabaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Fabaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Fabaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Fabaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Fabaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Fabaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Fabaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Fabaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Fabaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Fabaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Fabaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Fabaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Fabaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Fabaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Fabaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Fabaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Fabaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Fabaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Fabaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Fabaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Fabaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Fabaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Fabaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Fabaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Fabaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Fabaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Fabaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Fabaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Fabaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Fabaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Fabaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Fabaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Fabaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Fabaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Fabaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Fabaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Fabaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Fabaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Fabaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Fabaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Fabaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Fabaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Fabaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Fabaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Fabaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Fabaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Fabaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Fabaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Fabaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Fabaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Fabaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Fabaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Geraniaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Geraniaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Geraniaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Geraniaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Geraniaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Geraniaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Geraniaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Geraniaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Geraniaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Geraniaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Illecebraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Illecebraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Illecebraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Illecebraceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Illecebraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Illecebraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Illecebraceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Illecebraceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Illecebraceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Illecebraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Illecebraceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Illecebraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Illecebraceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Illecebraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Illecebraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Illecebraceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Illecebraceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Illecebraceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Illecebraceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Illecebraceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Illecebraceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Illecebraceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Illecebraceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Illecebraceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Illecebraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Illecebraceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Illecebraceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Illecebraceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Illecebraceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Lamiaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Lamiaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Lamiaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Lamiaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Lamiaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Lamiaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Lamiaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Lamiaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Lamiaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Lamiaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Lamiaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Malvaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Malvaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Malvaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Malvaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Malvaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Malvaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Malvaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Malvaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Malvaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Malvaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Malvaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Papaveraceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Papaveraceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Plantaginaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Plantaginaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Plantaginaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Plantaginaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Plantaginaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Plantaginaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Plantaginaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Plantaginaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Plantaginaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Plantaginaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Plantaginaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Plantaginaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Plantaginaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Plantaginaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Plantaginaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Plantaginaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Plantaginaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Plantaginaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Plantaginaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Plantaginaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Poaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Poaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Poaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Poaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Poaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Poaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Poaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Poaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Poaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Poaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Poaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Poaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Poaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Poaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Poaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Poaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Poaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Poaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Poaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Poaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Poaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Poaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Poaceae
-"PEST1 Maatarka";"2013-05-07 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Poaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Poaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Poaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Poaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Poaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Poaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PEST5 Maatarka";"2013-05-07 00:00:00.000";33.23298;-2.74498;"PEST5 Maatarka";Poaceae
-"PIST2 Maatarka";"2012-05-21 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST3 Maatarka";"2012-05-02 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Poaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Poaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Poaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Poaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PEST4 Maatarka";"2013-05-07 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Poaceae
-"PEST2 Maatarka";"2013-05-06 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PEST4 Maatarka";"2012-05-03 00:00:00.000";33.24786;-2.73128;"PEST4 Maatarka";Poaceae
-"PIST4 Maatarka";"2013-05-06 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Poaceae
-"PIST1 Maatarka";"2013-05-06 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Poaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Poaceae
-"PIST5 Maatarka";"2013-05-06 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Poaceae
-"PEST3 Maatarka";"2013-05-07 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-Tendrara;"2012-05-14 00:00:00.000";33.08804;-1.98884;;Poaceae
-"PIST1 Maatarka";"2012-05-02 00:00:00.000";33.25749;-2.72370;"PIST1 Maatarka";Poaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Poaceae
-"PIST5 Maatarka";"2012-05-02 00:00:00.000";33.24731;-2.72851;"PIST5 Maatarka";Poaceae
-"PEST3 Maatarka";"2012-05-03 00:00:00.000";33.21395;-2.78115;"PEST3 Maatarka";Poaceae
-"PEST1 Maatarka";"2012-05-03 00:00:00.000";33.23939;-2.74390;"PEST1 Maatarka";Primulaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Ranunculaceae
-"PIST2 Maatarka";"2013-05-06 00:00:00.000";33.25630;-2.72885;"PIST2 Maatarka";Thymelaeaceae
-"PIST4 Maatarka";"2012-05-02 00:00:00.000";33.25535;-2.72255;"PIST4 Maatarka";Zygophyllaceae
-"PEST2 Maatarka";"2012-05-03 00:00:00.000";33.25857;-2.73322;"PEST2 Maatarka";Zygophyllaceae
-"PIST3 Maatarka";"2013-05-06 00:00:00.000";33.25619;-2.73259;"PIST3 Maatarka";Zygophyllaceae
+Name;Place;FreqOpti;Sex;MonitoringStatus;SurveyType
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x6162;Tissint;216162;female;Lost;Post-Release
+x7163;"Oued Sidi Ali";217163;female;Monitored;Breeding
+x6463;"Al Baten";216463;male;Monitored;Tracking
+x7518;"Al Baten";217518;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x6729;"Al Baten";216729;male;Lost;Tracking
+x7187;"Outat Elhaj";217187;male;Monitored;Tracking
+x7187;"Outat Elhaj";217187;male;Monitored;Tracking
+x6390;"Al Baten";216390;male;Lost;Breeding
+x7322;"Al Baten";217322;male;Monitored;Breeding
+x8843;"Al Baten";218841;male;Lost;Breeding
+x9623;"Al Baten";219622;male;Monitored;Breeding
+x7368;"Issan Guarn";217368;female;Monitored;Breeding
+x5725;Maslagh;215725;male;Monitored;Tracking
+x9145;ECWP-Missour;219145;male;Lost;Tracking
+x8816;"Al Baten";218816;male;Lost;Breeding
+x6679;"Al Baten";216678;male;Monitored;Tracking
+x7699;"Al Baten";217670;male;Monitored;Breeding
+x7258;"El Hassani";217258;male;Lost;Tracking
+x7005;"Al Baten";217005;male;Monitored;Breeding
+x6494;"Al Baten";216494;male;Monitored;Breeding
+x6619;"Al Baten";216620;male;Monitored;Tracking
+x6318;Lamjalil;216318;male;Monitored;Tracking
+x6318;Lamjalil;216318;male;Monitored;Tracking
+x6318;Lamjalil;216318;male;Monitored;Tracking
+x4535;"Al Baten";214535;male;Monitored;Tracking
+x7573;"Al Baten";217573;male;Monitored;Breeding
+x6095;Zabzat;216095;male;Lost;Tracking
+x9260;"Al Baten";219260;male;Lost;Tracking
+x6749;"Al Baten";216749;male;Monitored;Breeding
+x6749;"Al Baten";216749;male;Monitored;Breeding
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x7086;"Al Baten";217086;male;Lost;Tracking
+x6714;"Al Baten";216714;male;Monitored;Breeding
+x8319;"Al Baten";218315;male;Monitored;Tracking
+x8319;"Al Baten";218315;male;Monitored;Tracking
+x8359;"Al Baten";218359;male;Monitored;Breeding
+x6447;Mengoub;216447;male;Monitored;Tracking
+x4360;"Al Baten";214360;male;Monitored;Tracking
+x9793;Ouizghet;219793;male;Monitored;Tracking
+x5801;Enjil;215801;female;Monitored;Tracking
+x5801;Enjil;215801;female;Monitored;Tracking
+x5801;Enjil;215801;female;Monitored;Tracking
+x8459;Zarzaya;218459;female;Monitored;Tracking
+x9942;Tamdoult;219942;female;Monitored;Breeding
+x8371;Tighirte;218371;male;Monitored;Tracking
+x8371;Tighirte;218371;male;Monitored;Tracking
+x8371;Tighirte;218371;male;Monitored;Tracking
+x8342;Tighirte;218342;female;Monitored;Breeding
+x8342;Tighirte;218342;female;Monitored;Breeding
+x7261;Adanna;217261;female;Monitored;Breeding
+x9641;Enjil;219641;male;Monitored;Post-Release
+x9641;Enjil;219641;male;Monitored;Post-Release
+x9641;Enjil;219641;male;Monitored;Post-Release
+x9641;Enjil;219641;male;Monitored;Post-Release
+x9641;Enjil;219641;male;Monitored;Post-Release
+x9641;Enjil;219641;male;Monitored;Post-Release
+x9641;Enjil;219641;male;Monitored;Post-Release
+x9641;Enjil;219641;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x5894;Lamjalil;215894;male;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x9789;Tadmaia;219789;female;Monitored;Post-Release
+x6741;Enjil;216741;female;Monitored;Post-Release
+x5671;"Foum Zguid";215671;male;Monitored;Post-Release
+x6512;Zayda;216512;female;Monitored;Post-Release
+x5831;"ECWP Enjil";215831;male;Monitored;Post-Release
+x5831;"ECWP Enjil";215831;male;Monitored;Post-Release
+x5831;"ECWP Enjil";215831;male;Monitored;Post-Release
+x5581;Talha;215581;male;Monitored;Post-Release
+x9151;Lakheraiwaâ;219151;female;Monitored;Post-Release
+x8869;Maatarka;218869;male;Monitored;Tracking
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x6834;RT82;216834;male;Monitored;Post-Release
+x8010;Zehda;218010;female;Monitored;Tracking
+x8010;Zehda;218010;female;Monitored;Tracking
+x8010;Zehda;218010;female;Monitored;Tracking
+x8010;Zehda;218010;female;Monitored;Tracking
+x9769;falet;219769;male;Monitored;Post-Release
+x9769;falet;219769;male;Monitored;Post-Release
+x9769;falet;219769;male;Monitored;Post-Release
+x9769;falet;219769;male;Monitored;Post-Release
+x7440;Adanna;217440;male;Monitored;Post-Release
+x7440;Adanna;217440;male;Monitored;Post-Release
+x4913;Zaoueya;214914;male;Monitored;Post-Release
+x4913;Zaoueya;214914;male;Monitored;Post-Release
+x8851;Tamlelt;218851;male;Lost;Tracking
+x8851;Tamlelt;218851;male;Lost;Tracking
+x8851;Tamlelt;218851;male;Lost;Tracking
+x8851;Tamlelt;218851;male;Lost;Tracking
+x5431;Smar;215431;male;Monitored;Tracking
+x9541;Semaira;219541;male;Monitored;Tracking
+x9541;Semaira;219541;male;Monitored;Tracking
+x6794;Tamlelt;216794;male;Monitored;Post-Release
+x6510;"Zerga Touila";216510;female;Lost;Breeding
+x7602;"Ouled Rahou";217602;female;Monitored;Breeding
+x7602;"Ouled Rahou";217602;female;Monitored;Breeding
+x7602;"Ouled Rahou";217602;female;Monitored;Breeding
+x7602;"Ouled Rahou";217602;female;Monitored;Breeding
+x7602;"Ouled Rahou";217602;female;Monitored;Breeding
+x7602;"Ouled Rahou";217602;female;Monitored;Breeding
+x5982;"Mâadar Naimi";215982;female;Monitored;Breeding
+x5982;"Mâadar Naimi";215982;female;Monitored;Breeding
+x5982;"Mâadar Naimi";215982;female;Monitored;Breeding
+x5982;"Mâadar Naimi";215982;female;Monitored;Breeding
+x6517;Falit;216517;female;Monitored;Breeding
+x6517;Falit;216517;female;Monitored;Breeding
+x6517;Falit;216517;female;Monitored;Breeding
+x6517;Falit;216517;female;Monitored;Breeding
+x6517;Falit;216517;female;Monitored;Breeding
+x8502;"Ait Wabli";218503;female;Monitored;Breeding
+x8502;"Ait Wabli";218503;female;Monitored;Breeding
+x5101;"Bel Laben";215101;female;Monitored;Breeding
+x5142;Tandout;215142;male;Monitored;Tracking
+x5142;Tandout;215142;male;Monitored;Tracking
+x5142;Tandout;215142;male;Monitored;Tracking
+x9951;Semaira;219951;male;Monitored;Tracking
+x9951;Semaira;219951;male;Monitored;Tracking
+x4132;Lamhamid;214132;male;Monitored;Tracking
+x9234;Mengoub;219234;female;Monitored;Breeding
+x9234;Mengoub;219234;female;Monitored;Breeding
+x9234;Mengoub;219234;female;Monitored;Breeding
+x9234;Mengoub;219234;female;Monitored;Breeding
+x4372;Semaira;214372;male;Monitored;Tracking
+x9452;Tamlelt;219452;female;Lost;Tracking
+x8920;Tamlelt;218920;male;Lost;Tracking
+x9310;"Bel Ghiada";219310;female;Monitored;Tracking
+x9310;"Bel Ghiada";219310;female;Monitored;Tracking
+x9310;"Bel Ghiada";219310;female;Monitored;Tracking
+x4482;Lamjalil;214483;male;Monitored;Tracking
+x5622;Ghachwa;215622;female;Monitored;Tracking
+x5622;Ghachwa;215622;female;Monitored;Tracking
+x5622;Ghachwa;215622;female;Monitored;Tracking
+x6540;"El Hassani";216540;female;Monitored;Tracking
+x6540;"El Hassani";216540;female;Monitored;Tracking
+x6540;"El Hassani";216540;female;Monitored;Tracking
+x6540;"El Hassani";216540;female;Monitored;Tracking
+x7999;Enjil;217999;male;Monitored;Tracking
+x7490;Lethima;217490;female;Monitored;Tracking
+x7490;Lethima;217490;female;Monitored;Tracking
+x7490;Lethima;217490;female;Monitored;Tracking
+x7490;Lethima;217490;female;Monitored;Tracking
+x7738;Talha;217738;male;Monitored;Tracking
+x7738;Talha;217738;male;Monitored;Tracking
+x7738;Talha;217738;male;Monitored;Tracking
+x7738;Talha;217738;male;Monitored;Tracking
+x8673;Anoual;218673;male;Monitored;Tracking
+x7400;"Dayat Lajraf";217400;male;Monitored;Tracking
+x7400;"Dayat Lajraf";217400;male;Monitored;Tracking
+x9242;Ghilan;219242;female;Monitored;Tracking
+x8694;"hassi lahmar";218694;male;Monitored;Tracking
+x8694;"hassi lahmar";218694;male;Monitored;Tracking
+x8694;"hassi lahmar";218694;male;Monitored;Tracking
+x8694;"hassi lahmar";218694;male;Monitored;Tracking
+x8761;"Hassi Lhmar";218761;male;Monitored;Tracking
+x5362;Ouizghet;215362;male;Monitored;Tracking
+x5362;Ouizghet;215362;male;Monitored;Tracking
+x5362;Ouizghet;215362;male;Monitored;Tracking
+x5362;Ouizghet;215362;male;Monitored;Tracking
+x5362;Ouizghet;215362;male;Monitored;Tracking
+x8312;"Hassi Lâaricha";218312;male;Monitored;Tracking
+x8312;"Hassi Lâaricha";218312;male;Monitored;Tracking
+x6857;Tendrara;216857;male;Monitored;Tracking
+x6857;Tendrara;216857;male;Monitored;Tracking
+x6857;Tendrara;216857;male;Monitored;Tracking
+x6857;Tendrara;216857;male;Monitored;Tracking
+x6857;Tendrara;216857;male;Monitored;Tracking
+x8551;Lamjalil;218551;male;Monitored;Tracking
+x5061;"Foum Zguid";215061;male;Monitored;Tracking
+x5901;Ahouli;215900;female;Monitored;Tracking
+x5901;Ahouli;215900;female;Monitored;Tracking
+x5301;Enjil;215301;male;Monitored;Tracking
+x5172;Enjil;215172;male;Monitored;Tracking
+x5172;Enjil;215172;male;Monitored;Tracking
+x4202;Lahmida;214203;female;Monitored;Tracking
+x4202;Lahmida;214203;female;Monitored;Tracking
+x6172;Zehda;216172;male;Monitored;Tracking
+x4253;Zehda;214253;female;Monitored;Tracking
+x4253;Zehda;214253;female;Monitored;Tracking
+x4253;Zehda;214253;female;Monitored;Tracking
+x9854;Zayda;219854;male;Monitored;Tracking
+x9854;Zayda;219854;male;Monitored;Tracking
+x9854;Zayda;219854;male;Monitored;Tracking
+x4934;Enjil;214934;female;Monitored;Tracking
+x7921;"Galb Lhrache";217921;male;Monitored;Tracking
+x7921;"Galb Lhrache";217921;male;Monitored;Tracking
+x7921;"Galb Lhrache";217921;male;Monitored;Tracking
+x7921;"Galb Lhrache";217921;male;Monitored;Tracking
+x8021;Zayda;218021;female;Lost;Breeding
+x4812;Semaira;214812;male;Lost;Tracking
+x5342;Zayda;215342;male;Monitored;Tracking
+x5490;"Ach Laghrab";215490;male;Lost;Tracking
+x5490;"Ach Laghrab";215490;male;Lost;Tracking
+x5490;"Ach Laghrab";215490;male;Lost;Tracking
+x8793;Adanna;218793;male;Monitored;Tracking
+x8793;Adanna;218793;male;Monitored;Tracking
+x7460;Lamjalil;217460;female;Monitored;Breeding
+x7460;Lamjalil;217460;female;Monitored;Breeding
+x7460;Lamjalil;217460;female;Monitored;Breeding
+x5312;Zayda;215312;female;Monitored;Fledging
+x8054;Ghilan;218054;male;Monitored;Tracking
+x8054;Ghilan;218054;male;Monitored;Tracking
+x8054;Ghilan;218054;male;Monitored;Tracking
+x8054;Ghilan;218054;male;Monitored;Tracking
+x8054;Ghilan;218054;male;Monitored;Tracking
+x8190;"El Hassani";218190;male;Monitored;Tracking
+x8650;Tamdoult;218651;female;Monitored;Breeding
+x4372;Zayda;214372;male;Monitored;Tracking
+x4372;Zayda;214372;male;Monitored;Tracking
+x4372;Zayda;214372;male;Monitored;Tracking
+x9352;Enjil;219352;male;Monitored;Tracking
+x5502;Hamourzeg;215502;male;Monitored;Tracking
+x5502;Hamourzeg;215502;male;Monitored;Tracking
+x5502;Hamourzeg;215502;male;Monitored;Tracking
+x5502;Hamourzeg;215502;male;Monitored;Tracking
+x5502;Hamourzeg;215502;male;Monitored;Tracking
+x5502;Hamourzeg;215502;male;Monitored;Tracking
+x5502;Hamourzeg;215502;male;Monitored;Tracking
+x9371;"Hassi Lahmar";219371;male;Monitored;Tracking
+x9371;"Hassi Lahmar";219371;male;Monitored;Tracking
+x9371;"Hassi Lahmar";219371;male;Monitored;Tracking
+x6439;"Bel Lâbine";216440;female;Monitored;Tracking
+x4680;Nekhailla;214680;male;Monitored;Tracking
+x4680;Nekhailla;214680;male;Monitored;Tracking
+x4881;Adanna;214881;male;Monitored;Tracking
+x4881;Adanna;214881;male;Monitored;Tracking
+x8017;Nekhailla;218017;female;Monitored;Tracking
+x9442;"Oued Zguid";219442;female;Monitored;Tracking
+x8631;Enjil;218631;female;Monitored;Tracking
+x8631;Enjil;218631;female;Monitored;Tracking
+x9632;Tizgi;219632;female;Monitored;Post-Release
+x9632;Tizgi;219632;female;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x7676;RTTW190;217676;male;Monitored;Post-Release
+x9162;"Ait Wabli";219161;male;Monitored;Post-Release
+x9291;Kodya;219291;female;Monitored;Post-Release
+x9291;Kodya;219291;female;Monitored;Post-Release
+x9291;Kodya;219291;female;Monitored;Post-Release
+x9291;Kodya;219291;female;Monitored;Post-Release
+x9291;Kodya;219291;female;Monitored;Post-Release
+x7859;Naji;217859;male;Monitored;Post-Release
+x5709;"Dayat Lahmir";215709;female;Monitored;Post-Release
+x5709;"Dayat Lahmir";215709;female;Monitored;Post-Release
+x5709;"Dayat Lahmir";215709;female;Monitored;Post-Release
+x4266;Sbiâa;214266;male;Monitored;Post-Release
+x4266;Sbiâa;214266;male;Monitored;Post-Release
+x4266;Sbiâa;214266;male;Monitored;Post-Release
+x4266;Sbiâa;214266;male;Monitored;Post-Release
+x4266;Sbiâa;214266;male;Monitored;Post-Release
+x4266;Sbiâa;214266;male;Monitored;Post-Release
+x9534;Laaraguib;219534;male;Monitored;Post-Release
+x8556;Tamdoult;218556;male;Monitored;Tracking
+x8556;Tamdoult;218556;male;Monitored;Tracking
+x8556;Tamdoult;218556;male;Monitored;Tracking
+x6121;;216121;male;Lost;Tracking
+x9172;Smar;219172;male;Monitored;Tracking
+x7243;Ouizghet;217243;male;Lost;Tracking
+x5853;Tayeb;215853;female;Monitored;Tracking
+x5853;Tayeb;215853;female;Monitored;Tracking
+x5853;Tayeb;215853;female;Monitored;Tracking
+x5853;Tayeb;215853;female;Monitored;Tracking
+x7471;Talha;217471;male;Monitored;Post-Release
+x7578;Talha;217578;male;Monitored;Post-Release
+x8719;Zehda;218720;male;Monitored;Post-Release
+x8719;Zehda;218720;male;Monitored;Post-Release
+x8719;Zehda;218720;male;Monitored;Post-Release
+x8950;Zehda;218950;female;Monitored;Post-Release
+x8950;Zehda;218950;female;Monitored;Post-Release
+x8950;Zehda;218950;female;Monitored;Post-Release
+x6761;Tizgaine;216761;male;Monitored;Tracking
+x7742;Sahma;217742;female;Monitored;Tracking
+x7742;Sahma;217742;female;Monitored;Tracking
+x7742;Sahma;217742;female;Monitored;Tracking
+x7742;Sahma;217742;female;Monitored;Tracking
+x7742;Sahma;217742;female;Monitored;Tracking
+x7742;Sahma;217742;female;Monitored;Tracking
+x7742;Sahma;217742;female;Monitored;Tracking
+x7742;Sahma;217742;female;Monitored;Tracking
+x5871;Amourzeg;215871;female;Monitored;Post-Release
+x5871;Amourzeg;215871;female;Monitored;Post-Release
+x5871;Amourzeg;215871;female;Monitored;Post-Release
+x6626;Hofra;216626;female;Monitored;Post-Release
+x5926;"Galb Lahrche";215926;male;Monitored;Post-Release
+x6191;Zehda;216192;female;Monitored;Tracking
+x6191;Zehda;216192;female;Monitored;Tracking
+x6447;"Bel Ghiada";216447;male;Monitored;Post-Release
+x6447;"Bel Ghiada";216447;male;Monitored;Post-Release
+x6447;"Bel Ghiada";216447;male;Monitored;Post-Release
+x9873;Sahma;219873;male;Monitored;Tracking
+x9873;Sahma;219873;male;Monitored;Tracking
+x7558;"Oued Zguid";217558;male;Lost;Post-Release
+x9661;Ghachwa;219661;male;Monitored;Tracking
+x9661;Ghachwa;219661;male;Monitored;Tracking
+x9902;Irriki;219902;male;Monitored;Post-Release
+x8726;"Al Baten";218726;female;Lost;Tracking
+x5101;Sahma;215102;male;Monitored;Tracking
+x5101;Sahma;215102;male;Monitored;Tracking
+x5765;Maatarka;215765;female;Monitored;Tracking
+x8543;Lamjalil;218543;female;Monitored;Breeding
+x8543;Lamjalil;218543;female;Monitored;Breeding
+x8543;Lamjalil;218543;female;Monitored;Breeding
+x5662;Sahma;215662;female;Monitored;Breeding
+x8080;"El Hamda";218081;female;Monitored;Post-Release
+x8080;"El Hamda";218081;female;Monitored;Post-Release
+x8479;Mjahma;218479;male;Monitored;Post-Release
+x9043;"Jorf Naga";219043;male;Monitored;Post-Release
+x9043;"Jorf Naga";219043;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9080;RCM093;219080;male;Monitored;Post-Release
+x9935;Mengoub;219935;male;Monitored;Post-Release
+x9935;Mengoub;219935;male;Monitored;Post-Release
+x7117;Trarid;217117;male;Monitored;Post-Release
+x7117;Trarid;217117;male;Monitored;Post-Release
+x9861;Maatarka;219861;male;Monitored;Tracking
+x5629;Teggour;215629;male;Lost;Post-Release
+x5629;Teggour;215629;male;Lost;Post-Release
+x9560;"Est Outat";219560;male;Monitored;Post-Release
+x9560;"Est Outat";219560;male;Monitored;Post-Release
+x9560;"Est Outat";219560;male;Monitored;Post-Release
+x4802;Smar;214802;male;Monitored;Post-Release
+x9211;"Oued Charef";219211;male;Monitored;Post-Release
+x9211;"Oued Charef";219211;male;Monitored;Post-Release
+x9211;"Oued Charef";219211;male;Monitored;Post-Release
+x9211;"Oued Charef";219211;male;Monitored;Post-Release
+x7774;"Sehb Laghta";217774;female;Monitored;Post-Release
+x4426;Maatarka;214426;female;Monitored;Breeding
+x7760;"Al Baten";217760;male;Monitored;Breeding
+x7760;"Al Baten";217760;male;Monitored;Breeding
+x7760;"Al Baten";217760;male;Monitored;Breeding
+x7760;"Al Baten";217760;male;Monitored;Breeding
+x9434;"Lac Irriki";219434;female;Monitored;Breeding
+x5374;Traride;215374;female;Monitored;Post-Release
+x5374;Traride;215374;female;Monitored;Post-Release
+x5374;Traride;215374;female;Monitored;Post-Release
+x5374;Traride;215374;female;Monitored;Post-Release
+x5374;Traride;215374;female;Monitored;Post-Release
+x8090;Mengoub;218090;male;Monitored;Post-Release
+x8799;Tamlelt;218799;female;Monitored;Post-Release
+x9423;Nefekha;219423;male;Monitored;Post-Release
+x9811;Lamjalil;219811;female;Monitored;Breeding
+x9962;"Nif Dreg";219962;male;Monitored;Post-Release
+x9962;"Nif Dreg";219962;male;Monitored;Post-Release
+x7961;Sahma;217961;male;Monitored;Tracking
+x4791;Sahma;214791;male;Monitored;Post-Release
+x4791;Sahma;214791;male;Monitored;Post-Release
+x4102;Sahma;214102;female;Monitored;Post-Release
+x9393;"Sidi Amer";219393;male;Monitored;Post-Release
+x8935;Sahma;218935;female;Monitored;Breeding
+x5839;Enjil;215839;male;Monitored;Post-Release
+x5839;Enjil;215839;male;Monitored;Post-Release
+x5839;Enjil;215839;male;Monitored;Post-Release
+x5839;Enjil;215839;male;Monitored;Post-Release
+x5839;Enjil;215839;male;Monitored;Post-Release
+x5839;Enjil;215839;male;Monitored;Post-Release
+x5839;Enjil;215839;male;Monitored;Post-Release
+x5839;Enjil;215839;male;Monitored;Post-Release
+x4121;Zayda;214121;female;Monitored;Post-Release
+x4121;Zayda;214121;female;Monitored;Post-Release
+x7423;Zayda;217423;male;Monitored;Post-Release
+x7423;Zayda;217423;male;Monitored;Post-Release
+x7423;Zayda;217423;male;Monitored;Post-Release
+x7423;Zayda;217423;male;Monitored;Post-Release
+x7423;Zayda;217423;male;Monitored;Post-Release
+x8450;Smar;218450;female;Monitored;Breeding
+x8450;Smar;218450;female;Monitored;Breeding
+x9712;Karâa;219712;female;Monitored;Breeding
+x9712;Karâa;219712;female;Monitored;Breeding
+x9712;Karâa;219712;female;Monitored;Breeding
+x9712;Karâa;219712;female;Monitored;Breeding
+x9570;Tagmoute;219570;male;Monitored;Tracking
+x9570;Tagmoute;219570;male;Monitored;Tracking
+x9071;Tagmoute;219071;male;Monitored;Tracking
+x4754;Zayda;214754;male;Monitored;Post-Release
+x4754;Zayda;214754;male;Monitored;Post-Release
+x9950;Agdal;219950;male;Monitored;Tracking
+x7351;Tagmoute;217351;female;Monitored;Tracking
+x8042;Lamjalil;218042;female;Monitored;Tracking
+x6229;Sahma;216229;male;Lost;Tracking
+x6229;Sahma;216229;male;Lost;Tracking
+x4313;Enjil;214313;female;Monitored;Post-Release
+x4313;Enjil;214313;female;Monitored;Post-Release
+x5235;Zayda;215235;female;Monitored;Post-Release
+x7591;Zayda;217591;female;Monitored;Post-Release
+x7591;Zayda;217591;female;Monitored;Post-Release
+x7591;Zayda;217591;female;Monitored;Post-Release
+x8243;Tayeb;218243;male;Monitored;Tracking
+x6642;Enjil;216642;male;Monitored;Post-Release
+x9580;"Sidi Amer";219580;female;Monitored;Tracking
+x8291;Sahma;218291;female;Monitored;Tracking
+x8291;Sahma;218291;female;Monitored;Tracking
+x8291;Sahma;218291;female;Monitored;Tracking
+x7871;"Sidi Amer";217871;female;Monitored;Tracking
+x5352;Enjil;215352;male;Monitored;Tracking
+x5352;Enjil;215352;male;Monitored;Tracking
+x5352;Enjil;215352;male;Monitored;Tracking
+x6700;Karâa;216700;female;Monitored;Tracking
+x9701;"Sidi Amer";219701;female;Lost;Tracking
+x4342;Ghachwa;214342;female;Monitored;Tracking
+x4342;Ghachwa;214342;female;Monitored;Tracking
+x8810;Ghachwa;218810;male;Monitored;Tracking
+x8810;Ghachwa;218810;male;Monitored;Tracking
+x9800;Smar;219800;female;Monitored;Tracking
+x9800;Smar;219800;female;Monitored;Tracking
+x9800;Smar;219800;female;Monitored;Tracking
+x9800;Smar;219800;female;Monitored;Tracking
+x9800;Smar;219800;female;Monitored;Tracking
+x9800;Smar;219800;female;Monitored;Tracking
+x9800;Smar;219800;female;Monitored;Tracking
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x9632;ENJ23;219632;male;Monitored;Post-Release
+x4431;Enjil;214431;male;Monitored;Post-Release
+x4431;Enjil;214431;male;Monitored;Post-Release
+x4431;Enjil;214431;male;Monitored;Post-Release
+x4431;Enjil;214431;male;Monitored;Post-Release
+x6882;Enjil;216882;female;Monitored;Post-Release
+x8839;Tamlelt;218839;female;Monitored;Tracking
+x8839;Tamlelt;218839;female;Monitored;Tracking
+x8839;Tamlelt;218839;female;Monitored;Tracking
+x8839;Tamlelt;218839;female;Monitored;Tracking
+x8839;Tamlelt;218839;female;Monitored;Tracking
+x8839;Tamlelt;218839;female;Monitored;Tracking
+x5278;Enjil;215278;female;Monitored;Tracking
+x5278;Enjil;215278;female;Monitored;Tracking
+x5278;Enjil;215278;female;Monitored;Tracking
+x5278;Enjil;215278;female;Monitored;Tracking
+x4772;Zayda;214772;female;Monitored;Tracking
+x6271;Zayda;216271;female;Monitored;Post-Release
+x6271;Zayda;216271;female;Monitored;Post-Release
+x6271;Zayda;216271;female;Monitored;Post-Release
+x7414;Zayda;217414;female;Monitored;Post-Release
+x7414;Zayda;217414;female;Monitored;Post-Release
+x7414;Zayda;217414;female;Monitored;Post-Release
+x4494;Zayda;214494;female;Monitored;Post-Release
+x4494;Zayda;214494;female;Monitored;Post-Release
+x7508;Wadghaghe;217508;male;Monitored;Post-Release
+x7508;Wadghaghe;217508;male;Monitored;Post-Release
+x4751;"Ain Lhalwa";214751;male;Monitored;Post-Release
+x5269;Zayda;215269;female;Monitored;Tracking
+x5269;Zayda;215269;female;Monitored;Tracking
+x5269;Zayda;215269;female;Monitored;Tracking
+x5269;Zayda;215269;female;Monitored;Tracking
+x5269;Zayda;215269;female;Monitored;Tracking
+x5269;Zayda;215269;female;Monitored;Tracking
+x5269;Zayda;215269;female;Monitored;Tracking
+x5269;Zayda;215269;female;Monitored;Tracking
+x5471;Enjil;215471;male;Monitored;Post-Release
+x5471;Enjil;215471;male;Monitored;Post-Release
+x7801;"Ain Lhalwa";217800;female;Lost;Tracking
+x9893;Ichte;219893;male;Lost;Tracking
+x9611;"Ain Lhalwa";219611;female;Monitored;Post-Release
+x9611;"Ain Lhalwa";219611;female;Monitored;Post-Release
+x9611;"Ain Lhalwa";219611;female;Monitored;Post-Release
+x9611;"Ain Lhalwa";219611;female;Monitored;Post-Release
+x9611;"Ain Lhalwa";219611;female;Monitored;Post-Release
+x3999;Zayda;213999;female;Monitored;Post-Release
+x3999;Zayda;213999;female;Monitored;Post-Release
+x4026;Zayda;214026;female;Monitored;Post-Release
+x4026;Zayda;214026;female;Monitored;Post-Release
+x5643;"Al Baten";215643;female;Monitored;Tracking
+x7210;Enjil;217210;male;Monitored;Tracking
+x7210;Enjil;217210;male;Monitored;Tracking
+x7210;Enjil;217210;male;Monitored;Tracking
+x7210;Enjil;217210;male;Monitored;Tracking
+x7210;Enjil;217210;male;Monitored;Tracking
+x7210;Enjil;217210;male;Monitored;Tracking
+x7210;Enjil;217210;male;Monitored;Tracking
+x5251;Enjil;215251;female;Monitored;Tracking
+x5251;Enjil;215251;female;Monitored;Tracking
+x7650;"Ain Lhalwa";217650;male;Monitored;Post-Release
+x7650;"Ain Lhalwa";217650;male;Monitored;Post-Release
+x7650;"Ain Lhalwa";217650;male;Monitored;Post-Release
+x6111;"Galb Lhrache";216111;male;Monitored;Tracking
+x6111;"Galb Lhrache";216111;male;Monitored;Tracking
+x6111;"Galb Lhrache";216111;male;Monitored;Tracking
+x6111;"Galb Lhrache";216111;male;Monitored;Tracking
+x4394;Tamdaflet;214394;male;Lost;Tracking
+x4394;Tamdaflet;214394;male;Lost;Tracking
+x7365;Zayda;217365;female;Monitored;Breeding
+x7365;Zayda;217365;female;Monitored;Breeding
+x7365;Zayda;217365;female;Monitored;Breeding
+x7365;Zayda;217365;female;Monitored;Breeding
+x7365;Zayda;217365;female;Monitored;Breeding
+x6660;Sahma;216660;male;Monitored;Tracking
+x6660;Sahma;216660;male;Monitored;Tracking
+x6660;Sahma;216660;male;Monitored;Tracking
+x6660;Sahma;216660;male;Monitored;Tracking
+x6660;Sahma;216660;male;Monitored;Tracking
+x6660;Sahma;216660;male;Monitored;Tracking
+x6660;Sahma;216660;male;Monitored;Tracking
+x6660;Sahma;216660;male;Monitored;Tracking
+x6660;Sahma;216660;male;Monitored;Tracking
+x9462;"Ain Lhalwa";219462;male;Monitored;Tracking
+x9800;"Ain Lhalwa";219801;male;Monitored;Tracking
+x9800;"Ain Lhalwa";219801;male;Monitored;Tracking
+x9800;"Ain Lhalwa";219801;male;Monitored;Tracking
+x8972;"Al Baten";218972;male;Monitored;Breeding
+x9202;Lgachwa;219202;male;Monitored;Tracking
+x9322;Sehma;219322;male;Monitored;Tracking
+x9322;Sehma;219322;male;Monitored;Tracking
+x9322;Sehma;219322;male;Monitored;Tracking
+x9430;Ouizghet;219431;female;Monitored;Breeding
+x9728;Ouizghet;219728;female;Monitored;Breeding
+x7673;Khokhate;217671;female;Monitored;Breeding
+x7673;Khokhate;217671;female;Monitored;Breeding
+x5442;"Sidi Amer";215442;female;Monitored;Breeding
+x8939;"Sidi Amer";218938;male;Monitored;Tracking
+x6374;Rekkam;216374;female;Monitored;Breeding
+x8571;"Ouled Rahou";218571;male;Monitored;Tracking
+x5211;Enjil;215211;male;Monitored;Tracking
+x8745;Namousse;218745;male;Monitored;Tracking
+x7661;Lhofra;217661;male;Monitored;Tracking
+x7661;Lhofra;217661;male;Monitored;Tracking
+x7661;Lhofra;217661;male;Monitored;Tracking
+x7661;Lhofra;217661;male;Monitored;Tracking
+x7661;Lhofra;217661;male;Monitored;Tracking
+x8343;Bouarfa;218343;male;Monitored;Tracking
+x7899;"Douiat Lahmir";217899;female;Monitored;Breeding
+x7899;"Douiat Lahmir";217899;female;Monitored;Breeding
+x9001;"Ain Lhalwa";219001;male;Monitored;Tracking
+x9001;"Ain Lhalwa";219001;male;Monitored;Tracking
+x8150;"Hassi Laâricha";218150;male;Monitored;Tracking
+x8150;"Hassi Laâricha";218150;male;Monitored;Tracking
+x8150;"Hassi Laâricha";218150;male;Monitored;Tracking
+x8150;"Hassi Laâricha";218150;male;Monitored;Tracking
+x8150;"Hassi Laâricha";218150;male;Monitored;Tracking
+x7229;Ghzala;217229;female;Monitored;Fledging
+x7817;"Ecwp Enjil";217817;female;Monitored;Tracking
+x8530;Enjil;218530;female;Monitored;Tracking
+x8530;Enjil;218530;female;Monitored;Tracking
+x8530;Enjil;218530;female;Monitored;Tracking
+x8530;Enjil;218530;female;Monitored;Tracking
+x8530;Enjil;218530;female;Monitored;Tracking
+x8530;Enjil;218530;female;Monitored;Tracking
+x4324;Zayda;214324;male;Monitored;Tracking
+x4324;Zayda;214324;male;Monitored;Tracking
+x4324;Zayda;214324;male;Monitored;Tracking
+x4324;Zayda;214324;male;Monitored;Tracking
+x4324;Zayda;214324;male;Monitored;Tracking
+x4324;Zayda;214324;male;Monitored;Tracking
+x4062;Adanna;214062;female;Monitored;Tracking
+x4062;Adanna;214062;female;Monitored;Tracking
+x4462;Zayda;214462;female;Monitored;Tracking
+x4462;Zayda;214462;female;Monitored;Tracking
+x4462;Zayda;214462;female;Monitored;Tracking
+x4462;Zayda;214462;female;Monitored;Tracking
+x8890;Ouizghet;218891;male;Monitored;Tracking
+x8890;Ouizghet;218891;male;Monitored;Tracking
+x9321;"Gharb Wahid";219321;female;Monitored;Tracking
+x8111;"Sbaâ Shab";218111;male;Monitored;Tracking
+x8660;Enjil;218660;male;Monitored;Tracking
+x7304;"Sidi Amer";217304;female;Monitored;Tracking
+x7304;"Sidi Amer";217304;female;Monitored;Tracking
+x7304;"Sidi Amer";217304;female;Monitored;Tracking
+x7304;"Sidi Amer";217304;female;Monitored;Tracking
+x7304;"Sidi Amer";217304;female;Monitored;Tracking
+x7304;"Sidi Amer";217304;female;Monitored;Tracking
+x4942;Enjil;214942;male;Monitored;Tracking
+x4942;Enjil;214942;male;Monitored;Tracking
+x7570;Talha;217570;female;Monitored;Tracking
+x7570;Talha;217570;female;Monitored;Tracking
+x7570;Talha;217570;female;Monitored;Tracking
+x6960;"Oued El Aine";216960;male;Monitored;Tracking
+x8711;Taginne;218711;female;Monitored;Tracking
+x8431;Enjil;218431;male;Monitored;Tracking
+x5782;"Jbel Missour";215782;female;Monitored;Tracking
+x5782;"Jbel Missour";215782;female;Monitored;Tracking
+x5599;Enjil;215599;female;Monitored;Tracking
+x8750;Enjil;218750;male;Monitored;Tracking
+x8750;Enjil;218750;male;Monitored;Tracking
+x8750;Enjil;218750;male;Monitored;Tracking
+x8750;Enjil;218750;male;Monitored;Tracking
+x8750;Enjil;218750;male;Monitored;Tracking
+x8750;Enjil;218750;male;Monitored;Tracking
+x8399;"Al Baten";218399;male;Monitored;Tracking
+x4238;"Ain Lhalwa";214238;female;Monitored;Tracking
+x9935;Smar;219935;female;Monitored;Tracking
+x4053;Zayda;214053;female;Monitored;Tracking
+x4053;Zayda;214053;female;Monitored;Tracking
+x4053;Zayda;214053;female;Monitored;Tracking
+x7431;Ghachwa;217430;female;Monitored;Tracking
+x7431;Ghachwa;217430;female;Monitored;Tracking
+x4143;"Sbaâ Shab";214143;female;Monitored;Tracking
+x8930;"Dayt Lhaddad";218930;female;Lost;Tracking
+x8071;Maatarka;218071;female;Monitored;Post-Release
+x8071;Maatarka;218071;female;Monitored;Post-Release
+x8071;Maatarka;218071;female;Monitored;Post-Release
+x8228;Tizghaine;218228;female;Monitored;Post-Release
+x7748;Rekam;217748;female;Lost;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x8858;TAT132;218858;female;Monitored;Post-Release
+x9420;"Akka Otmia";219421;female;Monitored;Post-Release
+x8143;"Ait Wabli";218143;female;Monitored;Post-Release
+x5001;Enjil;215001;female;Monitored;Post-Release
+x5001;Enjil;215001;female;Monitored;Post-Release
+x9461;"Foum Lahcen";219461;male;Monitored;Post-Release
+x9023;Ichte;219023;male;Monitored;Post-Release
+x8270;"Sidi Ali";218270;male;Monitored;Post-Release
+x8270;"Sidi Ali";218270;male;Monitored;Post-Release
+x8270;"Sidi Ali";218270;male;Monitored;Post-Release
+x9822;Zabzgar;219821;male;Monitored;Post-Release
+x4225;Lahssey;214225;female;Monitored;Breeding
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x5743;Enjil;215743;male;Monitored;Post-Release
+x4702;Ouizghet;214702;male;Monitored;Tracking
+x4702;Ouizghet;214702;male;Monitored;Tracking
+x4702;Ouizghet;214702;male;Monitored;Tracking
+x6600;Rekkam;216600;male;Check;Tracking
+x9711;Outat;219712;female;Monitored;Breeding
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x9751;MAH002;219751;male;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8255;MAH003;218255;female;Monitored;Post-Release
+x8381;"Nif Dreg";218380;female;Monitored;Breeding
+x8381;"Nif Dreg";218380;female;Monitored;Breeding
+x8381;"Nif Dreg";218380;female;Monitored;Breeding
+x8381;"Nif Dreg";218380;female;Monitored;Breeding
+x8381;"Nif Dreg";218380;female;Monitored;Breeding
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4971;MAH193;214971;male;Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x4420;"Ecwp Missour";214420;(indeterminate);Monitored;Post-Release
+x9382;Lakssabe;219382;male;Monitored;Tracking
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x5382;"Sidi Amer";215382;female;Monitored;Post-Release
+x6582;"Sidi Amer";216582;male;Monitored;Post-Release
+x6582;"Sidi Amer";216582;male;Monitored;Post-Release
+x6582;"Sidi Amer";216582;male;Monitored;Post-Release
+x6582;"Sidi Amer";216582;male;Monitored;Post-Release
+x6582;"Sidi Amer";216582;male;Monitored;Post-Release
+x9870;Naji;219870;male;Lost;Tracking
+x9870;Naji;219870;male;Lost;Tracking
+x9870;Naji;219870;male;Lost;Tracking
+x9870;Naji;219870;male;Lost;Tracking
+x5231;"Ain Lhalwa";215231;male;Monitored;Post-Release
+x4532;"Sidi Amer";214532;female;Monitored;Post-Release
+x4532;"Sidi Amer";214532;female;Monitored;Post-Release
+x7881;"Sidi Amer";217881;male;Monitored;Post-Release
+x7881;"Sidi Amer";217881;male;Monitored;Post-Release
+x7881;"Sidi Amer";217881;male;Monitored;Post-Release
+x5262;"Sidi Amer";215262;male;Monitored;Post-Release
+x5262;"Sidi Amer";215262;male;Monitored;Post-Release
+x5262;"Sidi Amer";215262;male;Monitored;Post-Release
+x5557;"Ecwp Maatarka";215557;(indeterminate);Monitored;Post-Release
+x5557;"Ecwp Maatarka";215557;(indeterminate);Monitored;Post-Release
+x5557;"Ecwp Maatarka";215557;(indeterminate);Monitored;Post-Release
+x5557;"Ecwp Maatarka";215557;(indeterminate);Monitored;Post-Release
+x5557;"Ecwp Maatarka";215557;(indeterminate);Monitored;Post-Release
+x5557;"Ecwp Maatarka";215557;(indeterminate);Monitored;Post-Release
+x5557;"Ecwp Maatarka";215557;(indeterminate);Monitored;Post-Release
+x5557;"Ecwp Maatarka";215557;(indeterminate);Monitored;Post-Release
+x7341;Maatarka;217342;(indeterminate);Monitored;Post-Release
+x7819;"Ain Beni Mathar";217819;male;Monitored;Post-Release
+x7049;"Al Baten";217049;male;Monitored;Tracking
+x4092;"Sidi Amer";214092;male;Monitored;Post-Release
+x4092;"Sidi Amer";214092;male;Monitored;Post-Release
+x4092;"Sidi Amer";214092;male;Monitored;Post-Release
+x4092;"Sidi Amer";214092;male;Monitored;Post-Release
+x9943;Laghwassil;219943;female;Monitored;Tracking
+x9943;Laghwassil;219943;female;Monitored;Tracking
+x5253;"Sidi Amer";215253;male;Monitored;Post-Release
+x5253;"Sidi Amer";215253;male;Monitored;Post-Release
+x4947;"Ecwp Maatarka";214947;(indeterminate);Lost;Post-Release
+x4947;"Ecwp Maatarka";214947;(indeterminate);Lost;Post-Release
+x4947;"Ecwp Maatarka";214947;(indeterminate);Lost;Post-Release
+x4947;"Ecwp Maatarka";214947;(indeterminate);Lost;Post-Release
+x4947;"Ecwp Maatarka";214947;(indeterminate);Lost;Post-Release
+x4947;"Ecwp Maatarka";214947;(indeterminate);Lost;Post-Release
+x4947;"Ecwp Maatarka";214947;(indeterminate);Lost;Post-Release
+x5999;Ouizghet;215998;female;Monitored;Tracking
+x7831;"Ecwp Missour";217830;(indeterminate);Monitored;Post-Release
+x8901;"Ain Beni Mathar";218902;female;Monitored;Post-Release
+x8901;"Ain Beni Mathar";218902;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9059;"Sidi Amer";219059;female;Monitored;Post-Release
+x9823;Naji;219823;female;Monitored;Post-Release
+x9823;Naji;219823;female;Monitored;Post-Release
+x9823;Naji;219823;female;Monitored;Post-Release
+x6100;"Sidi Amer";216099;female;Monitored;Post-Release
+x6100;"Sidi Amer";216099;female;Monitored;Post-Release
+x6100;"Sidi Amer";216099;female;Monitored;Post-Release
+x6100;"Sidi Amer";216099;female;Monitored;Post-Release
+x6100;"Sidi Amer";216099;female;Monitored;Post-Release
+x7520;"Sidi Amer";217520;female;Monitored;Post-Release
+x7520;"Sidi Amer";217520;female;Monitored;Post-Release
+x7520;"Sidi Amer";217520;female;Monitored;Post-Release
+x7520;"Sidi Amer";217520;female;Monitored;Post-Release
+x6039;Tayeb;216039;male;Monitored;Tracking
+x6039;Tayeb;216039;male;Monitored;Tracking
+x7453;Charef;217453;(indeterminate);Monitored;Post-Release
+x7453;Charef;217453;(indeterminate);Monitored;Post-Release
+x7453;Charef;217453;(indeterminate);Monitored;Post-Release
+x7453;Charef;217453;(indeterminate);Monitored;Post-Release
+x7453;Charef;217453;(indeterminate);Monitored;Post-Release
+x7189;Ghachwa;217189;female;Monitored;Tracking
+x7189;Ghachwa;217189;female;Monitored;Tracking
+x7189;Ghachwa;217189;female;Monitored;Tracking
+x7601;"Foum Lahcen";217601;female;Monitored;Tracking
+x5156;"Ecwp Maatarka";215156;(indeterminate);Monitored;Tracking
+x5156;"Ecwp Maatarka";215156;(indeterminate);Monitored;Tracking
+x5156;"Ecwp Maatarka";215156;(indeterminate);Monitored;Tracking
+x5156;"Ecwp Maatarka";215156;(indeterminate);Monitored;Tracking
+x5156;"Ecwp Maatarka";215156;(indeterminate);Monitored;Tracking
+x5156;"Ecwp Maatarka";215156;(indeterminate);Monitored;Tracking
+x4103;"Foum Lahcen";214103;female;Monitored;Tracking
+x4103;"Foum Lahcen";214103;female;Monitored;Tracking
+x7418;"Foum Lahcen";217418;female;Monitored;Tracking
+x7418;"Foum Lahcen";217418;female;Monitored;Tracking
+x8823;Tighirte;218823;female;Monitored;Tracking
+x8823;Tighirte;218823;female;Monitored;Tracking
+x8823;Tighirte;218823;female;Monitored;Tracking
+x9171;Tighirte;219171;male;Monitored;Tracking
+x9171;Tighirte;219171;male;Monitored;Tracking
+x9171;Tighirte;219171;male;Monitored;Tracking
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x5761;Enjil;215761;male;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x4135;"Ecwp Enjil";214135;female;Monitored;Post-Release
+x5121;Zayda;215121;male;Monitored;Post-Release
+x5121;Zayda;215121;male;Monitored;Post-Release
+x5121;Zayda;215121;male;Monitored;Post-Release
+x5121;Zayda;215121;male;Monitored;Post-Release
+x4927;"Ecwp Maatarka";214927;(indeterminate);Monitored;Tracking
+x4927;"Ecwp Maatarka";214927;(indeterminate);Monitored;Tracking
+x4927;"Ecwp Maatarka";214927;(indeterminate);Monitored;Tracking
+x4927;"Ecwp Maatarka";214927;(indeterminate);Monitored;Tracking
+x4927;"Ecwp Maatarka";214927;(indeterminate);Monitored;Tracking
+x4916;"Ecwp Maatarka";214916;(indeterminate);Lost;Tracking
+x4916;"Ecwp Maatarka";214916;(indeterminate);Lost;Tracking
+x4916;"Ecwp Maatarka";214916;(indeterminate);Lost;Tracking
+x4916;"Ecwp Maatarka";214916;(indeterminate);Lost;Tracking
+x4916;"Ecwp Maatarka";214916;(indeterminate);Lost;Tracking
+x7241;"Ecwp Maatarka";217241;(indeterminate);Monitored;Tracking
+x7241;"Ecwp Maatarka";217241;(indeterminate);Monitored;Tracking
+x7241;"Ecwp Maatarka";217241;(indeterminate);Monitored;Tracking
+x7241;"Ecwp Maatarka";217241;(indeterminate);Monitored;Tracking
+x7241;"Ecwp Maatarka";217241;(indeterminate);Monitored;Tracking
+x7241;"Ecwp Maatarka";217241;(indeterminate);Monitored;Tracking
+x5940;Ouizghet;215940;male;Monitored;Tracking
+x8221;Enjil;218221;female;Monitored;Post-Release
+x8221;Enjil;218221;female;Monitored;Post-Release
+x9401;"Sidi Amer";219401;male;Monitored;Tracking
+x9401;"Sidi Amer";219401;male;Monitored;Tracking
+x9401;"Sidi Amer";219401;male;Monitored;Tracking
+x4742;khokhate;214740;female;Lost;Post-Release
+x9653;Enjil;219653;male;Monitored;Post-Release
+x9472;Zayda;219472;female;Monitored;Post-Release
+x5591;"Ecwp Enjil";215592;female;Monitored;Tracking
+x8771;Agdal;218771;female;Monitored;Tracking
+x8771;Agdal;218771;female;Monitored;Tracking
+x9991;Tidarine;219991;male;Monitored;Tracking
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5641;Ganga;215641;female;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5982;Ganga;215981;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x5878;Ganga;215878;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x4333;Ganga;214333;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x5975;Ganga;215975;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x4871;Ganga;214871;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x5932;Ganga;215932;male;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x4827;Ganga;214827;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x6081;Ganga;216081;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5072;Ganga;215072;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x5774;Ganga;215774;female;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x4770;Ganga;214770;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6143;Ganga;216143;male;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x6133;Ganga;216133;female;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x4960;Ganga;214960;male;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x5511;Ganga;215551;female;Monitored;Post-Release
+x9122;Zayda;219122;male;Monitored;Post-Release
+x9122;Zayda;219122;male;Monitored;Post-Release
+x9122;Zayda;219122;male;Monitored;Post-Release
+x6822;"Al Baten";216822;female;Monitored;Post-Release
+x6411;"Al Baten";216411;male;Monitored;Post-Release
+x7781;"Al Baten";217781;female;Monitored;Post-Release
+x7781;"Al Baten";217781;female;Monitored;Post-Release
+x7841;"Al Baten";217841;male;Monitored;Post-Release
+x6971;"Al Baten";216971;male;Monitored;Post-Release
+x9651;Enjil;219651;female;Monitored;Post-Release
+x9651;Enjil;219651;female;Monitored;Post-Release
+x9651;Enjil;219651;female;Monitored;Post-Release
+x9651;Enjil;219651;female;Monitored;Post-Release
+x9651;Enjil;219651;female;Monitored;Post-Release
+x9651;Enjil;219651;female;Monitored;Post-Release
+x4082;Enjil;214081;male;Monitored;Post-Release
+x4082;Enjil;214081;male;Monitored;Post-Release
+x4082;Enjil;214081;male;Monitored;Post-Release
+x4082;Enjil;214081;male;Monitored;Post-Release
+x4082;Enjil;214081;male;Monitored;Post-Release
+x4082;Enjil;214081;male;Monitored;Post-Release
+x5531;Enjil;215530;male;Monitored;Post-Release
+x5951;Zayda;215950;female;Monitored;Post-Release
+x5951;Zayda;215950;female;Monitored;Post-Release
+x8421;Zayda;218420;male;Monitored;Post-Release
+x8421;Zayda;218420;male;Monitored;Post-Release
+x8421;Zayda;218420;male;Monitored;Post-Release
+x8421;Zayda;218420;male;Monitored;Post-Release
+x9132;Enjil;219131;female;Monitored;Post-Release
+x9132;Enjil;219131;female;Monitored;Post-Release
+x9132;Enjil;219131;female;Monitored;Post-Release
+x9132;Enjil;219131;female;Monitored;Post-Release
+x9132;Enjil;219131;female;Monitored;Post-Release
+x9132;Enjil;219131;female;Monitored;Post-Release
+x9132;Enjil;219131;female;Monitored;Post-Release
+x9252;Enjil;219251;male;Monitored;Post-Release
+x9412;Enjil;219411;male;Monitored;Post-Release
+x9768;Zayda;219767;male;Monitored;Post-Release
+x9768;Zayda;219767;male;Monitored;Post-Release
+x9768;Zayda;219767;male;Monitored;Post-Release
+x8251;Enjil;218251;female;Monitored;Post-Release
+x8594;Zayda;218594;male;Monitored;Post-Release
+x8594;Zayda;218594;male;Monitored;Post-Release
+x8594;Zayda;218594;male;Monitored;Post-Release
+x9030;Zayda;219030;female;Monitored;Post-Release
+x9030;Zayda;219030;female;Monitored;Post-Release
+x9030;Zayda;219030;female;Monitored;Post-Release
+x9582;"Ecwp Enjil";219582;female;Monitored;Post-Release
+x9582;"Ecwp Enjil";219582;female;Monitored;Post-Release
+x9181;"Ecwp Enjil";219181;female;Monitored;Post-Release
+x9181;"Ecwp Enjil";219181;female;Monitored;Post-Release
+x9491;Enjil;219491;male;Monitored;Post-Release
+x5700;Zayda;215700;female;Monitored;Post-Release
+x5700;Zayda;215700;female;Monitored;Post-Release
+x9913;Zayda;219913;female;Monitored;Post-Release
+x9913;Zayda;219913;female;Monitored;Post-Release
+x5993;"Al Baten";215993;female;Monitored;Post-Release
+x5993;"Al Baten";215993;female;Monitored;Post-Release
+x5993;"Al Baten";215993;female;Monitored;Post-Release
+x5993;"Al Baten";215993;female;Monitored;Post-Release
+x5993;"Al Baten";215993;female;Monitored;Post-Release
+x6613;"Al Baten";216613;female;Monitored;Post-Release
+x6613;"Al Baten";216613;female;Monitored;Post-Release
+x7850;"Al Baten";217850;male;Monitored;Post-Release
+x7850;"Al Baten";217850;male;Monitored;Post-Release
+x6582;"Al Baten";216582;male;Monitored;Post-Release
+x6582;"Al Baten";216582;male;Monitored;Post-Release
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5310;"Ecwp Maatarka";215310;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x5606;"Ecwp Maatarka";215606;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x4795;"Ecwp Maatarka";214795;(indeterminate);Monitored;Tracking
+x8501;Sbiâ;218501;female;Monitored;Tracking
+x8501;Sbiâ;218501;female;Monitored;Tracking
+x8501;Sbiâ;218501;female;Monitored;Tracking
+x7450;Harouche;217450;female;Monitored;Tracking
+x7450;Harouche;217450;female;Monitored;Tracking
+x7450;Harouche;217450;female;Monitored;Tracking
+x7450;Harouche;217450;female;Monitored;Tracking
+x7450;Harouche;217450;female;Monitored;Tracking
+x7450;Harouche;217450;female;Monitored;Tracking
+x9589;Agdal;219588;female;Monitored;Tracking
+x9589;Agdal;219588;female;Monitored;Tracking
+x9589;Agdal;219588;female;Monitored;Tracking
+x9589;Agdal;219588;female;Monitored;Tracking

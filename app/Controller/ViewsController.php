@@ -146,6 +146,7 @@
 			$filters=array();
 			$format="json";
 			$conditionstring2="";
+			$bbox="";			
 			
 			//creation of the gpx's url
 			if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
@@ -615,7 +616,7 @@
 						
 						$fieldmapped = array_map($func, $fields);
 						$fieldsstring=implode(" , ", $fieldmapped);
-						$result=$this->MapSelectionManager->query("SELECT $top * FROM ( 
+						$result=$this->MapSelectionManager->query("SELECT distinct $top * FROM ( 
 						SELECT ROW_NUMBER() OVER ($orderstring) AS Id, $fieldsstring 
 						FROM [$table_name] AS [MapSelectionManager] $latlonnull $conditionstring2 ) AS _cake_paging_ 
 						$agrwhere $offs $rowstring 

@@ -19,21 +19,21 @@ class MapSelectionManager extends CartoModel {
 		$nbstation=count($stations);
 		$l=count($keyarr);
 		//print_r($keyarr);
-		$pdf = new  PDF_MC_Table('P','mm','A4'/*array($l*2,$l)*/);
+		$pdf = new  PDF_MC_Table('L','mm','A4'/*array($l*2,$l)*/);
 		/*$pdf->SetAuthor('Hyperion - Ben Hermans');
 		$pdf->SetCreator('CygnusEd 4.21 & Fpdf');
 		$pdf->SetTitle('Amiwest AmigaOS 4 Presentation');
 		$pdf->SetSubject('Remix by bIgdAn');*/
+		$cdate=date('l jS \of F Y h:i:s A');
+		$pdf->SetTitle("PDF export of $table_name,from $cdate");
 		$pdf->AddPage();
-		
 		//pdf title
 		$fontsize=14;		
 		//$table_name="'Table name'";
-		$pdf->SetFont('Arial','B',$fontsize);
-		$cdate=date('l jS \of F Y h:i:s A');
-		$pdf->Cell(0,10,"PDF export of $table_name",0,1,'C');
-		$pdf->Cell(0,10,"from $cdate",0,1,'C');
-		$pdf->Cell(0,10,"",0,1);
+		$pdf->SetFont('Arial','B',$fontsize);		
+		//$pdf->Cell(0,10,"PDF export of $table_name",0,1,'C');
+		//$pdf->Cell(0,10,"from $cdate",0,1,'C');
+		//$pdf->Cell(0,10,"",0,1);
 		$fontsize=11;
 		//$filters="CXD<XDEttttjhgkjhgyfuzeifgysodfmlkhttttttttgfthykiuyoliliuoloyulyopmljiuiyjytttttttttttttttttttttte";
 		$pdf->SetWidths(array(0));
@@ -50,8 +50,8 @@ class MapSelectionManager extends CartoModel {
 		$pdf->SetFont('Arial','',$fontsize);
 		$pdf->Cell(20,10,"$nbstation",0,0,'');
 		$pdf->Cell(0,10,"",0,1);
-		$cellwidth=30;	
-		$limitnbcell=6;		
+		$cellwidth=25;	
+		$limitnbcell=7;		
 		$widtharr=array();
 		$cellallign="C";
 		$allignarr=array();
@@ -59,8 +59,8 @@ class MapSelectionManager extends CartoModel {
 		$pdf->SetFont('Arial','B',$fontsize);
 		$fontsize=13;
 		$limitfield="";
-		if($l>7)
-			$limitfield="(fields limited to 6 for pdf export)";
+		if($l>$limitnbcell+1)
+			$limitfield="(fields limited to $limitnbcell for pdf export)";
 		$table_title_width=$l<=6?$cellwidth*($l-1):0;
 		$pdf->Cell($table_title_width,10,"Export Table $limitfield: ",0,1,'C');
 		
@@ -76,14 +76,44 @@ class MapSelectionManager extends CartoModel {
 		
 		// pdf column names
 		$fontsize=11;
+		$inputfields=array("","Date de saisie","Vu","Entendu","Perdu","Mort","Repro","No Check");
+		$inputvalblank=array("","","","","","","","");
+		$fun=function($item){
+			 return preg_replace(array("/id(.)+@/","/@Station/"), '', $item);
+			$itemsplit=explode("@",$item);
+			if(count($itemsplit)>1){				
+				$itemsplitsplit=preg_split("/id(.)+@/", $itemsplit[0]);
+				if(count($itemsplitsplit)>1)
+					return $itemsplit[1];
+			}
+				
+		};
+		$keyarr=array_map($fun,$keyarr);
+		$exportfields=array_slice($keyarr,1,$limitnbcell);
+		$fields = array_merge($exportfields,$inputfields);
 		$pdf->SetFont('Arial','B',$fontsize);
-		foreach($keyarr as $name) {
-			$widtharr=array_merge($widtharr, array($cellwidth));
+		foreach($fields as $name) {
+			if($name=='LAT' || $name=='LON' || $name=='Mort' || $name=='Repro')
+				$widtharr=array_merge($widtharr, array(17));
+			else if($name=='Vu')
+				$widtharr=array_merge($widtharr, array(10));
+			else if($name=='Perdu' || $name=='No Check')
+				$widtharr=array_merge($widtharr, array(15));
+			else if($name=='Entendu')
+				$widtharr=array_merge($widtharr, array(20));
+			else if($name=='Date de saisie')
+				$widtharr=array_merge($widtharr, array(30));
+			else if($name=='')
+				$widtharr=array_merge($widtharr, array(2));		
+			else
+				$widtharr=array_merge($widtharr, array($cellwidth));
 			$allignarr=array_merge($allignarr, array($cellallign));	
 		}
 		$pdf->SetWidths($widtharr);
 		$pdf->SetAligns($allignarr);
-		$pdf->Row(array_slice($keyarr,1,$limitnbcell));
+		
+		
+		$pdf->Row($fields);
 		
 		//csv open
 		if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
@@ -103,7 +133,9 @@ class MapSelectionManager extends CartoModel {
 		foreach($stations as $rmodel){
 			$j=0;
 			//pdf part
-			$pdf->Row(array_slice($rmodel[0],1,$limitnbcell));			
+			$exportval=array_slice($rmodel[0],1,$limitnbcell);
+			$fields = array_merge($exportval,$inputvalblank);
+			$pdf->Row($fields);			
 			
 			//csv part
 			fputcsv($fpcsv,array_slice($rmodel[0],1),';');			
@@ -113,33 +145,33 @@ class MapSelectionManager extends CartoModel {
 			&& (!isset($rmodel[0]['Date']) || !isset($rmodel[0]['DATE'])) 
 			&& (!isset($rmodel[0]['Station']) || !isset($rmodel[0]['Site_name']))){
 				$error=true;
-				break;
 			}
+			else{
+				$lat=$rmodel[0]['LAT'];
+				$lon=$rmodel[0]['LON'];
+				if(isset($rmodel[0]['ELE']))
+					$ele=$rmodel[0]['ELE'];
+				else if(isset($rmodel[0]['ELE']))
+					$ele="";
+				if(isset($rmodel[0]['Date']))
+					$date=$rmodel[0]['Date'];
+				else if(isset($rmodel[0]['DATE']))
+					$date=$rmodel[0]['DATE'];
+				$date=str_replace(" ","T",$date)."Z";		
+				if(isset($rmodel[0]['Station']))
+					$name=$rmodel[0]['Station'];
+				else if(isset($rmodel[0]['Site_name']))	
+					$name=$rmodel[0]['Site_name'];
+				$sym="";
 				
-			$lat=$rmodel[0]['LAT'];
-			$lon=$rmodel[0]['LON'];
-			if(isset($rmodel[0]['ELE']))
-				$ele=$rmodel[0]['ELE'];
-			else if(isset($rmodel[0]['ELE']))
-				$ele="";
-			if(isset($rmodel[0]['Date']))
-				$date=$rmodel[0]['Date'];
-			else if(isset($rmodel[0]['DATE']))
-				$date=$rmodel[0]['DATE'];
-			$date=str_replace(" ","T",$date)."Z";		
-			if(isset($rmodel[0]['Station']))
-				$name=$rmodel[0]['Station'];
-			else if(isset($rmodel[0]['Site_name']))	
-				$name=$rmodel[0]['Site_name'];
-			$sym="";
-			
-			$gpx.="\n<wpt lat='$lat' lon='$lon'>\n";
-			$gpx.="<ele>$ele</ele>\n";
-			$gpx.="<time>$date</time>\n";
-			$gpx.="<desc></desc>\n";
-			$gpx.="<name>$name</name>\n";
-			$gpx.="<sym>Flag, Blue</sym>\n";			
-			$gpx.="</wpt>\n";
+				$gpx.="\n<wpt lat='$lat' lon='$lon'>\n";
+				$gpx.="<ele>$ele</ele>\n";
+				$gpx.="<time>$date</time>\n";
+				$gpx.="<desc></desc>\n";
+				$gpx.="<name>$name</name>\n";
+				$gpx.="<sym>Flag, Blue</sym>\n";			
+				$gpx.="</wpt>\n";
+			}	
 			$i++;
 		}
 		

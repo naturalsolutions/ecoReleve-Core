@@ -371,14 +371,33 @@ function AddPage($orientation='', $size='')
 	$this->ColorFlag = $cf;
 }
 
+//En-tete
 function Header()
 {
-	// To be implemented in your own inherited class
+    //Logo
+    //$this->Image('logo_pb.png',10,8,33);
+    //Police Arial gras 15
+    $this->SetFont('Arial','B',15);
+    //D�calage � droite
+    //$this->Cell(80);
+    //Titre
+	$titlesplited=explode(",",$this->title);
+	foreach($titlesplited as $ti){	
+		$this->Cell(0,10,$ti,0,1,'C');
+    }
+	//Saut de ligne
+    $this->Ln(20);
 }
 
+//Pied de page
 function Footer()
 {
-	// To be implemented in your own inherited class
+    //Positionnement � 1,5 cm du bas
+    $this->SetY(-15);
+    //Police Arial italique 8
+    $this->SetFont('Arial','I',8);
+    //Num�ro de page
+    $this->Cell(0,10,'Page '.$this->PageNo(),0,0,'C');
 }
 
 function PageNo()
