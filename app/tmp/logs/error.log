@@ -11322,3 +11322,91 @@ Stack Trace:
 #3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-03-03 09:06:59 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near 'name'.
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 100...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 100...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 100...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 100...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(347): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-03 09:07:19 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near the keyword 'as'.
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 100...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 100...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 100...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 100...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(347): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-03 09:08:31 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near '('.
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 100...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 100...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 100...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 100...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(347): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-03 09:08:54 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near the keyword 'as'.
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 100...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 100...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 100...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 100...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(347): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-03 10:01:22 Error: Fatal Error (1): Maximum execution time of 300 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\String.php, line 243]
+2014-03-03 10:01:22 Error: [FatalErrorException] Maximum execution time of 300 seconds exceeded
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=&format=geojson&cluster=yes&limit=0&zoom=15
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 243, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 243, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 10:05:06 Error: Fatal Error (1): Maximum execution time of 300 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 826]
+2014-03-03 10:05:06 Error: [FatalErrorException] Maximum execution time of 300 seconds exceeded
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=&format=geojson&cluster=yes&limit=0&zoom=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

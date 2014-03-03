@@ -11,13 +11,16 @@
 	else if(isset($table[0][0]['TStationsJoin']) || isset($table[0]['TStationsJoin']['TSta_PK_ID'])){
 		$ModelName="TStationsJoin";	
 	} 
+	else if(isset($table[0][0][0]) || isset($table[0][0]['TSta_PK_ID']) || isset($table[0][0]['ID'])){
+		$ModelName=0;
+	}	
 	for($i=0;$i<count($table);$i++):?>
 		<?php
 			$count=1;
 			$id="";
 			$sta_keys=array_keys($table[$i]);
 			$date="";
-			if(!is_string($sta_keys[0])){
+			if(isset($table[$i][0][$ModelName]['LAT'])){
 				$lat=$table[$i][0][$ModelName]['LAT'];
 				$lon=$table[$i][0][$ModelName]['LON'];
 				$count=count($table[$i]);	
@@ -25,7 +28,10 @@
 			else{
 				$lat=$table[$i][$ModelName]['LAT'];
 				$lon=$table[$i][$ModelName]['LON'];
-				$id=$table[$i][$ModelName]['TSta_PK_ID'];
+				if(isset($table[$i][$ModelName]['TSta_PK_ID']))
+					$id=$table[$i][$ModelName]['TSta_PK_ID'];
+				else
+					$id=$table[$i][$ModelName]['ID'];
 				$date=$table[$i][$ModelName]['DATE'];
 			}	
 		?>

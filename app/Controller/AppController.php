@@ -158,6 +158,7 @@ class AppController extends Controller {
 
 			if(isset($this->request->params['fields']) && $this->request->params['fields']!=""){
 				$fields=split(",",$this->request->params['fields']);
+				//field case
 				$value_label_array=array();
 				foreach($fields as $f){
 					$f_split=explode(" as ",$f);					
@@ -414,7 +415,6 @@ class AppController extends Controller {
 				$sort_dir="asc";
 				//column sort
 				if(isset($this->params['url']['sortColumn']) &&  $this->params['url']['sortColumn']!=""){
-				
 					if(isset($this->params['url']['sortOrder']) && $this->params['url']['sortOrder']!="")
 						$sort_dir= $this->params['url']['sortOrder'];
 					if(isset($value_label_array[$this->params['url']['sortColumn']]))

@@ -119,9 +119,19 @@
 				$model_proto = new AppModel('TStation',$table_name);
 				$this->set("Model",$model_proto);
 				//array that contain the column return
-				$column_array = array($Stationjoinstringnamedot."TSta_PK_ID",$Stationjoinstringnamedot."FieldActivity_Name"
-				,$Stationjoinstringnamedot."Name",$Stationjoinstringnamedot."DATE",$Stationjoinstringnamedot."Region",$Stationjoinstringnamedot."Place"
-				,$Stationjoinstringnamedot."LAT",$Stationjoinstringnamedot."LON");
+				$column_array = array($Stationjoinstringnamedot."TSta_PK_ID as ID",$Stationjoinstringnamedot."FieldActivity_Name as FieldActivityName"
+				,$Stationjoinstringnamedot."Name as Name",$Stationjoinstringnamedot."DATE as DATE",$Stationjoinstringnamedot."Region as Region",$Stationjoinstringnamedot."Place as Place"
+				,$Stationjoinstringnamedot."LAT as LAT",$Stationjoinstringnamedot."LON as LON");
+				
+				//label case
+				$value_label_array=array();
+				foreach($column_array as $f){
+					$f_split=explode(" as ",$f);					
+					if(count($f_split)>1){
+						$value_label_array=array_merge($value_label_array,array(trim($f_split[1])=>trim($f_split[0])));
+					}
+				}
+				
 				$condition_array = array('LAT IS NOT NULL','LON IS NOT NULL');
 				$limit=limit;
 				$offset=offset;
@@ -159,9 +169,11 @@
 				if(isset($this->params['url']['filters']) && count($this->params['url']['filters'])>0){
 					$filters=$this->params['url']['filters'];
 					//$condition_array[];
-					foreach($filters as $f){
+					foreach($filters as $f){						
 						if($f){
 							list($col,$val)=split(":",$f,2);
+							if(isset($value_label_array[trim($col)]))
+								$col=$value_label_array[$col];
 							if($col=='DATE'){
 								//equal date search with DATE:[DATE]
 								if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$val)){
@@ -276,20 +288,35 @@
 					$sEcho=$this->params['url']['sEcho'];	
 				}		
 				
-				$sort_column=$column_array[0];
+				
+				$firstcsplit=explode(" as ",$column_array[0]);
+				if(isset($firstcsplit[1]) && isset($value_label_array[trim($firstcsplit[1])]))
+					$sort_column=$value_label_array[trim($firstcsplit[1])];
+				else 
+					$sort_column=$column_array[0];
+					
 				$sort_dir="asc";
+				
 				//column sort
 				if(isset($this->params['url']['iSortCol_0']) &&  $this->params['url']['sSortDir_0']){
 					$index_col=intval($this->params['url']['iSortCol_0']);
 					$sort_dir= $this->params['url']['sSortDir_0'];
-					$sort_column=$column_array[$index_col];
+					
+					if(isset($value_label_array[$this->params['url']['sortColumn']]))
+						$sort_column=$value_label_array[$column_array[$index_col]];
+					else
+						$sort_column=$column_array[$index_col];
 				}
 				
 				if(isset($this->params['url']['sortColumn']) &&  $this->params['url']['sortColumn']!=""){
 				
 					if(isset($this->params['url']['sortOrder']) && $this->params['url']['sortOrder']!="")
 						$sort_dir= $this->params['url']['sortOrder'];
-					$sort_column=$this->params['url']['sortColumn'];
+					
+					if(isset($value_label_array[$this->params['url']['sortColumn']]))
+						$sort_column=$value_label_array[$this->params['url']['sortColumn']];
+					else	
+						$sort_column=$this->params['url']['sortColumn'];
 				}
 				
 				//take taxonsearch parameter for a taxon filter
@@ -334,6 +361,7 @@
 															,'order'=> array("$sort_column $sort_dir")
 															,'conditions'=>$condition_array)+$Stationjoin
 													);
+					
 					if($station){
 						$totaldisplay = $model_proto->find("count",array('recursive' => 0
 															,'fields'=>$column_array
@@ -381,13 +409,13 @@
 			}
 			else
 				$this->viewPath .= '/json';	
-				
 			//$this->filedebug($totaldisplay);	
 			$this->set("find",$find);			
 			$this->set("sEcho",$sEcho);			
 			$this->set("ModelName",$ModelName);
 			$this->set("debug",$debug); 
 			//print_r($condition_array);
+			// $this->RequestHandler->respondAs('html');
 			$this->RequestHandler->respondAs('json');
 			$this->layoutPath = 'json';	
 			$this->layout = 'json';		

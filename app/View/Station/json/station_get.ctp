@@ -1,6 +1,14 @@
 <?php if($find == 1):?>
+<?php 
+if(isset($result[0]['Value']))
+	$ModelName='TStationsJoin';
+else 
+	$ModelName=0;			
+?>
 {"count":"<?php echo $totaldisplay?>","values":[<?php $i=0; foreach ($table as $t): ?>
-{<?php $j=0;foreach($t[$ModelName] as $key=>$val): ?><?php echo '"'.$key.'":"'.$val.'"';?><?php if($j<sizeof($t[$ModelName])-1)echo ",";?>
+{<?php 
+$j=0;foreach($t[$ModelName] as $key=>$val): ?><?php echo '"'.$key.'":"'.$val.'"';?><?php if($j<sizeof($t[$ModelName])-1)echo ",";
+?>
 <?php $j++;?>
 <?php endforeach?>}<?php if($i<sizeof($table)-1)echo ",";?><?php $i++;?>	
 <?php endforeach?>
