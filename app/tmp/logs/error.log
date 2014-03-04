@@ -11594,3 +11594,73 @@ Stack Trace:
 #3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-03-03 16:32:04 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 65]
+2014-03-03 16:32:04 Error: [FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /ecoReleve-core/TViewIndividual/3
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 65)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 65, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 65, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 16:36:13 Error: Fatal Error (4): syntax error, unexpected ':' in [C:\wamp\www\ecoReleve-core\app\View\TViewIndividual\geojson\detail.ctp, line 3]
+2014-03-03 16:36:14 Error: [FatalErrorException] syntax error, unexpected ':'
+Request URL: /ecoReleve-core/TViewIndividual/3?format=geojson
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 3, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 3, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 16:37:11 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 823]
+2014-03-03 16:37:11 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/3?format=geojson
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 823)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 823, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 823, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 16:39:56 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 816]
+2014-03-03 16:39:56 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/3?format=geojson
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 816)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 816, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 816, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 16:40:38 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 484]
+2014-03-03 16:40:38 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/3?format=geojson
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 484)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 484, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 484, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 16:42:39 Error: Fatal Error (4): syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 68]
+2014-03-03 16:42:39 Error: [FatalErrorException] syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /ecoReleve-core/TViewIndividual/3?format=geojson
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 68, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 68, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-03 16:44:26 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 1657480 bytes) in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\String.php, line 243]
+2014-03-03 16:44:27 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 1657480 bytes)
+Request URL: /ecoReleve-core/TViewIndividual/3?format=geojson
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\eco...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\eco...', 243, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\eco...', 243, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -52,39 +52,55 @@
 				'id56@TCarac_Mark_code_2 as Marking2_Code'
 				
 				);
-				$iniresult=$this->TViewIndividual->find("all",array(
-					'fields'=> $fields,
-					'conditions'=> array('Individual_Obj_PK'=>$id)
-				));				
-				
-				$indfield=array('ID','Age','Sex','Species','Origin','Individual_status'
-				,'Monitoring_status','Survey_type','Birth_date','Death_date','Comments');
-				$ringfield=array('Breeding_Color','Breeding_code','Breeding_Position','Release_Color','Release_Code',
-				'Release_Position','Chip_Code');				
-				$transmitterfield=array('VHF_Serial_Number','VHF_Frequency','VHF_Model','VHF_Shape'
-				,'Argos_PTT','Argos_model','Argos_manufacturer');
-				$markingfield=array('Marking1_Color','Marking1_Position','Marking1_Code','Marking2_Color','Marking2_Position','Marking2_Code');
-				
-				$result=array('Ind'=>array()
-				,'Ring'=>array('Breeding'=>array(),'Release'=>array(),'Chip'=>array())
-				,'Transmitter'=>array('VHF'=>array(),'Argos'=>array())
-				,'Marking'=>array('Marking1'=>array(),'Marking2'=>array()));
-				// print_r($iniresult);
-				foreach($iniresult[0][0] as $field=>$value){
-					// print_r($field);
-					if(in_array($field,$indfield))
-						$result['Ind']+=array($field=>$value);
-					else if(in_array($field,$ringfield)){
-						list($part,$fieldpart)=split("_",$field,2);
-						$result['Ring'][$part]+=array($fieldpart=>$value);						
-					}	
-					else if(in_array($field,$transmitterfield)){
-						list($part,$fieldpart)=split("_",$field,2);
-						$result['Transmitter'][$part]+=array($fieldpart=>$value);
+				$format="json";
+				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
+					if($this->params['url']['format']=="geojson"){
+						$format="geojson";
 					}
-					else if(in_array($field,$markingfield)){
-						list($part,$fieldpart)=split("_",$field,2);
-						$result['Marking'][$part]+=array($fieldpart=>$value);
+				}
+				
+				if($format=="geojson"){
+					$this->loadModel('TViewIndividual');
+					$this->TViewIndividual->setSource('TProtocol_Summary');
+					$result=$this->TViewIndividual->find("all",array(
+						'conditions'=> array('Fk_Ind'=>$id)
+					));		
+				}
+				else{
+					$iniresult=$this->TViewIndividual->find("all",array(
+						'fields'=> $fields,
+						'conditions'=> array('Individual_Obj_PK'=>$id)
+					));				
+					
+					$indfield=array('ID','Age','Sex','Species','Origin','Individual_status'
+					,'Monitoring_status','Survey_type','Birth_date','Death_date','Comments');
+					$ringfield=array('Breeding_Color','Breeding_code','Breeding_Position','Release_Color','Release_Code',
+					'Release_Position','Chip_Code');				
+					$transmitterfield=array('VHF_Serial_Number','VHF_Frequency','VHF_Model','VHF_Shape'
+					,'Argos_PTT','Argos_model','Argos_manufacturer');
+					$markingfield=array('Marking1_Color','Marking1_Position','Marking1_Code','Marking2_Color','Marking2_Position','Marking2_Code');
+					
+					$result=array('Ind'=>array()
+					,'Ring'=>array('Breeding'=>array(),'Release'=>array(),'Chip'=>array())
+					,'Transmitter'=>array('VHF'=>array(),'Argos'=>array())
+					,'Marking'=>array('Marking1'=>array(),'Marking2'=>array()));
+					// print_r($iniresult);
+					foreach($iniresult[0][0] as $field=>$value){
+						// print_r($field);
+						if(in_array($field,$indfield))
+							$result['Ind']+=array($field=>$value);
+						else if(in_array($field,$ringfield)){
+							list($part,$fieldpart)=split("_",$field,2);
+							$result['Ring'][$part]+=array($fieldpart=>$value);						
+						}	
+						else if(in_array($field,$transmitterfield)){
+							list($part,$fieldpart)=split("_",$field,2);
+							$result['Transmitter'][$part]+=array($fieldpart=>$value);
+						}
+						else if(in_array($field,$markingfield)){
+							list($part,$fieldpart)=split("_",$field,2);
+							$result['Marking'][$part]+=array($fieldpart=>$value);
+						}
 					}
 				}
 				$this->set("result",$result);
@@ -93,10 +109,12 @@
 				
 			}
 			$this->RequestHandler->respondAs('json');
-			$this->viewPath .= "/json";
+			$this->viewPath .= "/$format";
 			$this->layout = 'json';
 			$this->layoutPath = 'json';	
-		}	
+		}
+
+			
 	}
 
 ?>
