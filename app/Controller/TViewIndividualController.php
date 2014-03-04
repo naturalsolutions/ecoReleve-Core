@@ -64,7 +64,7 @@
 					$this->TViewIndividual->setSource('TProtocol_Summary');
 					$result=$this->TViewIndividual->find("all",array(
 						'conditions'=> array('Fk_Ind'=>$id)
-					));		
+					));	
 				}
 				else{
 					$iniresult=$this->TViewIndividual->find("all",array(
@@ -109,6 +109,7 @@
 				
 			}
 			$this->RequestHandler->respondAs('json');
+			// $this->RequestHandler->respondAs('html');
 			$this->viewPath .= "/$format";
 			$this->layout = 'json';
 			$this->layoutPath = 'json';	

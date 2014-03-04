@@ -109,7 +109,7 @@
 	Router::connect('/TViewIndividual/list',array('controller'=>'TViewIndividual','action' => 'column_list','table_name' => 'TViewIndividual'
 	,'column_name' => 'Individual_Obj_PK','fields'=>'Individual_Obj_PK as ID
 	,id60@TCaracThes_Monitoring_Status_Precision as Monitoring_status,
-	id61@TCaracThes_Survey_type as Survey_type
+	id61@TCaracThes_Survey_type_Precision as Survey_type
 	,id5@TCarac_Transmitter_Frequency as VHF_frequency
 	,id19@TCarac_PTT as PTT
 	,id9@TCarac_Release_Ring_Code as Release_ring_code
