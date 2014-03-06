@@ -40,9 +40,10 @@ class TApplicationsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->TApplication->create();
+			print_r($this->request->data);
 			if ($this->TApplication->save($this->request->data)) {
 				$this->Session->setFlash(__('The t application has been saved'));
-				$this->redirect(array('action' => 'index'));
+				//$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The t application could not be saved. Please, try again.'));
 			}

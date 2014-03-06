@@ -28,5 +28,5 @@ class Tthesaurus extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'PK';
+	public $primaryKey = 'ID';
 }
