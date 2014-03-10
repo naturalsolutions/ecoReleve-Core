@@ -12278,3 +12278,1027 @@ Stack Trace:
 #11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2014-03-06 15:03:01 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=&limit=15&skip=0&filters%5B0%5D=DATE%3Aexact%3A2006-03-15
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 15 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 15 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 15 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 15 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(363): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-06 15:03:42 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=&limit=15&skip=0&filters%5B0%5D=DATE%3Aexact%3A2006-03-15
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 15 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 15 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 15 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 15 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(364): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-06 15:04:08 Error: [PDOException] SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]La conversion d'un type de données nvarchar en type de données datetime a créé une valeur hors limites.
+Request URL: /ecoReleve-core/station/get?id_proto=28&place=&region=&idate=&taxonsearch=&limit=15&skip=0&filters%5B0%5D=DATE%3Aexact%3A2006-03-15
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 15 ...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 15 ...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 15 ...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 15 ...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(AppModel), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(AppModel), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\StationController.php(364): Model->find('all', Array)
+#8 [internal function]: StationController->station_get()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(StationController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-06 15:36:04 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 310]
+2014-03-06 15:36:04 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 310)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 310, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 310, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-06 15:36:21 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 484]
+2014-03-06 15:36:21 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 484)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 484, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 484, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-06 15:37:08 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 493]
+2014-03-06 15:37:09 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 493)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 493, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 493, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-06 15:37:25 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php, line 177]
+2014-03-06 15:37:25 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 177)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 177, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 177, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-06 15:38:38 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\String.php, line 238]
+2014-03-06 15:38:38 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 238)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 238, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 238, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-06 15:38:58 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\String.php, line 213]
+2014-03-06 15:38:58 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 213)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 213, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 213, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-06 15:45:35 Error: Fatal Error (4): syntax error, unexpected '(' in [C:\wamp\www\ecoReleve-core\app\Model\TViewIndividual.php, line 12]
+2014-03-06 15:45:35 Error: [FatalErrorException] syntax error, unexpected '('
+Request URL: /ecoReleve-core/TViewIndividual/3/carac
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 12, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 12, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-06 16:13:42 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Impossible d'insérer la valeur NULL dans la colonne 'begin_date', table 'ECWP-eReleveData.dbo.TObj_Carac_value'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(275): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-06 16:18:11 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Impossible d'insérer la valeur NULL dans la colonne 'begin_date', table 'ECWP-eReleveData.dbo.TObj_Carac_value'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(275): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-06 16:27:41 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Impossible d'insérer la valeur NULL dans la colonne 'value', table 'ECWP-eReleveData.dbo.TObj_Carac_value'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(286): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-06 16:51:39 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers le mot clé 'DISTINCT'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [TObjCa...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [TObjCa...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [TObjCa...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [TObjCa...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TObjCaractype), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TObjCaractype), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): Model->find('list', Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 08:29:56 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Impossible d'insérer la valeur NULL dans la colonne 'Individual_Obj_PK', table 'ECWP-eReleveData.dbo.TViewIndividual'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TV...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TV...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TV...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TViewIndividual), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TViewIndividual), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(287): Model->saveAssociated(Array)
+#7 [internal function]: TViewIndividualController->add()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-07 08:30:05 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Impossible d'insérer la valeur NULL dans la colonne 'Individual_Obj_PK', table 'ECWP-eReleveData.dbo.TViewIndividual'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TV...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TV...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TV...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TViewIndividual), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TViewIndividual), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(287): Model->saveAssociated(Array)
+#7 [internal function]: TViewIndividualController->add()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-07 09:05:06 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procédure stockée 'findfg' introuvable.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('findfg')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('findfg', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('findfg', Array, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('findfg', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(800): DboSource->query('findfg', Array, Object(TObjCaractype))
+#5 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): Model->__call('findfg', Array)
+#6 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): TObjCaractype->findfg('list', Array)
+#7 [internal function]: TViewIndividualController->add()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-07 09:06:15 Error: [MissingConnectionException] Database connection "Sqlserver" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Sqlserver',
+  'message' => 'SQLSTATE[28000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Échec de l\'ouverture de session de l\'utilisateur \'AUTORITE NT\\Système\'.',
+  'enabled' => true,
+)
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(262): Sqlserver->connect()
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3243): Model->setSource('TObj_Carac_type')
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(800): Model->getDataSource()
+#6 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): Model->__call('findfg', Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): TObjCaractype->findfg('list', Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 09:06:48 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procédure stockée 'findfg' introuvable.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('findfg')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('findfg', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('findfg', Array, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('findfg', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(800): DboSource->query('findfg', Array, Object(TObjCaractype))
+#5 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): Model->__call('findfg', Array)
+#6 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): TObjCaractype->findfg('list', Array)
+#7 [internal function]: TViewIndividualController->add()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-07 09:12:15 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procédure stockée 'findfg' introuvable.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('findfg')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('findfg', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('findfg', Array, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('findfg', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(800): DboSource->query('findfg', Array, Object(TObjCaractype))
+#5 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): Model->__call('findfg', Array)
+#6 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(177): TObjCaractype->findfg('list', Array)
+#7 [internal function]: TViewIndividualController->add()
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-07 09:17:14 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 243]
+2014-03-07 09:17:14 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')'
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 243)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 243, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 243, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-07 10:51:21 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(303): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:38:03 Error: [PDOException] SQLSTATE[22018]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Échec de la conversion de la valeur nvarchar 'adult' en type de données int.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(306): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:40:34 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Array'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TObject), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TObject), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(187): Model->find('first')
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:41:31 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Array'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TObject), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TObject), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(187): Model->find('first')
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:41:53 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Array'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TObject), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TObject), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(187): Model->find('first')
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:42:54 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Array'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TObject), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TObject), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(187): Model->find('first')
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:44:18 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Array'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TObject), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TObject), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(187): Model->find('first')
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:44:34 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Array'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TObject), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TObject), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(187): Model->find('first')
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:44:59 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Array'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [TObjec...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [TObjec...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [TObjec...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [TObjec...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TObject), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2696): Sqlserver->read(Object(TObject), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(187): Model->find('all')
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 12:58:33 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(309): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:01:27 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(309): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:02:39 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(309): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:08:24 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(311): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:08:45 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(311): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:10:11 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(311): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:11:10 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(311): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:12:22 Error: Fatal Error (4): syntax error, unexpected 'print_r' (T_STRING) in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 190]
+2014-03-07 13:12:22 Error: [FatalErrorException] syntax error, unexpected 'print_r' (T_STRING)
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 190)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 190, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 190, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-07 13:12:52 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(312): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:18:27 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:18:54 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:19:23 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:21:20 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:23:47 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:29:29 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:30:58 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:35:49 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2054): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAll(Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 13:40:37 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 13:43:06 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Impossible d'insérer une ligne de clé en double dans l'objet 'dbo.TObj_Carac_value' avec un index unique 'ind_uniqueReleaseCode'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(313): Model->saveAssociated(Array, Array)
+#8 [internal function]: TViewIndividualController->add()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-07 13:49:36 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 254]
+2014-03-07 13:49:36 Error: [FatalErrorException] Unsupported operand types
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 254)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 254, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\wamp\www\eco...', 254, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-07 13:54:03 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 255]
+2014-03-07 13:54:03 Error: [FatalErrorException] Unsupported operand types
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 255)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 255, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\wamp\www\eco...', 255, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-07 13:55:02 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 256]
+2014-03-07 13:55:02 Error: [FatalErrorException] Unsupported operand types
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 256)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 256, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\wamp\www\eco...', 256, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-07 14:04:50 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 264]
+2014-03-07 14:04:50 Error: [FatalErrorException] Unsupported operand types
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 264)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 264, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\wamp\www\eco...', 264, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-07 14:07:01 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 240]
+2014-03-07 14:07:01 Error: [FatalErrorException] Unsupported operand types
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 240)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\wamp\www\eco...', 240, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\wamp\www\eco...', 240, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-07 14:24:17 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#9 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(319): Model->saveMany(Array, Array)
+#10 [internal function]: TViewIndividualController->add()
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-03-07 14:25:21 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Impossible d'insérer la valeur NULL dans la colonne 'value', table 'ECWP-eReleveData.dbo.TObj_Carac_value'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2293): Model->saveMany(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#9 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(319): Model->saveMany(Array, Array)
+#10 [internal function]: TViewIndividualController->add()
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-03-07 14:29:39 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(319): Model->saveMany(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 14:30:54 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(319): Model->saveMany(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 14:31:49 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]L'instruction INSERT est en conflit avec la contrainte FOREIGN KEY "FK_TObj_Individual_carac_value_ON_TObj_Objects". Le conflit s'est produit dans la base de données "ECWP-eReleveData", table "dbo.TObj_Objects", column 'Object_Pk'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(319): Model->saveMany(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 14:33:00 Error: [PDOException] SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Impossible d'insérer une ligne de clé en double dans l'objet 'dbo.TObj_Carac_value' avec un index unique 'ind_uniqueReleaseCode'.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(319): Model->saveMany(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 14:46:05 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(321): Model->saveMany(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 14:47:42 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(321): Model->saveMany(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 15:44:25 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(321): Model->saveMany(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 16:21:57 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Cette syntaxe n'est autorisée que pour les requêtes paramétrées.
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('INSERT INTO [TO...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('INSERT INTO [TO...', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO [TO...')
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(344): DboSource->create(Object(TObjectCaracValue), Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(1744): Sqlserver->create(Object(TObjectCaracValue), Array, Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2110): Model->saveAssociated(Array, Array)
+#8 C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php(321): Model->saveMany(Array, Array)
+#9 [internal function]: TViewIndividualController->add()
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewIndividualController), Array)
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewIndividualController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-07 16:27:30 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 323]
+2014-03-07 16:27:30 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 323)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 323, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 323, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-07 16:27:50 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\ecoReleve-core\app\Controller\TViewIndividualController.php, line 328]
+2014-03-07 16:27:50 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /ecoReleve-core/TViewIndividual/add
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 328)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 328, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 328, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

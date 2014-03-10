@@ -174,7 +174,8 @@
 							list($col,$val)=split(":",$f,2);
 							if(isset($value_label_array[trim($col)]))
 								$col=$value_label_array[$col];
-							if($col=='DATE'){
+							if(strpos($col,'DATE')!==false){
+								
 								//equal date search with DATE:[DATE]
 								if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$val)){
 									$condition_array[]=array("CONVERT(char(10),[DATE],126)='$val'");
