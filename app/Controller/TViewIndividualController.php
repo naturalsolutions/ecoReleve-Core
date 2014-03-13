@@ -83,7 +83,8 @@
 					$this->TViewIndividual->setSource('TProtocol_Summary');
 					$this->TViewIndividual->primaryKey="Id";
 					$result=$this->TViewIndividual->find("all",array(
-						'conditions'=> array('Fk_Ind'=>$id)
+						'recursive'=>0,
+						'conditions'=> array('Fk_Ind'=>$id,'LAT is not null and LON is not null')
 					));	
 				}
 				else{
@@ -103,6 +104,7 @@
 					,'Argos_PTT','Argos_model','Argos_manufacturer');
 					$markingfield=array('Marking1_Color','Marking1_Position','Marking1_Code','Marking2_Color','Marking2_Position','Marking2_Code');
 					
+					//not history case
 					if($labelcarac==""){
 						$result=array('Ind'=>array()
 						,'Ring'=>array('Breeding'=>array(),'Release'=>array(),'Chip'=>array())
@@ -127,6 +129,7 @@
 							}
 						}
 					}
+					//history case
 					else{	
 						//unset($iniresult[0]['TViewIndividual']);
 						$countindval=count($iniresult[0]['TViewIndividual']);

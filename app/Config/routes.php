@@ -91,6 +91,7 @@
 	Router::connect('/user/list',array('controller'=>'User','action' => 'listv'));  //get list of user
 	Router::connect('/user',array('controller'=>'tusers','action' => 'index'));  
 	Router::connect('/user/login/:login/:password',array('controller'=>'User','action' => 'login'));  //login action	
+	Router::connect('/user/list',array('controller'=>'User','action' => 'fieldworkers')); 
 	
 	Router::connect('/doc/list',array('controller'=>'Docs','action' => 'docs_list'));
 	
@@ -136,6 +137,9 @@
 	,'count2' => 'yes','nogroup'=>'yes'));
 	Router::connect('/TViewTrx_Radio/list/count',array('controller'=>'TViewTrx_Radio','action' => 'column_list','table_name' => 'TViewTrx_Radio'
 	,'column_name' => 'id1@Thes_Status','fields'=>'*','count' => 'yes'));
+	Router::connect('/TViewTrx_Radio/:id/carac',array('controller'=>'TViewTrx_Radio','action' => 'detail','carac'=>'yes'));
+	Router::connect('/TViewTrx_Radio/:id',array('controller'=>'TViewTrx_Radio','action' => 'detail'));
+	
 	
 	Router::connect('/TViewTrx_Sat/list',array('controller'=>'TViewTrx_Sat','action' => 'column_list','table_name' => 'TViewTrx_Sat'
 	,'column_name' => 'id1@Thes_Status','fields'=>'Trx_Sat_Obj_PK as ID
@@ -147,6 +151,9 @@
 	,'count2' => 'yes','nogroup'=>'yes'));
 	Router::connect('/TViewTrx_Sat/list/count',array('controller'=>'TViewTrx_Sat','action' => 'column_list','table_name' => 'TViewTrx_Sat'
 	,'column_name' => 'id1@Thes_Status','fields'=>'*','count' => 'yes'));
+	Router::connect('/TViewTrx_Sat/:id/carac',array('controller'=>'TViewTrx_Sat','action' => 'detail','carac'=>'yes'));
+	Router::connect('/TViewTrx_Sat/:id',array('controller'=>'TViewTrx_Sat','action' => 'detail'));
+	
 	
 	Router::connect('/argos/stat',array('controller'=>'Argos','action' => 'argos_stat'));
 	

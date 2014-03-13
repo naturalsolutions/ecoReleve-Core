@@ -64,11 +64,13 @@
 			//$model->column_exist("V_Qry_VGroups_AllTaxons_EnjilDamStations",$date_name);
 			//$table = $model->find("all",array('order'=> array("TSMan_Layer_Name asc"))+$conditions);				
 			$table = $this->MapSelectionManager->find("all",array(
-												'fields'=>array('TProt_PK_ID','Caption'),	
-												'order'=> array("Caption asc"),
-												'group'=>array('Caption','TProt_PK_ID')
-												)+$conditions+$options
-			);				
+				'fields'=>array('TProt_PK_ID','Caption'),	
+				'order'=> array("Caption asc"),
+				'group'=>array('Caption','TProt_PK_ID'),
+				'conditions'=>array("Actif"=>true)
+				)+$options
+			);		
+			print_r($table);	
 			//$this->set('date_name',$date_name);
 			$this->set('model',$this->MapSelectionManager);
 			$this->set('views', $table);

@@ -8,8 +8,122 @@
 			//'proto_list' => cache_time
 		);
 
-		function index(){
+		function detail(){
+			$id="";
+			$recursive=0;
+			$format="json";
+			$this->loadModel('TViewTrxSat');
+			$this->loadModel('TViewIndividual');
+			$labelcarac="";
+			$carac="";
+			if(isset($this->request->params['id']) && $this->request->params['id']!=""){
+				$id=$this->request->params['id'];					
+			}
+			if(isset($this->request->params['carac']) && $this->request->params['carac']!=""){
+				$carac=$this->request->params['carac'];	
+				$recursive=1;
+				$this->loadModel('TObjCaractype');
+				$labelcarac=$this->TObjCaractype->find("list",array(
+					'fields'=>array('name','label')			
+				));
+				
+				$func=function ($val){
+					return str_replace(" ","_",$val).".*";
+				};								
+				$labelcaracwspace=array_map($func,$labelcarac);	
+				//print_r($labelcarac);
+			}
 			
+			if($id!=""){				
+				$fields=array('Trx_Sat_Obj_pk as ID',		
+				'id19@TCarac_PTT as PTT',
+				'id49@TCarac_PTTAssignmentDate as [PTT assignment date]',
+				'id41@TCaracThes_Model_Precision as Model',
+				'id42@TCaracThes_Company_Precision as  Manufacturer',
+				'id1@Thes_Status_Precision as Status',
+				'id24@TCaracThes_Txt_Harness_Precision as Harness',
+				'id44@TCarac_InitialLivespan as [Initial LifeSpan]',
+				'id25@TCaracThes_Txt_Argos_DutyCycle_Precision as [Duty cycle]',
+				'id6@TCarac_Transmitter_Serial_Number as [Serial Number]',
+				'id43@TCarac_Weight as Weight',
+				'id37@Comments as Comments'
+				);
+				
+				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
+					if($this->params['url']['format']=="geojson"){
+						$format="geojson";
+					}
+				}
+				/*'contain' => array('Comment', 'User' => array('Comment', 'Profile'))*/
+				
+				if($labelcarac!="")
+					$fields=array("Trx_Sat_Obj_PK","id42@TCaracThes_Company_Precision","id41@TCaracThes_Model_Precision",
+					"id37@Comments");
+				$iniresult=$this->TViewTrxSat->find("first",array(
+					'recursive'=>$recursive,
+					'fields'=> $fields,
+					'conditions'=> array('Trx_Sat_Obj_pk'=>$id)
+				));							
+				$result=$iniresult;
+				//print_r($result);
+				//history case
+				if($labelcarac!=""){	
+					//unset($iniresult[0]['TViewTrxSat']);
+					$countindval=count($iniresult['TViewTrxSat']);
+					$i=0;
+					foreach($iniresult['TViewTrxSat'] as $key=>$val){
+						if($key=='Trx_Radio_Obj_PK'){
+							$iniresult['TViewTrxSat']['Id']=$iniresult['TViewTrxSat']['Trx_Sat_Obj_PK'];								
+						}
+						else{
+							foreach($labelcarac as $name=>$label){
+								if(strpos($key,$name)!==false){
+									$iniresult['TViewTrxSat'][$label]=$iniresult['TViewTrxSat'][$key];	
+								}
+							}
+						}
+						unset($iniresult['TViewTrxSat'][$key]);
+						$i++;
+						if($i>$countindval)
+							break;
+					}
+					foreach($iniresult as $type=>$values){
+						if(count($values)==0)
+							unset($iniresult[$type]);
+					}
+					$result=$iniresult;
+				}
+				//check if equipped or not
+				else if(count($result)>0){
+					// print_r($result);
+					$equiped=$this->TViewIndividual->find("first",
+					array("fields" => array("id6@TCarac_Transmitter_Serial_Number","id9@TCarac_Release_Ring_Code"),
+						  "recursive"=>0,
+						  "conditions"=>array("id6@TCarac_Transmitter_Serial_Number"=>$result[0]['Serial Number'])					
+					)
+					);
+					if(count($equiped)>0){
+						$equi="Equipped on Individual";
+						if($equiped['TViewIndividual']['id9@TCarac_Release_Ring_Code']!="")
+							$equi.= " ".$equiped['TViewIndividual']['id9@TCarac_Release_Ring_Code'];
+					}
+					else{
+						$equi="Not equipped";
+					}
+					$result[0]=array_merge(array("Equipped"=>$equi),$result[0]);
+				}		
+				$this->set("result",$result);
+			}
+			else{
+				
+			}
+			$this->RequestHandler->respondAs('json');
+			// $this->RequestHandler->respondAs('html');
+			$this->viewPath .= "/$format";
+			$this->layout = 'json';
+			$this->layoutPath = 'json';	
+			if($carac!="")
+				$this->render("SatCarac");
 		}			
 				
 	}

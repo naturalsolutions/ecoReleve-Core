@@ -13302,3 +13302,521 @@ Stack Trace:
 #3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-03-10 10:06:39 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Status'.
+Request URL: /ecoReleve-core/list/autocomplete?table_name=TViewTrx_Sat&column_name=Status&fields=Status&format=json
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 100...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 100...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 100...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 100...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(Value), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(Value), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\AppController.php(518): Model->find('all', Array)
+#8 [internal function]: AppController->column_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AppController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 15:25:14 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) in [C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php, line 16]
+2014-03-12 15:25:14 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION)
+Request URL: /ecoReleve-core/TViewTrx_Radio/1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 16, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 16, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-12 15:27:00 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewTrxRadio/\detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewTrxRadio/\\detail.ctp',
+)
+Request URL: /ecoReleve-core/TViewTrx_Radio/1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-03-12 15:29:32 Error: [MissingTableException] Table t_view_trx_radios for model TViewTrxRadio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 't_view_trx_radios',
+  'class' => 'TViewTrxRadio',
+  'ds' => 'default',
+)
+Request URL: /ecoReleve-core/TViewTrx_Radio/1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3256): Model->setSource('t_view_trx_radi...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(66): Model->find('all', Array)
+#3 [internal function]: TViewTrxRadioController->detail()
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-12 15:30:13 Error: [MissingTableException] Table t_view_trx_radios for model TViewTrxRadio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 't_view_trx_radios',
+  'class' => 'TViewTrxRadio',
+  'ds' => 'default',
+)
+Request URL: /ecoReleve-core/TViewTrx_Radio/1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3256): Model->setSource('t_view_trx_radi...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(66): Model->find('all', Array)
+#3 [internal function]: TViewTrxRadioController->detail()
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-12 15:30:41 Error: [MissingTableException] Table t_view_trx_radios for model TViewTrxRadio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 't_view_trx_radios',
+  'class' => 'TViewTrxRadio',
+  'ds' => 'default',
+)
+Request URL: /ecoReleve-core/TViewTrx_Radio/1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(3256): Model->setSource('t_view_trx_radi...')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Model->getDataSource()
+#2 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(66): Model->find('all', Array)
+#3 [internal function]: TViewTrxRadioController->detail()
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-12 15:31:58 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers 'number'.
+Request URL: /ecoReleve-core/TViewTrx_Radio/1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  Trx_Rad...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  Trx_Rad...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  Trx_Rad...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  Trx_Rad...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewTrxRadio), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewTrxRadio), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(66): Model->find('all', Array)
+#8 [internal function]: TViewTrxRadioController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 15:32:29 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers 'LifeSpan'.
+Request URL: /ecoReleve-core/TViewTrx_Radio/1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  Trx_Rad...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  Trx_Rad...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  Trx_Rad...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  Trx_Rad...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewTrxRadio), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewTrxRadio), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(66): Model->find('all', Array)
+#8 [internal function]: TViewTrxRadioController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 15:32:40 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Individual_Obj_PK'.
+Request URL: /ecoReleve-core/TViewTrx_Radio/1
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  Trx_Rad...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  Trx_Rad...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  Trx_Rad...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  Trx_Rad...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewTrxRadio), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewTrxRadio), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(66): Model->find('all', Array)
+#8 [internal function]: TViewTrxRadioController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 15:49:28 Error: Fatal Error (64): Cannot use [] for reading in [C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php, line 102]
+2014-03-12 15:49:28 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /ecoReleve-core/TViewTrx_Radio/42013
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\wamp\www\eco...', 102)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\wamp\www\eco...', 102, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\wamp\www\eco...', 102, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-12 15:49:57 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers ''.
+Request URL: /ecoReleve-core/TViewTrx_Radio/42013
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewIndividual), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewIndividual), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(104): Model->find('first', Array)
+#8 [internal function]: TViewTrxRadioController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 15:51:13 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers ''.
+Request URL: /ecoReleve-core/TViewTrx_Radio/42013
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewIndividual), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewIndividual), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(104): Model->find('first', Array)
+#8 [internal function]: TViewTrxRadioController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 15:57:45 Error: Fatal Error (4): syntax error, unexpected 'print_r' (T_STRING) in [C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php, line 115]
+2014-03-12 15:57:45 Error: [FatalErrorException] syntax error, unexpected 'print_r' (T_STRING)
+Request URL: /ecoReleve-core/TViewTrx_Radio/55187
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 115, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 115, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-12 16:14:56 Error: [MissingActionException] Action TViewTrxSatController::67114() could not be found.
+Exception Attributes: array (
+  'controller' => 'TViewTrxSatController',
+  'action' => '67114',
+)
+Request URL: /ecoReleve-core/TViewTrx_Sat/67114
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-12 16:15:45 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Trx_Radio_Obj_PK'.
+Request URL: /ecoReleve-core/TViewTrx_Sat/67114
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 T...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 T...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 T...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 T...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewTrxSat), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewTrxSat), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxSatController.php(66): Model->find('first', Array)
+#8 [internal function]: TViewTrxSatController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxSatController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 16:16:45 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers ''.
+Request URL: /ecoReleve-core/TViewTrx_Sat/67114
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewIndividual), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewIndividual), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxSatController.php(103): Model->find('first', Array)
+#8 [internal function]: TViewTrxSatController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxSatController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 16:17:40 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewTrxSat/json\detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewTrxSat/json\\detail.ctp',
+)
+Request URL: /ecoReleve-core/TViewTrx_Sat/67114
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-03-12 16:23:08 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Syntaxe incorrecte vers ''.
+Request URL: /ecoReleve-core/TViewTrx_Sat/65105
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewIndividual), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewIndividual), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxSatController.php(103): Model->find('first', Array)
+#8 [internal function]: TViewTrxSatController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxSatController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 16:23:56 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxSatController.php, line 130]
+2014-03-12 16:23:57 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /ecoReleve-core/TViewTrx_Sat/65105
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 130)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 130, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 130, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-12 16:29:35 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Trx_Radio_Obj_PK'.
+Request URL: /ecoReleve-core/TViewTrx_Sat/39128/carac
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewTrxSat), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewTrxSat), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxSatController.php(66): Model->find('first', Array)
+#8 [internal function]: TViewTrxSatController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxSatController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 16:30:02 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'Trx_Radio_Obj_PK'.
+Request URL: /ecoReleve-core/TViewTrx_Sat/39128/carac
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewTrxSat), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewTrxSat), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxSatController.php(66): Model->find('first', Array)
+#8 [internal function]: TViewTrxSatController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxSatController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 16:35:14 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\TViewTrxSat/json\sat_carac.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\TViewTrxSat/json\\sat_carac.ctp',
+)
+Request URL: /ecoReleve-core/TViewTrx_Sat/39128/carac
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName('SatCarac')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render('SatCarac', NULL)
+#2 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxSatController.php(125): Controller->render('SatCarac')
+#3 [internal function]: TViewTrxSatController->detail()
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxSatController), Array)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-12 16:37:46 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'id'.
+Request URL: /ecoReleve-core/TViewTrx_Sat/39128
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 T...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 T...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 T...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 T...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewTrxSat), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewTrxSat), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxSatController.php(66): Model->find('first', Array)
+#8 [internal function]: TViewTrxSatController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxSatController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxSatController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-12 16:42:08 Error: [PDOException] SQLSTATE[42S22]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Nom de colonne non valide : 'id30@TCaracThes_Sex_Precision'.
+Request URL: /ecoReleve-core/TViewTrx_Radio/41635/carac
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TOP 1 [...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TOP 1 [...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TOP 1 [...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TOP 1 [...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(TViewTrxRadio), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(TViewTrxRadio), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\TViewTrxRadioController.php(68): Model->find('first', Array)
+#8 [internal function]: TViewTrxRadioController->detail()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(TViewTrxRadioController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TViewTrxRadioController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 09:29:29 Error: Fatal Error (4): syntax error, unexpected '" & [TUse_PreNom] AS Nom"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\ecoReleve-core\app\Controller\UserController.php, line 462]
+2014-03-13 09:29:29 Error: [FatalErrorException] syntax error, unexpected '" & [TUse_PreNom] AS Nom"' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 462)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 462, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 462, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-13 09:30:47 Error: Fatal Error (4): syntax error, unexpected '",[TUse_PreNom]) AS Nom"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\ecoReleve-core\app\Controller\UserController.php, line 462]
+2014-03-13 09:30:47 Error: [FatalErrorException] syntax error, unexpected '",[TUse_PreNom]) AS Nom"' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 462)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 462, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 462, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-13 09:31:00 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [User]....', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [User]....', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [User]....', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [User]....', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(User), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(User), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(463): Model->find('list', Array)
+#8 [internal function]: UserController->fieldworkers()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 09:33:19 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [User]....', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [User]....', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [User]....', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [User]....', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(User), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(User), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(463): Model->find('list', Array)
+#8 [internal function]: UserController->fieldworkers()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 09:33:40 Error: Fatal Error (4): syntax error, unexpected ''+[TUse_PreNom])'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\ecoReleve-core\app\Controller\UserController.php, line 463]
+2014-03-13 09:33:40 Error: [FatalErrorException] syntax error, unexpected ''+[TUse_PreNom])'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 463)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 463, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 463, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-13 09:34:13 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [User]....', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [User]....', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [User]....', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [User]....', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(User), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(User), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(463): Model->find('list', Array)
+#8 [internal function]: UserController->fieldworkers()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 09:35:03 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\User/json\fieldworkers.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\User/json\\fieldworkers.ctp',
+)
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-03-13 09:35:15 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]The multi-part identifier "TUsers.TUse_Pk_ID" could not be bound.
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  TUsers....', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  TUsers....', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  TUsers....', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  TUsers....', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(User), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(User), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(463): Model->find('all', Array)
+#8 [internal function]: UserController->fieldworkers()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 09:37:08 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\User/json\fieldworkers.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\User/json\\fieldworkers.ctp',
+)
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-03-13 09:41:06 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near '('.
+Request URL: /ecoReleve-core/user/fieldworkers
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  User.TU...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  User.TU...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  User.TU...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  User.TU...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(User), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(User), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\UserController.php(466): Model->find('list', Array)
+#8 [internal function]: UserController->fieldworkers()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UserController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 09:59:46 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Expression de type non booléen spécifiée dans un contexte où une condition est attendue, près de 'GROUP'.
+Request URL: /ecoReleve-core/view/theme/list
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(754): DboSource->_execute('SELECT  [MapSel...', Array, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('SELECT  [MapSel...', Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT  [MapSel...', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT  [MapSel...', false)
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(599): DboSource->read(Object(MapSelectionManager), Array, NULL)
+#6 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(2709): Sqlserver->read(Object(MapSelectionManager), Array)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\ViewsController.php(72): Model->find('all', Array)
+#8 [internal function]: ViewsController->themes_list()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ViewsController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ViewsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

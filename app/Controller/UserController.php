@@ -442,6 +442,7 @@
 				'recursive' => 0,
 				'conditions' => array(
 					'Applications.TApp_Nom' => 'eReleve',
+					'TUse_Actif'=>1,
 					'NOT' => array('Roles.TRol_Type' => "Interdit")
 				),
 				'fields' => array('TUse_Pk_ID','TUse_Nom','TUse_Prenom','Roles.TRol_Type'),
@@ -455,15 +456,32 @@
 			$this->layoutPath =$format;
 		}
 		
+		function fieldworkers(){
+			$format='json';
+			$this->loadModel('User');
+			
+			$users = $this->User->find('all',array(
+				'fields'=>array("TUse_Pk_ID AS ID","([TUse_Nom]+' '+[TUse_PreNom]) AS Nom")
+				,'order'=>"([TUse_Nom]+' '+[TUse_PreNom])"
+				)
+			);
+			
+			//print_r($users);
+			$this->set('result',$users);
+			
+			$this->RequestHandler->respondAs($format);
+			$this->viewPath .= "/$format";
+			$this->layout =$format;
+			$this->layoutPath =$format;
+		}
+		
 		function index(){			
 			//$this->set('result',"result:'".$this->Session->read('login')."'\ndebug:".print_r($_SESSION,true)."\nLevel:'".$this->Session->read('Security.level')."'\n");
 			//print_r($this->Session->read('login'));
 			$this->RequestHandler->respondAs('json');
 			$this->viewPath .= "/json";
 			$this->layout ='json';
-			$this->layoutPath ='json';	
-			
-			
+			$this->layoutPath ='json';			
 		}		
 	}
 ?>	
