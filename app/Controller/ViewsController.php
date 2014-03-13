@@ -69,8 +69,8 @@
 				'group'=>array('Caption','TProt_PK_ID'),
 				'conditions'=>array("Actif"=>true)
 				)+$options
-			);		
-			print_r($table);	
+			);
+			$table=array_merge($table,array(array("MapSelectionManager"=>array("TProt_PK_ID"=>"null","Caption"=>"Others"))));	
 			//$this->set('date_name',$date_name);
 			$this->set('model',$this->MapSelectionManager);
 			$this->set('views', $table);
@@ -86,6 +86,7 @@
 		function views_list(){
 			$conditions=array();
 			$this->loadModel('MapSelectionManager');
+			$options=array();
 			//$model = new AppModel("TMapSelectionManager","TMapSelectionManager",base);	
 			
 			//format from request
@@ -96,7 +97,20 @@
 			
 			if(isset($this->params['url']['id_theme']) && $this->params['url']['id_theme']!=""){
 				$id_theme=$this->params['url']['id_theme'];
-				$conditions+=array('conditions'=>array("TSMan_FK_Theme"=>$id_theme));
+				if($id_theme=="null"){
+					$options['joins'] = array(
+					array('table' => 'TThemeEtude',
+							'alias' => 'TThemeEtude',
+							'type' => 'left',
+							'conditions' => array(
+								"TSMan_FK_Theme  = TThemeEtude.TProt_PK_ID" 
+							)
+						)
+					);
+					$conditions+=array('conditions'=>array("Caption is null"));
+				}	
+				else
+					$conditions+=array('conditions'=>array("TSMan_FK_Theme"=>$id_theme));
 			}
 			
 			//format return from param
@@ -118,7 +132,7 @@
 			//$date_name=array("DATE","StaDate","lastArgosDate");
 			//$model->column_exist("V_Qry_VGroups_AllTaxons_EnjilDamStations",$date_name);
 			//$table = $model->find("all",array('order'=> array("TSMan_Layer_Name asc"))+$conditions);				
-			$table = $this->MapSelectionManager->find("all",array('order'=> array("TSMan_Layer_Name asc"))+$conditions);				
+			$table = $this->MapSelectionManager->find("all",array('order'=> array("TSMan_Layer_Name asc"))+$conditions+$options);				
 			//$this->set('date_name',$date_name);
 			$this->set('model',$this->MapSelectionManager);
 			$this->set('views', $table);
@@ -224,11 +238,13 @@
 			}
 			
 			if(isset($this->params['url']['skip']) && $this->params['url']['skip']!=""){
+				$agrwhere="WHERE";
 				$offset=intval($this->params['url']['skip']);
-				$offs="WHERE _cake_paging_.Id > $offset";
+				$offs="_cake_paging_.Id > $offset";
 				$offseton=true;	
 			}
 			$rowstring="";
+			//map => grid interaction
 			if(isset($this->params['url']['rows']) && $this->params['url']['rows']!=""){
 				$agrwhere="WHERE";
 				$row=$this->params['url']['rows'];
