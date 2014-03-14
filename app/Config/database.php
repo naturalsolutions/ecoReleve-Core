@@ -3,7 +3,7 @@ class DATABASE_CONFIG {
 	public $default = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "WIN7PRO-PC\TESTINSTANCE",
+	 "host" => "WIN7PRO-PC\SQLSERVER2008",
 	 "login" => "",
 	 "password" => "",
 	 "database" => "ECWP-eReleveData",

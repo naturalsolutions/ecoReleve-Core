@@ -87,10 +87,41 @@
 						if($i>$countindval)
 							break;
 					}
+					
+					//delete empty
 					foreach($iniresult as $type=>$values){
-						if(count($values)==0)
-							unset($iniresult[$type]);
+						if($type!="TViewTrxSat"){
+							if(count($values)==1){
+								$iniresult[]=array($type=>$values);
+								unset($iniresult[$type]);
+							}
+							else{
+								foreach($values as $val){
+									$iniresult[]=array($type=>array($val));
+								}
+							}
+							unset($iniresult[$type]);	
+						}	
+							
 					}
+					
+					//order by date historical associated model
+					$cmp=function ($a, $b) {
+						$akeyarr=array_keys($a);
+						$akey=$akeyarr[0];
+						$bkeyarr=array_keys($b);
+						$bkey=$bkeyarr[0];
+						if(!isset($a[$akey][0]['begin_date']))
+							return -1;
+						else if(!isset($b[$bkey][0]['begin_date']))
+							return 1;
+						else if($a[$akey][0]['begin_date'] == $b[$bkey][0]['begin_date']) {
+							return 0;
+						}
+						return ($a[$akey][0]['begin_date'] < $b[$bkey][0]['begin_date']) ? -1 : 1;
+					};
+					uasort($iniresult,$cmp);
+					
 					$result=$iniresult;
 				}
 				//check if equipped or not

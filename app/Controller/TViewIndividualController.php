@@ -12,15 +12,27 @@
 			
 		}	
 
+		function compare($a, $b) {
+			if ($a[0]['begin_date'] == $b[0]['begin_date']) {
+				return 0;
+			}
+			return ($a[0]['begin_date'] < $b[0]['begin_date']) ? -1 : 1;
+		}	
+		
 		//detail of an individu (Object part)
 		function detail(){
 			$id="";
 			$recursive=0;
 			$carac="";
 			$labelcarac="";
+			$conditions=array();
 			$this->loadModel('TViewIndividual');
 			if(isset($this->request->params['id']) && $this->request->params['id']!=""){
 				$id=$this->request->params['id'];					
+			}
+			
+			if(isset($this->request->params['count']) && $this->request->params['count']!=""){
+				$count=$this->request->params['count'];					
 			}
 			
 			if(isset($this->request->params['carac']) && $this->request->params['carac']!=""){
@@ -77,14 +89,31 @@
 						$format="geojson";
 					}
 				}
+				
+				if(isset($this->params['url']['id_protocole']) && $this->params['url']['id_protocole']!=""){
+					$id_protocole=intval($this->params['url']['id_protocole']);	
+					$conditions+=array("StationType"=>$id_protocole);
+				}
+				
+				if(isset($this->params['url']['date_depart']) && $this->params['url']['date_depart']!=""){
+					$date_depart=$this->params['url']['date_depart'];	
+					$conditions+=array("CONVERT(char(10),[DATE],126) >="=>$date_depart);
+				}
+				
+				if(isset($this->params['url']['date_fin']) && $this->params['url']['date_fin']!=""){
+					$date_fin=$this->params['url']['date_fin'];	
+					$conditions+=array("CONVERT(char(10),[DATE],126) <="=>$date_fin);
+				}
+				
 				/*'contain' => array('Comment', 'User' => array('Comment', 'Profile'))*/
 				if($format=="geojson"){
-					$this->loadModel('TViewIndividual');
+					$conditions+=array('Fk_Ind'=>$id);
+					$conditions[]=array('LAT is not null and LON is not null');
 					$this->TViewIndividual->setSource('TProtocol_Summary');
 					$this->TViewIndividual->primaryKey="Id";
 					$result=$this->TViewIndividual->find("all",array(
 						'recursive'=>0,
-						'conditions'=> array('Fk_Ind'=>$id,'LAT is not null and LON is not null')
+						'conditions'=> $conditions
 					));	
 				}
 				else{
@@ -134,6 +163,7 @@
 						//unset($iniresult[0]['TViewIndividual']);
 						$countindval=count($iniresult[0]['TViewIndividual']);
 						$i=0;
+						//giving a right label 
 						foreach($iniresult[0]['TViewIndividual'] as $key=>$val){
 							if($key=='Individual_Obj_PK'){
 								$iniresult[0]['TViewIndividual']['Id']=$iniresult[0]['TViewIndividual']['Individual_Obj_PK'];								
@@ -150,10 +180,42 @@
 							if($i>$countindval)
 								break;
 						}
+						
+						
+						//delete empty
 						foreach($iniresult[0] as $type=>$values){
-							if(count($values)==0)
-								unset($iniresult[0][$type]);
+							if($type!="TViewIndividual"){
+								if(count($values)==1){
+									$iniresult[]=array($type=>$values);
+									unset($iniresult[0][$type]);
+								}
+								else{
+									foreach($values as $val){
+										$iniresult[]=array($type=>array($val));
+									}
+								}
+								unset($iniresult[0][$type]);	
+							}	
+								
 						}
+						
+						//order by date historical associated model
+						$cmp=function ($a, $b) {
+							$akeyarr=array_keys($a);
+							$akey=$akeyarr[0];
+							$bkeyarr=array_keys($b);
+							$bkey=$bkeyarr[0];
+							if(!isset($a[$akey][0]['begin_date']))
+								return -1;
+							else if(!isset($b[$bkey][0]['begin_date']))
+								return 1;
+							else if($a[$akey][0]['begin_date'] == $b[$bkey][0]['begin_date']) {
+								return 0;
+							}
+							return ($a[$akey][0]['begin_date'] < $b[$bkey][0]['begin_date']) ? -1 : 1;
+						};
+						uasort($iniresult,$cmp);
+						
 						$result=$iniresult;
 					}	
 				}
@@ -170,7 +232,52 @@
 			if($carac!="")
 				$this->render("IndivCarac");
 		}
-
+		
+		function getproto(){
+			$format='json';
+			$recursive=0;
+			$this->loadModel('TViewIndividual');
+			$id="";
+			$this->TViewIndividual->setSource('TProtocol_Summary');
+			$options['joins'] = array(
+				array('table' => 'TProtocole',
+					'alias' => 'TProtocole',
+					'type' => 'INNER',
+					'conditions' => array(
+						"TProtocole.TTheEt_PK_ID  = StationType" 
+					)
+				)
+			);
+			if(isset($this->request->params['id']) && $this->request->params['id']!=""){
+				$id=$this->request->params['id'];					
+			}			
+			
+			if($id!=""){
+				$result=$this->TViewIndividual->find("all",array(
+					'recursive'=>$recursive,
+					'fields'=> array("TProtocole.Caption as protocole","count(*) as nb","StationType as id"),
+					'conditions'=> array('Fk_Ind'=>$id),
+					'group'=>array("TProtocole.Caption,StationType")
+				)+$options);
+				$resultnbtotal=$this->TViewIndividual->find("count",array(
+					'recursive'=>$recursive,
+					'fields'=> array("StationType as id"),
+					'conditions'=> array('Fk_Ind'=>$id)
+				));
+				$result=array_merge(array(array(array("protocole"=>"All protocols","nb"=>$resultnbtotal,"id"=>""))),$result);
+				$this->set("result",$result);
+			}
+			else{
+			
+			}
+			
+			$this->RequestHandler->respondAs('json');
+			// $this->RequestHandler->respondAs('html');
+			$this->viewPath .= "/$format";
+			$this->layout = 'json';
+			$this->layoutPath = 'json';	
+		}
+		
 		//indiv add
 		//post
 		//data: 'Age={"value_precision":"adult","begin_date":null,"end_date":"null","comments":null}&Sex={"value_precision":"male","begin_date":null,"end_date":"null","comments":null}&Species={"value_precision":"North African Houbara Bustard","begin_date":null,"end_date":"null","comments":null}&Origin={"value_precision":"wild","begin_date":null,"end_date":"null","comments":null}&Individual_status={"value_precision":"Unknown","begin_date":null,"end_date":"null","comments":null}&Monitoring_status={"value_precision":"Lost","begin_date":null,"end_date":"null","comments":null}&Survey_type={"value_precision":"Tracking","begin_date":null,"end_date":"null","comments":null}&Birth_date={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Death_date={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Comments={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Breeding_Color={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Breeding_code={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Breeding_Position={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Release_Color={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Release_code={"value_precision":"W-00277","begin_date":null,"end_date":"null","comments":null}&Release_Position={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Chip_Code={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&VHF_Serial_Number={"value_precision":10144,"begin_date":null,"end_date":"null","comments":null}&VHF_Frequency={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&VHF_Model={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&VHF_Shape={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Argos_PTT={"value_precision":73468,"begin_date":null,"end_date":"null","comments":null}&Argos_model={"value_precision":"GPS solar Microwave 45g","begin_date":null,"end_date":"null","comments":null}&Argos_manufacturer={"value_precision":"Microwave Telemetry","begin_date":null,"end_date":"null","comments":null}&Marking1_Color={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Marking1_Position={"value_precision":null,"begin_date":null,"end_date":"null","comments":null}&Marking1_Code={"value_precision":13456,"begin_date":null,"end_date":"null","comments":null}&Marking2_Color={"value_precision":"blue","begin_date":null,"end_date":"null","comments":null}&Marking2_Position={"value_precision":null,"begin_date":null,"end_date":"null","comments":{"value_precision":null,"begin_date":null,"end_date":"null","comments":null}}&Marking2_Code=null',

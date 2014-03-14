@@ -21,13 +21,13 @@
 			$sta_keys=array_keys($table[$i]);
 			$date="";
 			if(isset($table[$i][0][$ModelName]['LAT'])){
-				$lat=$table[$i][0][$ModelName]['LAT'];
-				$lon=$table[$i][0][$ModelName]['LON'];
+				$lat=floatval($table[$i][0][$ModelName]['LAT']);
+				$lon=floatval($table[$i][0][$ModelName]['LON']);
 				$count=count($table[$i]);	
 			}
 			else{
-				$lat=$table[$i][$ModelName]['LAT'];
-				$lon=$table[$i][$ModelName]['LON'];
+				$lat=floatval($table[$i][$ModelName]['LAT']);
+				$lon=floatval($table[$i][$ModelName]['LON']);
 				if(isset($table[$i][$ModelName]['TSta_PK_ID']))
 					$id=$table[$i][$ModelName]['TSta_PK_ID'];
 				else

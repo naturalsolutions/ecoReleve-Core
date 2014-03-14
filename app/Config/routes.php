@@ -125,6 +125,7 @@
 	,'count' => 'yes'));
 	Router::connect('/TViewIndividual/add',array('controller'=>'TViewIndividual','action' => 'add'));
 	Router::connect('/TViewIndividual/:id/carac',array('controller'=>'TViewIndividual','action' => 'detail','carac'=>'yes'));
+	Router::connect('/TViewIndividual/:id/protocole',array('controller'=>'TViewIndividual','action' => 'getproto'));
 	Router::connect('/TViewIndividual/:id',array('controller'=>'TViewIndividual','action' => 'detail'));
 		
 	Router::connect('/TViewTrx_Radio/list',array('controller'=>'TViewTrx_Radio','action' => 'column_list','table_name' => 'TViewTrx_Radio'
