@@ -67,12 +67,13 @@
 				$result=$iniresult;
 				//print_r($result);
 				//history case
+				
 				if($labelcarac!=""){	
 					//unset($iniresult[0]['TViewTrxSat']);
 					$countindval=count($iniresult['TViewTrxSat']);
 					$i=0;
 					foreach($iniresult['TViewTrxSat'] as $key=>$val){
-						if($key=='Trx_Radio_Obj_PK'){
+						if($key=='Trx_Sat_Obj_PK'){
 							$iniresult['TViewTrxSat']['Id']=$iniresult['TViewTrxSat']['Trx_Sat_Obj_PK'];								
 						}
 						else{
@@ -87,10 +88,10 @@
 						if($i>$countindval)
 							break;
 					}
-					
+					//print_r($iniresult);
 					//delete empty
 					foreach($iniresult as $type=>$values){
-						if($type!="TViewTrxSat"){
+						/*if($type!="TViewTrxSat"){
 							if(count($values)==1){
 								$iniresult[]=array($type=>$values);
 								unset($iniresult[$type]);
@@ -101,12 +102,17 @@
 								}
 							}
 							unset($iniresult[$type]);	
-						}	
-							
+						}
+						else{
+							$iniresult[]=array($type=>$values);
+							unset($iniresult[$type]);
+						}	*/
+						if(count($values)==0)
+							unset($iniresult[$type]);
 					}
 					
 					//order by date historical associated model
-					$cmp=function ($a, $b) {
+					/*$cmp=function ($a, $b) {
 						$akeyarr=array_keys($a);
 						$akey=$akeyarr[0];
 						$bkeyarr=array_keys($b);
@@ -120,8 +126,8 @@
 						}
 						return ($a[$akey][0]['begin_date'] < $b[$bkey][0]['begin_date']) ? -1 : 1;
 					};
-					uasort($iniresult,$cmp);
-					
+					//uasort($iniresult,$cmp);
+					*/
 					$result=$iniresult;
 				}
 				//check if equipped or not
@@ -142,8 +148,10 @@
 						$equi="Not equipped";
 					}
 					$result[0]=array_merge(array("Equipped"=>$equi),$result[0]);
-				}		
-				$this->set("result",$result);
+				}	
+				// $result[]= array($result);	
+				
+				$this->set("result",array($result));
 			}
 			else{
 				

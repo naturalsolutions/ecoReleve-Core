@@ -185,7 +185,7 @@
 						//delete empty
 						foreach($iniresult[0] as $type=>$values){
 							if($type!="TViewIndividual"){
-								if(count($values)==1){
+								/*if(count($values)==1){
 									$iniresult[]=array($type=>$values);
 									unset($iniresult[0][$type]);
 								}
@@ -193,14 +193,15 @@
 									foreach($values as $val){
 										$iniresult[]=array($type=>array($val));
 									}
-								}
-								unset($iniresult[0][$type]);	
+								}*/
+								if(count($values)==0)
+									unset($iniresult[0][$type]);	
 							}	
 								
 						}
 						
 						//order by date historical associated model
-						$cmp=function ($a, $b) {
+						/*$cmp=function ($a, $b) {
 							$akeyarr=array_keys($a);
 							$akey=$akeyarr[0];
 							$bkeyarr=array_keys($b);
@@ -215,7 +216,7 @@
 							return ($a[$akey][0]['begin_date'] < $b[$bkey][0]['begin_date']) ? -1 : 1;
 						};
 						uasort($iniresult,$cmp);
-						
+						*/
 						$result=$iniresult;
 					}	
 				}
