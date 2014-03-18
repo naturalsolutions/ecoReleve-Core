@@ -120,7 +120,7 @@
 				$this->set("Model",$model_proto);
 				//array that contain the column return
 				$column_array = array($Stationjoinstringnamedot."TSta_PK_ID as ID",$Stationjoinstringnamedot."FieldActivity_Name as FieldActivityName"
-				,$Stationjoinstringnamedot."Name as Name",$Stationjoinstringnamedot."DATE as DATE",$Stationjoinstringnamedot."Region as Region",$Stationjoinstringnamedot."Place as Place"
+				,$Stationjoinstringnamedot."Name as Name",$Stationjoinstringnamedot."DATE as DATE",$Stationjoinstringnamedot."Area as Area",$Stationjoinstringnamedot."Locality as Locality"
 				,$Stationjoinstringnamedot."LAT as LAT",$Stationjoinstringnamedot."LON as LON");
 				
 				//label case
@@ -396,7 +396,28 @@
 					$zoom=$this->params['url']['zoom'];
 				}
 				$cluster='no';
+				$minlat=1000;
+				$minlon=1000;
+				$maxlat=-1000;
+				$maxlon=-1000;
 				
+				//bbox creation
+				foreach($station as $s){
+					$thislat=$s[0]['LAT'];
+					$thislon=$s[0]['LON'];
+					if($thislat>$maxlat)
+						$maxlat=$thislat;
+					else if($thislon>$maxlon)
+						$maxlon=$thislon;
+					else if($thislat<$minlat)
+						$minlat=$thislat;
+					else if($thislon<$minlon)
+						$minlon=$thislon;			
+				}
+				$this->set('maxlat',$maxlat);
+				$this->set('maxlon',$maxlon);
+				$this->set('minlat',$minlat);
+				$this->set('minlon',$minlon);
 				if(isset($this->params['url']['cluster']) && $this->params['url']['cluster']=='yes')
 					$cluster='yes';				
 					

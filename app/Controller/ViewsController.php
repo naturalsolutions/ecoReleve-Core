@@ -677,10 +677,36 @@
 					$this->viewPath .= '/'."datatablejs";
 			else if(isset($tmp_format) && $tmp_format=="geojson"){ //geojson view
 				$this->viewPath .= '/'."geojson";
+				
+				$minlat=1000;
+				$minlon=1000;
+				$maxlat=-1000;
+				$maxlon=-1000;
+				//bbox creation
+				foreach($result as $s){
+					$thislat=$s[0]['LAT'];
+					$thislon=$s[0]['LON'];
+					if($thislat>$maxlat)
+						$maxlat=$thislat;
+					else if($thislon>$maxlon)
+						$maxlon=$thislon;
+					else if($thislat<$minlat)
+						$minlat=$thislat;
+					else if($thislon<$minlon)
+						$minlon=$thislon;			
+				}
+				$this->set('maxlat',$maxlat);
+				$this->set('maxlon',$maxlon);
+				$this->set('minlat',$minlat);
+				$this->set('minlon',$minlon);
+				
 				if($cluster=="yes"){
 					//$cartomodel=new CartoModel();
 					$this->set('cluster',true);
 					$result=$this->MapSelectionManager->cluster($result,20,$zoom);
+					
+					
+					
 					$this->set('result',$result);
 					//print_r($result);
 				}	

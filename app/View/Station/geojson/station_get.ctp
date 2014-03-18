@@ -38,7 +38,8 @@
 		{"type":"Feature","properties":{"count":<?php echo $count;?>,"id":"<?php echo $id;?>","year":"<?php echo date("Y", strtotime($date));?>"},"geometry":{"type": "Point", "coordinates":[ <?php echo $lon;?>, <?php echo $lat;?>]}}
 		<?php if($i<count($table)-1)echo ",";?>
 	<?php endfor?>
-]
+],
+"bbox":{"maxlat":<?php echo $maxlat?>,"maxlon":<?php echo $maxlon?>,"minlat":<?php echo $minlat?>,"minlon":<?php echo $minlon?>}
 }
 <?php endif?>
 <?php if($find==2):?>

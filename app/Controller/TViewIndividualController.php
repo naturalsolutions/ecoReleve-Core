@@ -115,6 +115,29 @@
 						'recursive'=>0,
 						'conditions'=> $conditions
 					));	
+					
+					$minlat=1000;
+					$minlon=1000;
+					$maxlat=-1000;
+					$maxlon=-1000;
+					//bbox creation
+					foreach($result as $s){
+						$thislat=$s['TViewIndividual']['LAT'];
+						$thislon=$s['TViewIndividual']['LON'];
+						if($thislat>$maxlat)
+							$maxlat=$thislat;
+						else if($thislon>$maxlon)
+							$maxlon=$thislon;
+						else if($thislat<$minlat)
+							$minlat=$thislat;
+						else if($thislon<$minlon)
+							$minlon=$thislon;			
+					}
+					$this->set('maxlat',$maxlat);
+					$this->set('maxlon',$maxlon);
+					$this->set('minlat',$minlat);
+					$this->set('minlon',$minlon);
+					
 				}
 				else{
 					if($labelcarac!="")
@@ -237,9 +260,11 @@
 		function getproto(){
 			$format='json';
 			$recursive=0;
-			$this->loadModel('TViewIndividual');
+			$this->loadModel('TProtocolSummary');
 			$id="";
-			$this->TViewIndividual->setSource('TProtocol_Summary');
+			$conditions=array();
+			// $this->TViewIndividual->setSource('TProtocol_Summary');
+			// $this->TViewIndividual->primaryKey="Id";
 			$options['joins'] = array(
 				array('table' => 'TProtocole',
 					'alias' => 'TProtocole',
@@ -253,14 +278,25 @@
 				$id=$this->request->params['id'];					
 			}			
 			
+			if(isset($this->params['url']['date_depart']) && $this->params['url']['date_depart']!=""){
+					$date_depart=$this->params['url']['date_depart'];	
+					$conditions+=array("CONVERT(char(10),[DATE],126) >="=>$date_depart);
+				}
+				
+			if(isset($this->params['url']['date_fin']) && $this->params['url']['date_fin']!=""){
+				$date_fin=$this->params['url']['date_fin'];	
+				$conditions+=array("CONVERT(char(10),[DATE],126) <="=>$date_fin);
+			}
+			
 			if($id!=""){
-				$result=$this->TViewIndividual->find("all",array(
+				$conditions+=array('Fk_Ind'=>$id);
+				$result=$this->TProtocolSummary->find("all",array(
 					'recursive'=>$recursive,
 					'fields'=> array("TProtocole.Caption as protocole","count(*) as nb","StationType as id"),
-					'conditions'=> array('Fk_Ind'=>$id),
+					'conditions'=> $conditions,
 					'group'=>array("TProtocole.Caption,StationType")
 				)+$options);
-				$resultnbtotal=$this->TViewIndividual->find("count",array(
+				$resultnbtotal=$this->TProtocolSummary->find("count",array(
 					'recursive'=>$recursive,
 					'fields'=> array("StationType as id"),
 					'conditions'=> array('Fk_Ind'=>$id)

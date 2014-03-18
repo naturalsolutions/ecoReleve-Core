@@ -65,7 +65,7 @@ class AppModel extends Model {
 			$placearraysplit=explode(",",$place);
 			$placearraysplit=array_map($func,$placearraysplit);
 			$place=implode(",",$placearraysplit);
-			$condition_array[]=array("Place IN ($place)");
+			$condition_array[]=array("Locality IN ($place)");
 		}
 		
 		//take region parameter for a region filter
@@ -84,7 +84,7 @@ class AppModel extends Model {
 			$placearraysplit=explode(",",$region);
 			$placearraysplit=array_map($func,$placearraysplit);
 			$region=implode(",",$placearraysplit);
-			$condition_array[]=array("Region IN ($region)");
+			$condition_array[]=array("Area IN ($region)");
 		}	
 		
 		//take taxonsearch parameter for a taxon filter
