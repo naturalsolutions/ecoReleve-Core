@@ -71,6 +71,8 @@
 	Router::connect('/nsml/get',array('controller'=>'NSML','action' => 'nsml_get'));  //get nsml from view url
 	Router::connect('/nsml/get/count',array('controller'=>'NSML','action' => 'nsml_get','count' => 'yes'));  //get nsml from view url
 	
+	Router::connect('/station/area',array('controller'=>'station','action' => 'station_get','areautocomplete' => 'yes'));
+	Router::connect('/station/locality',array('controller'=>'station','action' => 'station_get','localityautocomplete'=>'yes'));
 	Router::connect('/station/list',array('controller'=>'station','action' => 'station_get'));  //get station url
 	Router::connect('/station/list/count',array('controller'=>'station','action' => 'station_get','count' => 'yes'));  //get station url
 	Router::connect('/station/list2',array('controller'=>'station','action' => 'station_get2'));  //get station url
@@ -91,7 +93,7 @@
 	Router::connect('/user/list',array('controller'=>'User','action' => 'listv'));  //get list of user
 	Router::connect('/user',array('controller'=>'tusers','action' => 'index'));  
 	Router::connect('/user/login/:login/:password',array('controller'=>'User','action' => 'login'));  //login action	
-	Router::connect('/user/list',array('controller'=>'User','action' => 'fieldworkers')); 
+	Router::connect('/user/fieldworker',array('controller'=>'User','action' => 'fieldworkers')); 
 	
 	Router::connect('/doc/list',array('controller'=>'Docs','action' => 'docs_list'));
 	

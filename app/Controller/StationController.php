@@ -74,6 +74,9 @@
 			$Distinct=array();
 			$ModelName="AppModel"; //for the array returned by find
 			$totaldisplay=0;
+			$areautocomplete=false;
+			$localityautocomplete=false;
+			
 			
 			if(isset($this->params['url']['to_carto']) && $this->params['url']['to_carto']!=""){
 				if($this->params['url']['to_carto']=="yes"){
@@ -346,6 +349,14 @@
 					$search=$this->params['url']['sSearch'];				
 				}
 				
+				if(isset($this->request->params['localityautocomplete']) && $this->request->params['localityautocomplete']!=""){
+					$localityautocomplete=true;					
+				}	
+				
+				if(isset($this->request->params['areautocomplete']) && $this->request->params['areautocomplete']!=""){
+					$areautocomplete=true;					
+				}	
+				
 				$count=false;
 				if(isset($this->request->params['count']))
 					$count=true;
@@ -355,23 +366,45 @@
 					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true,$currentdate);				
 					//print_r($condition_array);
 					//find station with the right parameter without search				
-					$station = $model_proto->find("all",array('recursive' => 0
-															,'limit'=>$limit
-															,'offset'=>$offset
-															,'fields'=>$column_array
-															,'order'=> array("$sort_column $sort_dir")
-															,'conditions'=>$condition_array)+$Stationjoin
-													);
-					
-					if($station){
-						$totaldisplay = $model_proto->find("count",array('recursive' => 0
-															,'fields'=>$column_array
-															,'conditions'=>$condition_array)+$Stationjoin
-													);	
-													
-					}								
-					else 
-						$totaldisplay=0;
+					;
+					if(!$areautocomplete && !$localityautocomplete){
+						$station = $model_proto->find("all",array('recursive' => 0
+																,'limit'=>$limit
+																,'offset'=>$offset
+																,'fields'=>$column_array
+																,'order'=> array("$sort_column $sort_dir")
+																,'conditions'=>$condition_array)+$Stationjoin
+														);
+						
+						if($station){
+							$totaldisplay = $model_proto->find("count",array('recursive' => 0
+																,'fields'=>$column_array
+																,'conditions'=>$condition_array)+$Stationjoin
+														);	
+														
+						}								
+						else 
+							$totaldisplay=0;
+					}
+					else if($areautocomplete){
+						$station = $model_proto->find("all",array('recursive' => 0
+																,'fields'=>array('TStationsJoin.Area')
+																,'order'=> array("TStationsJoin.Area asc")
+																,'conditions'=>$condition_array
+																,'group'=>array('TStationsJoin.Area'))+$Stationjoin
+																
+														);
+						$this->set("result",$station);								
+					}
+					else if($localityautocomplete){
+						$station = $model_proto->find("all",array('recursive' => 0
+								,'fields'=>array('TStationsJoin.Locality')
+								,'order'=> array("TStationsJoin.Locality asc")
+								,'conditions'=>$condition_array
+								,'group'=>array('TStationsJoin.Locality'))+$Stationjoin								
+						);
+						$this->set("result",$station);	
+					}	
 					$this->set("table",$station);
 					$this->set("schema",$column_array);
 					$this->set("total",$total);
@@ -390,7 +423,7 @@
 			else
 				$find=-1;
 			
-			if(isset($this->params['url']['format']) && $this->params['url']['format']=="geojson" && !$count){
+			if(isset($this->params['url']['format']) && $this->params['url']['format']=="geojson" && !$count && !$areautocomplete && !$localityautocomplete){
 				$zoom=0;
 				if(isset($this->params['url']['zoom'])){
 					$zoom=$this->params['url']['zoom'];
@@ -440,7 +473,10 @@
 			// $this->RequestHandler->respondAs('html');
 			$this->RequestHandler->respondAs('json');
 			$this->layoutPath = 'json';	
-			$this->layout = 'json';		
+			$this->layout = 'json';	
+			if($areautocomplete || $localityautocomplete){
+				$this->render('autocomplete');
+			}	
 		}
 		
 		function station_get2(){

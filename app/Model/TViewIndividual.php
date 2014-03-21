@@ -37,7 +37,7 @@
 			'Serial_number' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('Serial_number.Fk_carac'=>6)
 			),
 			'Release_ring_position' => array(
@@ -55,7 +55,7 @@
 			'Release_ring_code' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('Release_ring_code.Fk_carac'=>9)
 			),
 			'Breeding_ring_position' => array(
@@ -73,7 +73,7 @@
 			'Breeding_ring_code' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('Breeding_ring_code.Fk_carac'=>12)
 			),
 			'Chip_code' => array(
@@ -109,7 +109,7 @@
 			'PTT' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('PTT.Fk_carac'=>19)
 			),
 			'Sex' => array(
@@ -133,13 +133,13 @@
 			'Birth_date' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('Birth_date.Fk_carac'=>35)
 			),
 			'Death_date' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('Death_date.Fk_carac'=>36)
 			),
 			'Comments' => array(
@@ -193,13 +193,13 @@
 			'Updated_LifeSpan' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('Updated_LifeSpan.Fk_carac'=>57)
 			),
 			'Date_Updated_LifeSpan' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('Date_Updated_LifeSpan.Fk_carac'=>58)
 			),
 			'Individual_status' => array(
@@ -259,7 +259,7 @@
 			'Weight' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('Weight.Fk_carac'=>43)
 			),
 			'Initial_livespan' => array(
@@ -277,7 +277,7 @@
 			'PTT_assignment_date' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
-				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),
+				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
 				'conditions'=>array('PTT_assignment_date.Fk_carac'=>49)
 			)
 		);			

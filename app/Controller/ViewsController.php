@@ -25,7 +25,7 @@
 			$this->loadModel('MapSelectionManager');
 			$this->MapSelectionManager->setSource("TThemeEtude");
 			//$model = new AppModel("TMapSelectionManager","TMapSelectionManager",base);	
-			
+			$import=false;
 			//format from request
 			if(stripos($this->request->header('Accept'),"application/xml")!==false)
 				$format="xml"; 
@@ -46,6 +46,10 @@
 				}
 			}
 			
+			if(isset($this->params['url']['import']) && $this->params['url']['import']!=""){
+				$import=true;
+			}
+			
 			$conditions=array();
 			$debug="";
 	
@@ -59,7 +63,8 @@
 					)
 				)
 			);	
-			
+			if($import)
+				$options=array();
 			//$date_name=array("DATE","StaDate","lastArgosDate");
 			//$model->column_exist("V_Qry_VGroups_AllTaxons_EnjilDamStations",$date_name);
 			//$table = $model->find("all",array('order'=> array("TSMan_Layer_Name asc"))+$conditions);				
@@ -70,7 +75,8 @@
 				'conditions'=>array("Actif"=>true)
 				)+$options
 			);
-			$table=array_merge($table,array(array("MapSelectionManager"=>array("TProt_PK_ID"=>"null","Caption"=>"Others"))));	
+			if(!$import)
+				$table=array_merge($table,array(array("MapSelectionManager"=>array("TProt_PK_ID"=>"null","Caption"=>"Others"))));	
 			//$this->set('date_name',$date_name);
 			$this->set('model',$this->MapSelectionManager);
 			$this->set('views', $table);

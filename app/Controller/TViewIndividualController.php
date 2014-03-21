@@ -299,7 +299,7 @@
 				$resultnbtotal=$this->TProtocolSummary->find("count",array(
 					'recursive'=>$recursive,
 					'fields'=> array("StationType as id"),
-					'conditions'=> array('Fk_Ind'=>$id)
+					'conditions'=> $conditions,
 				));
 				$result=array_merge(array(array(array("protocole"=>"All protocols","nb"=>$resultnbtotal,"id"=>""))),$result);
 				$this->set("result",$result);

@@ -733,6 +733,7 @@
 							//$taxons=$model_proto->find('all',array(
 							$taxons=$this->ProtocoleTaxon->find('all',array(
 								'fields'=>array('Name_Taxon'),
+								'order'=>array('Name_Taxon asc'),
 								'group'=>array('Name_Taxon'),
 								'conditions'=>$array_conditions
 							));	

@@ -60,7 +60,7 @@ class AppModel extends Model {
 				$place="%".$place."%";
 			$condition_array+=array("Place $like"=>$place);*/
 			$func = function($value) {
-				return "'".$value."'";
+				return "'".trim($value)."'";
 			};
 			$placearraysplit=explode(",",$place);
 			$placearraysplit=array_map($func,$placearraysplit);
@@ -79,7 +79,7 @@ class AppModel extends Model {
 				$region="%".$region."%";
 			$condition_array+=array("Region $like"=>$region);*/	
 			$func = function($value) {
-				return "'".$value."'";
+				return "'".trim($value)."'";
 			};
 			$placearraysplit=explode(",",$region);
 			$placearraysplit=array_map($func,$placearraysplit);
