@@ -122,10 +122,10 @@
 				$model_proto = new AppModel('TStation',$table_name);
 				$this->set("Model",$model_proto);
 				//array that contain the column return
-				$column_array = array($Stationjoinstringnamedot."TSta_PK_ID as ID",$Stationjoinstringnamedot."FieldActivity_Name as FieldActivityName"
+				$column_array = array($Stationjoinstringnamedot."TSta_PK_ID as ID",$Stationjoinstringnamedot."FieldActivity_Name as [FieldActivity Name]"
 				,$Stationjoinstringnamedot."Name as Name",$Stationjoinstringnamedot."DATE as DATE",$Stationjoinstringnamedot."Area as Area",$Stationjoinstringnamedot."Locality as Locality"
 				,$Stationjoinstringnamedot."LAT as LAT",$Stationjoinstringnamedot."LON as LON");
-				
+				$column_arraygroup=array("TSta_PK_ID","FieldActivity_Name","Name","DATE","Area","Locality","LAT","LON");
 				//label case
 				$value_label_array=array();
 				foreach($column_array as $f){
@@ -361,6 +361,7 @@
 				if(isset($this->request->params['count']))
 					$count=true;
 				
+				//not count
 				if(!$count){
 					//create condition array for the sql request
 					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true,$currentdate);				
@@ -373,13 +374,15 @@
 																,'offset'=>$offset
 																,'fields'=>$column_array
 																,'order'=> array("$sort_column $sort_dir")
-																,'conditions'=>$condition_array)+$Stationjoin
+																,'conditions'=>$condition_array
+																,'group'=>$column_arraygroup)+$Stationjoin
 														);
 						
 						if($station){
 							$totaldisplay = $model_proto->find("count",array('recursive' => 0
 																,'fields'=>$column_array
-																,'conditions'=>$condition_array)+$Stationjoin
+																,'conditions'=>$condition_array
+																,'group'=>$column_arraygroup)+$Stationjoin
 														);	
 														
 						}								
@@ -410,6 +413,7 @@
 					$this->set("total",$total);
 					$this->set("totaldisplay",$totaldisplay);	
 				}
+				//count
 				else{					
 					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true,$currentdate);
 					//print_r($condition_array);

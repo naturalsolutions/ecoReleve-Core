@@ -141,7 +141,7 @@
 				$conditions=array("Relation LIKE"=>"%$mot%");
 			}	
 			
-			$table = $this->Protocole->find("all",array("conditions"=>array("Active" => 1)+$conditions));	
+			$table = $this->Protocole->find("all",array("conditions"=>array("Active" => 1)+$conditions,"order"=>"Caption asc"));	
 			
 			$this->set("debug",$debug);
 			$this->set('protos', $table);

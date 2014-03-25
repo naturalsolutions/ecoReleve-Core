@@ -158,8 +158,9 @@
 	Router::connect('/TViewTrx_Sat/:id',array('controller'=>'TViewTrx_Sat','action' => 'detail'));
 	
 	
-	Router::connect('/argos/stat',array('controller'=>'Argos','action' => 'argos_stat'));
-	
+	Router::connect('/argos/stat',array('controller'=>'Sensor','action' => 'argos_stat'));
+	Router::connect('/sensor/stat',array('controller'=>'Sensor','action' => 'log_stat'));
+
 	Router::connect('/list/autocomplete',array('controller'=>'app','action' => 'column_list'));
 	
 	/**

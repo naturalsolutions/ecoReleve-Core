@@ -510,8 +510,8 @@ class AppController extends Controller {
 					
 					$model_result=$model->find("all",array(
 						'fields'=>$field_array+$fields,
-						'order'=>"$sort_column $sort_dir",
-						'group'=>$field_arrayg,
+						//'order'=>"$sort_column $sort_dir",
+						//'group'=>$field_arrayg,
 						'conditions'=>$array_conditions,
 						'limit'=>$limit,
 						'offset'=>intval($offset))+$options
