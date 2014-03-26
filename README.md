@@ -58,17 +58,23 @@ List of ecoReleve-core webservices routes :
 	• /nsml/get/count parameter(s) : table
 	Return the number of station concern by the request.
 -----------------		
-	• /station/list parameter(s) : id_proto, bbox, id_stations
+	• /station/list parameter(s) : id_proto, bbox, id_stations, filters[], idate, place, region, format=geojson
 	List of station for a datatable js. Based in the old version of eReleve's station on database
 		• 'id_proto' allow to show only the stations of that protocole
 		• 'bbox' open layer bbox
 		• 'id_stations' a list of station's id. The stations with this ids will be shown
+		• 'filters[]' NS grid filter parameter
+		• 'format=geojson' geojson return parameter
+		• 'idate' date filter parameter. idate values : 'idate=week' this week, 'idate=month' this month, 'idate=year' this year, 'idate=begindate;enddate' date format=YYYY-MM-DD
+		• 'place' parameter for filter the locality
+		• 'region' parameter.
 	
-	• /station/carto parameter(s) : bbox, zoom, cluster
+	• /station/carto parameter(s) : bbox, zoom, cluster, filters[]
 	Return stations in a geojson
 	Based in the old version of eReleve's station on database
 		• 'zoom' open layer zoom value
 		• 'cluster' = yes if we want clustered data
+		• 'filters[]' NS grid filter parameter
 	
 	• /station/list2 parameter(s) : bbox, id_taxon, id_stations, format
 	List of station for a table (with 'format'=datatablejs will return data for a datatablejs)
@@ -77,7 +83,16 @@ List of ecoReleve-core webservices routes :
 	
 	• /station/carto2 parameter(s) : bbox, zoom, id_taxon, id_stations, cluster
 	Return stations in a geojson. Based in the new version of eReleve's station on database
-		
+	
+	• /station/count/month
+	Return the number of station by month since the last 12 month
+	
+	• /station/area parameter(s) : all '/station/list' ws parameter
+	List of area from station. Can be filtered
+	
+	• /station/locality parameter(s) : all '/station/list' ws parameter
+	List of locality from station. Can be filtered
+	
 	• /station/import_csv parameter(s) : file
 	Import of data (Stations and protocoles) from a csv
 		• 'file' is the file to import (with form file)
@@ -89,15 +104,18 @@ List of ecoReleve-core webservices routes :
 	• /view/list parameter(s) : id_theme
 	List of sql views from eReleve sortable by topic with 'id_theme'
 		
-	• /view/get/:table_name parameter(s) : filters 
+	• /view/get/:table_name parameter(s) : filters[]
 	List of stations for a table from the view 'table_name' filtered or not 
-		• 'filters' contains columns value to filter result
+		• 'filters' contains columns value to filter result. Parameter use for NS grid
 		
-	• /view/carto/:table_name parameter(s) : filters 
+	• /view/carto/:table_name parameter(s) : filters[]
 	Return stations in a geojson from the view 'table_name' filtered or not 
 	
-	• /view/get/:table_name/count parameter(s) : filters 
+	• /view/get/:table_name/count parameter(s) : filters[] 
 	Return the number stations from the view 'table_name' filtered or not 
+	
+	• /view/get/:table_name/export parameter(s) : filters[] 
+	Create pdf,gpx,csv export files based on the filters 
 	
 	• /view/detail/:table_name
 	Return the columns and their types of the view 'table_name'
@@ -107,6 +125,9 @@ List of ecoReleve-core webservices routes :
 	
 	• /user/login parameter(s) : login, password
 	Login webservice with 'login' and 'password' parameter
+	
+	• /user/fieldworker
+	List of fieldworker (same as user list)
 	
 	• /user
 	CRUD user
@@ -132,11 +153,60 @@ List of ecoReleve-core webservices routes :
 	• /taxon/list/count parameter(s) : filter
 	Count the number of taxon that begin with 'filter'
 	
-	• /vernacular/list/autocomplete : filter
+	• /vernacular/list/autocomplete parameter(s) : filter
 	List of taxon with vernacular name that begin with 'filter' for autocomplete
 	
 	• /vernacular/list parameter(s) : filter
 	List of taxon with vernacular name that begin with 'filter' for a table
+-----------------
+	• /TViewTrx_Radio/:id 
+	Return detail of a radio object 'id'
+	
+	• /TViewTrx_Radio/:id/carac 
+	List of characteristic of each fields of a radio object since now and before
+	
+	• /TViewTrx_Radio/list parameter(s) : filters[]
+	
+	List of radio object. The parameters 'filters' use for NS grid
+	• /TViewTrx_Radio/list/count :filters[]
+	Number of radio. The 'filters' parameter can be used too
+-----------------
+	• /TViewTrx_Sat/:id 
+	Return detail of a sat object 'id'
+	
+	• /TViewTrx_Sat/:id/carac 
+	List of characteristic of each fields of a sat object since now and before
+	
+	• /TViewTrx_Sat/list parameter(s) : filters[]
+	List of sat object. The parameters 'filters' use for NS grid
+	
+	• /TViewTrx_Sat/list/count : filters[]
+	Number of sat. The 'filters' parameter can be used too
+-----------------
+	• /TViewIndividual/:id parameter(s) : id_protocole,date_depart, date_fin, format=geojson
+	Return detail of an Individu 'id'. Can be filtred by date and 'id_protocole'. Use 'format=geojson' parameter for get a geojson 
+	
+	• /TViewIndividual/:id/carac 
+	List of characteristic of each fields of an Individu since now and before
+	
+	• /TViewIndividual/list parameter(s) : filters[]
+	List of Individu. The parameters 'filters' use for NS grid
+	
+	• /TViewIndividual/list/count : filters[]
+	Number of Individu. The 'filters' parameter can be used too
+	
+	• /TViewIndividual/:id/protocole : date_depart, date_fin
+	List of protocole from an Individu 'id'. Return also the number of individu by protocole and can be filtred by date
+	Date format : YYYY-MM-DD
+-----------------
+	• /argos/stat 
+	Argos stat since the last 7 days based on a Argos table
+	
+	• /sensor/stat
+	Sensor stat since the last 7 days based on a sensor table
+-----------------
+	• /list/autocomplete parameter(s) : table_name, column_name, filter
+	Dynamic autocomplete. Return all value from table 'table_name' of the column 'column_name'. Can be filtered by 'filter'
 
 Twitter
 ------------
