@@ -126,11 +126,11 @@
 						$thislon=$s['TViewIndividual']['LON'];
 						if($thislat>$maxlat)
 							$maxlat=$thislat;
-						else if($thislon>$maxlon)
+						if($thislon>$maxlon)
 							$maxlon=$thislon;
-						else if($thislat<$minlat)
+						if($thislat<$minlat)
 							$minlat=$thislat;
-						else if($thislon<$minlon)
+						if($thislon<$minlon)
 							$minlon=$thislon;			
 					}
 					$this->set('maxlat',$maxlat);

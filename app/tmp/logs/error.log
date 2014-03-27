@@ -14410,3 +14410,81 @@ Stack Trace:
 #11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2014-03-26 10:25:33 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Thesaurus/json\getthesaurus.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Thesaurus/json\\getthesaurus.ctp',
+)
+Request URL: /ecoReleve-core/thesaurus/autocomplete/DistanceFromObserver/list
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ThesaurusController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-03-26 10:32:27 Error: [MissingActionException] Action ThesaurusController::autocomplete() could not be found.
+Exception Attributes: array (
+  'controller' => 'ThesaurusController',
+  'action' => 'autocomplete',
+)
+Request URL: /ecoReleve-core/thesaurus/autocomplete/microHabitat/list?searchfr=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ThesaurusController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-26 10:47:54 Error: [MissingActionException] Action ThesaurusController::autocomplete() could not be found.
+Exception Attributes: array (
+  'controller' => 'ThesaurusController',
+  'action' => 'autocomplete',
+)
+Request URL: /ecoReleve-core/thesaurus/autocomplete/especeInvertebre/count?searchfr=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ThesaurusController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-26 10:52:17 Error: [MissingActionException] Action ThesaurusController::autocomplete() could not be found.
+Exception Attributes: array (
+  'controller' => 'ThesaurusController',
+  'action' => 'autocomplete',
+)
+Request URL: /ecoReleve-core/thesaurus/autocomplete/Geomorphology/count?searchfr=
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ThesaurusController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-26 14:24:01 Error: [MissingActionException] Action ThesaurusController::autocomplete() could not be found.
+Exception Attributes: array (
+  'controller' => 'ThesaurusController',
+  'action' => 'autocomplete',
+)
+Request URL: /ecoReleve-core/thesaurus/autocomplete/Geomorphology/list?searchfr=&limit=1&skip=3
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ThesaurusController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-26 14:32:00 Error: [MissingActionException] Action ThesaurusController::autocomplete() could not be found.
+Exception Attributes: array (
+  'controller' => 'ThesaurusController',
+  'action' => 'autocomplete',
+)
+Request URL: /ecoReleve-core/thesaurus/autocomplete/maleReproductionState/list?searchfr=&limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ThesaurusController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-26 14:42:40 Error: [MissingActionException] Action ThesaurusController::autocomplete() could not be found.
+Exception Attributes: array (
+  'controller' => 'ThesaurusController',
+  'action' => 'autocomplete',
+)
+Request URL: /ecoReleve-core/thesaurus/autocomplete/topographie/list?searchfr=&limit=10
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ThesaurusController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

@@ -29,7 +29,7 @@ Technical details
 
 Application details
 -----------------
-List of ecoReleve-core webservices routes :
+List of ecoReleve-core webservices routes ( many of them get a limit and offset(or skip) parameter):
 
 	• /protocole/list parameter(s) : motcle
 	Return the list of protocols. Can be filtered by 'motcle'
@@ -207,6 +207,119 @@ List of ecoReleve-core webservices routes :
 -----------------
 	• /list/autocomplete parameter(s) : table_name, column_name, filter
 	Dynamic autocomplete. Return all value from table 'table_name' of the column 'column_name'. Can be filtered by 'filter'
+-----------------
+	Thesaurus web services 
+	
+	format : /thesaurus/autocomplete/'type'/list for a listing 
+	or /thesaurus/autocomplete/'type'/count for a count
+	
+	parameter : 'searcheng' for english search, 'searchfr' for french search
+	
+	• /thesaurus/autocomplete/distanceFromObserver/list
+	
+	• /thesaurus/autocomplete/typeSiteMonitired/list
+	
+	• /thesaurus/autocomplete/habitat/list
+	
+	• /thesaurus/autocomplete/microHabitat/list
+	
+	• /thesaurus/autocomplete/especePlant/list
+	
+	• /thesaurus/autocomplete/especeVertebre/list
+	
+	• /thesaurus/autocomplete/especeInvertebre/list
+	
+	• /thesaurus/autocomplete/especeChiro/list
+	
+	• /thesaurus/autocomplete/geomorphology/list
+
+	• /thesaurus/autocomplete/typeSignal/list
+	
+	• /thesaurus/autocomplete/sex/list
+	
+	• /thesaurus/autocomplete/age/list
+	
+	• /thesaurus/autocomplete/posture/list
+	
+	• /thesaurus/autocomplete/maleReproductionState/list
+	
+	• /thesaurus/autocomplete/femaleReproductionState/list
+	
+	• /thesaurus/autocomplete/femaleMaturityState/list
+	
+	• /thesaurus/autocomplete/observationTool/list
+	
+	• /thesaurus/autocomplete/weather/list
+	
+	• /thesaurus/autocomplete/windForce/list
+
+	• /thesaurus/autocomplete/topographie/list
+
+	• /thesaurus/autocomplete/substrat/list
+	
+	• /thesaurus/autocomplete/exposure/list
+
+	• /thesaurus/autocomplete/slope/list
+	
+	• /thesaurus/autocomplete/edaphicHygrotrophy/list
+	
+	• /thesaurus/autocomplete/pHCategories/list
+	
+	• /thesaurus/autocomplete/soilTexture/list
+	
+	• /thesaurus/autocomplete/vegetationSeries/list
+	
+	• /thesaurus/autocomplete/entomologicalAbundance/list
+	
+	• /thesaurus/autocomplete/captureMethode/list
+	
+	• /thesaurus/autocomplete/captureMethodeEntomo/list
+	
+	• /thesaurus/autocomplete/houbaraRemains/list
+	
+	• /thesaurus/autocomplete/deathTime/list
+	
+	• /thesaurus/autocomplete/reasonOfDeath/list
+	
+	• /thesaurus/autocomplete/typesOfTracks/list
+	
+	• /thesaurus/autocomplete/clutchDescription/list
+	
+	• /thesaurus/autocomplete/eggStatus/list
+	
+	• /thesaurus/autocomplete/fieldMethodsOrnithology/list
+	
+	• /thesaurus/autocomplete/abundanceDominance/list
+	
+	• /thesaurus/autocomplete/sociability/list
+	
+	• /thesaurus/autocomplete/growthStages/list
+	
+	• /thesaurus/autocomplete/countingClasses/list
+	
+	• /thesaurus/autocomplete/emettorShapes/list
+	
+	• /thesaurus/autocomplete/transmittorModel/list
+	
+	• /thesaurus/autocomplete/argosModel/list
+	
+	• /thesaurus/autocomplete/ringPosition/list
+	
+	• /thesaurus/autocomplete/color/list
+	
+	• /thesaurus/autocomplete/manufacturers/list
+	
+	• /thesaurus/autocomplete/origine/list
+	
+	• /thesaurus/autocomplete/monitoringStatus/list
+	
+	• /thesaurus/autocomplete/typesOfStockEvents/list
+	
+	• /thesaurus/autocomplete/implementationSystem/list
+	
+	• /thesaurus/autocomplete/batteryType/list
+	
+	
 
 Twitter
 ------------
