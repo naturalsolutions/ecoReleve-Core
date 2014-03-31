@@ -8,11 +8,13 @@ A free and open source application.
 This Software allow access to a lot of ecoReleve's webservices.
 
 
-Installation notes
+Installation notes 
 -----------------
  * Deploy on a apache or IIS server, with "sqlserver for php" plugin
  * Have sqlserver database with a eReleve base (Natural Solution's base)
  * Intall sqlserver native client 2012 
+
+How to install [here] (https://github.com/NaturalSolutions/ecoReleve-Core/blob/master/Installe%20Cakephp%20sur%20IIS.pdf  "How to")
 
 
 Contributing
