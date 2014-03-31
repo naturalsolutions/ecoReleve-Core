@@ -14,7 +14,7 @@ Installation notes
  * Have sqlserver database with a eReleve base (Natural Solution's base)
  * Intall sqlserver native client 2012 
 
-How to install [here] (https://github.com/NaturalSolutions/ecoReleve-Core/blob/master/Installe%20Cakephp%20sur%20IIS.pdf  "How to")
+How to install [here] (https://github.com/NaturalSolutions/ecoReleve-Core/raw/master/Installe%20Cakephp%20sur%20IIS.pdf  "How to")
 
 
 Contributing
