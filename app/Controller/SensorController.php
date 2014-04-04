@@ -119,24 +119,21 @@
 			$today = date("Y-m-d",mktime(0,0,0,$m,$d,$y));	
 			$oneweek= date("Y-m-d",mktime(0,0,0,$m,$d-7,$y));	
 			
-			$conditions=array("CONVERT(char(10),date,120) <="=>$today, "CONVERT(char(10),date,120) >="=>$oneweek,"logType"=>"Success");
+			$conditions=array("CONVERT(char(10),logDate,120) <="=>$today, "CONVERT(char(10),logDate,120) >="=>$oneweek,"logType"=>"Insert");
 			
 			$result=$this->Sensorlog->find("all",array(
-				'fields'=>array("logProtocol as Proto","CONVERT(char(10),date,120) as date","SUM(cast(logValue as int)) as nb"),
+				'fields'=>array("logProtocol as Proto","CONVERT(char(10),logDate,120) as logDate","SUM(cast(logValue as int)) as nb"),
 				'conditions'=>$conditions,
-				'group'=>array("logProtocol,CONVERT(char(10),date,120)")
+				'group'=>array("logProtocol,CONVERT(char(10),logDate,120)")
 			));
 			
-			$resultfinal=array('label'=>array(),'nbArgos'=>array(),'nbGPS'=>array(),'nbGPS Engineering'=>array());	
+			$resultfinal=array('label'=>array(),'nbArgos'=>array(),'nbGPS'=>array(),'nbEng'=>array());	
 			for($i=0;$i<7;$i++){
 				$exist=false;
 				$today = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
 				array_push($resultfinal['label'],$today);
 				for($j=0;$j<count($result);$j++){
-					if(is_array($result) && count($result)>0 && $result[$j][0]['date']==$today){
-						/*array_push($resultfinal['nbArgos'],$result[$j]['Argos']['nbArgos']);
-						array_push($resultfinal['nbGPS'],$result[$j]['Argos']['nbGPS']);
-						array_push($resultfinal['nbPTT'],$result[$j]['Argos']['nbPTT']);*/
+					if(is_array($result) && count($result)>0 && $result[$j][0]['logDate']==$today){
 						array_push($resultfinal['nb'.$result[$j][0]['Proto']],$result[$j][0]['nb']);
 						$exist=true;
 						//break;
@@ -145,7 +142,7 @@
 				if(!$exist){
 					array_push($resultfinal['nbArgos'],0);
 					array_push($resultfinal['nbGPS'],0);
-					array_push($resultfinal['nbGPS Engineering'],0);
+					array_push($resultfinal['nbEng'],0);
 				}
 			}
 			$this->set("result",$resultfinal);
