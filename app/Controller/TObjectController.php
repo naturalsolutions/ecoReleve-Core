@@ -9,11 +9,13 @@ class TObjectController extends AppController {
 
 	public $components = array('Paginator','Cookie','Session');
 	public $notauth=false;	
+	public $currentarraycarac=array();
 	
 	public function beforeFilter($id = null) {
 		parent::beforeFilter();		
 		
-	}
+	}	
+	
 	
 /**
  * index method
@@ -80,11 +82,15 @@ class TObjectController extends AppController {
 		
 		$savearray=array("Fk_carac"=>"54","fk_object"=>$object_id,"value"=>$id_obj_type,"value_precision"=>$object_type,"begin_date"=>$begin_date,
 		"comments"=>$comment,"object_type"=>$object_type);
+		$this->currentarraycarac=$savearray;
+			
+		$this->TObjectCaracValue->save($this->currentarraycarac);
 		
-		$this->TObjectCaracValue->save($savearray);		
-		
+		//use stored procedure because of a bug on iis
+		// $this->TObject->query("sp_create_carac 54, '$object_id', '$id_obj_type', '$object_type', '$begin_date', null, null, '$object_type'");
 		
 		$this->set("result",array("object_id"=>$object_id));
+		// $this->RequestHandler->respondAs("html");		
 		$this->RequestHandler->respondAs($format);		
 		$this->viewPath .= '/'.$format;
 		$this->layoutPath = $format;	

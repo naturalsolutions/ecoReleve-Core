@@ -240,22 +240,22 @@
 							else {
 								//No date search
 								if(strpos($val, ":")!==false){
-									list($typesearch,$search)=split(":",$val,2);
+									list($typesearch,$nsgsearch)=split(":",$val,2);
 									//exact search
 									if($typesearch=="exact"){
-										$condition_array+=array($col=>$search);
+										$condition_array+=array($col=>$nsgsearch);
 									}
 									//begin search
 									else if($typesearch=="begin"){
-										$condition_array+=array($col.' like'=>$search.'%');
+										$condition_array+=array($col.' like'=>$nsgsearch.'%');
 									}
 									//end search
 									else if($typesearch=="end"){
-										$condition_array+=array($col.' like'=>'%'.$search);
+										$condition_array+=array($col.' like'=>'%'.$nsgsearch);
 									}
 									//contain search
 									else if($typesearch=="contain"){
-										$condition_array+=array($col.' like'=>'%'.$search.'%');
+										$condition_array+=array($col.' like'=>'%'.$nsgsearch.'%');
 									}
 								}
 								else{
@@ -451,10 +451,10 @@
 					if($thislon<$minlon)
 						$minlon=$thislon;		
 				}
-				$this->set('maxlat',$maxlat);
-				$this->set('maxlon',$maxlon);
-				$this->set('minlat',$minlat);
-				$this->set('minlon',$minlon);
+				$this->set('maxlat',floatval($maxlat));
+				$this->set('maxlon',floatval($maxlon));
+				$this->set('minlat',floatval($minlat));
+				$this->set('minlon',floatval($minlon));
 				if(isset($this->params['url']['cluster']) && $this->params['url']['cluster']=='yes')
 					$cluster='yes';				
 					

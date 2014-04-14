@@ -79,7 +79,7 @@ class TaxonController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Taxon->create();
-			print_r($this->request->data['Additional']);
+			//print_r($this->request->data['Additional']);
 			$finaladdi=array();
 			$addi=$this->request->data['Additional'];
 			//print_r(" val :".$this->request->data['Additional']);

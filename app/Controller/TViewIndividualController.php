@@ -50,8 +50,7 @@
 				//print_r($labelcarac);
 			}
 			
-			if($id!=""){				
-				$fields=array('Individual_Obj_PK as ID',		
+			$fields=array('Individual_Obj_PK as ID',		
 				'id2@Thes_Age_Precision as Age',
 				'id30@TCaracThes_Sex_Precision as Sex',				
 				'id34@TCaracThes_Species_Precision as Species',
@@ -82,7 +81,10 @@
 				'id16@TCaracThes_Mark_Color_2_Precision as Marking2_Color',
 				'id17@TCaracThes_Mark_Position_2_Precision as Marking2_Position',
 				'id56@TCarac_Mark_code_2 as Marking2_Code'				
-				);
+			);
+			
+			if($id!=""){				
+				
 				$format="json";
 				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
 					if($this->params['url']['format']=="geojson"){
@@ -113,7 +115,8 @@
 					$this->TViewIndividual->primaryKey="Id";
 					$result=$this->TViewIndividual->find("all",array(
 						'recursive'=>0,
-						'conditions'=> $conditions
+						'conditions'=> $conditions,
+						'order'=>array("DATE asc")
 					));	
 					
 					$minlat=1000;
@@ -133,10 +136,10 @@
 						if($thislon<$minlon)
 							$minlon=$thislon;			
 					}
-					$this->set('maxlat',$maxlat);
-					$this->set('maxlon',$maxlon);
-					$this->set('minlat',$minlat);
-					$this->set('minlon',$minlon);
+					$this->set('maxlat',floatval($maxlat));
+					$this->set('maxlon',floatval($maxlon));
+					$this->set('minlat',floatval($minlat));
+					$this->set('minlon',floatval($minlon));	
 					
 				}
 				else{
@@ -165,20 +168,27 @@
 						// print_r($iniresult);
 						foreach($iniresult[0][0] as $field=>$value){
 							// print_r($field);
-							if(in_array($field,$indfield))
-								$result['Ind']+=array($field=>$value);
+							if(in_array($field,$indfield)){
+								$editb=$this->editbouton("TViewIndividual","Individual_Obj_PK",$fields,"TViewIndividual_".$field,$value);
+								$result['Ind']+=array($field=>array($value,$editb));
+							}	
 							else if(in_array($field,$ringfield)){
 								list($part,$fieldpart)=split("_",$field,2);
-								$result['Ring'][$part]+=array($fieldpart=>$value);						
+								$editb=$this->editbouton("TViewIndividual","Individual_Obj_PK",$fields,$part."_".$fieldpart,$value);
+								$result['Ring'][$part]+=array($fieldpart=>array($value,$editb));						
 							}	
 							else if(in_array($field,$transmitterfield)){
 								list($part,$fieldpart)=split("_",$field,2);
-								$result['Transmitter'][$part]+=array($fieldpart=>$value);
+								$editb=$this->editbouton("TViewIndividual","Individual_Obj_PK",$fields,$part."_".$fieldpart,$value);
+								$result['Transmitter'][$part]+=array($fieldpart=>array($value,$editb));
 							}
 							else if(in_array($field,$markingfield)){
 								list($part,$fieldpart)=split("_",$field,2);
-								$result['Marking'][$part]+=array($fieldpart=>$value);
+								$editb=$this->editbouton("TViewIndividual","Individual_Obj_PK",$fields,$part."_".$fieldpart,$value);
+								$result['Marking'][$part]+=array($fieldpart=>array($value,$editb));
 							}
+							
+							//___________edit here________
 						}
 					}
 					//history case
@@ -208,7 +218,7 @@
 						//delete empty
 						foreach($iniresult[0] as $type=>$values){
 							if($type!="TViewIndividual"){
-								/*if(count($values)==1){
+								if(count($values)==1){
 									$iniresult[]=array($type=>$values);
 									unset($iniresult[0][$type]);
 								}
@@ -216,7 +226,8 @@
 									foreach($values as $val){
 										$iniresult[]=array($type=>array($val));
 									}
-								}*/
+									unset($iniresult[0][$type]);
+								}
 								if(count($values)==0)
 									unset($iniresult[0][$type]);	
 							}	
@@ -240,7 +251,7 @@
 						};
 						uasort($iniresult,$cmp);
 						*/
-						$result=$iniresult;
+						$result=array($iniresult);
 					}	
 				}
 				$this->set("result",$result);

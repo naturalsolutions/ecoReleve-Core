@@ -1,6 +1,8 @@
 <?php
 App::import('Lib', 'FPDF/mctable');
 App::uses('CartoModel', 'Model');
+if(file_exists("app/Lib/FPDF/mctable.php"))
+	include_once "app/Lib/FPDF/mctable.php";
 class MapSelectionManager extends CartoModel {
 	//public $useDbConfig = 'mycoflore';
 	public $useTable = 'TMapSelectionManager';

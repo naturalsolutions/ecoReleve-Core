@@ -162,7 +162,6 @@ class AppModel extends Model {
 				$condition_array+=array("CONVERT(VARCHAR, $date_name, 120) <="=>$datearr);
 			}
 		}	
-		
 		//create the condition array from a search of datatable js default input search
 		if(isset($datatablesearch) && $datatablesearch!=""){
 			$search=$datatablesearch;

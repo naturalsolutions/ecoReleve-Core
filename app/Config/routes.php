@@ -158,10 +158,28 @@
 	Router::connect('/TViewTrx_Sat/:id',array('controller'=>'TViewTrx_Sat','action' => 'detail'));
 	
 	
+	Router::connect('/TViewFieldsensor/list',array('controller'=>'TViewFieldsensor','action' => 'column_list','table_name' => 'TViewField_sensor'
+	,'column_name' => 'Field_sensor_Obj_pk','fields'=>'Field_sensor_Obj_pk as ID
+	,id62@TCaracThes_Field_sensor_type_Precision as FieldSensorType
+	,id41@TCaracThes_Model_Precision as Model
+	,id42@TCaracThes_Company_Precision as Manufacturer
+	,id37@Comments as Comments'
+	,'count2' => 'yes','nogroup'=>'yes'));
+	Router::connect('/TViewFieldsensor/list/count',array('controller'=>'TViewFieldsensor','action' => 'column_list','table_name' => 'TViewField_sensor'
+	,'column_name' => 'Field_sensor_Obj_pk','fields'=>'*','count' => 'yes'));
+	Router::connect('/TViewFieldsensor/:id/carac',array('controller'=>'TViewFieldsensor','action' => 'detail','carac'=>'yes'));
+	Router::connect('/TViewFieldsensor/:id',array('controller'=>'TViewFieldsensor','action' => 'detail'));
+	
+	Router::connect('/characteristic/edit',array('controller'=>'TObjectCaracValue','action' => 'edit'));
+	Router::connect('/object/add',array('controller'=>'TObject','action' => 'add'));
+	Router::connect('/object/delete',array('controller'=>'TObject','action' => 'delete'));
+	Router::connect('/object/delete/:id_object',array('controller'=>'TObject','action' => 'delete'));
+	
 	Router::connect('/argos/stat',array('controller'=>'Sensor','action' => 'argos_stat'));
 	Router::connect('/sensor/stat',array('controller'=>'Sensor','action' => 'log_stat'));
 
 	Router::connect('/list/autocomplete',array('controller'=>'app','action' => 'column_list'));
+	Router::connect('/save/:table_name',array('controller'=>'app','action' => 'save'));
 	
 	Router::connect('/thesaurus/autocomplete/distanceFromObserver/list',array('controller'=>'Thesaurus','action' => 'getthesaurus','id_type'=>'1000003'));
 	Router::connect('/thesaurus/autocomplete/distanceFromObserver/count',array('controller'=>'Thesaurus','action' => 'getthesaurus','id_type'=>'1000003','count'=>'yes'));
@@ -273,7 +291,7 @@
 	Router::connect('/thesaurus/autocomplete/implementationSystem/count',array('controller'=>'Thesaurus','action' => 'getthesaurus','id_type'=>'1000157','count'=>'yes'));
 	Router::connect('/thesaurus/autocomplete/batteryType/list',array('controller'=>'Thesaurus','action' => 'getthesaurus','id_type'=>'1000244'));
 	Router::connect('/thesaurus/autocomplete/batteryType/count',array('controller'=>'Thesaurus','action' => 'getthesaurus','id_type'=>'1000244','count'=>'yes'));
-	
+	Router::connect('/thesaurus/autocomplete/list',array('controller'=>'Thesaurus','action' => 'getthesaurus'));
 	
 	
 	

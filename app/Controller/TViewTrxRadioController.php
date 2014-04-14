@@ -39,15 +39,15 @@
 				'id5@TCarac_Transmitter_Frequency as Frequency',
 				'id41@TCaracThes_Model_Precision as Model',
 				'id42@TCaracThes_Company_Precision as Manufacturer',
-				'id6@TCarac_Transmitter_Serial_Number as [Serial Number]',
+				'id6@TCarac_Transmitter_Serial_Number as [Serial number]',
 				'id43@TCarac_Weight as Weight',
-				'id44@TCarac_InitialLivespan as [Initial LifeSpan]',
+				'id44@TCarac_InitialLivespan as [Initial livespan]',
 				'id40@TCaracThes_Shape_Precision as Shape',
 				'id46@TCaracThes_BatteryType_Precision as [Battery Type]',
 				'id1@Thes_Status_Precision as Status',
 				'id24@TCaracThes_Txt_Harness_Precision as Harness',
-				'id57@TCarac_UpdatedLifeSpan as UpdatedLS',
-				'id58@TCarac_Date_UpdatedLifeSpan as UpdatedLS',
+				'id57@TCarac_UpdatedLifeSpan as [Updated LifeSpan]',
+				'id58@TCarac_Date_UpdatedLifeSpan as [Date Updated LifeSpan]',
 				'id37@Comments as Comments'
 				);
 				
@@ -91,7 +91,7 @@
 					
 					//delete empty
 					foreach($iniresult as $type=>$values){
-						/*if($type!="TViewTrxRadio"){
+						if($type!="TViewTrxRadio"){
 							if(count($values)==1){
 								$iniresult[]=array($type=>$values);
 								unset($iniresult[$type]);
@@ -106,7 +106,7 @@
 						else{
 							$iniresult[]=array($type=>$values);
 							unset($iniresult[$type]);
-						}*/
+						}
 						if(count($values)==0)
 							unset($iniresult[$type]);
 					}
@@ -129,16 +129,20 @@
 					uasort($iniresult,$cmp);*/
 					
 					$result=$iniresult;
-				}
+				}				
 				//check if equipped or not
-				else if(count($result)>0){
+				else if(count($result)>0){					
 					// print_r($result);
-					$equiped=$this->TViewIndividual->find("first",
-					array("fields" => array("id6@TCarac_Transmitter_Serial_Number","id9@TCarac_Release_Ring_Code"),
-						  "recursive"=>0,
-						  "conditions"=>array("id6@TCarac_Transmitter_Serial_Number"=>$result[0]['Serial Number'])					
-					)
-					);
+					if(isset($result[0]['Serial Number']) && $result[0]['Serial Number']!='' && $result[0]['Serial Number']!=null){
+						$equiped=$this->TViewIndividual->find("first",						
+							array("fields" => array("id6@TCarac_Transmitter_Serial_Number","id9@TCarac_Release_Ring_Code"),
+								  "recursive"=>0,
+								  "conditions"=>array("id6@TCarac_Transmitter_Serial_Number"=>$result[0]['Serial Number'])					
+							)
+						);
+					}
+					else
+						$equiped=array();
 					if(count($equiped)>0){
 						$equi="Equipped on Individual";
 						if($equiped['TViewIndividual']['id9@TCarac_Release_Ring_Code']!="")
@@ -148,6 +152,16 @@
 						$equi="Not equipped";
 					}
 					$result[0]=array_merge(array("Equipped"=>$equi),$result[0]);
+					$result['TViewTrxRadio']=$result[0];
+					unset($result[0]);
+
+					
+					//edit boutton val
+					foreach($result['TViewTrxRadio'] as $key=>$val){
+						$editb=$this->editbouton("TViewTrxRadio","Trx_Radio_Obj_PK",$fields,"TViewTrxRadio_".$key,$val);
+						$result['TViewTrxRadio'][$key]=array($val,$editb);
+					}
+			
 				}	
 				// print_r($result);	
 				$this->set("result",array($result));

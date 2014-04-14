@@ -40,7 +40,7 @@ App::uses('CorrelationTable', 'Model');
  */
 class AppController extends Controller {
 	var $helpers = array('Xml', 'Text','form','html','Cache','Json');
-	public $components = array('RequestHandler','Cookie','Session');
+	public $components = array('RequestHandler','Cookie','Session','DebugKit.Toolbar');
 	var $typereturn;
 	public $notauth=true;	
 	public $admin=false;
@@ -510,8 +510,8 @@ class AppController extends Controller {
 					
 					$model_result=$model->find("all",array(
 						'fields'=>$field_array+$fields,
-						//'order'=>"$sort_column $sort_dir",
-						//'group'=>$field_arrayg,
+						'order'=>"$sort_column $sort_dir",
+						'group'=>$field_arrayg,
 						'conditions'=>$array_conditions,
 						'limit'=>$limit,
 						'offset'=>intval($offset))+$options
@@ -584,6 +584,74 @@ class AppController extends Controller {
 			$this->render('not_autorized');	
 		}	
 	}
+	
+	//use by objects controller check if a carac is editable
+	function editbouton($typeobject,$pk_name,$fields,$editval,$content){		
+		$editval=str_replace("$typeobject"."_","",$editval);
+		$ltype="";
+		$id_carac="";
+		$edit=0;
+		$fieldname="";
+		$this->loadModel('ObjCaracList');
+		$this->loadModel('TObjCaractype');
+		//find field sql name from var field
+		foreach($fields as $field){
+			list($v,$l)=explode(" as ",$field);
+			
+			if($editval==$l || "[".$editval."]"==$l){
+				$fieldname=$v;
+			}
+		}
+		$fieldname=preg_replace(array('/id(\d+)@/','/_Precision/'),array("",""),$fieldname);
+		//find id_type from editval (label of carac)
+		if($fieldname!=$pk_name && $fieldname!=""){
+			$id_carac_array=$this->TObjCaractype->find("all",array(
+				"fields" => array("Carac_type_Pk"),
+				"conditions" => array("name"=>trim($fieldname))
+			));
+			$id_carac=$id_carac_array[0]['TObjCaractype']['Carac_type_Pk'];
+			
+			//getting the type and contant value of the carac
+			$objcaraclist=$this->ObjCaracList->find('first',array(
+				"fields"=> array("value_type","Constant"),
+				"conditions"=>array("fk_Carac_type"=>$id_carac)
+			));
+			$value_type=$objcaraclist['ObjCaracList']['value_type'];
+			$constant=$objcaraclist['ObjCaracList']['Constant'];
+			
+			//check if we can edit this carac
+			if($constant==0 || ($constant==1 && ($content==null ||$content=="null" || $content=""))){
+				$edit=1;
+			}				
+			
+			switch($value_type){
+				case "thesaurus":
+					$ltype="t";
+					break;
+				case "function":
+					$edit=0;
+					break;
+				case "int":	
+					$ltype="i";
+					break;
+				case "float":
+					$ltype="f";
+					break;
+				case "datetime":
+					$ltype="d";
+					break;
+				default:
+					$ltype="v";
+					break;	
+			}
+		}
+		else
+			$edit=0;
+			
+		$typeandid=$ltype.$id_carac;
+		$result=array("edit"=>$edit,"typeandid"=>$typeandid);
+		return $result;
+	}	
 	
 	/*
 	@arg $date string date in that format yyyy-mm-dd
@@ -675,4 +743,40 @@ class AppController extends Controller {
 		return $months;
 	}
 	
+	//dynamic update and insert
+	function save(){
+		$message="";
+		if(isset($this->request->params['table_name']) && $this->request->params['table_name']!=""){
+			$table_name=$this->request->params['table_name'];					
+		
+			$this->loadModel("Save");
+			try{
+				$this->Save->setSource($table_name);
+				$schema=$this->Save->schema();
+				$message=$schema;
+			}
+			catch(Exception $e){
+				$message="unknown table";
+			}
+			if ($this->request->is('post')) {
+				if($message!="unknown table"){
+					//data from post request
+					$data=$this->request->data;	
+					
+				}
+			}
+			else{
+				$message="the request must be a POST";
+			}
+		}
+		else{
+			$message="you must enter a 'table name'";
+		}
+		$this->set("result",array("message"=>$message));
+		$this->RequestHandler->respondAs('json');
+		// $this->RequestHandler->respondAs('html');
+		$this->viewPath .= "/json";
+		$this->layout = 'json';
+		$this->layoutPath = 'json';	
+	}
 }

@@ -4,12 +4,8 @@ class TObject extends AppModel {
 	public $useTable = 'TObj_Objects';
 	public $primaryKey = 'Object_Pk';	
 	
-	public $hasOne = array(
-        'TViewIndividual' => array(
-            'className' => 'TViewIndividual',
-            'foreignKey' => 'Individual_Obj_PK'
-        ),
-		'Status' => array(
+	public $hasOne = array(        
+			'Status' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
 				'fields' => array('Carac_value_Pk','value_precision','begin_date','end_date','creation_date','comments'),

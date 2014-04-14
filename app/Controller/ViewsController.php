@@ -701,10 +701,10 @@
 					if($thislon<$minlon)
 						$minlon=$thislon;		
 				}
-				$this->set('maxlat',$maxlat);
-				$this->set('maxlon',$maxlon);
-				$this->set('minlat',$minlat);
-				$this->set('minlon',$minlon);
+				$this->set('maxlat',floatval($maxlat));
+				$this->set('maxlon',floatval($maxlon));
+				$this->set('minlat',floatval($minlat));
+				$this->set('minlon',floatval($minlon));
 				
 				if($cluster=="yes"){
 					//$cartomodel=new CartoModel();
