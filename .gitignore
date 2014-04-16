@@ -1,3 +1,4 @@
-app/tmp
-Config/database.php
-app/Config/database.php
+tmp/*
+[Cc]onfig/database.php
+app/tmp/*
+app/[Cc]onfig/database.php
