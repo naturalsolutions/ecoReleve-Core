@@ -40,7 +40,7 @@ App::uses('CorrelationTable', 'Model');
  */
 class AppController extends Controller {
 	var $helpers = array('Xml', 'Text','form','html','Cache','Json');
-	public $components = array('RequestHandler','Cookie','Session','DebugKit.Toolbar');
+	public $components = array('RequestHandler','Cookie','Session'/*,'DebugKit.Toolbar'*/);
 	var $typereturn;
 	public $notauth=true;	
 	public $admin=false;

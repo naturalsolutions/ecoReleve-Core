@@ -17008,3 +17008,427 @@ Stack Trace:
 #3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-04-15 09:32:11 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Sensor\r_f_i_d_import.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Sensor\\r_f_i_d_import.ctp',
+)
+Request URL: /ecoReleve-core/sensor/RFID_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-04-15 09:32:31 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Sensor\rfid_import.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Sensor\\rfid_import.ctp',
+)
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-04-15 09:34:23 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Sensor\rfid_import.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Sensor\\rfid_import.ctp',
+)
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-04-15 09:35:01 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Sensor/json\rfid_import.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Sensor/json\\rfid_import.ctp',
+)
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-04-15 11:50:23 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 11]
+2014-04-15 11:50:23 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 11, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 11, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 11:50:33 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 11]
+2014-04-15 11:50:33 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 11, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 11, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 11:51:13 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 11]
+2014-04-15 11:51:14 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 11, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 11, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 12:15:30 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 826]
+2014-04-15 12:15:30 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 12:16:19 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 820]
+2014-04-15 12:16:19 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 820)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 820, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 820, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 12:30:05 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 817]
+2014-04-15 12:30:06 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 817)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 817, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 817, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 12:30:34 Error: Fatal Error (4): syntax error, unexpected 'trimarray' (T_STRING), expecting '(' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 17]
+2014-04-15 12:30:34 Error: [FatalErrorException] syntax error, unexpected 'trimarray' (T_STRING), expecting '('
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 17, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 17, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 13:51:40 Error: Fatal Error (1): Function name must be a string in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 44]
+2014-04-15 13:51:41 Error: [FatalErrorException] Function name must be a string
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Function name m...', 'C:\wamp\www\eco...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Function name m...', 'C:\wamp\www\eco...', 44, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Function name m...', 'C:\wamp\www\eco...', 44, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 13:53:59 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 44]
+2014-04-15 13:53:59 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 44)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 44, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 44, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 13:57:38 Error: Fatal Error (1): Call to undefined function validDateFile1() in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 48]
+2014-04-15 13:57:38 Error: [FatalErrorException] Call to undefined function validDateFile1()
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\eco...', 48, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\eco...', 48, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-15 14:21:30 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 97]
+2014-04-15 14:21:30 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 97)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 97, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 97, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 08:17:48 Error: Fatal Error (1): Method name must be a string in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 68]
+2014-04-16 08:17:48 Error: [FatalErrorException] Method name must be a string
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Method name mus...', 'C:\wamp\www\eco...', 68)
+#1 [internal function]: ErrorHandler::handleError(1, 'Method name mus...', 'C:\wamp\www\eco...', 68, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Method name mus...', 'C:\wamp\www\eco...', 68, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 08:18:40 Error: Fatal Error (1): Method name must be a string in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 69]
+2014-04-16 08:18:40 Error: [FatalErrorException] Method name must be a string
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Method name mus...', 'C:\wamp\www\eco...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Method name mus...', 'C:\wamp\www\eco...', 69, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Method name mus...', 'C:\wamp\www\eco...', 69, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 08:20:16 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 826]
+2014-04-16 08:20:16 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 08:20:31 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\Debugger.php, line 826]
+2014-04-16 08:20:31 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\eco...', 826, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 08:26:35 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 134125 bytes) in [C:\wamp\www\ecoReleve-core\lib\Cake\Utility\String.php, line 243]
+2014-04-16 08:26:35 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 134125 bytes)
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\eco...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\eco...', 243, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\eco...', 243, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 09:09:42 Error: Fatal Error (1): Method name must be a string in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 87]
+2014-04-16 09:09:42 Error: [FatalErrorException] Method name must be a string
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Method name mus...', 'C:\wamp\www\eco...', 87)
+#1 [internal function]: ErrorHandler::handleError(1, 'Method name mus...', 'C:\wamp\www\eco...', 87, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Method name mus...', 'C:\wamp\www\eco...', 87, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 09:29:30 Error: Fatal Error (4): syntax error, unexpected '$i' (T_VARIABLE), expecting '(' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 34]
+2014-04-16 09:29:30 Error: [FatalErrorException] syntax error, unexpected '$i' (T_VARIABLE), expecting '('
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 34, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 34, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 09:30:21 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 34]
+2014-04-16 09:30:21 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 34, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 34, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 12:04:05 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 99]
+2014-04-16 12:04:05 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 99)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 99, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 99, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 12:16:57 Error: [Exception] DateTime::__construct(): Failed to parse time string (# #) at position 0 (#): Unexpected character
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(105): DateTime->__construct('# #')
+#1 C:\wamp\www\ecoReleve-core\app\Controller\SensorController.php(175): RFID->import_txt('C:\wamp\tmp\php...', '1')
+#2 [internal function]: SensorController->RFID_import()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SensorController), Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-04-16 12:17:31 Error: [Exception] DateTime::__construct(): Failed to parse time string (# #) at position 0 (#): Unexpected character
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(106): DateTime->__construct('# #')
+#1 C:\wamp\www\ecoReleve-core\app\Controller\SensorController.php(175): RFID->import_txt('C:\wamp\tmp\php...', '1')
+#2 [internal function]: SensorController->RFID_import()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SensorController), Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-04-16 12:21:21 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 105]
+2014-04-16 12:21:22 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 105, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 105, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 12:22:12 Error: [Exception] DateTime::__construct(): Failed to parse time string (Date: Time:) at position 0 (D): The timezone could not be found in the database
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(109): DateTime->__construct('Date: Time:')
+#1 C:\wamp\www\ecoReleve-core\app\Controller\SensorController.php(175): RFID->import_txt('C:\wamp\tmp\php...', '1')
+#2 [internal function]: SensorController->RFID_import()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SensorController), Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-04-16 12:26:16 Error: [Exception] DateTime::__construct(): Failed to parse time string (Date: Time:) at position 0 (D): The timezone could not be found in the database
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(109): DateTime->__construct('Date: Time:')
+#1 C:\wamp\www\ecoReleve-core\app\Controller\SensorController.php(175): RFID->import_txt('C:\wamp\tmp\php...', '1')
+#2 [internal function]: SensorController->RFID_import()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SensorController), Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-04-16 12:47:01 Error: [Exception] DateTime::__construct(): Failed to parse time string (Date: Time:) at position 0 (D): The timezone could not be found in the database
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(117): DateTime->__construct('Date: Time:')
+#1 C:\wamp\www\ecoReleve-core\app\Controller\SensorController.php(175): RFID->import_txt('C:\wamp\tmp\php...', '1')
+#2 [internal function]: SensorController->RFID_import()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SensorController), Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-04-16 12:50:35 Error: [Exception] DateTime::__construct() [<a href='http://php.net/datetime.--construct'>datetime.--construct</a>]: Failed to parse time string ( Time:) at position 0 (T): The timezone could not be found in the database
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(115): DateTime->__construct(' Time:')
+#1 C:\wamp\www\ecoReleve-core\app\Controller\SensorController.php(175): RFID->import_txt('C:\wamp\tmp\php...', '1')
+#2 [internal function]: SensorController->RFID_import()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SensorController), Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-04-16 12:50:52 Error: [Exception] DateTime::__construct(): Failed to parse time string (Date:) at position 0 (D): The timezone could not be found in the database
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(115): DateTime->__construct('Date:')
+#1 C:\wamp\www\ecoReleve-core\app\Controller\SensorController.php(175): RFID->import_txt('C:\wamp\tmp\php...', '1')
+#2 [internal function]: SensorController->RFID_import()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SensorController), Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-04-16 12:51:07 Error: Fatal Error (1): Class 'Date' not found in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 115]
+2014-04-16 12:51:07 Error: [FatalErrorException] Class 'Date' not found
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Date' no...', 'C:\wamp\www\eco...', 115)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Date' no...', 'C:\wamp\www\eco...', 115, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Class 'Date' no...', 'C:\wamp\www\eco...', 115, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 12:51:29 Error: Fatal Error (1): Class 'date' not found in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 115]
+2014-04-16 12:51:30 Error: [FatalErrorException] Class 'date' not found
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'date' no...', 'C:\wamp\www\eco...', 115)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'date' no...', 'C:\wamp\www\eco...', 115, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Class 'date' no...', 'C:\wamp\www\eco...', 115, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 13:00:19 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 100]
+2014-04-16 13:00:19 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 100)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 100, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 100, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 13:16:16 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 57]
+2014-04-16 13:16:16 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 57, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 57, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 13:16:52 Error: Fatal Error (1): Method name must be a string in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 94]
+2014-04-16 13:16:52 Error: [FatalErrorException] Method name must be a string
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Method name mus...', 'C:\wamp\www\eco...', 94)
+#1 [internal function]: ErrorHandler::handleError(1, 'Method name mus...', 'C:\wamp\www\eco...', 94, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Method name mus...', 'C:\wamp\www\eco...', 94, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 13:40:14 Error: [PDOException] SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procédure stockée 'validTimeFile2' introuvable.
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\Database\Sqlserver.php(757): PDO->exec('validTimeFile2')
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(426): Sqlserver->_execute('validTimeFile2', Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('validTimeFile2', Array, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('validTimeFile2', Array, Array)
+#4 C:\wamp\www\ecoReleve-core\lib\Cake\Model\Model.php(800): DboSource->query('validTimeFile2', Array, Object(RFID))
+#5 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(106): Model->__call('validTimeFile2', Array)
+#6 C:\wamp\www\ecoReleve-core\app\Model\RFID.php(106): RFID->validTimeFile2('7:43:44 PM', 1)
+#7 C:\wamp\www\ecoReleve-core\app\Controller\SensorController.php(175): RFID->import_txt('C:\wamp\tmp\php...', '2')
+#8 [internal function]: SensorController->RFID_import()
+#9 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SensorController), Array)
+#10 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-04-16 14:02:23 Error: Fatal Error (4): syntax error, unexpected '[' in [C:\wamp\www\ecoReleve-core\app\Model\RFID.php, line 155]
+2014-04-16 14:02:23 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 155)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\eco...', 155, Array)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\eco...', 155, Array)
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-16 14:44:17 Error: [MissingViewException] View file "C:\wamp\www\ecoReleve-core\app\View\Sensor\rfid_import.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\ecoReleve-core\\app\\View\\Sensor\\rfid_import.ctp',
+)
+Request URL: /ecoReleve-core/sensor/rfid_import
+Stack Trace:
+#0 C:\wamp\www\ecoReleve-core\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\ecoReleve-core\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\ecoReleve-core\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SensorController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\ecoReleve-core\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

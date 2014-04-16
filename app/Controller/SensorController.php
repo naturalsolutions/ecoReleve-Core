@@ -153,6 +153,40 @@
 			$this->layoutPath = $format;
 		}	
 		
+		function RFID_import(){
+			$this->loadModel('RFID');
+			$message="";
+			$id_rfid="";
+			$filetype="";
+			if(isset($this->params['form']['datafile']['tmp_name'])	&& $this->params['form']['datafile']['tmp_name']!=""){	
+				$filename=$this->params['form']['datafile']['tmp_name'];
+				
+				//get rfid id
+				if(isset($this->params['data']['id_rfid']) && $this->params['data']['id_rfid']!=""){
+					$id_rfid=$this->params['data']['id_rfid'];
+				}
+				
+				//get rfid filetype
+				if(isset($this->params['data']['filetype']) && $this->params['data']['filetype']!=""){
+					$filetype=$this->params['data']['filetype'];
+				}
+				
+				//begin import
+				$result=$this->RFID->import_txt($filename,$id_rfid);
+				
+				$message=$result;
+			}	
+			else{
+				$message=array("message"=>"No file");
+				
+			}
+			$this->set('message',$message);
+			$this->RequestHandler->respondAs("json");
+			// $this->RequestHandler->respondAs("html");
+			$this->viewPath .= "/"."json";
+			$this->layout = "json";
+			$this->layoutPath = "json";
+		}
 	}
 
 ?>

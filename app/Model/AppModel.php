@@ -512,4 +512,11 @@ class AppModel extends Model {
 		}
 		return $attrs;
 	}
+	
+	//function for array trim map
+	function trimarray($val){
+		print_r("POJUDGHEOIKBIUONI");
+		return trim($val);
+	}
+	
 }
