@@ -49,40 +49,73 @@
 				$labelcaracwspace=array_map($func,$labelcarac);	
 				//print_r($labelcarac);
 			}
-			
-			$fields=array('Individual_Obj_PK as ID',		
-				'id2@Thes_Age_Precision as Age',
-				'id30@TCaracThes_Sex_Precision as Sex',				
-				'id34@TCaracThes_Species_Precision as Species',
-				'id33@Thes_Origin_Precision as Origin',
-				'id59@TCaracThes_Individual_Status as Individual_status',
-				'id60@TCaracThes_Monitoring_Status_Precision as Monitoring_status',
-				'id61@TCaracThes_Survey_type_Precision as Survey_type',
-				'id35@Birth_date as Birth_date',
-				'id36@Death_date as Death_date',
-				'id37@Comments as Comments',
-				'id11@TCaracThes_Breeding_Ring_Color_Precision as Breeding_Color',
-				'id12@TCarac_Breeding_Ring_Code as Breeding_code',
-				'id10@TCaracThes_Breeding_Ring_Position_Precision as Breeding_Position',
-				'id8@TCaracThes_Release_Ring_Color_Precision as Release_Color',
-				'id9@TCarac_Release_Ring_Code as Release_Code',
-				'id7@TCaracThes_Release_Ring_Position_Precision as Release_Position',
-				'id13@TCarac_Chip_Code as Chip_Code',
-				'id6@TCarac_Transmitter_Serial_Number as VHF_Serial_Number',
-				'id5@TCarac_Transmitter_Frequency as VHF_Frequency',
-				'id4@TCaracThes_Transmitter_Model_Precision as VHF_Model',
-				'id3@TCaracThes_Transmitter_Shape_Precision as VHF_Shape',
-				'id19@TCarac_PTT as Argos_PTT',
-				'id22@TCaracThes_PTT_model_Precision as Argos_model',
-				'id20@TCaracThes_PTT_manufacturer_Precision as Argos_manufacturer',
-				'id14@TCaracThes_Mark_Color_1_Precision as Marking1_Color',
-				'id15@TCaracThes_Mark_Position_1_Precision as Marking1_Position',
-				'id55@TCarac_Mark_code_1 as Marking1_Code',
-				'id16@TCaracThes_Mark_Color_2_Precision as Marking2_Color',
-				'id17@TCaracThes_Mark_Position_2_Precision as Marking2_Position',
-				'id56@TCarac_Mark_code_2 as Marking2_Code'				
+			$fields=array('Individual_Obj_PK',		
+				'id2@Thes_Age_Precision',
+				'id30@TCaracThes_Sex_Precision',				
+				'id34@TCaracThes_Species_Precision',
+				'id33@Thes_Origin_Precision',
+				'id59@TCaracThes_Individual_Status',
+				'id60@TCaracThes_Monitoring_Status_Precision',
+				'id61@TCaracThes_Survey_type_Precision',
+				'id35@Birth_date',
+				'id36@Death_date',
+				'id37@Comments',
+				'id11@TCaracThes_Breeding_Ring_Color_Precision',
+				'id12@TCarac_Breeding_Ring_Code',
+				'id10@TCaracThes_Breeding_Ring_Position_Precision',
+				'id8@TCaracThes_Release_Ring_Color_Precision',
+				'id9@TCarac_Release_Ring_Code',
+				'id7@TCaracThes_Release_Ring_Position_Precision',
+				'id13@TCarac_Chip_Code',
+				'id6@TCarac_Transmitter_Serial_Number',
+				'id5@TCarac_Transmitter_Frequency',
+				'id4@TCaracThes_Transmitter_Model_Precision',
+				'id3@TCaracThes_Transmitter_Shape_Precision',
+				'id19@TCarac_PTT',
+				'id22@TCaracThes_PTT_model_Precision',
+				'id20@TCaracThes_PTT_manufacturer_Precision',
+				'id14@TCaracThes_Mark_Color_1_Precision',
+				'id15@TCaracThes_Mark_Position_1_Precision',
+				'id55@TCarac_Mark_code_1',
+				'id16@TCaracThes_Mark_Color_2_Precision',
+				'id17@TCaracThes_Mark_Position_2_Precision',
+				'id56@TCarac_Mark_code_2'				
 			);
+			$fields=$this->caraclabel($fields);
 			
+			$fields_matching=array('ID'=>'ID',		
+				'Age'=>'Age',
+				'Sex'=>'Sex',				
+				'Species'=>'Species',
+				'Origin'=>'Origin',
+				'Individual_status'=>'Individual status',
+				'Monitoring_status'=>'Monitoring status',
+				'Survey_type'=>'Survey type',
+				'Birth_date'=>'Birth date',
+				'Death_date'=>'Death date',
+				'Comments'=>'Comments',
+				'Breeding_Color'=>'Breeding ring color',
+				'Breeding_code'=>'Breeding ring code',
+				'Breeding_Position'=>'Breeding ring position',
+				'Release_Color'=>'Release ring color',
+				'Release_Code'=>'Release ring code',
+				'Release_Position'=>'Release ring position',
+				'Chip_Code'=>'Chip code',
+				'VHF_Serial_Number'=>'Serial number',
+				'VHF_Frequency'=>'Frequency',
+				'VHF_Model'=>'Tansmitter model',
+				'VHF_Shape'=>'Tansmitter shape',
+				'Argos_PTT'=>'PTT',
+				'Argos_model'=>'PTT model',
+				'Argos_manufacturer'=>'PTT manufacturer',
+				'Marking1_Color'=>'Mark color 1',
+				'Marking1_Position'=>'Mark position 1',
+				'Marking1_Code'=>'Mark code 1',
+				'Marking2_Color'=>'Mark color 2',
+				'Marking2_Position'=>'Mark position 2',
+				'Marking2_Code'=>'Mark code 2'				
+			);
+			// print_r($fields);
 			if($id!=""){				
 				
 				$format="json";
@@ -151,13 +184,13 @@
 						'fields'=> $fields,
 						'conditions'=> array('Individual_Obj_PK'=>$id)
 					));							
-					$indfield=array('ID','Age','Sex','Species','Origin','Individual_status'
-					,'Monitoring_status','Survey_type','Birth_date','Death_date','Comments');
-					$ringfield=array('Breeding_Color','Breeding_code','Breeding_Position','Release_Color','Release_Code',
-					'Release_Position','Chip_Code');				
-					$transmitterfield=array('VHF_Serial_Number','VHF_Frequency','VHF_Model','VHF_Shape'
-					,'Argos_PTT','Argos_model','Argos_manufacturer');
-					$markingfield=array('Marking1_Color','Marking1_Position','Marking1_Code','Marking2_Color','Marking2_Position','Marking2_Code');
+					$indfield=array('ID','Age','Sex','Species','Origin','Individual status'
+					,'Monitoring status','Survey type','Birth date','Death date','Comments');
+					$ringfield=array('Breeding ring color','Breeding ring code','Breeding ring position','Release ring color','Release ring code',
+					'Release ring position','Chip code');				
+					$transmitterfield=array('Serial number','VHF_Frequency','Tansmitter model','Tansmitter shape'
+					,'PTT','PTT model','PTT manufacturer');
+					$markingfield=array('Mark color 1','Mark position 1','Mark code 1','Mark color 2','Mark position 2','Mark code 2');
 					
 					//not history case
 					if($labelcarac==""){
@@ -173,17 +206,18 @@
 								$result['Ind']+=array($field=>array($value,$editb));
 							}	
 							else if(in_array($field,$ringfield)){
-								list($part,$fieldpart)=split("_",$field,2);
-								$editb=$this->editbouton("TViewIndividual","Individual_Obj_PK",$fields,$part."_".$fieldpart,$value);
+								
+								list($part,$fieldpart)=split("_",array_search($field,$fields_matching),2);
+								$editb=$this->editbouton("TViewIndividual","Individual_Obj_PK",$fields,$part."_".$fieldpart,$value);								
 								$result['Ring'][$part]+=array($fieldpart=>array($value,$editb));						
 							}	
 							else if(in_array($field,$transmitterfield)){
-								list($part,$fieldpart)=split("_",$field,2);
+								list($part,$fieldpart)=split("_",array_search($field,$fields_matching),2);
 								$editb=$this->editbouton("TViewIndividual","Individual_Obj_PK",$fields,$part."_".$fieldpart,$value);
 								$result['Transmitter'][$part]+=array($fieldpart=>array($value,$editb));
 							}
 							else if(in_array($field,$markingfield)){
-								list($part,$fieldpart)=split("_",$field,2);
+								list($part,$fieldpart)=split("_",array_search($field,$fields_matching),2);
 								$editb=$this->editbouton("TViewIndividual","Individual_Obj_PK",$fields,$part."_".$fieldpart,$value);
 								$result['Marking'][$part]+=array($fieldpart=>array($value,$editb));
 							}

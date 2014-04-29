@@ -32,7 +32,7 @@ class TObjectController extends AppController {
 		$vp=null;
 		$object_type="";
 		if(isset($this->params['url']['object_type']) && $this->params['url']['object_type']!=""){
-			$object_type=$this->params['url']['object_type'];
+			$object_type=str_replace(" ","_",$this->params['url']['object_type']);
 		}
 		
 		$object_id=null;

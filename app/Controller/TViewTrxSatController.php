@@ -35,19 +35,21 @@
 			}
 			
 			if($id!=""){				
-				$fields=array('Trx_Sat_Obj_pk as ID',		
-				'id19@TCarac_PTT as PTT',
-				'id49@TCarac_PTTAssignmentDate as [PTT assignment date]',
-				'id41@TCaracThes_Model_Precision as Model',
-				'id42@TCaracThes_Company_Precision as  Manufacturer',
-				'id1@Thes_Status_Precision as Status',
-				'id24@TCaracThes_Txt_Harness_Precision as Harness',
-				'id44@TCarac_InitialLivespan as [Initial livespan]',
-				'id25@TCaracThes_Txt_Argos_DutyCycle_Precision as [Argos Duty cycle]',
-				'id6@TCarac_Transmitter_Serial_Number as [Serial number]',
-				'id43@TCarac_Weight as Weight',
-				'id37@Comments as Comments'
+				$fields=array('Trx_Sat_Obj_pk',		
+				'id19@TCarac_PTT',
+				'id49@TCarac_PTTAssignmentDate',
+				'id41@TCaracThes_Model_Precision',
+				'id42@TCaracThes_Company_Precision',
+				'id1@Thes_Status_Precision',
+				'id24@TCaracThes_Txt_Harness_Precision',
+				'id44@TCarac_InitialLivespan',
+				'id25@TCaracThes_Txt_Argos_DutyCycle_Precision',
+				'id6@TCarac_Transmitter_Serial_Number',
+				'id43@TCarac_Weight',
+				'id37@Comments'
 				);
+				
+				$fields=$this->caraclabel($fields);
 				
 				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
 					if($this->params['url']['format']=="geojson"){
@@ -152,7 +154,10 @@
 					else{
 						$equi="Not equipped";
 					}
+					$idarr=array('ID'=>$result[0]['ID']);
 					$result[0]=array_merge(array("Equipped"=>$equi),$result[0]);
+					unset($result[0]['ID']);					
+					$result[0]=array_merge($idarr,$result[0]);
 					$result['TViewTrxSat']=$result[0];
 					unset($result[0]);
 										

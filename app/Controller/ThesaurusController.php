@@ -26,8 +26,8 @@
 			// $this->TViewIndividual->setSource('TProtocol_Summary');
 			// $this->TViewIndividual->primaryKey="Id";
 			
-			if(isset($this->request->params['id']) && $this->request->params['id']!=""){
-				$id=$this->request->params['id'];					
+			if(isset($this->request->params['id_type']) && $this->request->params['id_type']!=""){
+				$id=$this->request->params['id_type'];					
 			}	
 			
 			if(isset($this->params['url']['id_type']) && $this->params['url']['id_type']!=""){
@@ -66,8 +66,7 @@
 			if(isset($this->params['url']['object_type']) && $this->params['url']['object_type']!=""){
 				$object_type=$this->params['url']['object_type'];
 			}
-			
-			if($id!="" || isset($id_type)){
+			if($id!="" || (isset($id_type) && $id_type!="")){
 				//get id_type and hierarchie from param
 				if($id!="")
 					$conditions+=array('Id_Type'=>$id);
@@ -105,6 +104,7 @@
 						'conditions'=> $conditions
 					));
 					$result=array("nb"=>$result);
+					
 				}	
 				$this->set("result",$result);
 			}

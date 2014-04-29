@@ -1,6 +1,6 @@
 <?php
 	App::uses('AppController','Controller');
-	class TViewFieldsensorController extends AppController{
+	class TViewRFIDController extends AppController{
 		var $helpers = array('Xml', 'Text','form','html','Cache','Json');
 		public $components = array('RequestHandler');
 		public $cacheAction = array(  //set the method(webservice) with a cached result
@@ -12,7 +12,7 @@
 			$id="";
 			$recursive=0;
 			$format="json";
-			$this->loadModel('TViewFieldsensor');
+			$this->loadModel('TViewRFID');
 			$this->loadModel('TViewIndividual');
 			$this->loadModel('ObjCaracList');
 			$this->loadModel('TObjCaractype');
@@ -48,15 +48,15 @@
 				//print_r($labelcarac);
 			}
 			
-			$fields=array('Field_sensor_Obj_pk',		
-				'id62@TCaracThes_Field_sensor_type_Precision',
+			$fields=array('RFID_Obj_pk',		
+				'id65@TCarac_rfid_Serial_Number',
 				'id41@TCaracThes_Model_Precision',
 				'id42@TCaracThes_Company_Precision',				
 				'id37@Comments'
 			);
 			$fields=$this->caraclabel($fields);
 			if($editval!=""){
-				$editval=str_replace("TViewFieldsensor_","",$editval);
+				$editval=str_replace("TViewRFID_","",$editval);
 				$fieldname="";
 				$ltype="";
 				$id_carac="";
@@ -69,7 +69,7 @@
 				}
 				$fieldname=preg_replace(array('/id(\d+)@/','/_Precision/'),array("",""),$fieldname);
 				//find id_type from editval (label of carac)
-				if($fieldname!="Field_sensor_Obj_pk"){
+				if($fieldname!="RFID_Obj_pk"){
 					$id_carac_array=$this->TObjCaractype->find("all",array(
 						"fields" => array("Carac_type_Pk"),
 						"conditions" => array("name"=>trim($fieldname))
@@ -126,12 +126,12 @@
 				/*'contain' => array('Comment', 'User' => array('Comment', 'Profile'))*/
 				
 				if($labelcarac!="")
-					$fields=array("Field_sensor_Obj_pk","id62@TCaracThes_Field_sensor_type_Precision","id41@TCaracThes_Model_Precision",
+					$fields=array("RFID_Obj_pk","id65@TCarac_rfid_Serial_Number","id41@TCaracThes_Model_Precision",
 					"id42@TCaracThes_Company_Precision","id37@Comments");
-				$iniresult=$this->TViewFieldsensor->find("first",array(
+				$iniresult=$this->TViewRFID->find("first",array(
 					'recursive'=>$recursive,
 					'fields'=> $fields,
-					'conditions'=> array('Field_sensor_Obj_pk'=>$id)
+					'conditions'=> array('RFID_Obj_pk'=>$id)
 				));							
 				$result=$iniresult;
 				//print_r($result);
@@ -139,20 +139,20 @@
 				
 				if($labelcarac!=""){						
 					//unset($iniresult[0]['TViewTrxSat']);
-					$countindval=count($iniresult['TViewFieldsensor']);
+					$countindval=count($iniresult['TViewRFID']);
 					$i=0;
-					foreach($iniresult['TViewFieldsensor'] as $key=>$val){
-						if($key=='Field_sensor_Obj_pk'){							
-							$iniresult['TViewFieldsensor']['Id']=$iniresult['TViewFieldsensor']['Field_sensor_Obj_pk'];								
+					foreach($iniresult['TViewRFID'] as $key=>$val){
+						if($key=='RFID_Obj_pk'){							
+							$iniresult['TViewRFID']['Id']=$iniresult['TViewRFID']['RFID_Obj_pk'];								
 						}
 						else{
 							foreach($labelcarac as $name=>$label){
 								if(strpos($key,$name)!==false){
-									$iniresult['TViewFieldsensor'][$label]=$iniresult['TViewFieldsensor'][$key];	
+									$iniresult['TViewRFID'][$label]=$iniresult['TViewRFID'][$key];	
 								}
 							}
 						}
-						unset($iniresult['TViewFieldsensor'][$key]);
+						unset($iniresult['TViewRFID'][$key]);
 						$i++;
 						if($i>$countindval)
 							break;
@@ -160,7 +160,7 @@
 					//print_r($iniresult);
 					//delete empty
 					foreach($iniresult as $type=>$values){
-						if($type!="TViewFieldsensor"){
+						if($type!="TViewRFID"){
 							if(count($values)==1){
 								$iniresult[]=array($type=>$values);
 								unset($iniresult[$type]);
@@ -200,11 +200,11 @@
 					$result=$iniresult;					
 				}
 				else{
-					$result['TViewFieldsensor']=$result[0];
+					$result['TViewRFID']=$result[0];
 					unset($result[0]);
-					foreach($result['TViewFieldsensor'] as $key=>$val){
-						$editb=$this->editbouton("TViewFieldsensor","Field_sensor_Obj_pk",$fields,"TViewFieldsensor_".$key,$val);
-						$result['TViewFieldsensor'][$key]=array($val,$editb);
+					foreach($result['TViewRFID'] as $key=>$val){
+						$editb=$this->editbouton("TViewRFID","RFID_Obj_pk",$fields,"TViewRFID_".$key,$val);
+						$result['TViewRFID'][$key]=array($val,$editb);
 					}
 				}
 				//check if equipped or not

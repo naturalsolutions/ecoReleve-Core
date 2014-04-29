@@ -1,1 +1,1 @@
-<?phpclass TaxonFamilyCount extends AppModel {	// public $useDbConfig = 'mycoflore';	public $useTable = 'TTaxa';}	 ?>
+<?phpclass TaxonFamilyCount extends AppModel {	public $useDbConfig = 'taxon';	public $useTable = 'TTaxa';}	 ?>

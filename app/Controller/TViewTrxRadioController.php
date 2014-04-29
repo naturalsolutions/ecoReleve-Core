@@ -35,21 +35,22 @@
 			}
 			
 			if($id!=""){				
-				$fields=array('Trx_Radio_Obj_PK as ID',		
-				'id5@TCarac_Transmitter_Frequency as Frequency',
-				'id41@TCaracThes_Model_Precision as Model',
-				'id42@TCaracThes_Company_Precision as Manufacturer',
-				'id6@TCarac_Transmitter_Serial_Number as [Serial number]',
-				'id43@TCarac_Weight as Weight',
-				'id44@TCarac_InitialLivespan as [Initial livespan]',
-				'id40@TCaracThes_Shape_Precision as Shape',
-				'id46@TCaracThes_BatteryType_Precision as [Battery Type]',
-				'id1@Thes_Status_Precision as Status',
-				'id24@TCaracThes_Txt_Harness_Precision as Harness',
-				'id57@TCarac_UpdatedLifeSpan as [Updated LifeSpan]',
-				'id58@TCarac_Date_UpdatedLifeSpan as [Date Updated LifeSpan]',
-				'id37@Comments as Comments'
+				$fields=array('Trx_Radio_Obj_PK',		
+				'id5@TCarac_Transmitter_Frequency',
+				'id41@TCaracThes_Model_Precision ',
+				'id42@TCaracThes_Company_Precision',
+				'id6@TCarac_Transmitter_Serial_Number',
+				'id43@TCarac_Weight',
+				'id44@TCarac_InitialLivespan',
+				'id40@TCaracThes_Shape_Precision',
+				'id46@TCaracThes_BatteryType_Precision',
+				'id1@Thes_Status_Precision',
+				'id24@TCaracThes_Txt_Harness_Precision',
+				'id57@TCarac_UpdatedLifeSpan',
+				'id58@TCarac_Date_UpdatedLifeSpan',
+				'id37@Comments'
 				);
+				$fields=$this->caraclabel($fields);
 				
 				if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
 					if($this->params['url']['format']=="geojson"){
@@ -151,10 +152,12 @@
 					else{
 						$equi="Not equipped";
 					}
+					$idarr=array('ID'=>$result[0]['ID']);
 					$result[0]=array_merge(array("Equipped"=>$equi),$result[0]);
-					$result['TViewTrxRadio']=$result[0];
+					unset($result[0]['ID']);					
+					$result[0]=array_merge($idarr,$result[0]);
+					$result['TViewTrxRadio']=$result[0];					
 					unset($result[0]);
-
 					
 					//edit boutton val
 					foreach($result['TViewTrxRadio'] as $key=>$val){

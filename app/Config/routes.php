@@ -107,29 +107,34 @@
 	Router::connect('/vernacular/list/autocomplete',array('controller'=>'taxon','action' => 'column_list','table_name' => 'TTaxa','column_name' => 'NAME_VERN_FR','fields'=>'NAME_VERN_FR'));
 	Router::connect('/vernacular/list',array('controller'=>'taxon','action' => 'column_list','table_name' => 'TTaxa','column_name' => 'NAME_VERN_FR'
 	,'fields'=>'ID_TAXON,NAME_VALID_WITHOUT_AUTHORITY,NAME_VALID_AUTHORITY,NAME_VALID_WITH_AUTHORITY,NAME_VERN_FR,RANK'));
-
+	Router::connect('/taxon/import/taxref',array('controller'=>'taxon','action' => 'importTaxref'));	
+	Router::connect('/taxon/import/taxref/count',array('controller'=>'taxon','action' => 'importTaxref','count'=>"yes"));
+	Router::connect('/taxon//taxref/version/list',array('controller'=>'taxon','action' => 'taxrefversion'));
+	Router::connect('/taxon/taxref/list/autocomplete/:field',array('controller'=>'taxon','action' => 'taxrefautocomplete'));
 	
-	Router::connect('/TViewIndividual/list',array('controller'=>'TViewIndividual','action' => 'column_list','table_name' => 'TViewIndividual'
-	,'column_name' => 'Individual_Obj_PK','fields'=>'Individual_Obj_PK as ID
-	,id60@TCaracThes_Monitoring_Status_Precision as Monitoring_status,
-	id61@TCaracThes_Survey_type_Precision as Survey_type
-	,id5@TCarac_Transmitter_Frequency as VHF_frequency
-	,id19@TCarac_PTT as PTT
-	,id9@TCarac_Release_Ring_Code as Release_ring_code
-	,id12@TCarac_Breeding_Ring_Code as Breeding_ring_code
-	,id13@TCarac_Chip_Code as Chip_code
-	,id55@TCarac_Mark_code_1 as Mark1_code
-	,id56@TCarac_Mark_code_2 as Mark2_code,
-	id30@TCaracThes_Sex_Precision as sex'
-	,'count2' => 'yes','nogroup'=>'yes'));
+	Router::connect('/TViewIndividual/list',array('controller'=>'TViewIndividual','action' => 'column_list','table_name' => 'V_Qry_AllIndivs_LastStations'
+	,'column_name' => 'Fk_TInd_ID','fields'=>"Fk_TInd_ID as ID
+	,CASE when  PTT IS NOT NULL and NumBagRel is not null then 'PTT:'+PTT+' / Chip code:'+NumBagRel when PTT IS NOT NULL then 'PTT:'+PTT when NumBagRel is not null then 'Chip code:'+NumBagRel end as transmitter
+	,last_observation as [last observation]
+	,SurveyType@station as [survey type]
+	,MonitoringStatus@Station as [monitoring status]
+	,Mark1_color as mark_color
+	,Frequency as frequency
+	,PTT as ptt
+	,Sex as sex
+	,Release_ring_code as [release ring]
+	,Breeding_ring_code as [breeding ring]
+	,Origin as origin
+	,Age as age"	
+	,'count2' => 'no','nogroup'=>'yes'));
 	Router::connect('/TViewIndividual/list/count',array('controller'=>'TViewIndividual','action' => 'column_list','table_name' => 'TViewIndividual'
 	,'column_name' => 'id2@Thes_Age','fields'=>'Individual_Obj_PK,id2@Thes_Age'
 	,'count' => 'yes'));
 	Router::connect('/TViewIndividual/add',array('controller'=>'TViewIndividual','action' => 'add'));
 	Router::connect('/TViewIndividual/:id/carac',array('controller'=>'TViewIndividual','action' => 'detail','carac'=>'yes'));
 	Router::connect('/TViewIndividual/:id/protocole',array('controller'=>'TViewIndividual','action' => 'getproto'));
-	Router::connect('/TViewIndividual/:id',array('controller'=>'TViewIndividual','action' => 'detail'));
-		
+	Router::connect('/TViewIndividual/:id',array('controller'=>'TViewIndividual','action' => 'detail'));		
+	
 	Router::connect('/TViewTrx_Radio/list',array('controller'=>'TViewTrx_Radio','action' => 'column_list','table_name' => 'TViewTrx_Radio'
 	,'column_name' => 'id1@Thes_Status','fields'=>'Trx_Radio_Obj_PK as ID
 	,id5@TCarac_Transmitter_Frequency as VHF_frequency
@@ -156,8 +161,7 @@
 	,'column_name' => 'id1@Thes_Status','fields'=>'*','count' => 'yes'));
 	Router::connect('/TViewTrx_Sat/:id/carac',array('controller'=>'TViewTrx_Sat','action' => 'detail','carac'=>'yes'));
 	Router::connect('/TViewTrx_Sat/:id',array('controller'=>'TViewTrx_Sat','action' => 'detail'));
-	
-	
+		
 	Router::connect('/TViewFieldsensor/list',array('controller'=>'TViewFieldsensor','action' => 'column_list','table_name' => 'TViewField_sensor'
 	,'column_name' => 'Field_sensor_Obj_pk','fields'=>'Field_sensor_Obj_pk as ID
 	,id62@TCaracThes_Field_sensor_type_Precision as FieldSensorType
@@ -169,6 +173,30 @@
 	,'column_name' => 'Field_sensor_Obj_pk','fields'=>'*','count' => 'yes'));
 	Router::connect('/TViewFieldsensor/:id/carac',array('controller'=>'TViewFieldsensor','action' => 'detail','carac'=>'yes'));
 	Router::connect('/TViewFieldsensor/:id',array('controller'=>'TViewFieldsensor','action' => 'detail'));
+	
+	Router::connect('/TViewRFID/list',array('controller'=>'TViewRFID','action' => 'column_list','table_name' => 'TViewRFID'
+	,'column_name' => 'RFID_Obj_pk','fields'=>'RFID_Obj_pk as ID
+	,id65@TCarac_rfid_Serial_Number as [Serial number]
+	,id41@TCaracThes_Model_Precision as Model
+	,id42@TCaracThes_Company_Precision as Manufacturer
+	,id37@Comments as Comments'
+	,'count2' => 'yes','nogroup'=>'yes'));
+	Router::connect('/TViewRFID/list/count',array('controller'=>'TViewRFID','action' => 'column_list','table_name' => 'TViewRFID'
+	,'column_name' => 'RFID_Obj_pk','fields'=>'*','count' => 'yes'));
+	Router::connect('/TViewRFID/:id/carac',array('controller'=>'TViewRFID','action' => 'detail','carac'=>'yes'));
+	Router::connect('/TViewRFID/:id',array('controller'=>'TViewRFID','action' => 'detail'));
+	
+	Router::connect('/TViewCameraTrap/list',array('controller'=>'TViewCamera_trap','action' => 'column_list','table_name' => 'TViewCamera_trap'
+	,'column_name' => 'Camera_trap_Obj_pk','fields'=>'Camera_trap_Obj_pk as ID
+	,id67@TCarac_cameratrap_Serial_Number as [Serial number]
+	,id41@TCaracThes_Model_Precision as Model
+	,id42@TCaracThes_Company_Precision as Manufacturer
+	,id37@Comments as Comments'
+	,'count2' => 'yes','nogroup'=>'yes'));
+	Router::connect('/TViewCameraTrap/list/count',array('controller'=>'TViewCamera_trap','action' => 'column_list','table_name' => 'TViewCamera_trap'
+	,'column_name' => 'Camera_trap_Obj_pk','fields'=>'*','count' => 'yes'));
+	Router::connect('/TViewCameraTrap/:id/carac',array('controller'=>'TViewCamera_trap','action' => 'detail','carac'=>'yes'));
+	Router::connect('/TViewCameraTrap/:id',array('controller'=>'TViewCamera_trap','action' => 'detail'));
 	
 	Router::connect('/characteristic/edit',array('controller'=>'TObjectCaracValue','action' => 'edit'));
 	Router::connect('/object/add',array('controller'=>'TObject','action' => 'add'));

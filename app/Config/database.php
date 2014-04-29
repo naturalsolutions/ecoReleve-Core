@@ -3,19 +3,22 @@ class DATABASE_CONFIG {
 	public $default = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "",
-	 "login" => "",
-	 "password" => "",
-	 "database" => "",
+	 // "host" => "WIN7PRO-PC\SQLSERVER2008",
+	 "host" => "SERVEUR2008\SQLSERVER2008",
+	 "login" => "eReleveApplication",
+	 "password" => "123456",
+	 // "database" => "ECWP-eReleveData",
+	 "database" => "ECWP_ecoReleveData",
 	 "prefix" => ""
 	);
+	
 	
 	public $ereleveArgos = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "",
-	 "login" => "",
-	 "password" => "",
+	 "host" => "SERVEUR2008\SQLSERVER2008",
+	 "login" => "eReleveApplication",
+	 "password" => "123456",
 	 "database" => "ECWP_eReleve_Argos",
 	 "prefix" => ""
 	);	
@@ -23,20 +26,20 @@ class DATABASE_CONFIG {
 	public $ereleveSensor= array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "",
-	 "login" => "",
-	 "password" => "",
-	 "database" => "",
+	 "host" => "SERVEUR2008\SQLSERVER2008",
+	 "login" => "eReleveApplication",
+	 "password" => "123456",
+	 "database" => "ECWP_eReleve_Sensor",
 	 "prefix" => ""
 	);	
 	
 	public $user = array(
 	 "datasource" => "Database/Sqlserver",
 	 "persistent" => false,
-	 "host" => "",
+	 "host" => "WIN7PRO-PC\SQLSERVER2008",
 	 "login" => "",
 	 "password" => "",
-	 "database" => "",
+	 "database" => "ECWP_TRACK_SECURITE",
 	 "prefix" => "",
 	 "encoding" => "",
 	);

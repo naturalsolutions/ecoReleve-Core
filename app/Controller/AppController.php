@@ -123,14 +123,14 @@ class AppController extends Controller {
 				$offset=$this->params['url']['skip'];
 			}
 			
-			//format from request
-				
+			//format from request				
 			if(stripos($this->request->header('Accept'),"application/xml")!==false){
 				$format="xml"; 
 			}
 			else if(stripos($this->request->header('Accept'),"application/json")!==false){
 				$format="json";
 			}
+			
 			//format from param
 			if(isset($this->params['url']['format']) && $this->params['url']['format']!=""){
 				if(stristr($_SERVER["SERVER_SOFTWARE"], 'apache')){
@@ -421,6 +421,9 @@ class AppController extends Controller {
 						$sort_column=$value_label_array[$this->params['url']['sortColumn']];
 					else
 						$sort_column=$this->params['url']['sortColumn'];
+					if(strpos($sort_column," ")!==false){
+						$sort_column="[".$sort_column."]";
+					}	
 				}
 				
 				if(count($fields)>1 && ($table_name=="TTaxa_Name" || $table_name=="TTaxa")){
@@ -518,14 +521,16 @@ class AppController extends Controller {
 					);	
 
 					if(isset($this->request->params['count2'])){
-						$nb=$model->find("count",array(
-							'fields'=>$field_array+$fields,
-							'order'=>"$column_name asc",
-							'group'=>$field_arrayg,
-							'conditions'=>$array_conditions
-							)+$options
-						);
-						
+						$nb="";
+						if($this->request->params['count2']=="yes"){
+							$nb=$model->find("count",array(
+								'fields'=>$field_array+$fields,
+								'order'=>"$column_name asc",
+								'group'=>$field_arrayg,
+								'conditions'=>$array_conditions
+								)+$options
+							);
+						}
 						$this->set("totaldisplay",$nb);	
 					}				
 					$this->set("result",$model_result);	
@@ -584,74 +589,6 @@ class AppController extends Controller {
 			$this->render('not_autorized');	
 		}	
 	}
-	
-	//use by objects controller check if a carac is editable
-	function editbouton($typeobject,$pk_name,$fields,$editval,$content){		
-		$editval=str_replace("$typeobject"."_","",$editval);
-		$ltype="";
-		$id_carac="";
-		$edit=0;
-		$fieldname="";
-		$this->loadModel('ObjCaracList');
-		$this->loadModel('TObjCaractype');
-		//find field sql name from var field
-		foreach($fields as $field){
-			list($v,$l)=explode(" as ",$field);
-			
-			if($editval==$l || "[".$editval."]"==$l){
-				$fieldname=$v;
-			}
-		}
-		$fieldname=preg_replace(array('/id(\d+)@/','/_Precision/'),array("",""),$fieldname);
-		//find id_type from editval (label of carac)
-		if($fieldname!=$pk_name && $fieldname!=""){
-			$id_carac_array=$this->TObjCaractype->find("all",array(
-				"fields" => array("Carac_type_Pk"),
-				"conditions" => array("name"=>trim($fieldname))
-			));
-			$id_carac=$id_carac_array[0]['TObjCaractype']['Carac_type_Pk'];
-			
-			//getting the type and contant value of the carac
-			$objcaraclist=$this->ObjCaracList->find('first',array(
-				"fields"=> array("value_type","Constant"),
-				"conditions"=>array("fk_Carac_type"=>$id_carac)
-			));
-			$value_type=$objcaraclist['ObjCaracList']['value_type'];
-			$constant=$objcaraclist['ObjCaracList']['Constant'];
-			
-			//check if we can edit this carac
-			if($constant==0 || ($constant==1 && ($content==null ||$content=="null" || $content=""))){
-				$edit=1;
-			}				
-			
-			switch($value_type){
-				case "thesaurus":
-					$ltype="t";
-					break;
-				case "function":
-					$edit=0;
-					break;
-				case "int":	
-					$ltype="i";
-					break;
-				case "float":
-					$ltype="f";
-					break;
-				case "datetime":
-					$ltype="d";
-					break;
-				default:
-					$ltype="v";
-					break;	
-			}
-		}
-		else
-			$edit=0;
-			
-		$typeandid=$ltype.$id_carac;
-		$result=array("edit"=>$edit,"typeandid"=>$typeandid);
-		return $result;
-	}	
 	
 	/*
 	@arg $date string date in that format yyyy-mm-dd
@@ -742,6 +679,187 @@ class AppController extends Controller {
 		
 		return $months;
 	}
+	
+	//return a list of carac label for sql select from a carac view column list name
+	function caraclabel($fields){
+		$this->loadModel('TObjCaractype');
+		$labels=array();
+		$fields2=array(); //field array (field_name => simplified_name)
+		
+		//get object type
+		if(in_array("Trx_Sat_Obj_pk", $fields)){
+			$objecttype="Trx_Sat";
+			$labels=array_merge($labels,array("Trx_Sat_Obj_pk as ID"));
+		}
+		else if(in_array("Trx_Radio_Obj_PK", $fields)){
+			$objecttype="Trx_Radio";
+			$labels=array_merge($labels,array("Trx_Radio_Obj_PK as ID"));
+		}
+		else if(in_array("Individual_Obj_PK", $fields)){
+			$objecttype="Individual";
+			$labels=array_merge($labels,array("Individual_Obj_PK as ID"));
+		}
+		else if(in_array("Field_sensor_Obj_pk", $fields)){
+			$objecttype="Field_sensor";
+			$labels=array_merge($labels,array("Field_sensor_Obj_pk as ID"));
+		}
+		else if(in_array("RFID_Obj_pk", $fields)){
+			$objecttype="RFID";
+			$labels=array_merge($labels,array("RFID_Obj_pk as ID"));
+		}
+		else if(in_array("Camera_trap_Obj_pk", $fields)){
+			$objecttype="Camera_trap";
+			$labels=array_merge($labels,array("Camera_trap_Obj_pk as ID"));
+		}
+		
+		//join array
+		$options['joins'] = array(
+			array('table' => 'TObj_Obj_CaracList',
+				'alias' => 'CaracList',
+				'type' => 'LEFT',
+				'conditions' => array(
+					"Carac_type_Pk = CaracList.fk_Carac_type" 
+				)
+			),
+			array('table' => 'TObj_Obj_Type',
+				'alias' => 'ObjectType',
+				'type' => 'LEFT',
+				'conditions' => array(
+					"CaracList.fk_Object_type = ObjectType.Obj_Type_Pk" 
+				)
+			)
+		);
+		
+		//get ordered list of carac
+		$caraclist=$this->TObjCaractype->find("list",array(
+			"fields"=>array("label","name"),
+			"conditions"=>array("ObjectType.name"=>$objecttype),
+			"order"=>array("CaracList.importance,CaracList.position asc")
+		)+$options);
+		
+		//creation of field2
+		foreach($fields as $field){
+			$fields2+=array($field=>preg_replace(array('/id(\d+)@/','/_Precision/'),array("",""),trim($field)));
+		}
+		
+		//create label array
+		foreach($caraclist as $lab=>$name){
+				
+			$index=array_search(trim($name),$fields2);
+			
+			if($index){
+				if(strpos($lab," "))
+					$lab="[".$lab."]";
+				$labels=array_merge($labels,array($index." as ".$lab));
+			}
+		}
+		return $labels;
+	}
+	
+	//use by objects controller check if a carac is editable
+	function editbouton($typeobject,$pk_name,$fields,$editval,$content){		
+		$editval=str_replace("$typeobject"."_","",$editval);
+		$ltype="";
+		$id_carac="";
+		$edit=0;
+		$fieldname="";
+		$position="";
+		$importance="";
+		$object_type="Individual";
+		$this->loadModel('ObjCaracList');
+		$this->loadModel('TObjCaractype');
+		$this->loadModel('TObjType');
+		
+		//get id object_type
+		if($typeobject=="TViewTrxRadio")
+			$object_type="Trx_Radio";
+		else if($typeobject=="TViewTrxSat")
+			$object_type="Trx_Sat";	
+		else if($typeobject=="TViewFieldsensor")
+			$object_type="Field_sensor";
+		else if($typeobject=="TViewRFID")
+			$object_type="RFID";
+		else if($typeobject=="TViewCamera_trap")
+			$object_type="Camera_trap";	
+		$id_obj_array=$this->TObjType->find("first",array(
+			"fields"=>array("Obj_Type_Pk"),
+			"conditions"=>array("name"=>$object_type)
+		));					
+		$id_obj=$id_obj_array['TObjType']['Obj_Type_Pk'];
+		
+		//find field sql name from var field
+		foreach($fields as $field){
+			list($v,$l)=explode(" as ",$field);
+			
+			if(trim($editval)==trim($l) || "[".trim($editval)."]"==trim($l)){
+				$fieldname=$v;
+			}
+		}
+			
+		
+		$fieldname=preg_replace(array('/id(\d+)@/','/_Precision/'),array("",""),$fieldname);
+		//find id_type from editval (label of carac)
+		if($fieldname!=$pk_name && $fieldname!=""){
+			$id_carac_array=$this->TObjCaractype->find("all",array(
+				"fields" => array("Carac_type_Pk"),
+				"conditions" => array("name"=>trim($fieldname))
+			));
+			$id_carac=$id_carac_array[0]['TObjCaractype']['Carac_type_Pk'];
+			
+			//getting the type and contant value of the carac
+			$objcaraclist=$this->ObjCaracList->find('first',array(
+				"fields"=> array("value_type","Constant","importance","position"),
+				"conditions"=>array("fk_Carac_type"=>$id_carac,"fk_Object_type"=>$id_obj)
+			));
+			$value_type=$objcaraclist['ObjCaracList']['value_type'];
+			$constant=$objcaraclist['ObjCaracList']['Constant'];
+			if(isset($objcaraclist['ObjCaracList']['position']))
+				$position=$objcaraclist['ObjCaracList']['position'];
+			if(isset($objcaraclist['ObjCaracList']['importance']))	
+				$importance=$objcaraclist['ObjCaracList']['importance'];
+			//check if we can edit this carac
+			if($constant==0 || ($constant==1 && ($content==null ||$content=="null" || $content=""))){
+				$edit=1;
+			}				
+			
+			switch($value_type){
+				case "thesaurus":
+					$ltype="t";
+					break;
+				case "function":
+					$edit=0;
+					break;
+				case "int":	
+					$ltype="i";
+					break;
+				case "float":
+					$ltype="f";
+					break;
+				case "datetime":
+					$ltype="d";
+					break;
+				default:
+					$ltype="v";
+					break;	
+			}
+		}
+		else{
+			if($fieldname==$pk_name){
+				$importance=1;
+				$position=1;
+			}			
+			$edit=0;
+		}
+		
+		if($editval=="Equipped"){
+			$position=2;
+			$importance=2;
+		}
+		
+		$typeandid=$ltype.$id_carac;
+		$result=array("edit"=>$edit,"typeandid"=>$typeandid,"importance"=>$importance,"order"=>$position);
+		return $result;
+	}	
 	
 	//dynamic update and insert
 	function save(){

@@ -661,7 +661,8 @@
 							else if($filters2!="" && $bbox!="")	
 								$exportfilter="$filters2, \nbbox:".$bbox;
 								
-							$this->MapSelectionManager->export_save($result,$gpx_name,$table_name,$exportfilter);
+							if(count($result)>0)
+								$this->MapSelectionManager->export_save($result,$gpx_name,$table_name,$exportfilter);
 							$gpx_array=array('gpx_url'=>$gpx_url);
 							$find=3;	
 						}

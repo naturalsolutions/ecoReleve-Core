@@ -16,7 +16,7 @@ class TaxonController extends AppController {
 		$this->Cookie->name = 'session';
 		$this->Cookie->key = 'q45678SI232qs*&sXOw!adre@34SAdejfjhv!@*(XSL#$%)asGb$@11~_+!@#HKis~#^';
 		$this->Cookie->httpOnly = true;
-		if($this->params['action']=='column_list' 
+		/*if($this->params['action']=='column_list' 
 		|| $this->params['action']=='taxon_get' || $this->params['action']=='taxon_count'){
 			if((!$this->Cookie->read('connected')))
 				$this->notauth=true;	
@@ -25,7 +25,7 @@ class TaxonController extends AppController {
 		}		
 		else if($this->params['action']!='not_autorized'){
 			$this->redirect(array('action' => 'not_autorized'));
-		}
+		}*/
 		
 	}
 	
@@ -506,4 +506,152 @@ class TaxonController extends AppController {
 			//$this->layout=$format;
 		}
 	}
+	
+	//do a import of taxon (for taxon application)
+	function importTaxref(){
+		$this->loadModel('Taxon');
+		$limit=null;
+		$offset=null;
+		$condition=null;
+		$taxrefversion=null;
+		$deletedo=null;
+		$deletecond=null;
+		$count=0;
+		$deletedo=1;
+		
+		if(isset($this->params['url']['limit']) && $this->params['url']['limit']!=""){
+			$limit= $this->params['url']['limit'];
+		}
+		
+		if(isset($this->params['url']['offset']) && $this->params['url']['offset']!=""){
+			$offset= $this->params['url']['offset'];
+		}
+		
+		if(isset($this->request->params['count']) && $this->request->params['count']){
+			$count= 1;
+		}
+		
+		if(isset($this->params['url']['condition']) && $this->params['url']['condition']!=""){
+			$condition = $this->params['url']['condition'];
+			$condition_array = explode(",",$condition);
+			$condition=array();
+			foreach($condition_array as $cond){
+				list($column,$values)=explode("=",$cond);
+				if(trim($values)!="")
+					$condition+=array($column=>$values);
+			}
+		}
+		
+		if(isset($this->params['url']['taxrefversion']) && $this->params['url']['taxrefversion']!=""){
+			$taxrefversion= $this->params['url']['taxrefversion'];
+		}		
+		
+		if(isset($this->params['url']['deletedo']) && $this->params['url']['deletedo']!=""){
+			$deletedo= $this->params['url']['deletedo'];
+		}
+		
+		if(isset($this->params['url']['deletecond']) && $this->params['url']['deletecond']!=""){
+			$deletecond= $this->params['url']['deletecond'];
+			$deletecond_array = explode(",",$deletecond);
+			$deletecond=array();
+			foreach($deletecond_array as $cond){
+				list($column,$values)=explode("=",$cond);
+				if(trim($values)!="")
+					$deletecond+=array($column=>htmlspecialchars($values));
+			}
+		}		
+		$message=$this->Taxon->importTaxref($count,$limit,$offset,$condition,$taxrefversion,$deletedo,$deletecond);
+		
+		$this->set("message",$message);
+		
+		$this->RequestHandler->respondAs("json");
+		// $this->RequestHandler->respondAs("html");
+		$this->viewPath .= "/"."json";
+		$this->layoutPath = "json";
+		$this->layout = "json";
+	}
+	
+	function taxrefautocomplete(){
+		$this->loadModel('TaxrefList');
+		$this->loadModel('Taxref');
+		$tablefind=true;
+		$taxrefversion="7.0";
+		$condition=array();
+		
+		if(isset($this->params['url']['taxrefversion']) && $this->params['url']['taxrefversion']!=""){
+			$taxrefversion= $this->params['url']['taxrefversion'];
+		}
+		
+		$tlist=$this->TaxrefList->find("first",array(
+			"conditions"=>array("Version"=>$taxrefversion)
+		));
+		
+		if(isset($this->request->params['field']) && $this->request->params['field']){
+			$field= $this->request->params['field'];
+		}
+		
+		
+		
+		if(isset($this->params['url']['condition']) && $this->params['url']['condition']!=""){
+			$condition = $this->params['url']['condition'];
+			$condition_array = explode(",",$condition);
+			$condition = array();
+			foreach($condition_array as $cond){
+				list($column,$values)=explode("=",$cond);
+				if(trim($values)!="")
+					$condition+=array($column=>htmlspecialchars($values));
+			}
+		
+		}
+		$condition=array_merge(array("$field is not null"),$condition);		
+		if(isset($field)){
+			if(count($tlist)>0){
+				$taxrefname=$tlist['TaxrefList']['Name'];
+				try{
+					$this->Taxref->setSource($taxrefname);
+				}catch(Exception $e){
+					$tablefind=false;
+				}
+				if($tablefind){
+					$result=$this->Taxref->find("all",array(
+						"fields"=>array($field),
+						"conditions"=>$condition,
+						"group"=>array($field),
+						"order"=>array("$field asc")
+					));					
+					$this->set("result",$result);
+				}
+				else{
+					//taxref name not find
+				}
+			}
+			else{
+				//version taxref unknown
+			}	
+		}
+		else{
+			//field missing
+		}
+		
+		$this->RequestHandler->respondAs("json");
+		// $this->RequestHandler->respondAs("html");
+		$this->viewPath .= "/"."json";
+		$this->layoutPath = "json";
+		$this->layout = "json";
+	}
+	
+	function taxrefversion(){
+		$this->loadModel('TaxrefList');
+		$tlist=$this->TaxrefList->find("all",array("fields"=>array("version")));
+		
+		$this->set("result",$tlist);
+		$this->RequestHandler->respondAs("json");
+		// $this->RequestHandler->respondAs("html");
+		$this->viewPath .= "/"."json";
+		$this->layoutPath = "json";
+		$this->layout = "json";
+	}
 }	
+
+
+

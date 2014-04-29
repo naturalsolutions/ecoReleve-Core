@@ -870,6 +870,41 @@
 			$this->viewPath .= '/json';
 			$this->layout= 'json';
 			$this->layoutPath = 'json';	
+		}
+
+		function add(){
+			$stationsarray=array();
+			$protocoles;
+			$message=array("message"=>"");
+			if ($this->request->is('post')) {
+				if($this->request->data['stations']){
+					$stations=$this->request->data['stations'];
+					$stations=json_decode($stations,true);
+					$message=array("message"=>$stations);
+				}
+				
+				foreach($stations as $station){
+					foreach($station as $key=>$val){
+						if(stripos($key,"date")!==false){
+						
+						}
+						else if(stripos($key,"fieldworker")!==false) {
+						
+						}
+					}
+					print_r($station);
+				}
+				
+			}
+			else{
+				//error must be a post
+				$message=array("message"=>"Error the request must be a post");
+			}
+			$this->set("message",$message);
+			$this->RequestHandler->respondAs('json');
+			$this->viewPath .= '/json';
+			$this->layout= 'json';
+			$this->layoutPath = 'json';	
 		}	
 		
 	}
