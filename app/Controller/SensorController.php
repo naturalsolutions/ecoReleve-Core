@@ -94,7 +94,6 @@
 		
 		//Return stat from sensor 
 		function log_stat(){
-			$this->loadModel('Sensorlog');
 			//$this->MapSelectionManager->setSource("TThemeEtude");
 			//$model = new AppModel("TMapSelectionManager","TMapSelectionManager",base);	
 			$format="json";
@@ -119,32 +118,46 @@
 			$today = date("Y-m-d",mktime(0,0,0,$m,$d,$y));	
 			$oneweek= date("Y-m-d",mktime(0,0,0,$m,$d-7,$y));	
 			
-			$conditions=array("CONVERT(char(10),logDate,120) <="=>$today, "CONVERT(char(10),logDate,120) >="=>$oneweek,"logType"=>"Insert");
+			$resultfinal=array('label'=>array(),'nbArgos'=>array(),'nbGPS'=>array());	
 			
-			$result=$this->Sensorlog->find("all",array(
-				'fields'=>array("logProtocol as Proto","CONVERT(char(10),logDate,120) as logDate","SUM(cast(logValue as int)) as nb"),
-				'conditions'=>$conditions,
-				'group'=>array("logProtocol,CONVERT(char(10),logDate,120)")
-			));
 			
-			$resultfinal=array('label'=>array(),'nbArgos'=>array(),'nbGPS'=>array(),'nbEng'=>array());	
+			// Pas la meilleure solution en terme de performance -> 14 requêtes en tout.
+			// Données Argos
+			$this->loadModel('SensorArgos');
 			for($i=0;$i<7;$i++){
-				$exist=false;
 				$today = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
-				array_push($resultfinal['label'],$today);
-				for($j=0;$j<count($result);$j++){
-					if(is_array($result) && count($result)>0 && $result[$j][0]['logDate']==$today){
-						array_push($resultfinal['nb'.$result[$j][0]['Proto']],$result[$j][0]['nb']);
-						$exist=true;
-						//break;
-					}
-				}
-				if(!$exist){
-					array_push($resultfinal['nbArgos'],0);
-					array_push($resultfinal['nbGPS'],0);
-					array_push($resultfinal['nbEng'],0);
-				}
+				
+				array_push($resultfinal['label'], $today);
+			
+				$argos_result = $this->SensorArgos->find("all", array(
+					'fields'=>array('convert(char(10), date, 120) as locDate', 'count(*) as nb'),
+					'conditions'=>array('convert(char(10), date, 120) = '=>$today),
+					'group'=>array('convert(char(10), date, 120)')
+				));
+				
+				if ( is_array($argos_result) && count($argos_result) == 1)
+					array_push($resultfinal['nbArgos'], $argos_result[0][0]['nb']);
+				else
+					array_push($resultfinal['nbArgos'], 0);
 			}
+			
+			// Données GPS
+			$this->loadModel('SensorGps');
+			for($i=0;$i<7;$i++){
+				$today = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
+			
+				$gps_result = $this->SensorGps->find("all", array(
+					'fields'=>array('convert(char(10), date, 120) as locDate', 'count(*) as nb'),
+					'conditions'=>array('convert(char(10), date, 120) = '=>$today),
+					'group'=>array('convert(char(10), date, 120)')
+				));
+				
+				if ( is_array($gps_result) && count($gps_result) == 1)
+					array_push($resultfinal['nbGPS'], $gps_result[0][0]['nb']);
+				else
+					array_push($resultfinal['nbGPS'], 0);
+			}
+			
 			$this->set("result",$resultfinal);
 			// Set response as XML
 			$this->RequestHandler->respondAs($format);
