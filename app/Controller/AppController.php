@@ -301,6 +301,8 @@ class AppController extends Controller {
 					foreach($filters as $f){
 						if($f){
 							list($col,$val)=split(":",$f,2);
+							if(strpos($col," ")!==false)
+								$col="[".$col."]";
 							if(isset($value_label_array[trim($col)]))
 								$col=$value_label_array[$col];
 							if($col=='DATE'){
