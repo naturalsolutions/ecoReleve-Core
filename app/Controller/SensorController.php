@@ -115,8 +115,6 @@
 			$m=date("m");
 			$d=date("d");
 			$y=date("Y");
-			$today = date("Y-m-d",mktime(0,0,0,$m,$d,$y));	
-			$oneweek= date("Y-m-d",mktime(0,0,0,$m,$d-7,$y));	
 			
 			$resultfinal=array('label'=>array(),'nbArgos'=>array(),'nbGPS'=>array());	
 			
@@ -124,7 +122,8 @@
 			// Pas la meilleure solution en terme de performance -> 14 requêtes en tout.
 			// Données Argos
 			$this->loadModel('SensorArgos');
-			for($i=0;$i<7;$i++){
+			for($i=1;$i<8;$i++){
+			
 				$today = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
 				
 				array_push($resultfinal['label'], $today);
@@ -143,7 +142,7 @@
 			
 			// Données GPS
 			$this->loadModel('SensorGps');
-			for($i=0;$i<7;$i++){
+			for($i=1;$i<8;$i++){
 				$today = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
 			
 				$gps_result = $this->SensorGps->find("all", array(
