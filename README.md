@@ -160,6 +160,20 @@ List of ecoReleve-core webservices routes ( many of them get a limit and offset(
 	
 	• /vernacular/list parameter(s) : filter
 	List of taxon with vernacular name that begin with 'filter' for a table
+	
+	• /taxon/import/taxref parameter(s) : limit, offset, condition, taxrefversion, deletecond
+	Import of taxon from a taxref table fieltred by 'condition'. You can use deletecond for
+	avoid duplicated row.
+
+	• /taxon/import/taxref/count parameter(s) : condition, taxrefversion
+	Number of taxon with that 'condition'
+	
+	• /taxon//taxref/version/list
+	List of taxref version in database
+	
+	• /taxon/taxref/list/autocomplete/:field parameter(s) : condition
+	List autocomplete from taxref 'field'. used for taxonomy rang (kingdom, phylum, ...)
+	
 -----------------
 	• /TViewTrx_Radio/:id 
 	Return detail of a radio object 'id'
@@ -200,6 +214,39 @@ List of ecoReleve-core webservices routes ( many of them get a limit and offset(
 	• /TViewIndividual/:id/protocole : date_depart, date_fin
 	List of protocole from an Individu 'id'. Return also the number of individu by protocole and can be filtred by date
 	Date format : YYYY-MM-DD
+-----------------
+	• /TViewRFID/:id 
+	Return detail of a rfid object 'id'
+	
+	• /TViewRFID/:id/carac 
+	List of characteristic of each fields of a rfid object since now and before
+	
+	• /TViewRFID/list parameter(s) : filters[]
+	List of rfid object. The parameters 'filters' use for NS grid
+	
+	• /TViewRFID/list/count : filters[]
+	Number of rfid. The 'filters' parameter can be used too
+-----------------
+	• /TViewCameraTrap/:id 
+	Return detail of a camera trap object 'id'
+	
+	• /TViewCameraTrap/:id/carac 
+	List of characteristic of each fields of a camera trap object since now and before
+	
+	• /TViewCameraTrap/list parameter(s) : filters[]
+	List of camera trap object. The parameters 'filters' use for NS grid
+	
+	• /TViewCameraTrap/list/count : filters[]
+	Number of camera trap. The 'filters' parameter can be used too
+-----------------
+	• /characteristic/edit parameter(s) POST : object_type object_id value carac_type id_carac begin_date end_date comments
+	Edit an object. Create a new characteristic.
+	
+	• /object/add 
+	Create a new object and return the id.
+	
+	• /object/delete/:id_object
+	Delete object 'id_object'
 -----------------
 	• /argos/stat 
 	Argos stat since the last 7 days based on a Argos table
