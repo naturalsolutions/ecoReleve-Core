@@ -19,7 +19,7 @@
 	define("cache_time",3600);
 	
 	class StationController extends AppController{
-		var $helpers = array('Xml', 'Text','form','html','Cache','Json');
+		var $helpers = array('Xml', 'Text','form','html','Cache','Json'/*,'DebugKit.Toolbar'*/);
 		public $components = array('RequestHandler','Cookie','Session');
 		var $typereturn;
 		public $notauth=false;		
@@ -418,8 +418,8 @@
 					$condition_array=$model_proto->filter_create($condition_array,$place,$region,$date,"","","",$search,$tsearch,"",true,$currentdate);
 					//print_r($condition_array);
 					$totaldisplay = $model_proto->find("count",array('recursive' => 0
-															,'conditions'=>$condition_array)+$Stationjoin
-													);
+							,'conditions'=>$condition_array)+$Stationjoin
+					);
 					$this->set("nb",$totaldisplay);	
 					$find=2;								
 				}
@@ -483,6 +483,7 @@
 			}	
 		}
 		
+		//use on mycoflore app (use addiotionnal)
 		function station_get2(){
 			if(true/*!$this->notauth*/){
 				$format="json";
@@ -754,8 +755,9 @@
 			}		
 		}
 		
+		//use on mycoflore app
 		function import_csv(){
-			if($this->admin){
+			if(/*$this->admin*/true){
 				$this->loadModel('Station');
 				$format="json";
 				$viewpath='/text';
@@ -820,13 +822,12 @@
 			if($find==1){
 				$fields=array();
 				$conditions=array();
-				$y=date('Y');
+				$y=date('y');
 				$m=date('m');
 				$d=1;
 				if($date!="")
 					list($y,$m,$d2)=split("-",$date);
 				
-				//$last12month=$this->last12month($y,$m,$d);
 				$mkmonthlast = mktime(0, 0, 0, $m-11, 1, $y);
 				$datemonthlast = date("Y-m-d",$mkmonthlast);
 				$mkmonthfirst = mktime(0, 0, 0, $m, 31, $y);
@@ -834,78 +835,171 @@
 				$nbbym=array();
 				$monthyear=array();
 				for($i=0;$i<12;$i++){
-					$month12 = date("F",mktime(0, 0, 0, $m-$i, 1, $y))." ".date("Y",mktime(0, 0, 0, $m-$i, 1, $y));
+					$month12 = date("F",mktime(0, 0, 0, $m-$i, 1, $y))." ".date("y",mktime(0, 0, 0, $m-$i, 1, $y));
 					$nbbym+=array($month12=>null);
-					$monthyear+=array(date("F",mktime(0, 0, 0, $m-$i, 1, $y)) => date("Y",mktime(0, 0, 0, $m-$i, 1, $y)));
-					//print_r($nbbym);
+					$monthyear+=array(date("F",mktime(0, 0, 0, $m-$i, 1, $y)) => date("y",mktime(0, 0, 0, $m-$i, 1, $y)));
 				}
-				//print_r(date("F",mktime(0, 0, 0, 01, 1, $y)));
 				
 				$query="Select count(*) as nb,CONVERT(CHAR(4), DATE, 100) as month,month(DATE) as nummonth FROM      TStations 
 				WHERE CONVERT(varchar(255), DATE, 21) <= '$datemonthfirst' and 
 				CONVERT(varchar(255), DATE, 21) >= '$datemonthlast'
 				GROUP BY  month(DATE),CONVERT(CHAR(4), DATE, 100)";
 				
-				//print_r($query);
-				/*foreach($last12month as $month=>$date){
-					$begin=$this->begin_month($date);
-					$end=$this->end_month($date);
-					$fields[]="sum(case when (CONVERT(varchar(255), DATE, 21) >= '$begin' and CONVERT(varchar(255), DATE, 21) <= '$end') then 1 end) as $month";
-				}*/
 				$fields=implode(",",$fields);
-				//$query="Select $fields from TStations";
 				$queryresult=$this->Station->query($query);
-				//print_r($queryresult);
 				$i=0;	
 				foreach($queryresult as $r){					
 					$cmonth=date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y))." ".$monthyear[date("F",mktime(0, 0, 0, $r[0]['nummonth'], 1, $y))];;
+					
 					$nbbym[$cmonth]=$r[0]['nb'];
 				}	
-				$nbbym=array(array($nbbym));
-				$this->set('result',$nbbym);
+				
+				$origin=array("January","February","March","April","May","June","July","August","September","october","november","december");
+				$replace=array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","oct","nov","dec");
+				$nbbym2=array();
+				foreach($nbbym as $key=>$val){
+					$nbbym2+=array(str_replace($origin,$replace,$key)=>$val);
+				}
+				$nbbym2=array(array($nbbym2));
+				$this->set('result',$nbbym2);
 			}
 			$this->set('find',$find);
 			
+			// $this->RequestHandler->respondAs('html');
 			$this->RequestHandler->respondAs('json');
 			$this->viewPath .= '/json';
 			$this->layout= 'json';
 			$this->layoutPath = 'json';	
 		}
 
+		//input data ws function
 		function add(){
+			$this->loadModel('Station');
 			$stationsarray=array();
-			$protocoles;
 			$message=array("message"=>"");
+			$creation_date=date("Ymd H:i:s", mktime(date("H"), date("i"), date("s"), date("n"), date("d"), date("Y")));	
 			if ($this->request->is('post')) {
-				if($this->request->data['stations']){
+				if(isset($this->request->data['stations']) && $this->request->data['stations']){
 					$stations=$this->request->data['stations'];
 					$stations=json_decode($stations,true);
-					$message=array("message"=>$stations);
-				}
-				
-				foreach($stations as $station){
-					foreach($station as $key=>$val){
-						if(stripos($key,"date")!==false){
-						
-						}
-						else if(stripos($key,"fieldworker")!==false) {
-						
-						}
+					
+					if($this->request->data['protocoles']){
+						$protocoles=$this->request->data['protocoles'];
+						$protocoles=json_decode($protocoles,true);
 					}
-					print_r($station);
+					
+					//save array creation
+					foreach($stations as $station){						
+						//check if station already exist
+						$d=new DateTime($station["Date_"]);
+						$d=date_format($d,'Y-m-d H:i:s');
+						$stafind=$this->Station->find('first',array(
+							"recursive"=>0,
+							"conditions"=>array("LAT"=>$station["LAT"],"LON"=>$station["LON"],"convert(varchar,[DATE],120)"=>$d)
+						));
+						if(count($stafind)>0){
+							$idsta=$stafind['Station']['TSta_PK_ID'];
+							//protocole create
+							$currentstation['Station']['TSta_PK_ID']=$idsta;
+						}
+						else{
+							$currentstation['Station'] = array("Creation_date"=>$creation_date); //station array
+							 //station additionnal array (Fielworker3,4,5,...)
+							foreach($station as $key=>$val){						
+								//date
+								if(stripos($key,"date")!==false){
+									$date = new DateTime($val);
+									$date = date_format($date,'Ymd H:i:s');
+									$currentstation['Station']+=array("DATE"=>$date);
+								}
+								//fieldworker (add on additionnal table if >FW2)
+								else if(stripos($key,"fieldworker")!==false){
+									//regex for fieldworker
+									$subject = "$key";
+									$pattern = '/\d+/';
+									preg_match($pattern, $subject, $matches);
+									
+									if($matches[0]==1 || $matches[0]==2){
+										$currentstation['Station']+=array($key=>$val);
+									}
+									else{
+										if(!isset($currentstation['Additionnal'])){
+											$currentstation['Additionnal'] = array();
+										}
+										$currentstation['Additionnal'][]=array("FK_value_type"=>$key,"value"=>$val);
+									}
+								}
+								else if($key!="id" && $key!="stationId"){
+									$currentstation['Station']+=array($key=>$val);
+								}							
+							}
+						}
+						//protocole add on station array
+						foreach($protocoles as $protocole){
+							if($protocole['idStation']==$station['stationId']){
+								//get protocole from id
+								$this->loadModel('Protocole');
+								$protocoleid=$protocole["protocolId"];
+								$protolist=$this->Protocole->find("first",array(
+									"fields" => array("Relation"),
+									"conditions" => array("TTheEt_PK_ID"=>$protocoleid)
+								));
+								if(count($protolist)>0){
+									$protoassoname=$protolist['Protocole']['Relation'];										
+									$currentprotocole=array();
+									if(!isset($currentstation[$protoassoname])){
+										$currentstation[$protoassoname] = array();
+									}
+									foreach($protocole as $key=>$val){											
+										if($key!="id" && $key!="protocolId" && $key!="protocolName" && $key!="fk_station" && $key!="idStation"){												
+											$currentprotocole+=array($key=>$val);
+										}
+									}
+									$currentstation[$protoassoname][]=$currentprotocole;
+								}
+								else{
+									//id protocole inexistant
+									$message=array("message"=>"Error protocole_id '$protocoleid' is not exist");
+								}
+							}
+						}
+						$stationsarray[]=$currentstation;							
+					}
+					//save part
+					try{
+						if($message['message']==""){
+							if($this->Station->SaveMany($stationsarray,array('deep'=>true))){
+								$message=array("message"=>"Success");
+							}
+							else{
+								//error during saving								
+								$message=array("message"=>"error during saving");
+							}
+						}						
+					}
+					catch(Exception $e){
+						//Error during SAVING
+						$error=$e->getMessage();
+						$message=array("message"=>"error during SAVING. $error");
+					}					
+					
 				}
-				
+				else{
+					//error must be a post
+					$message=array("message"=>"Error missing post parameter 'stations' ('protocoles' parameter is not forced)");
+				}
+							
 			}
 			else{
 				//error must be a post
 				$message=array("message"=>"Error the request must be a post");
 			}
 			$this->set("message",$message);
+			// $this->RequestHandler->respondAs('html');
 			$this->RequestHandler->respondAs('json');
 			$this->viewPath .= '/json';
 			$this->layout= 'json';
 			$this->layoutPath = 'json';	
-		}	
-		
+		}
 	}
 ?>
