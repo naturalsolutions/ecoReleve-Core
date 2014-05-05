@@ -98,6 +98,10 @@ List of ecoReleve-core webservices routes ( many of them get a limit and offset(
 	• /station/import_csv parameter(s) : file
 	Import of data (Stations and protocoles) from a csv
 		• 'file' is the file to import (with form file)
+		
+	• /station/add parameter(s) POST: stations, protocoles
+	station and protocole insertion.
+		• 'stations' and 'protocoles' are the json from localforage	
 -----------------	
 	• /view/theme/list
 	List of topic's view
