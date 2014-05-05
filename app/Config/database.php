@@ -12,6 +12,13 @@ class DATABASE_CONFIG {
 	 "prefix" => ""
 	);
 	
+	public $mycoflore = array(
+		"datasource" => "Database/Sqlserver",
+		"persistent" => false,
+		"host" => "WIN7PRO-PC\WIN7SERVER",
+		
+		"database" => "DB_mycoflore"
+	);
 	
 	public $ereleveArgos = array(
 	 "datasource" => "Database/Sqlserver",
@@ -32,6 +39,17 @@ class DATABASE_CONFIG {
 	 "database" => "ECWP_eReleve_Sensor",
 	 "prefix" => ""
 	);	
+	
+	public $taxon = array(
+	 "datasource" => "Database/Sqlserver",
+	 "persistent" => false,
+	 "host" => "SERVEUR2008\SQLSERVER2008",
+	 "login" => "eReleveApplication",
+	 "password" => "123456",
+	 "database" => "Taxon",
+	 "prefix" => "",
+	 "encoding" => "",
+	);
 	
 	public $user = array(
 	 "datasource" => "Database/Sqlserver",

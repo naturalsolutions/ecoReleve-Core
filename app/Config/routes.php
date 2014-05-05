@@ -207,7 +207,7 @@
 	Router::connect('/sensor/stat',array('controller'=>'Sensor','action' => 'log_stat'));
 
 	Router::connect('/list/autocomplete',array('controller'=>'app','action' => 'column_list'));
-	Router::connect('/save/:table_name',array('controller'=>'app','action' => 'save'));
+	Router::connect('/save/:table_name',array('controller'=>'app','action' => 'save')); //not finish
 	
 	Router::connect('/thesaurus/autocomplete/distanceFromObserver/list',array('controller'=>'Thesaurus','action' => 'getthesaurus','id_type'=>'1000003'));
 	Router::connect('/thesaurus/autocomplete/distanceFromObserver/count',array('controller'=>'Thesaurus','action' => 'getthesaurus','id_type'=>'1000003','count'=>'yes'));

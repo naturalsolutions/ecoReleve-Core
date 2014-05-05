@@ -35,8 +35,8 @@ class TObjectCaracValueController extends AppController {
 		$this->loadModel('TObjectCaracValue');
 		$v=null;
 		$vp=null;
-		date_default_timezone_set('Europe/Paris');
-		print_r($this->request->data);
+		// date_default_timezone_set('Europe/Paris');
+		// print_r($this->request->data);
 		$object_type=$this->request->data['object_type'];
 		$object_id=$this->request->data['object_id'];
 		$value=$this->request->data['value'];
@@ -44,9 +44,7 @@ class TObjectCaracValueController extends AppController {
 		$id_carac=$this->request->data['id_carac'];
 		$begin_date=$this->request->data['begin_date'];
 		$end_date=$this->request->data['end_date'];
-		$comment=$this->request->data['comments'];
-
-		
+		$comment=$this->request->data['comments'];	
 		
 		if($carac_type=="t"){
 			$i=strrpos($value,";");

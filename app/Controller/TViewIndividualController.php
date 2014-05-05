@@ -178,7 +178,8 @@
 				else{
 					if($labelcarac!="")
 						$fields=array("Individual_Obj_PK","id30@TCaracThes_Sex_Precision","id33@Thes_Origin_Precision",
-						"id34@TCaracThes_Species_Precision","id35@Birth_date","id36@Death_date","id37@Comments");
+						"id34@TCaracThes_Species_Precision","id35@Birth_date","id36@Death_date","id59@TCaracThes_Individual_Status",
+						"id60@TCaracThes_Monitoring_Status_Precision","id61@TCaracThes_Survey_type_Precision","id37@Comments");
 					$iniresult=$this->TViewIndividual->find("all",array(
 						'recursive'=>$recursive,
 						'fields'=> $fields,

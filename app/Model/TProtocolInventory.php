@@ -1,6 +1,6 @@
 <?php
 App::uses('AppModel', 'Model');
-App::uses('Tthesaurus', 'Model');
+App::uses('Tthesaurus2', 'Model');
 /**
  * TProtocolInventory Model
  *
@@ -15,7 +15,7 @@ class TProtocolInventory extends AppModel {
  *
  * @var string
  */
-	// public $useDbConfig = 'mycoflore';
+	public $useDbConfig = 'mycoflore';
 
 /**
  * Use table
@@ -80,7 +80,7 @@ class TProtocolInventory extends AppModel {
 				return "'$habitat' is not a good habibat";
 			}
 			else if($habitat!=""){
-				$thesau=new Tthesaurus();
+				$thesau=new Tthesaurus2();
 				//fwrite($fp, "hab: ".print_r($habitat,true)."\n");
 				$thesauarray=$thesau->find('first',array('conditions'=>array('Id_Type'=>'1','topic_fr'=>$habitat)));
 				if(count($thesauarray)==0 || !is_array($thesauarray)){
@@ -99,7 +99,7 @@ class TProtocolInventory extends AppModel {
 				return "'$substrat' is not a good substrat.";
 			}
 			else if($substrat!=""){
-				$thesau=new Tthesaurus();
+				$thesau=new Tthesaurus2();
 				$thesauarray=$thesau->find('first',array('conditions'=>array('Id_Type'=>'2','topic_fr'=>$substrat)));
 				if(count($thesauarray)==0 || !is_array($thesauarray))
 					return "'$substrat' is not a good substrat.";

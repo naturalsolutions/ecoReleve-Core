@@ -80,13 +80,13 @@
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
 				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
-				'conditions'=>array('Chip_code.Fk_carac'=>14)
+				'conditions'=>array('Chip_code.Fk_carac'=>13)
 			),
 			'Mark_color_1' => array(
 				'className' => 'TObjectCaracValue',
 				'foreignKey' => 'fk_object',
 				'fields' => array('Carac_value_Pk','value','value_precision','begin_date','end_date','creation_date','comments'),
-				'conditions'=>array('Mark_color_1.Fk_carac'=>4)
+				'conditions'=>array('Mark_color_1.Fk_carac'=>14)
 			),
 			'Mark_position_1' => array(
 				'className' => 'TObjectCaracValue',

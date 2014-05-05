@@ -117,9 +117,7 @@
 			$this->viewPath .= "/$format";
 			$this->layout = 'json';
 			$this->layoutPath = 'json';	
-		}
-		
-		
+		}		
 	}
 
 ?>
