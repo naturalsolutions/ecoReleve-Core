@@ -14,7 +14,7 @@ class Station extends AppModel {
 	public $hasMany = array(
         'Additionnal' => array(
             'className' => 'StationAddi',
-			'foreignKey' => 'FK_TSta_ID',
+			'foreignKey' => 'FK_TSta_ID'
         ),
 		'StationProtocoles' => array(
 			'className' => 'TProtocolInventory',
@@ -28,6 +28,98 @@ class Station extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'Simplified_Habitat' => array(
+			'className' => 'SimplifiedHabitat',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Nest_Description' => array(
+			'className' => 'NestDescription',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Vertebrate_interview' => array(
+			'className' => 'Vertebrateinterview',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'ArgosDataArgos' => array(
+			'className' => 'ArgosDataArgos',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Vertebrate_individual' => array(
+			'className' => 'Vertebrateindividual',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Track_clue' => array(
+			'className' => 'Trackclue',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Sighting_conditions' => array(
+			'className' => 'Sightingconditions',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Phytosociology_habitat' => array(
+			'className' => 'Phytosociologyhabitat',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Phytosociologyreleve' => array(
+			'className' => 'Phytosociologyreleve',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Building_and_Activities' => array(
+			'className' => 'BuildingandActivities',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Entomo_population' => array(
+			'className' => 'Entomopopulation',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Chiroptera_capture' => array(
+			'className' => 'Chiropteracapture',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Chiroptera_detection' => array(
+			'className' => 'Chiropteradetection',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Clutch_Description' => array(
+			'className' => 'ClutchDescription',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Transects' => array(
+			'className' => 'Transects',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Vertebrate_Group' => array(
+			'className' => 'VertebrateGroup',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Bird_Biometry' => array(
+			'className' => 'BirdBiometry',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Capture_Group' => array(
+			'className' => 'CaptureGroup',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Vertebrate_individual_death' => array(
+			'className' => 'Vertebrateindividualdeath',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'ArgosDataGPS' => array(
+			'className' => 'ArgosDataGPS',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Release_Group' => array(
+			'className' => 'ReleaseGroup',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Station_Description' => array(
+			'className' => 'StationDescription',
+			'foreignKey' => 'FK_TSta_ID'
+		),
+		'Station_equipment' => array(
+			'className' => 'Stationequipment',
+			'foreignKey' => 'FK_TSta_ID'
 		)
 	);	
 	
