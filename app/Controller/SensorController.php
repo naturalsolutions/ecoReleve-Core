@@ -148,6 +148,8 @@
 				$resultfinal['nbGPS'][$index] = $value[0]['nb'];
 			}
 			
+			array_push($resultfinal, "toto");
+			
 			$this->set("result",$resultfinal);
 			// Set response as XML
 			$this->RequestHandler->respondAs($format);
