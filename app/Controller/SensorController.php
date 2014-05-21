@@ -118,43 +118,34 @@
 			
 			$resultfinal=array('label'=>array(),'nbArgos'=>array(),'nbGPS'=>array());	
 			
-			
-			// Pas la meilleure solution en terme de performance -> 14 requêtes en tout.
-			// Données Argos
-			$this->loadModel('SensorArgos');
 			for($i=1;$i<8;$i++){
-			
-				$today = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
-				
-				array_push($resultfinal['label'], $today);
-			
-				$argos_result = $this->SensorArgos->find("all", array(
-					'fields'=>array('convert(char(10), date, 120) as locDate', 'count(*) as nb'),
-					'conditions'=>array('convert(char(10), date, 120) = '=>$today),
-					'group'=>array('convert(char(10), date, 120)')
-				));
-				
-				if ( is_array($argos_result) && count($argos_result) == 1)
-					array_push($resultfinal['nbArgos'], $argos_result[0][0]['nb']);
-				else
-					array_push($resultfinal['nbArgos'], 0);
+				$date = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
+				array_push($resultfinal['label'], $date);
+				array_push($resultfinal['nbArgos'], 0);
+				array_push($resultfinal['nbGPS'], 0);
 			}
 			
-			// Données GPS
+			$this->loadModel('SensorArgos');
+			$argos_result = $this->SensorArgos->find("all", array(
+				'fields'=>array('convert(char(10), date, 120) as locDate', 'count(*) as nb'),
+				'conditions'=>array('convert(char(10), date, 120) >= '=>$date),
+				'group'=>array('convert(char(10), date, 120)')
+			));
 			$this->loadModel('SensorGps');
-			for($i=1;$i<8;$i++){
-				$today = date("Y-m-d",mktime(0,0,0,$m,$d-$i,$y));
+			$gps_result = $this->SensorGps->find("all", array(
+				'fields'=>array('convert(char(10), date, 120) as locDate', 'count(*) as nb'),
+				'conditions'=>array('convert(char(10), date, 120) >= '=>$date),
+				'group'=>array('convert(char(10), date, 120)')
+			));
 			
-				$gps_result = $this->SensorGps->find("all", array(
-					'fields'=>array('convert(char(10), date, 120) as locDate', 'count(*) as nb'),
-					'conditions'=>array('convert(char(10), date, 120) = '=>$today),
-					'group'=>array('convert(char(10), date, 120)')
-				));
-				
-				if ( is_array($gps_result) && count($gps_result) == 1)
-					array_push($resultfinal['nbGPS'], $gps_result[0][0]['nb']);
-				else
-					array_push($resultfinal['nbGPS'], 0);
+			foreach($argos_result as $value){
+				$index = array_search($value[0]['locDate'], $resultfinal['label']);
+				$resultfinal['nbArgos'][$index] = $value[0]['nb'];
+			}
+			
+			foreach($gps_result as $value){
+				$index = array_search($value[0]['locDate'], $resultfinal['label']);
+				$resultfinal['nbGPS'][$index] = $value[0]['nb'];
 			}
 			
 			$this->set("result",$resultfinal);
