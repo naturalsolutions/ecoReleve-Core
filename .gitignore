@@ -1,7 +1,10 @@
 [Cc]onfig/database.php
 app/tmp/cache/models/*
+!app/tmp/cache/models/empty
 app/tmp/cache/persistent/*
+!app/tmp/cache/persistent/empty
 app/tmp/cache/views/*
+!app/tmp/cache/views/empty
 app/tmp/logs/*
 app/tmp/sessions/*
 app/tmp/tests/*
